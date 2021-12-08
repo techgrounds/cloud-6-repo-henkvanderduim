@@ -30,5 +30,5 @@ Dit heb ik gecontroleerd m.b.v. cat. Daarna m.b.v. hetzelfde commando en de toev
 
 Dit wederom gecontroleerd m.b.v. cat.
 
-Zie afbeelding voor het resultaat:
+Zie afbeelding voor het resultaat:  
 ![OpdrachtLNX04](../00_includes/LNX-04.png)
