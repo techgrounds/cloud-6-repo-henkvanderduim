@@ -2,7 +2,6 @@
 ## Wie ben ik?  
 De afgelopen dertig jaar heb ik met mijn hoofd gewerkt. Met uitzondering van één jaar, waar ik als schoonmaker heb gewerkt.  
 Daar waar ik in het begin van mijn carrière de brandende ambitie had om leiding te gaan geven, heb ik de laatste tien jaar gemerkt dat ik dat minder belangrijk vind voor mijzelf.  
-[Leiding geven](./00_includes/henk.jpeg)  
 
 Ik vind het nog steeds leuk om te doen, maar ik zoek het niet meer op. Tegenwoordig is het meer zo dat het op mijn pad komt.
 
@@ -33,7 +32,7 @@ Ik ben het type dat voor elk probleem een oplossing heeft. Volgens een oud-colle
 
 Ik schrijf op onregelmatige basis gedichten, liedjes en korte verhalen. De laatste jaren schrijf ik vooral Haiku’s. Recentelijk ben ik aan de slag gegaan met Ollekebollekes. Die vind ik lastig, dus daar zal nog het nodige geschreven gaan worden voordat ik het helemaal beheers. Al mijn hersenspinsels zijn te vinden op mijn eigen weblog: https://www.henkvanderduim.nl.
 
-##.Wat kan ik?
+## Wat kan ik?
 Ik weet nog steeds niet wat ik wil worden als ik later groot ben en dat zal de reden zijn dat ik inmiddels een forse C.V. heb.
 
 Ik ben begonnen in de ICT bij een lokale Rabobank in de jaren ‘80 van de vorige eeuw. Daar heb ik een lokaal netwerk mogen opzetten. Al snel moesten daar ook de andere (bij)kantoren op aangesloten worden. Een mooie tijd waarin we veel pionierswerk binnen de organisatie hebben verricht. Na negen jaar heb ik de Rabobank vaarwel gezegd en ben ik begonnen als freelancer (ZZP’er). Mijn doel was om bij zoveel mogelijk verschillende bedrijven in de keuken te kijken en volgens mij was freelance werk daartoe de sleutel.
@@ -58,7 +57,7 @@ Doordat ik de administratieve kant minder leuk vind, resulteert het wel vaak in 
 
 Ik doe mijn werk eigenlijk nooit met tegenzin. Als de dingen die ik doe ergens toe leiden, dan voer ik ze uit. Ook de minder leuke dingen (hallo administratie) doe ik dan fluitend, weliswaar fluit ik dan wel in mineur. Geef mij een project en ik ga. De laatste projecten waren het uitzoeken en implementeren van een CRM systeem, HR systeem, Projecten systeem en een dashboard voor de specialisten (op basis van de big data)
 
-##.Wat wil ik?
+## Wat wil ik?
 Op dit moment, want exercities zoals deze zijn een momentopname, zou ik aan slag willen als Cloud/Data-consultant of projectmanager in dit vakgebied. Dat kan volgende week weer anders zijn, als er weer iets anders op mijn pad komt.
 
 Ik weet dat ik goed gedij in organisaties die in de laatste fase van Startup zitten en doorgroeien naar Scale-up. Of in een organisatie die in de Scale-up fase zitten en van daaruit willen doorgroeien. Voor dergelijke organisaties kan ik veel betekenen, niet alleen richting de klanten om ook voor de organisatie zelf. Aan de ene kant vind ik dat daar voor mij de interessante uitdagingen liggen. Aan de andere kant heb ik met veel plezier grote projecten gedaan voor de KLM, Numico, Staal Bankiers, AIG, etc. Het gaat mij vooral om de inhoud van de functie of opdracht.
