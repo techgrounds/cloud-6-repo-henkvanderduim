@@ -16,4 +16,10 @@ Ik ben de auteur van:
 👉 Twitter en Personal Branding  
 👉 Daarnaast heb ik zo'n 217 Haiku's geschreven (and still counting...)  
 link naar de Haiku's en andere hersenspinsels: https://www.henkvanderduim.nl/  
+
+## Haiku: Cloud
+> _werken in de cloud_  
+> _nog niet helemaal vertrouwd_  
+> _daarom leer ik het_
+
 ![HenkvanderDuim](/00_includes/henk.jpg)
