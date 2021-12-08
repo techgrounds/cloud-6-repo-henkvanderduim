@@ -11,21 +11,24 @@ De volgende taken worden uitgevoert:
 CLI - Command Line
 Pipe - Is het transferen van standaard output naar een andere bestemming. Pipe is een Ubuntu commando
 Echo - Commando om input aan een bestand te geven. Kan ook de inhoud van een bestand tonen op scherm
-Awk - Commando om te kunnen filteren
+Cat - Commando om tekst van één of meer bestanden zichtbaar maken in de terminal. Ook kun je bestanden maken en kopieëren
 
 ## Opdracht
 ### Gebruikte bronnen
 Ubuntu voor uitleg over de CLI en Pipe - https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
 Stackoverflow voor het toepassen van de Pipe - https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
-Voor het AWK commando heb ik deze bron gebruikt - https://www.tecmint.com/category/awk-command/
+Linux - https://www.edx.org/course/introduction-to-linux (tip van Matias)
 
 ### Ervaren problemen
-Gebruik maken van Pipe is nieuw voor mij, dus dat heeft zoekwerk opgelevert. Het probleem was dat het tijd kost. En tijdens het maken van deze opdracht was ik bezig met een inhaalslag.
+Geen probleem
 
 ### Resultaat
-Ik heb eerst m.b.v. Nano een bestand met 1 regel gemaakt.
-Daarna heb ik m.b.v. het echo commando een regel toegevoegd (gebruik gemaakt van >> file) die het woord Techgrounds bevat. 
-[img]: ../00_INCLUDES/LNX-04 - 1a-controleren of het gelukt is.png
-Dit heb ik m.b.v. Nano gecontroleerd.
+Ik heb eerst m.b.v. Nano een bestand met 2 regels gemaakt.
+Daarna heb ik m.b.v. het echo commando een regel toegevoegd (gebruik gemaakt van >> file) die het woord Techgrounds bevat.
 
-[img]: ../00_INCLUDES/LNX-04 -1-voeg regel toe aan text bestand.png
+Dit heb ik gecontroleerd m.b.v. cat. Daarna m.b.v. hetzelfde commando en de toevoeging van de pipe en grep het woord "techgrounds" eruit gefilterd. Daarna met dezelfde instructie en de toevoeging dat de output naar een nieuw bestand gestuurd moet worden, ht nogmaals gedaan.
+
+Dit wederom gecontroleerd m.b.v. cat.
+
+Zie afbeelding hieronder voor het resultaat:
+![LNX04](../00_includes/lnx-04.png)
