@@ -1,5 +1,5 @@
 # Users and groups
-Linux makt gebruik van Gebruikers en Groepen, net zoals andere besturingssystemen dat ook doen.  
+Linux maakt gebruik van Gebruikers en Groepen, net zoals andere besturingssystemen dat ook doen.  
 Elke gebruiker heeft z'n eigen home directory.
 
 Daarnaast kent Linux nog een speciale gebruiker: root  
@@ -12,6 +12,12 @@ root = de supergebruiker in een Linux systeem, gebruikers kunnen tijdelijk gebru
 
 
 ## Opdracht
+1. Create a new user in your VM. 
+2. The new user should be part of an admin group that also contains the user you created during installation.
+3. The new user should have a password.
+4. The new user should be able to use ‘sudo’
+5. Locate the files that store users, passwords, and groups. See if you can find your newly created user’s data in there.
+
 ### Gebruikte bronnen
 User toevoegen aan sudo groep - https://phoenixnap.com/kb/how-to-create-sudo-user-on-ubuntu
 
