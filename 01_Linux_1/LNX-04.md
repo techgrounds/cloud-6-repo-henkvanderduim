@@ -31,4 +31,4 @@ Dit heb ik gecontroleerd m.b.v. cat. Daarna m.b.v. hetzelfde commando en de toev
 Dit wederom gecontroleerd m.b.v. cat.
 
 Zie afbeelding hieronder voor het resultaat:
-![LNX04](../00_includes/lnx-04.png)
+![Workingwithtext](../00_includes/lnx-04.png)
