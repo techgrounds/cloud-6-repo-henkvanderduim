@@ -11,8 +11,8 @@ Samenwerken met mensen kan ik uitstekend net als zelfstandig werken. Ik geloof n
 
 Tot slot: transparantie, vertrouwen en eerlijkheid zijn de zaken die ik zoek in een werkgever.
 
-Ik ben de auteur van:
-👉 Ideas as Opiates (gedichtenbundel)
-👉 Twitter en Personal Branding
-👉 Daarnaast heb ik zo'n 217 Haiku's geschreven (and still counting...)
+Ik ben de auteur van:  
+👉 Ideas as Opiates (gedichtenbundel)  
+👉 Twitter en Personal Branding  
+👉 Daarnaast heb ik zo'n 217 Haiku's geschreven (and still counting...)  
 link naar de Haiku's en andere hersenspinsels: https://www.henkvanderduim.nl/
