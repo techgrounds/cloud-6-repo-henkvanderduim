@@ -1,5 +1,5 @@
 # Users and groups
-Linux makt gebruik van Gebruikers en Groepen, net zoals andere besturingssystemen dat ook doen.  
+Linux maakt gebruik van Gebruikers en Groepen, net zoals andere besturingssystemen dat ook doen.  
 Elke gebruiker heeft z'n eigen home directory.
 
 Daarnaast kent Linux nog een speciale gebruiker: root  
