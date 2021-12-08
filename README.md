@@ -17,4 +17,4 @@ Ik ben de auteur van:
 👉 Daarnaast heb ik zo'n 217 Haiku's geschreven (and still counting...)  
 link naar de Haiku's en andere hersenspinsels: https://www.henkvanderduim.nl/
 
-![Readme](./00_includes/henk.jpg)
+![Readme](../00_includes/henk.jpg)
