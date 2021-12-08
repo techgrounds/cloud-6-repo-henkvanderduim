@@ -1,4 +1,4 @@
-# [Working with text (CLI)]
+# Working with text (CLI)
 Met behulp van de Command Line (CLI) moeten er een aantal taken uitgevoert worden.
 Een tekstbestand met twee regels tekst wordt gebruikt bij deze opdracht. Daarnaast wordt de output van het ene commando gebruikt voor de input van het andere commando (hiervoor wordt het woord techgrounds gebruikt).
 De volgende taken worden uitgevoert:
@@ -8,15 +8,15 @@ De volgende taken worden uitgevoert:
 
 
 ## Key-terms
-CLI - Command Line
+CLI - Command Line Interface
 Pipe - Is het transferen van standaard output naar een andere bestemming. Pipe is een Ubuntu commando
 Echo - Commando om input aan een bestand te geven. Kan ook de inhoud van een bestand tonen op scherm
 Cat - Commando om tekst van één of meer bestanden zichtbaar maken in de terminal. Ook kun je bestanden maken en kopieëren
 
 ## Opdracht
 ### Gebruikte bronnen
-Ubuntu voor uitleg over de CLI en Pipe - https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
-Stackoverflow voor het toepassen van de Pipe - https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
+Ubuntu voor uitleg over de CLI en Pipe - https://ubuntu.com/tutorials/command-line-for-beginners#1-overview  
+Stackoverflow voor het toepassen van de Pipe - https://ubuntu.com/tutorials/command-line-for-beginners#1-overview  
 Linux - https://www.edx.org/course/introduction-to-linux (tip van Matias)
 
 ### Ervaren problemen
@@ -30,5 +30,5 @@ Dit heb ik gecontroleerd m.b.v. cat. Daarna m.b.v. hetzelfde commando en de toev
 
 Dit wederom gecontroleerd m.b.v. cat.
 
-Zie afbeelding hieronder voor het resultaat:
-![Workingwithtext](../00_includes/lnx-04.png)
+Zie afbeelding voor het resultaat:
+![OpdrachtLNX04](../00_includes/lnx-04.png)
