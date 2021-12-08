@@ -1,8 +1,8 @@
-#.Introductie van Henk van der Duim
-##.Wie ben ik?
+#.Introductie van Henk van der Duim  
+##.Wie ben ik?  
 De afgelopen dertig jaar heb ik met mijn hoofd gewerkt. Met uitzondering van één jaar, waar ik als schoonmaker heb gewerkt.  
 Daar waar ik in het begin van mijn carrière de brandende ambitie had om leiding te gaan geven, heb ik de laatste tien jaar gemerkt dat ik dat minder belangrijk vind voor mijzelf.  
-![Leiding geven](../00_includes/henk.jpg)
+![Leiding geven](../00_includes/henk.jpeg)  
 
 Ik vind het nog steeds leuk om te doen, maar ik zoek het niet meer op. Tegenwoordig is het meer zo dat het op mijn pad komt.
 
