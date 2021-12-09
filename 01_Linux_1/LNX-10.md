@@ -22,10 +22,8 @@ Bash scripting - https://help.ubuntu.com/community/Beginners/BashScripting
 30 voorbeelden - https://linuxhint.com/30_bash_script_examples/  
 How to install httpd - https://ubuntu.com/tutorials/install-and-configure-apache#3-creating-your-own-website  
 
-
-
 ### Ervaren problemen
-[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
+Geen probleem
 
 ### Resultaat
 **OPDRACHT 1**  
