@@ -22,4 +22,17 @@ Uitleg chmod: https://help.ubuntu.com/community/FilePermissions
 Geen probleem
 
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+- Ik heb een tekst bestand aangemaakt m.b.v. Nano  
+- Daarna heb ik de lijst van bestandrechten opgevraagd, eigenaar en groep  
+- Ik heb het bestand executable gemaakt en gecontroleerd of het is aangepast  
+- Permissies rw verwijderd voor de group en other en gecontroleerd  
+- Gecontroleerd of ik de inhoud nog steeds kan zien  
+- De eigenaar veranderd van het tekst bestand (note to self: wel sudo gebruiken!). Daar gecontroleerd of er een nieuwe eigenaar is. Gekeken of ik (gebruiker: henk) het bestand kan inzien. Dat kan ik niet.  
+- Daarna gekeken of ik m.b.v. het commando sudo wel kan kijken. Dat lukt.  
+- M.b.v. commando groups gekeken welke groepen ik tot mijn beschikking heb.  
+- De group adm wordt eigenaar van het tekst bestand. En ik controleer of deze groep de nieuwe eigenaar is.  
+
+Zie de afbeeldingen voor de resultaten:  
+![lnx06](../00_includes/LNX-06a.png)  
+
+![lnx06](../00_includes/LNX-06b.png)  
