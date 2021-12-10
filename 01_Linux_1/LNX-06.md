@@ -7,12 +7,12 @@ chmod - commando om rechten aan te passen
 chown - commando om de eigenaar of groep aan te passen
 
 ## Opdracht
-- Create a text file.
-- Make a long listing to view the file’s permissions. Who is the file’s owner and group? What kind of permissions does the file have?
-- Make the file executable by adding the execute permission (x).
-- Remove the read and write permissions (rw) from the file for the group and everyone else, but not for the owner. Can you still read it?
-- Change the owner of the file to a different user. If everything went well, you shouldn’t be able to read the file unless you assume root privileges with ‘sudo’.
-Change the group ownership of the file to a different group.
+- Maak een tekst bestand
+- Maak een lange lijst van de bestandsrechten. Wie is de eigenaar en welke groep? Welke rechten heeft het bestand?
+- Maak het bestand uitvoerbaar (executable) (x).
+- Verwijder de lees en schrijf rechten (rw) voor de groep en alle anderen (go). Kun je het bestand nog lezen?
+- Verander de eigenaar van het bestand (user2).
+- Verander het groep eigenaarschap van het bestand.
 
 ### Gebruikte bronnen
 Uitleg chown: https://manpages.ubuntu.com/manpages/trusty/man1/chown.1.html  

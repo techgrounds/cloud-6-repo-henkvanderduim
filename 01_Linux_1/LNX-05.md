@@ -12,11 +12,12 @@ root = de supergebruiker in een Linux systeem, gebruikers kunnen tijdelijk gebru
 
 
 ## Opdracht
-1. Create a new user in your VM. 
-2. The new user should be part of an admin group that also contains the user you created during installation.
-3. The new user should have a password.
-4. The new user should be able to use ‘sudo’
-5. Locate the files that store users, passwords, and groups. See if you can find your newly created user’s data in there.
+1. Maak een nieuwe gebruiker aan. 
+2. De nieuwe gebruiker moet onderdeel zijn van de admin groep.
+3. Geef de nieuwe gebruiker een wachtwoord
+4. De nieuwe gebruiker moet 'sudo' kunnen gebruiken
+5. Vind de locatie van de bestanden waar de gebruikers, wachtwoorden en groepen zijn opgeslagen. 
+6. Kijk of je de nieuwe gebruiker daar kunt vinden.
 
 ### Gebruikte bronnen
 User toevoegen aan sudo groep - https://phoenixnap.com/kb/how-to-create-sudo-user-on-ubuntu
