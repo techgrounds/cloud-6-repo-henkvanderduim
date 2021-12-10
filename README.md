@@ -7,7 +7,7 @@ Ik weet dat ik goed gedij in organisaties die in de laatste fase van Startup zit
 
 Voor mij is het allerbelangrijkste de inhoud van de functie en het gevoel wat ik bij de organisatie (mensen) heb. Daarbij vind ik het heerlijk om mensen te coachen en te begeleiden, zodat zij boven zichzelf uitstijgen.
 
-Samenwerken met mensen kan ik uitstekend net als zelfstandig werken. Ik geloof niet in óf teamverband óf zelfstandig. Dat is leuke stof voor de managementboeken, maar in de praktijk heb ik altijd in teamverband én zelfstandig werken meegemaakt.
+Samenwerken met mensen kan ik uitstekend net als zelfstandig werken. Ik geloof niet in óf teamverband óf zelfstandig. Dat is leuke stof voor de managementboeken, maar in de praktijk heb ik altijd de combinatie van teamverband én zelfstandig werken meegemaakt.
 
 Tot slot: transparantie, vertrouwen en eerlijkheid zijn de zaken die ik zoek in een werkgever.
 
