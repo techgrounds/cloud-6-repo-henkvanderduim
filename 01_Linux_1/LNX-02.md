@@ -1,4 +1,4 @@
-# [Files en Directories]
+# Files en Directories
 Linux gebruikt bestanden en mappen, net als op een windows machine.
 Bij Linux heten de mappen Directories (net als vroeger bij MS-DOS).
 
