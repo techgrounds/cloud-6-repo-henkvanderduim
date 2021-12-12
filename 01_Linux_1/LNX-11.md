@@ -15,6 +15,7 @@ Crontab (cron table) - Een configuratie bestand wat shell commando's die, volgen
 https://linuxize.com/post/cron-jobs-every-5-10-15-minutes/  
 https://linuxhint.com/run_cron_job_every_minute/  
 https://askubuntu.com/questions/73160/how-do-i-find-the-amount-of-free-space-on-my-hard-drive  
+https://crontab.guru/  
 
 ### Ervaren problemen
 Geen probleem
