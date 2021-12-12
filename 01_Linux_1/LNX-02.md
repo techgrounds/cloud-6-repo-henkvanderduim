@@ -18,7 +18,7 @@ Tilde - is een alias voor home (~)
 
 ### Gebruikte bronnen
 Ubuntu cheatsheet - https://purplemonkeydishwasher.co.uk/ubuntu-terminal-commands/  
-Linux Relative Path and Absolute Path - https://www.linux.com/  training-tutorials/absolute-path-vs-relative-path-linuxunix/
+Linux Relative Path and Absolute Path - https://www.linux.com/training-tutorials/absolute-path-vs-relative-path-linuxunix/
 
 ### Ervaren problemen
 Geen problemen. Het is lang geleden dat ik met Linux/Unix heb gewerkt, dus het piept en kraakt in mijn hoofd. Meer van hoe zat het ook alweer.
