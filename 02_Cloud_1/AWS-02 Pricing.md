@@ -26,6 +26,7 @@ https://spot.io/resources/aws-pricing-5-models-pricing-for-10-popular-aws-servic
 https://dzone.com/articles/the-cost-of-the-cloud-the-ultimate-aws-pricing-gui  
 https://www.cloudhealthtech.com/blog/capex-vs-opex-cloud-cost-management  
 e-Book: 
+Whitepaper: [Pricing](../00_includes/aws-pricing-overview.pdf)  
 
 ### Ervaren problemen
 Geen problemen
