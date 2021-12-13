@@ -85,7 +85,7 @@ De volgende afbeelding toont drie AWS-regio's die elk drie beschikbaarheidszones
 In de tekst gebruik ik het woord regio voor Region.
 
 Een regio is een geografisch gebied.  
-![locaties](../00_includes/AWS01-d.png)
+![locaties](../00_includes/AWS-01d.png)
 
 Elke regio bestaat uit 2 of meer AZs.
 
