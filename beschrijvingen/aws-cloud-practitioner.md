@@ -112,20 +112,34 @@ U kunt dezelfde AWS API's, tools en infrastructuur gebruiken voor zowel on-premi
 AWS Outposts is ontworpen voor verbonden omgevingen en kan worden gebruikt om workloads te ondersteunen die on-premises moeten blijven vanwege lage latentie of lokale gegevensverwerkingsbehoeften. 
 
 ## TCO
-djksdsfjghv
+Total Cost of Ownership (TCO) heet ook wel life cycle cost analysis of levensduurcyclus. Niet alleen de aanschafkosten maar de gehele economische levensduur wordt berekend.  
+
+De Total Cost of Ownership (de levensduurcyclus) is het totaalbedrag aan kosten voor de aanschaf en het bezit van een product of dienst gedurende de hele levenscyclus/gebruikscyclus. Behalve de aanschafprijs reken je alle kosten mee: vanaf het moment van aankoop tot het moment dat je er afstand van doet. Zo breng je de kosten van zakendoen met een bepaalde leverancier systematisch in kaart. Vervolgens kijk je niet alleen naar kostenreductie bij die leverancier, maar bekijk je ook wat je binnen je eigen organisatie kunt doen om kosten te besparen. TCO is een onderdeel van cost management.
+
+Kosten die onderdeel zijn van TCO zijn bijvoorbeeld:
+- Onderhoudskosten
+- Reparatiekosten
+- Afschrijvingen
+- Verzekeringen
+- Belastingen
+- Financieringskosten
+- Kosten voor training en scholing
+- Personeelskosten
+- Distributiekosten
+- Voorraadkosten
+- Etc.
 
 ## Capex
-saddfsdfd
+CAPEX is een afkorting van Capital expenditures oftewel investeringsuitgaven.  
+Dit zijn uitgaven die pas in latere perioden als last worden opgeschreven. Een voorbeeld is de aankoop van een computer, waar de entiteit 5 jaar plezier van heeft. De uitgave aan de computer wordt in 5 jaar tijd ten laste van het resultaat gebracht onder aftrek van de veronderstelde restwaarde na 5 jaar. De jaarlijkse last heet de afschrijving.
 
 ## Opex
-sdfsdfgsdfg
+OPEX is een afkorting van Operational expenses oftewel operationele kosten. Dit zijn alle kosten die voortvloeien uit de bedrijfsactiviteiten, bijvoorbeeld arbeidskosten.  
+Operating expenses zijn terugkerende kosten voor een product, systeem of onderneming.
 
-## Pay-as-you-go
-sdafdfs
+**Verschil OPEX en CAPEX**  
+De tegenhanger van OPEX is CAPEX, dit zijn investeringskosten.
 
-## S3
-sdffsd
+Als je een printer als voorbeeld neemt dan valt de aanschaf ervan onder CAPEX en de jaarlijkse kosten voor papier en inkt onder OPEX.
 
-## AFS
-** Always Free Services  
-dgdfgd
+Video over Opex: https://youtu.be/HluLXhmCP1g

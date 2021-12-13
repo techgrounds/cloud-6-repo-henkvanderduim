@@ -25,7 +25,7 @@ https://www.techmagic.co/blog/aws-pricing-model-overview/
 https://spot.io/resources/aws-pricing-5-models-pricing-for-10-popular-aws-services/  
 https://dzone.com/articles/the-cost-of-the-cloud-the-ultimate-aws-pricing-gui  
 https://www.cloudhealthtech.com/blog/capex-vs-opex-cloud-cost-management  
-e-Book: 
+e-Book:  
 Whitepaper: [Pricing](../00_includes/aws-pricing-overview.pdf)  
 
 ### Ervaren problemen
@@ -33,45 +33,45 @@ Geen problemen
 
 ### Resultaat
 #### De vier voordelen van het AWS-prijsmodel
-**Principe #1: Betalen naar gebruik**  
-- Het principe:  
+**#1: Betalen naar gebruik**  
+**Het principe:**  
 Dit is het belangrijkste idee achter AWS - in plaats van dure infrastructuur te kopen of te bouwen, huur het. AWS zet zich in om jouw CapEx-uitgaven om te zetten in OpEx.  
 Het biedt ook extreme flexibiliteit - je kan 1.000 machines voor een uur huren en ze vervolgens stoppen en alleen voor die 1.000 machine-uren betalen.
 
-Voordeel:  
+**Voordeel:**  
 Daarom zijn organisaties overgestapt naar de cloud. Betalen per gebruik is goed voor de bankrekening omdat het overcapaciteit en verspilde computerbronnen elimineert.
 
-Nadeel:  
+**Nadeel:**  
 Aan flexibiliteit hangt een prijskaartje. Als je echt "pay as you go" wilt, moet je genoegen nemen met Amazon's On-Demand Pricing, die zelfs voor kleine workloads behoorlijk duur kan worden, wanneer deze wordt gebruikt voor doorlopende serverimplementaties.  
 Als servers geen enorme pieken of dalen in hun gebruik hebben - dan kan het draaien ervan op dedicated hosting of on-prem goedkoper zijn dan op AWS.
 
-**Principe #2: Betaal minder door meer te gebruiken**  
-- Het principe:  
+**#2: Betaal minder door meer te gebruiken**  
+**Het principe:**  
 AWS biedt volumekortingen. Amazon S3 en vele andere services bieden gedifferentieerde prijzen en Amazon EC2 biedt volumekortingen voor gebruikers die meer dan $ 500.000 aan initiële kosten uitgeven. Amazon biedt ook een overvloed aan services en opties voor de meeste gebruiksscenario's, zodat je tegen lagere kosten kunt overschakelen naar een service die aan jouw behoefte voldoet. Er zijn bijvoorbeeld verschillende AWS-backup-opties, waaronder de AWS-backup-service en opslagservices zoals S3, Glacier, EBS, EFS, enz. Organisaties kunnen gegevens tussen deze opslagservices verplaatsen om efficiënter te werken.
 
-Voordeel:  
+**Voordeel:**  
 Geavanceerde gebruikers van AWS kunnen veel besparen door de workloads dynamisch tussen services te verplaatsen en schaalvoordelen te creëren.
 
-Nadeel:  
+**Nadeel:**  
 Dit principe is ook een van de verborgen redenen voor de enorme complexiteit van Amazon. Het is waar dat je een gelaagde opslagstrategie kan maken en in veel gevallen 90% of meer besparen. Maar kennen jouw technici of IT-personeel de fijne kneepjes van elke dataservice en hebben ze de knowhow om de relevante gebeurtenissen te detecteren en gegevens selectief op te slaan in verschillende datastores? Amazon biedt de tools om dit allemaal te doen. Maar het vereist tijd en expertise, wat organisaties op zich al serieus geld gaat kosten.
 
-**Principe #3: Bespaar wanneer u reserveert**  
-- Het principe:  
+**#3: Bespaar wanneer u reserveert**  
+**Het principe:**  
 De kern van AWS is de computerservice, Amazon EC2. EC2-machines worden aanzienlijk afgeprijsd (in de orde van 30-50%) als u een exemplaar voor 1-3 jaar van tevoren reserveert. Een andere optie is om "spot instances" te gebruiken - machine-instances die toevallig op een bepaald moment beschikbaar zijn en van u worden afgenomen wanneer een andere gebruiker erom vraagt. Dynamisch schakelen tussen workloads tussen spotinstances en Amazon helpen hun vraag te beheren, dat kan je nog grotere kortingen opleveren.
 
-Voordeel:  
+**Voordeel:**  
 Amazon biedt veel prijsflexibiliteit. Je kan de kosten aanzienlijk verlagen door je voor 1 jaar of langer vast te leggen - het is mogelijk om dit selectief te doen voor sommige workloads, terwijl je andere on-demand gebruikt. De optie voor spot-instances is een creatieve optie, waarmee iedereen met expertise en de tijd om een oplossing voor spot-instances te ontwerpen, 60% op de kosten kan besparen.
 
-Nadeel:  
+**Nadeel:**  
 1 tot 3 jaar in de cloud aan een machine-instance binden, klinkt misschien als een contradictio in terminis. Organisaties stappen over naar de cloud om computerresources op aanvraag te krijgen. Een langdurig financieel engagement staat haaks op deze flexibiliteit. Veel AWS-gebruikers beschouwen on-demand prijzen als een gegeven en betalen de prijs van flexibiliteit.
 
-**Principe #4: gratis gebruiksniveau**  
-Het principe:  
+**#4: gratis gebruiksniveau**  
+**Het principe:**  
 Amazon verleent 1 jaar gratis gebruik met een royale quota voor veel van zijn services, om risico's te verminderen en cloudadoptie aan te moedigen. Dit was een primaire manier waarop AWS in de beginjaren zijn aanvankelijke marktaandeel won.
 
 De 'Free Tier Grants' zijn te vinden op deze pagina: [AWS-Free-Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)  
 
-Nadeel:  
+**Nadeel:**  
 De gratis laag heeft veel organisaties en technologen geholpen om "verslaafd" te raken aan het aanbod van Amazon - het is een showcase van de verbazingwekkende diepte, breedte en technisch kunnen van hun serviceprofiel. Amazon biedt - en stimuleert - een enorme hoeveelheid verfijning binnen zijn ecosysteem. Heel vaak selecteren organisaties standaard AWS omdat het een marktleider is en de optie die het meest bekend is bij hun teams. 
 
 #### AWS gratis laag voor
