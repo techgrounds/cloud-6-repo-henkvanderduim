@@ -87,3 +87,45 @@ Bij informatica is een werkbelasting (workload) meestal elk programma of elke to
 Workload kan ook verwijzen naar de hoeveelheid werk (of belasting) die software oplegt aan de onderliggende computerbronnen. In grote lijnen is de werkbelasting van een applicatie gerelateerd aan de hoeveelheid tijd en computerbronnen die nodig zijn om een ​​specifieke taak uit te voeren of een output te produceren uit de geleverde input. Een lichte werklast bereikt de beoogde taken of prestatiedoelen met relatief weinig computerbronnen, zoals processors, CPU (central processing unit) klokcycli, opslag I/O (input/output) enzovoort. Een zware werklast vereist aanzienlijke hoeveelheden computerbronnen.
 
 De taken van een werkbelasting variëren sterk, afhankelijk van de complexiteit en het beoogde doel van de toepassing. Een webservertoepassing kan bijvoorbeeld de belasting meten aan de hand van het aantal webpagina's dat de server per seconde levert, terwijl andere toepassingen de belasting kunnen meten aan de hand van het aantal transacties dat per seconde wordt uitgevoerd met een specifiek aantal gelijktijdige netwerkgebruikers. Gestandaardiseerde statistieken die worden gebruikt om de prestaties of belasting van een applicatie te meten en erover te rapporteren, worden gezamenlijk benchmarks genoemd.
+
+## Local-Zones
+AWS Local Zones plaatsen rekenkracht, opslag, database en andere geselecteerde AWS-services dichter bij de eindgebruikers.
+
+Met AWS Local Zones kun je eenvoudig veeleisende applicaties uitvoeren die een milliseconde latency voor je eindgebruikers vereisen.
+
+Elke AWS Local Zone-locatie is een uitbreiding van een AWS-regio waar je jouw latency gevoelige applicaties kunt uitvoeren met behulp van AWS-services zoals Amazon Elastic Compute Cloud, Amazon Virtual Private Cloud, Amazon Elastic Block Store, Amazon File Storage en Amazon Elastic Load Balancing in geografische nabijheid van je eindgebruikers.
+
+AWS Local Zones bieden een veilige verbinding met hoge bandbreedte tussen lokale workloads en die in de AWS-regio, zodat je naadloos verbinding kunt maken met het volledige scala aan services in de regio via dezelfde API's en toolsets.
+
+## AWS-Wavelength
+Met AWS Wavelength kunnen ontwikkelaars applicaties bouwen die een milliseconde latency leveren aan mobiele apparaten en eindgebruikers.
+
+AWS-ontwikkelaars kunnen hun applicaties implementeren in Wavelength Zones, AWS-infrastructuurimplementaties die AWS-computing- en opslagservices inbedden in de datacenters van de telecommunicatieproviders aan de rand van de 5G-netwerken, en naadloos toegang krijgen tot de breedte van AWS-services in de regio.
+
+AWS Wavelength brengt AWS-services naar de rand van het 5G-netwerk en minimaliseert de latentie om vanaf een mobiel apparaat verbinding te maken met een applicatie.
+
+## AWS-Outposts
+AWS Outposts brengen native AWS-services, infrastructuur en operationele modellen naar vrijwel elk datacenter, co-locatieruimte of on-premises faciliteit.
+
+U kunt dezelfde AWS API's, tools en infrastructuur gebruiken voor zowel on-premises als de AWS-cloud om een echt consistente hybride ervaring te bieden.
+
+AWS Outposts is ontworpen voor verbonden omgevingen en kan worden gebruikt om workloads te ondersteunen die on-premises moeten blijven vanwege lage latentie of lokale gegevensverwerkingsbehoeften. 
+
+## TCO
+djksdsfjghv
+
+## Capex
+saddfsdfd
+
+## Opex
+sdfsdfgsdfg
+
+## Pay-as-you-go
+sdafdfs
+
+## S3
+sdffsd
+
+## AFS
+** Always Free Services  
+dgdfgd
