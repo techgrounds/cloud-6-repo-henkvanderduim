@@ -200,3 +200,36 @@ Er zijn in totaal zes Storage Classes bij AWS. Zie onderstaande afbeelding:
 ![S3 Glacier Deep Archive](../00_includes/s3-glacier-deep-archive.png)  
 
 Voor de AWS S3 Storage Classes heb ik deze infographic gebruikt: [S3 Storage Classes](../00_includes/Amazon_S3_StorageClasses_Infographic_2020.pdf)  
+
+## OSI-Model
+Interconnectiemodel voor open systemen.  
+
+Het OSI-model is ontworpen in 1977 en maakt sinds 1984 deel uit van de ISO-specificaties.  
+Elke OSI-laag heeft een unieke taak voor netwerkcommunicatie.
+
+## TCP  
+TCP/IP is een verzamelnaam voor een reeks netwerkprotocollen die gebruikt worden voor het grootste deel van de netwerkcommunicatie tussen computers. Het internet is het grootste en bekendste TCP/IP-netwerk.  
+
+## HTTP  
+Hypertext Transfer Protocol (HTTP) is het protocol voor de communicatie tussen een webclient (meestal een webbrowser of een app) en een webserver. Dit protocol wordt niet alleen veel op het wereldwijde web gebruikt, maar ook op lokale netwerken (we spreken dan van een intranet).
+
+In HTTP is vastgelegd welke vragen (de Engelse term hiervoor is requests) een cliënt aan een server kan stellen en welke antwoorden (de Engelse term is responses) een webserver daarop kan teruggeven. Elke vraag bevat een URL die naar een webcomponent of een statisch object zoals een webpagina of plaatje verwijst.
+
+## UDP  
+Het User Datagram Protocol (UDP) is een van de basisprotocollen van het internet. Het protocol opereert op hetzelfde niveau als TCP en wordt beschreven in RFC 768.  
+
+## BGP  
+Het Border Gateway Protocol (BGP) is het belangrijkste routeringsprotocol van het internet: het wordt gebruikt om verkeer tussen verschillende providers te routeren. Binnen het netwerk van een provider (een zogenaamd autonoom systeem) kiest de provider voor een bepaald intra-routeringsprotocol zoals OSPF of Routing Information Protocol, maar om routes uit te wisselen met andere providers wordt exclusief gebruikgemaakt van BGP. Het is dus niet zo dat BGP het meest gebruikte routeringsprotocol is, maar zonder BGP zou er geen internet zijn. Dan was er slechts een verzameling losse netwerken die niet met elkaar kunnen communiceren.  
+
+## IAB  
+Internet-architectuur Board (IAB): Verantwoordelijk voor het definiëren van de algemene architectuur van internet, het bieden van begeleiding en brede richting aan de IETF.  
+
+## IETF  
+Internet Engineering-taak Force (IETF): de protocol-engineering- en ontwikkelingstak van internet.  
+
+## IESG  
+Internet Engineering Steering Group (IESG): Verantwoordelijk voor technisch beheer van IETF-activiteiten en het proces van internetstandaarden.
+
+## RFC  
+Request for Comment
+

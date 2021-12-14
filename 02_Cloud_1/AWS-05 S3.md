@@ -3,8 +3,7 @@ Amazon Simple Storage Service (S3) is een opslag service. Het biedt schaalbaarhe
 Je kunt elke hoeveelheid data opslaan en beschermen. O.a. voor: data, websites, mobiele apps, backup en restore, archief, IoT devices, big data.  
 Je kunt m.b.v. S3 je data optimaliseren, organiseren en configureren. Zodat je voldoet aan de specifieke eisen en compliances.
 
-S3 kent verschillende _storage classes_:  
-
+S3 kent verschillende _storage classes_
 
 ## Key-terms
 Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
@@ -62,7 +61,7 @@ ik heb de volgende policy gemaakt, daarna is de kattenfoto zichtbaar:
 - URL van de kottenfoto gedeeld met mijn teamgenoten. Die bevestigen dat ze de website zien.  
 ![katten](../00_includes/AWS-05c.png)  
 
-**Opdracht 2**
+**Opdracht 2**  
 Aantekening: op het moment van uitvoeren van deze opdracht (12-12-2021) ontbraken de benodigde bestanden. Ik ben zo vrij geweest om gebruik te maken van de bestanden uit de Github die ik noem onder de kop 'Ervaren problemen'.  
 
 - Nieuwe bucket aangemaakt met de gevaagde instellingen.  
