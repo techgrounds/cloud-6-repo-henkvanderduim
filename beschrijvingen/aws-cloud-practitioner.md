@@ -1,5 +1,5 @@
-# Global Infrastructure Key Terms
-Hier zijn de alle Key Terms te vinden die horen bij Global Infrastructure.
+# AWS Cloud Practitioner Key Terms
+Hier zijn de alle Key Terms te vinden die horen bij AWS Cloud Practitioner.
 
 ## AWSR
 ### AWS Regions
@@ -150,3 +150,53 @@ Binnen de cryptografie staat encryptie of versleuteling voor het omzetten van ee
 Een van de bedoelingen van cryptografie is dat gegevens veilig tussen twee personen kunnen worden uitgewisseld over een onveilig communicatiekanaal, dat wil zeggen een communicatiekanaal waartoe ook derden toegang kunnen hebben, zoals het internet. De versleuteling zorgt er dan voor dat deze derden de gegevens niet kunnen lezen. Dit gebeurt meestal door het gebruik van sleutels. Wat precies een sleutel vormt verschilt per algoritme, maar meestal is een sleutel een reeks van tientallen of honderden cijfers en letters. Het doel van het cryptografische algoritme is ervoor te zorgen dat alleen de personen met de juiste sleutel de cijfertekst weer kunnen ontsleutelen. Het versleutelen en ontsleutelen kan met de huidige elektronica zo snel, dat het bijvoorbeeld mogelijk is een telefoongesprek te versleutelen zonder dat het opgemerkt wordt. De sleutel om een klare tekst te versleutelen, de codeersleutel, en de sleutel om de verkregen cijfertekst te ontsleutelen, de decodeersleutel, verschillen meestal van elkaar, maar zijn wel uit elkaar te berekenen. 
 
 Zo had ik vroeger, samen met mijn broertje, een sjabloon wat wij over een geschreven tekst konden leggen. Dan kwam naar voren wat wij elkaar te vertellen hadden.  
+
+## StorageTypes
+AWS kent drie types Cloud Storage. Hieronder worden de drie verder uitgewerkt.
+
+### ObjectStorage
+Een object is een bestand plus metagegevens en een objectarchief is een verzameling objecten. Elk object heeft een unieke ID en je gebruikt dit ID om jouw objecten in je archief te vinden.
+
+Hoewel object-ID's soms op bestandspaden lijken, zijn objectarchieven fundamenteel anders dan bestandsopslag. Objectopslagplaatsen bewaren gegevens op een manier die ze veel meer ruimte geeft om te schalen.
+
+### BlockStorage
+Block storage systemen worden gebruikt om databases te hosten, willekeurige lees-/schrijfbewerkingen te ondersteunen en systeembestanden van de draaiende virtuele machines te bewaren. Gegevens worden opgeslagen in volumes en blokken, waar bestanden worden opgesplitst in blokken van gelijke grootte. Elk blok heeft zijn eigen adres, maar in tegenstelling tot objecten hebben ze geen metadata. Bij het opslaan van grote hoeveelheden gegevens worden bestanden opgesplitst in kleinere brokken van een vaste grootte, de "blokken", die worden verdeeld over de opslagknooppunten. Dit ondersteunt ook de volume-IO-prestaties.
+
+### FileStorage
+Bestandsopslag in de cloud is een methode voor het opslaan van gegevens in de cloud die servers en applicaties toegang geeft tot gegevens via gedeelde bestandssystemen.
+
+## API
+Een application programming interface (API) is een verzameling definities op basis waarvan een computerprogramma kan communiceren met een ander programma of onderdeel (meestal in de vorm van bibliotheken).  Vaak vormen API's de scheiding tussen verschillende lagen van abstractie, zodat applicaties op een hoog niveau van abstractie kunnen werken en het minder abstracte werk uitbesteden aan andere programma's. Hierdoor hoeft bijvoorbeeld een tekenprogramma niet te weten hoe het de printer moet aansturen, maar roept het daarvoor een gespecialiseerd stuk software aan in een bibliotheek, via een afdruk-API.  
+Bekende webservice API's zijn:  
+- SOAP API  
+- REST API  
+
+### SOAP
+SOAP (Simple Object Access Protocol) is een koppeling, waarbij je alle regels voor de koppeling strikt definieert. Hierdoor wordt er structuur aangebracht in de koppeling, waardoor het overzicht en de controle bewaard blijft. Door al deze regels is een SOAP koppeling zwaarder dan een REST koppeling en kan het technisch gezien een uitdaging zijn om de koppeling uit te lezen en tot stand te brengen.  
+
+### REST
+Bij een REST (Representational State Transfer) koppeling wordt er minder structuur en regels in de koppeling aangebracht. De REST koppeling is om deze reden een stuk lichter dan de SOAP koppeling. Dit zorgt er over het algemeen voor dat deze koppeling sneller is.  
+
+## StorageClasses
+Er zijn in totaal zes Storage Classes bij AWS. Zie onderstaande afbeelding:  
+![Storage Classes](../00_includes/storage-classes.png)  
+
+### S3-Standard
+![S3 Standard](../00_includes/s3-standard.png)  
+
+### S3 Intelligent Tiering
+![S3 Intelligent Tiering](../00_includes/s3-intelligent-tiering.png)  
+
+### S3 Standard Infrequent Access
+![S3 Standard Infrequent Access](../00_includes/s3-standard-ia.png)  
+
+### S3 One Zone-Infrequent Access
+![S3 One Zone-Infrequent Access](../00_includes/s3-one-zone-ia.png)  
+
+### S3 Glacier
+![S3 Glacier](../00_includes/s3-glacier.png)  
+
+### S3 Glacier Deep Archive
+![S3 Glacier Deep Archive](../00_includes/s3-glacier-deep-archive.png)  
+
+Voor de AWS S3 Storage Classes heb ik deze infographic gebruikt: [S3 Storage Classes](../00_includes/Amazon_S3_StorageClasses_Infographic_2020.pdf)  
