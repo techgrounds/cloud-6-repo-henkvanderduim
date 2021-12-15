@@ -230,6 +230,23 @@ Internet Engineering-taak Force (IETF): de protocol-engineering- en ontwikkeling
 ## IESG  
 Internet Engineering Steering Group (IESG): Verantwoordelijk voor technisch beheer van IETF-activiteiten en het proces van internetstandaarden.
 
-## RFC  
+## RFC
 Request for Comment
 
+## SSH
+Secure Shell (kortweg: SSH) is een protocol uit de toepassingslaag van de TCP/IP-protocolgroep. De term ssh werd gemakshalve ook gebruikt voor het clientprogramma dat het protocol toepast (het serverprogramma heet sshd, 'Secure Shell daemon'). SSH vervangt oudere protocollen zoals telnet, rlogin, en rsh/rexec door een beveiligbare variant daarvan. De standaard poort van SSH is 22.
+
+## RDP
+Remote desktop is het volledig overnemen van een pc vanop afstand, inclusief het gebruik van het toetsenbord en de muis. Remote desktop is een Microsoft-technologie.
+
+## EBS
+Amazon Elastic Block Store (EBS) biedt onbewerkte opslag op blokniveau die kan worden gekoppeld aan Amazon EC2-instanties en wordt gebruikt door Amazon Relational Database Service (RDS).
+
+Amazon EBS biedt een reeks opties voor opslagprestaties en kosten. Deze opties zijn onderverdeeld in twee hoofdcategorieën: SSD-backed storage voor transactionele workloads, zoals databases en opstartvolumes (prestaties zijn voornamelijk afhankelijk van IOPS), en disk-backed storage voor doorvoerintensieve workloads, zoals MapReduce en logverwerking (prestaties zijn afhankelijk van voornamelijk op MB/s).
+
+## Firewall
+Een firewall is een systeem dat de middelen van een netwerk of computer kan beschermen tegen misbruik van buitenaf.
+
+Het beschermde netwerk is vaak een intranet of intern netwerk en dit wordt beschermd tegen het internet. Het ongewenste verkeer bestaat bijvoorbeeld uit aanvallen van hackers en computerkrakers, inbraken en/of uitbraken van computervirussen, spyware, spam en denial of service attacks.
+
+## 
