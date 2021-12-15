@@ -37,9 +37,13 @@ https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/
 Geen problemen
 
 ### Resultaat
-#### Hoe is een TCP/IP-pakket opgebouwd?  
+#### Hoe is een HTTPS TCP/IP-pakket opgebouwd?  
 Een TCP/IP pakket is opgebouwd uit vier lagen:  
 ![TCPIP](../00_includes/AWS-08b.png)  
+
+Het HTTPS protocol bevindt zich in de Application laag van TCP/IP en in de Session laag van het OSI model. Op internet is veel discussie over de laag waar het zich in bevindt. Al deducerend kom ik tot bovenstaande conclusie.
+
+HTTPS is in wezen een versleutelde communicatietunnel die HTTP-verkeer bevat. Deze tunnels gebruikten eerst Secure Sockets Layer (SSL) als coderingsprotocol. Tegenwoordig maakt het meeste HTTPS-verkeer gebruik van Transport Layer Security (TLS).
 
 #### Wie bepaalt welke protocols wij gebruiken?  
 Veel van de protocollen waaruit de TCP/IP-protocolsuite bestaat, zijn gestandaardiseerd of bevinden zich in het proces van standaardisatie. Bij universele overeenstemming is een organisatie die bekend staat als de **Internet** **Society** verantwoordelijk voor de ontwikkeling en publicatie van deze normen. 
@@ -58,13 +62,13 @@ Om deel te nemen kun je deze link volgen: [Getting Started in the IETF](https://
 
 OSI Laag | Protocol
 :------- | :-------
-Applicatie laag (7) | NFS, NIS+, DNS, telnet, ftp, rlogin, rsh, rcp, RIP, RDISC, SNMP
-Presentatie laag (6) | NFS, NIS+, DNS, telnet, ftp, rlogin, rsh, rcp, RIP, RDISC, SNMP
-Sessie laag (5) | NFS, NIS+, DNS, telnet, ftp, rlogin, rsh, rcp, RIP, RDISC, SNMP
-Transport laag (4) | TCP, UDP 
-Netwerk laag (3) | IP, ARP, ICMP 
-Data Link laag (2) | PPP, IEEE 802.2 
-Fysieke laag (1) | Ethernet (IEEE 802.3) Token Ring, RS-232
+Applicatie laag (7) | **DNS**: Het Domain Name System (DNS) is het systeem en netwerkprotocol dat op het internet gebruikt wordt om namen van computers naar numerieke adressen (IP-adressen) te vertalen en omgekeerd. Hoewel dit "vertalen" genoemd wordt, is het niet meer dan opzoeken van namen in tabellen waaraan nummers gekoppeld zijn.
+Presentatie laag (6) | **SNMP**: Simple Network Management Protocol (SNMP) is een toepassingslaag-protocol dat zorgt voor een gemakkelijke overdracht van managementinformatie tussen netwerkmachines. Het werkt op verscheidene protocols zoals UDP, IP, CLNS, DDP en IPX.
+Sessie laag (5) | **FTP**: File transfer protocol (FTP) is een protocol dat uitwisseling van bestanden tussen computers vergemakkelijkt. Het standaardiseert een aantal handelingen die tussen besturingssystemen vaak verschillen.
+Transport laag (4) | **TCP**: Het Transmission Control Protocol (TCP) is een verbindingsgeoriënteerd protocol dat veel gebruikt wordt voor gegevensoverdracht over netwerkverbindingen op het internet en op computernetwerken zoals local area networks en thuisnetwerken.
+Netwerk laag (3) | **IP**: Het internetprotocol, meestal afgekort tot IP, is een netwerkprotocol waarmee computers op een computernetwerk met elkaar kunnen communiceren, zoals op het internet.
+Data Link laag (2) | **PPP**: Point-to-Point Protocol (PPP) is een communicatieprotocol dat wordt gebruikt om een verbinding tot stand te brengen tussen twee computers, bijvoorbeeld een PC van een gebruiker en de inbelserver van diens internetprovider.
+Fysieke laag (1) | **Ethernet (IEEE 802.3)**: De IEEE 802.3 protocolstandaarden definiëren de fysieke laag en MAC-sublaag van de datalinklaag van bekabeld Ethernet. Ethernet kan ook draadloos zijn.
 
 #### Waarom was Facebook lange tijd niet bereikbaar?  
 De urenlange downtime waar Facebook en zijn diensten mee te maken had, kwam door een wijziging bij de backbonerouters voor zijn datacenters. Het lag aan een BGP-update bij Facebook. De BGP informeert de router over de veranderingen in de prefix of trekt deze terug. Doordat dit stopte kon er niet meer verbonden worden met de Nameservers.
