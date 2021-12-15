@@ -51,10 +51,10 @@ Tip: je moet eerst de terminate protection uitzetten.
 
 ### Ervaren problemen
 Bij de launch van de EC2 instance krijg ik de melding dat ik niet de juiste rechten heb.
-![fout][../00_includes/fout.png]  
+![fout](../00_includes/fout.png)  
 Ik heb op Google gezocht naar oorxaken en oplossing. Inmiddels heb ik AWS CLI op de Macbook geïnstalleerd en geconfigureerd om te kunnen zien wat er aan de hand is. Ik zie een aantal melding van 'False' maar heb verder geen idee hoe dit op te lossen.  
 In de AWS CLI heb ik het volgende commando gegeven:  
-![AWSCLI](../00_includes/awscli-commano.png)  
+![AWSCLI](../00_includes/awscli-commando.png)  
 Daar kwam o.a. het volgende uit:  
 ![AWSCLI](../00_includes/awscli-fout.png)  
 
