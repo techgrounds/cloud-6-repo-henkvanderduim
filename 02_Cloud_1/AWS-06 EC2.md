@@ -1,4 +1,4 @@
-# [Onderwerp]
+# Elastic Compute Cloud (EC2)
 EC2 is de service waarbinnen je een VM kunt draaien. Connectie met de VM maak je via internet. Als je een Linux VM hebt doe je dat middels SSH, als je een Windows VM hebt dan doe je dat via RDP
 
 ## Key-terms
