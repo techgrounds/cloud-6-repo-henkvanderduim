@@ -47,7 +47,11 @@ Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden i
 Tip: je moet eerst de terminate protection uitzetten.
 
 ### Gebruikte bronnen
-
+Naast de genoemde bronnen in het opdrachtdocument, heb ik nog de volgende gebruikt:  
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html  
+https://aws.amazon.com/premiumsupport/knowledge-center/ec2-not-auth-launch/  
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html  
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html  
 
 ### Ervaren problemen
 Bij de launch van de EC2 instance krijg ik de melding dat ik niet de juiste rechten heb.

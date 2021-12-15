@@ -1,4 +1,4 @@
-# [Onderwerp]
+# Elastic Block Store (EBS)
 [Geef een korte beschrijving van het onderwerp]
 
 ## Key-terms
