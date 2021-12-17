@@ -1,15 +1,30 @@
-# [Onderwerp]
-[Geef een korte beschrijving van het onderwerp]
+# Security Groups
+
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+[VPC](../beschrijvingen/aws-cloud-practitioner.md#VPC)  
+[Firewall](../beschrijvingen/aws-cloud-practitioner.md#Firewall)  
+[StatefulFirewall](../beschrijvingen/aws-cloud-practitioner.md#StatefulFirewall)  
+[StatelessFirewall](../beschrijvingen/aws-cloud-practitioner.md#StatelessFirewall)  
+[SecurityGroups](../beschrijvingen/aws-cloud-practitioner.md#SecurityGroups)  
+[NACL](../beschrijvingen/aws-cloud-practitioner.md#NACL)  
+[Suricata](../beschrijvingen/aws-cloud-practitioner.md#Suricata)  
+[IDS](../beschrijvingen/aws-cloud-practitioner.md#IDS)  
+[IPS](../beschrijvingen/aws-cloud-practitioner.md#IPS)  
+[NSM](../beschrijvingen/aws-cloud-practitioner.md#NSM)  
+[PCAP](../beschrijvingen/aws-cloud-practitioner.md#PCAP)    
 
 ## Opdracht
+Geen opdracht
+
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+https://aws.amazon.com/network-firewall/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc  
+https://docs.aws.amazon.com/network-firewall/latest/developerguide/firewall-rules-engines.html  
+https://suricata.io/  
 
 ### Ervaren problemen
-[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
+Geen probleem
 
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+Geen opdracht.

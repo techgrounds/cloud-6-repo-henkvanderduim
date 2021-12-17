@@ -255,4 +255,51 @@ Een solid state drive of solid state disk (SSD) is een medium waarop digitaal ge
 ## Snapshot
 EBS Snapshots zijn een kopie van je gegevens (van een bepaald punt in de tijd), die worden gebruikt om noodherstel mogelijk te maken. Je kunt tevens gegevens over regio's en accounts migreren en de backup-compliance te verbeteren.  
 
-## 
+## VPC
+Amazon's Virtual Private Cloud (VPC) is een fundamentele AWS-service. Fundamenteel zijn betekent dat andere AWS-services, zoals Elastic Compute Cloud (EC2), niet toegankelijk zijn zonder een onderliggend VPC-netwerk.
+
+Het maken van een VPC is van cruciaal belang voor het draaien in de AWS-cloud.
+
+## StatefulFirewall
+Stateful firewalls bewaken alle aspecten van de verkeersstromen, hun kenmerken en communicatiekanalen. Deze firewalls kunnen codering of tunnels integreren, TCP-verbindingsstadia, pakketstatus en andere belangrijke statusupdates identificeren.
+
+Standaard verwerkt de Stateful Firewall de regels in de volgorde van hun actie-instelling, waarbij 'pass rules' eerst worden verwerkt, vervolgens worden verwijderd en vervolgens een waarschuwing (alert). De firewall stopt met verwerken wanneer er een overeenkomst wordt gevonden.
+
+## StatelessFirewall
+Stateless firewalls gebruiken aanwijzingen van het bestemmingsadres, de bron en andere sleutelwaarden om te beoordelen of er bedreigingen aanwezig zijn, en blokkeren of beperken vervolgens de als onbetrouwbaar beschouwde bedreigingen. Vooraf ingestelde regels bepalen of verkeer wordt toegestaan of geweigerd, maar het systeem is doorgaans niet in staat om het verschil te bepalen tussen echt gewenste communicatie en geavanceerde pogingen om ongeautoriseerde communicatie te vermommen als vertrouwde communicatie. Als één van de eerdere iteraties van firewalls, kijken stateless firewalls niet verder dan de header van pakketinhoud om te bepalen of verkeer is geautoriseerd.
+
+De Stateless Firewall verwerkt de regels in de volgorde waarin jij ze prioriteit geeft en stopt met verwerken wanneer er een overeenkomst wordt gevonden.
+
+## SecurityGroups
+Een AWS-Security Group fungeert als een virtuele firewall voor uw EC2-instances om inkomend en uitgaand verkeer te controleren. Zowel inkomende als uitgaande regels bepalen respectievelijk de verkeersstroom naar en het verkeer van uw instantie.
+
+AWS-Security Groups helpen je om je cloudomgeving te beveiligen door te bepalen hoe verkeer naar je EC2-machines wordt toegelaten. Met beveiligingsgroepen kunt je ervoor zorgen dat al het verkeer dat op instance-niveau stroomt, alleen via jouw vastgestelde poorten en protocollen verloopt.
+
+Beveiligingsgroepen zijn stateful, wat betekent dat als een inkomend verzoek wordt doorgegeven, het uitgaande verzoek ook wordt doorgegeven.
+
+## NACL
+In AWS regelt een netwerk-ACL (of NACL) het verkeer van of naar een subnet volgens een set inkomende en uitgaande regels. Dit betekent dat het de beveiliging op netwerkniveau vertegenwoordigt. Een inkomende regel kan bijvoorbeeld inkomend verkeer van een reeks IP-adressen weigeren, terwijl een uitgaande regel kan toestaan dat al het verkeer het subnet verlaat.
+
+Omdat NACL's werken op het subnetniveau van een VPC, kan elke NACL worden toegepast op een of meer subnetten, maar elk subnet moet worden gekoppeld aan één NACL.
+
+Wanneer je een VPC maakt, maakt AWS er automatisch een standaard NACL voor. Je kunt regels toevoegen aan en verwijderen uit een standaard-NACL, maar je kan de NACL zelf niet verwijderen.
+
+## Suricata
+Suricata is een onafhankelijke open source-engine voor detectie van bedreigingen. Door inbraakdetectie (IDS), inbraakpreventie (IPS), netwerkbeveiligingsmonitoring (NSM) en PCAP-verwerking te combineren, kan Suricata de meest geavanceerde aanvallen snel identificeren, stoppen en beoordelen.
+
+## IDS
+Een intrusion detection system of IDS is een geautomatiseerd systeem dat hackpogingen en voorkomens van ongeautoriseerde toegang tot een informatiesysteem of netwerk detecteert.
+
+## IPS
+Zie  ook IDS.  
+Systemen met responsmogelijkheden worden doorgaans een inbraakpreventiesysteem genoemd.  Inbraakdetectiesystemen kunnen ook specifieke doelen dienen door ze uit te breiden met aangepaste tools, zoals het gebruik van een honeypot om kwaadaardig verkeer aan te trekken en te karakteriseren.
+
+## NSM
+Network Security Monitoring (NSM) omvat het verzamelen en analyseren van gegevens, die op hun beurt bedrijven de mogelijkheid bieden om indringers in hun netwerk te detecteren en erop te reageren.
+
+Op deze manier kunnen bedrijven actie ondernemen voordat indringers hun missie kunnen volbrengen en zo verdere schade aan het bedrijf voorkomen.
+
+## PCAP
+Packet Capture of PCAP (ook bekend als libpcap) is een Application Programming Interface (API) die live netwerkpakketgegevens van OSI-model Lagen 2-7 vastlegt. Netwerkanalysatoren zoals Wireshark maken pcap-bestanden om pakketgegevens van een netwerk te verzamelen en vast te leggen. PCAP wordt geleverd in een reeks formaten, waaronder Libpcap, WinPcap en PCAPng.
+
+Deze PCAP-bestanden kunnen worden gebruikt om TCP/IP- en UDP-netwerkpakketten te bekijken. Als je netwerkverkeer wilt opnemen, moet je een .pcap-bestand maken. Je kunt een .pcap-bestand maken met behulp van een netwerkanalysator of pakketsniffingtool zoals Wireshark of tcpdump.
