@@ -72,6 +72,9 @@ In het EC2 menu kies ik voor de Launch van een Instance:
 Na alles ingevuld te hebben is dit het resultaat:  
 ![ECS Instance](../00_includes/AWS-06b.png)  
 
+De website:  
+![website](../00_includes/AWS-06o.png)  
+
 **Opdracht 2**  
 Hier zijn de status checks:  
 ![Status Checks](../00_includes/AWS-06c.png)  
