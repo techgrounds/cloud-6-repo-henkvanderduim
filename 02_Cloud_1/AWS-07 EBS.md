@@ -52,34 +52,34 @@ Kon de instance niet benaderen via SSH. Chis kwam met de oplossing. Zie Youtube 
 ![EC2Shell](../00_includes/AWS-07c.png)  
 
 D.m.v. SSH de extra schijf klaargemaakt voor gebruik en het tekstbestand geplaatst:  
-![SSH](../00_inlcudes/AWS-07d.png)
+![aws7d](../00_includes/AWS-07d.png) 
 
-![SSH](../00_inlcudes/AWS-07e.png)
+![aws7e](../00_includes/AWS-07e.png)
 
-![SSH](../00_inlcudes/AWS-07f.png)
+![aws7f](../00_includes/AWS-07f.png)
 
-![SSH](../00_inlcudes/AWS-07g.png)
+![aws7g](../00_includes/AWS-07g.png)
 
-![SSH](../00_inlcudes/AWS-07h.png)
+![aws7h](../00_includes/AWS-07h.png)
 
-![SSH](../00_inlcudes/AWS-07i.png)
+![aws7i](../00_includes/AWS-07i.png)
 
-![SSH](../00_inlcudes/AWS-07j.png)
+![aws7j](../00_includes/AWS-07j.png)
 
-![SSH](../00_inlcudes/AWS-07k.png)
+![aws7k](../00_includes/AWS-07k.png)
 
 ### Opdracht 3
 Snapshot maken:  
-![SSH](../00_inlcudes/AWS-07l.png)
+![SSH](../00_includes/AWS-07l.png)
 
 Tekstbestand verwijderen:  
-![SSH](../00_inlcudes/AWS-07m.png)
+![SSH](../00_includes/AWS-07m.png)
 
 Nieuw volume m.b.v. Snapshot:  
-![SSH](../00_inlcudes/AWS-07n.png)
+![SSH](../00_includes/AWS-07n.png)
 
 Volume (Snapshot) benaderbaar maken via SSH:  
-![SSH](../00_inlcudes/AWS-07o.png)
+![SSH](../00_includes/AWS-07o.png)
 
 Tekstbestand is er weer:  
-![SSH](../00_inlcudes/AWS-07p.png)
+![SSH](../00_includes/AWS-07p.png)
