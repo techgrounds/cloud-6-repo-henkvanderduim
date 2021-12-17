@@ -249,4 +249,10 @@ Een firewall is een systeem dat de middelen van een netwerk of computer kan besc
 
 Het beschermde netwerk is vaak een intranet of intern netwerk en dit wordt beschermd tegen het internet. Het ongewenste verkeer bestaat bijvoorbeeld uit aanvallen van hackers en computerkrakers, inbraken en/of uitbraken van computervirussen, spyware, spam en denial of service attacks.
 
+## SSD
+Een solid state drive of solid state disk (SSD) is een medium waarop digitaal gegevens bewaard kunnen worden met behulp van niet-vluchtig (zoals flash) of vluchtig geheugen (bijvoorbeeld SDRAM). SSD's worden voornamelijk gebruikt in computertoepassingen waar traditioneel een harde schijf gebruikt werd. SSD's staan bekend om hun korte zoek- en toegangstijd. Tegenwoordig hebben SSD's een toegangstijd van amper 0,1 milliseconde.  
+
+## Snapshot
+EBS Snapshots zijn een kopie van je gegevens (van een bepaald punt in de tijd), die worden gebruikt om noodherstel mogelijk te maken. Je kunt tevens gegevens over regio's en accounts migreren en de backup-compliance te verbeteren.  
+
 ## 
