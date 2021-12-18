@@ -303,3 +303,8 @@ Op deze manier kunnen bedrijven actie ondernemen voordat indringers hun missie k
 Packet Capture of PCAP (ook bekend als libpcap) is een Application Programming Interface (API) die live netwerkpakketgegevens van OSI-model Lagen 2-7 vastlegt. Netwerkanalysatoren zoals Wireshark maken pcap-bestanden om pakketgegevens van een netwerk te verzamelen en vast te leggen. PCAP wordt geleverd in een reeks formaten, waaronder Libpcap, WinPcap en PCAPng.
 
 Deze PCAP-bestanden kunnen worden gebruikt om TCP/IP- en UDP-netwerkpakketten te bekijken. Als je netwerkverkeer wilt opnemen, moet je een .pcap-bestand maken. Je kunt een .pcap-bestand maken met behulp van een netwerkanalysator of pakketsniffingtool zoals Wireshark of tcpdump.
+
+## IOPS
+De term input/output-bewerkingen per seconde (IOPS) is een metriek die de prestaties van een opslagapparaat meet. Het geeft aan hoeveel verschillende invoer- of uitvoerbewerkingen een apparaat in één seconde kan uitvoeren.
+
+##

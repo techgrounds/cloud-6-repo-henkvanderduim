@@ -55,12 +55,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
 
 ### Ervaren problemen
 Bij de launch van de EC2 instance krijg ik de melding dat ik niet de juiste rechten heb.
-![fout](../00_includes/fout.png)  
-Ik heb op Google gezocht naar oorzaken en oplossing. Inmiddels heb ik AWS CLI op de Macbook geïnstalleerd en geconfigureerd om te kunnen zien wat er aan de hand is. Ik zie een aantal meldingen van 'False' maar heb verder geen idee hoe dit op te lossen.  
-In de AWS CLI heb ik het volgende commando gegeven:  
-![AWSCLI](../00_includes/awscli-commando.png)  
-Daar kwam o.a. het volgende uit:  
-![AWSCLI](../00_includes/awscli-fout.png)  
+Ik heb dit verder uitgewerkt in het document: [Error-Message](../02_Cloud_1/AWS-06 Error Message.md)  
 
 Casper heeft in Slack aangegeven dat hij het probleem heeft gefixt. En daarna kunnen wij gewoon de EC2 instance aanmaken.
 
