@@ -55,7 +55,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
 
 ### Ervaren problemen
 Bij de launch van de EC2 instance krijg ik de melding dat ik niet de juiste rechten heb.
-Ik heb dit verder uitgewerkt in het document: [Error-Message](../02_Cloud_1/AWS-06 Error Message.md)  
+Ik heb dit verder uitgewerkt in het document: [Error-Message](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/02_Cloud_1/AWS-06%20Error%20Message.md)  
 
 Casper heeft in Slack aangegeven dat hij het probleem heeft gefixt. En daarna kunnen wij gewoon de EC2 instance aanmaken.
 
