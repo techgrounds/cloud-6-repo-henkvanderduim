@@ -325,4 +325,30 @@ Cyber Security Frameworks.
 NIST Cybersecurity Framework is een reeks richtlijnen voor het beperken van organisatorische cyberbeveiligingsrisico's, gepubliceerd door het Amerikaanse National Institute of Standards and Technology op basis van bestaande normen, richtlijnen en praktijken.  
 PDF met meer informatie over: [CSF](../00_includes/NIST_Cybersecurity_Framework_CSF.pdf)  
 
+## IP-adres
+Een IP-adres, waarin IP staat voor Internet Protocol, is in een computernetwerk een adres waarmee een NIC, of in het Nederlands 'netwerkkaart', van een host in het netwerk eenduidig geadresseerd kan worden binnen het TCP/IP-model, de standaard van "het" internet. 
 
+## IPv4
+Internet Protocol versie 4 (IPv4) is de vierde versie van de standaard voor het routen van internetverkeer en andere packet switched (pakketgeschakelde) netwerken, geïntroduceerd in 1982 door de Internet Engineering Task Force (IETF). IPv4 is de meest gebruikte versie van het protocol, ondanks de beperkingen van de 32-bits adresruimte. Met iets minder dan 4,3 miljard beschikbare unieke adressen begon het beschikbare aantal adressen snel op te raken. 
+
+## IPv6
+Internet Protocol versie 6 of IPv6 is versie 6 van het internetprotocol voor het gebruik van IP-adressen. Het is de opvolger van Internet Protocol versie 4 en is de tweede versie van het internetprotocol die in gebruik is genomen. De tussenliggende versie IPv5 was een experimentele aanvulling op IPv4, maar deze werd nooit geïmplementeerd. De IPv6 adressen worden hexadecimaal weergegeven (0-f).
+
+## Public-IP
+Een public (openbaar) IP-adres is een IP-adres dat rechtstreeks via internet toegankelijk is en dat door je internetprovider (ISP) aan jouw netwerkrouter wordt toegewezen. Jouw persoonlijke apparaat heeft ook een privé-IP die verborgen blijft wanneer je verbinding maakt met internet via het openbare IP-adres van je router.
+
+Het gebruik van een openbaar IP-adres om verbinding te maken met internet is als het gebruik van een postbus voor je post, in plaats van je huisadres op te geven. Het is een beetje veiliger, maar veel beter zichtbaar.
+
+## Private-IP
+Een Private IP-adres is het adres dat je netwerkrouter aan je apparaat toewijst. Elk apparaat binnen hetzelfde netwerk krijgt een uniek Private IP-adres toegewezen (soms een privé-netwerkadres genoemd) - dit is hoe apparaten op hetzelfde interne netwerk met elkaar praten.
+
+Met Private IP-adressen kunnen apparaten die op hetzelfde netwerk zijn aangesloten met elkaar communiceren zonder verbinding te maken met het hele internet. Door het voor een externe host of gebruiker moeilijker te maken om een verbinding tot stand te brengen, helpen Private IP's de beveiliging binnen een specifiek netwerk te versterken, zoals bij je thuis of op kantoor. Dit is de reden waarom je documenten via een draadloze verbinding met je printer thuis kunt afdrukken, maar je buren kunnen hun bestanden niet per ongeluk naar je printer sturen.
+
+Lokale IP-adressen zijn ook de manier waarop je router het internetverkeer intern stuurt - met andere woorden, hoe je router zoekresultaten naar je computer stuurt in plaats van naar een ander apparaat dat op je netwerk is aangesloten.
+
+## NAT
+Network address translation (NAT, ook wel network masquerading of IP masquerading) is een verzamelnaam voor technieken die gebruikt worden in computernetwerken waarbij de adresinformatie in de datapakketjes veranderd wordt. Zodoende kunnen verschillende netwerken aan elkaar worden verbonden. De techniek wordt hoofdzakelijk in routers ingezet.
+
+Technisch worden IP-adressen veranderd in de header van een IP-bericht dat een router passeert. Vaak wordt ook het TCP/UDP-poortnummer veranderd, opdat men kan bijhouden welke veranderingen hebben plaatsgevonden. Een veel voorkomende toepassing is het toelaten van meerdere gebruikers van een thuisnetwerk tot het internet via één IP-adres. 
+
+##
