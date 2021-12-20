@@ -42,5 +42,5 @@ Benaderd via Terminal (CLI)
 Public IP verwijderd  
 ![VM-IP](../00_includes/AWS-12f.png)
 
-Geprobeert te benaderen via de Terminal. Er verschijnt een time-out. Dat klopt van de public IP is verdwenen.  
+Geprobeert te benaderen via de Terminal. Er verschijnt een time-out. Dat klopt want het public IP is verdwenen.  
 ![PIP](../00_includes/AWS-12g.png)
