@@ -307,4 +307,22 @@ Deze PCAP-bestanden kunnen worden gebruikt om TCP/IP- en UDP-netwerkpakketten te
 ## IOPS
 De term input/output-bewerkingen per seconde (IOPS) is een metriek die de prestaties van een opslagapparaat meet. Het geeft aan hoeveel verschillende invoer- of uitvoerbewerkingen een apparaat in één seconde kan uitvoeren.
 
-##
+## Inherited-Controls
+Controle-middelelen die een klant volledig overneemt van AWS. Zowel de fysieke alsmede de omgeving.
+
+## Shared-Controls
+Controle-middelen die zowel de infrastructuur-laag alsmede de klanten-laag bevatten, maar in compleet gescheiden perspectief en context.  
+De klant zorgt bijvoorbeeld voor:  
+- Patch Management
+- Configuration Management
+- Awareness en Training
+
+## Customer-Specific
+Controle-middelen die de verantwoordelijkheid zijn van de klant, gebasseerd op de applicatie die zij in de cloud draaien.
+
+## NIST
+Cyber Security Frameworks.  
+NIST Cybersecurity Framework is een reeks richtlijnen voor het beperken van organisatorische cyberbeveiligingsrisico's, gepubliceerd door het Amerikaanse National Institute of Standards and Technology op basis van bestaande normen, richtlijnen en praktijken.  
+PDF met meer informatie over: [CSF](../00_includes/NIST_Cybersecurity_Framework_CSF.pdf)  
+
+
