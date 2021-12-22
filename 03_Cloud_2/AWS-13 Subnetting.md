@@ -43,41 +43,40 @@ Subnet | Hosts | Subnet Mask
 :----- | :---- | :----------
 8 | 32 | /27
 
-Private IP adres: 10.0.0.0
+Network IP adres: 10.0.0.0
 
 Dan kom ik tot het volgende private subnet:  
 Network ID | Broadcast ID  | Mask | Slash | Range | Wildcard
 :--------- | :------------ | :--- | :---- | :---- | :-------
-10.0.0.0 | 10.0.0.31 | 255.255.225.224 | /27 | 10.0.0.1 - 10.0.0.30 | 0.0.0.31
+10.0.1.0 | 10.0.1.31 | 255.255.225.224 | /27 | 10.0.1.1 - 10.0.1.30 | 0.0.0.31
 
 #### Opdracht 2
-1 private subnet, internet toegang via NAT Gateway en minimaal 30 hosts.
+1 private subnet, internet toegang via NAT Gateway (public subnet) en minimaal 30 hosts.
 
 Subnet | Hosts | Subnet Mask
 :----- | :---- | :----------
 4 | 64 | /26
 
-Private IP adres: 10.0.0.0  
+Private IP adres: 10.0.2.0  
 
 Dan kom ik tot het volgende private subnet:  
 Network ID | Broadcast ID  | Mask | Slash | Range | Wildcard
 :--------- | :------------ | :--- | :---- | :---- | :-------
-10.0.0.0 | 10.0.0.63 | 255.255.255.192 | /26 | 10.0.0.1 - 10.0.0.62 | 0.0.0.63
+10.0.2.0 | 10.0.2.31 | 255.255.255.192 | /26 | 10.0.2.1 - 10.0.2.30 | 0.0.0.31
 
 #### Opdracht 3
 1 public subnet, Internet Gateway en minimaal 5 hosts.
 
-Uit Sunny's Table haal ik dan:  
 Subnet | Hosts | Subnet Mask
 :----- | :---- | :----------
 32 | 8 | /29
 
-Public IP adres: 17.5.7.8
+Public IP adres: 10.0.3.0
 
 Dan kom ik op het volgende subnet:  
 Network ID | Broadcast ID  | Mask | Slash | Range | Wildcard
 :--------- | :------------ | :--- | :---- | :---- | :-------
-17.5.7.8 | 17.5.7.15 | 255.255.255.248 | /29 | 17.5.7.9 - 17.5.7.14 | 0.0.0.7
+10.0.3.0 | 10.0.3.7 | 255.255.255.248 | /29 | 10.0.3.1 - 10.0.3.6 | 0.0.0.7
 
 De architectuur van de opdrachten is als volgt weergegeven:  
 ![opdracht](../00_includes/AWS-13-Subnetting.png)
