@@ -390,4 +390,4 @@ Netwerkapparaten zijn componenten die worden gebruikt om computers of andere ele
 ## DHCP
 Dynamic Host Configuration Protocol is een computerprotocol dat beschrijft hoe een computer dynamisch zijn netwerkinstelling van een DHCP-server kan verkrijgen. Het DHCP-protocol is gebaseerd op het Internet Protocol IP en werkt met UDP-pakketten.
 
-## UDP 
+## 
