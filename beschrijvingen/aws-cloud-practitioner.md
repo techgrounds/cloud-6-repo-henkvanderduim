@@ -351,4 +351,37 @@ Network address translation (NAT, ook wel network masquerading of IP masqueradin
 
 Technisch worden IP-adressen veranderd in de header van een IP-bericht dat een router passeert. Vaak wordt ook het TCP/UDP-poortnummer veranderd, opdat men kan bijhouden welke veranderingen hebben plaatsgevonden. Een veel voorkomende toepassing is het toelaten van meerdere gebruikers van een thuisnetwerk tot het internet via één IP-adres. 
 
+## Subnet
+Een subnet is een deelnetwerk in een netwerk, dat werkt volgens het Internet Protocol. Het werkwoord subnetten betekent het opdelen van een set opeenvolgende IP-adressen (een IP-range) voor adressering op gescheiden fysieke netwerken. Het subnetten vindt zijn uitdrukking in het zogenaamde subnetmasker. Met dit masker wordt door de netwerkbeheerder bepaald welk gedeelte van een IP-adres het netwerk-ID is, en welk deel het host-ID. Door de subnetmaskers weten de routers in het netwerk op welk fysiek segment zich een bepaald adres bevindt, en dus waarheen de gegevens voor dat bepaalde adres moeten worden gerouteerd.
+
+Elk IP-adres in een subnet start in de binaire notatie met hetzelfde binaire getal. Dit getal geeft het netwerk-ID weer. Soms wordt dit ook wel aangeduid als netwerkadres of subnet-ID. Omdat de term netwerkadres ook vaak wordt gebruikt om het volledige IP-adres aan te duiden, wordt hier verder steeds de term netwerk-ID gebruikt. De overblijvende bits in het IP-adres vormen het host-ID of hostadres. Om van een IP-adres te weten welk deel behoort tot het netwerk-ID en welk deel tot het host-ID maakt men gebruik van een subnetmasker. In binaire notatie bestaat een subnetmasker uit een rij enen, een voor elke bit van het netwerk-ID deel van het IP-adres, gevolgd door een rij nullen, een voor elke bit van het host-ID deel van het IP-adres.
+
+Een subnet wordt geïdentificeerd aan de hand van zijn algemeen IP-adres samen met zijn subnetmasker. Een alternatieve methode voor het subnetmasker is de CIDR-notatie, waarbij men het getal gebruikt dat het aantal bits van het netwerk-ID aangeeft.  
+Bron: https://nl.wikipedia.org/wiki/Subnet
+
+## Public-Subnet
+Een public subnet is een subnet dat is gekoppeld aan een routetabel met een route naar een internetgateway.
+
+## Private-Subnet
+Een private subnet is een subnet die geen inkomend verkeer van internet accepteert en daarom geen openbare IP-adressen heeft.
+
+## Internet-Gateway
+Een computer die zich tussen verschillende netwerken of applicaties bevindt. De gateway converteert informatie, gegevens of andere communicatie van het ene protocol of formaat naar het andere. Een router kan enkele van de functies van een gateway uitvoeren. Een internetgateway kan communicatie tussen een bedrijfsnetwerk en internet overbrengen.
+
+## CIDR
+Classless Inter-Domain routing (CIDR) is een methode voor het aanduiden van IP-adressen. CIDR werd in 1993 geïntroduceerd als vervanger voor de vroegere adressering op basis van klassen (A/B/C), met als doel de snelle groei van de routingtabellen tegen te houden en het probleem van de beperkte IP-adresruimte aan te pakken.
+
+Het belangrijkste verschil met adressering op basis van klassen, is dat bij CIDR exact (op bit-niveau) wordt aangeduid welke bits van een 32-bit IPv4-adres tot het netwerkgedeelte behoren en welke gebruikt worden om de hosts in dat netwerk aan te duiden. De CIDR notatie is dezelfde als bij een IPv4-adres, maar met een "/" (slash) erachter, gevolgd door een decimaal getal tussen 0 en 32 dat het aantal significante bits aanduidt.
+
+## LAN
+Een local area network, afgekort LAN, is een netwerk dat computers en andere toestellen die zich in een lokaal beperkt gebied bevinden, zodanig met elkaar verbindt dat deze met elkaar kunnen communiceren. Toestellen kunnen hierbij fysiek via een gedeeld medium of rechtstreeks met elkaar verbonden zijn.
+
+## Subnet-Mask
+Een netwerkmasker, subnetmask of ook wel netmask is een binair getal dat wordt gebruikt om een scheiding, ofwel subnet aan te brengen in de IP-adressering. De IP-adressen binnen dit subnet vallen binnen hetzelfde broadcast-domain. Dit heeft tot gevolg dat een broadcast niet over het gehele internet wordt verzonden.
+
+Het 'netmask' bestaat binair geschreven uit een aantal  opeenvolgende "énen" vanaf het MSB (Most Significant Bit) van een 32-bits IP-adres (8 bits maal 4), gevolgd door 32 − n "nullen". Voor de bij dit netmask behorende IP-adressen geldt dat de eerste n bits het (sub-)netnummer zijn, en de opvolgende 32 − n bits het hostadres.
+
+## VLSM
+VLSM (Variable Lenght Subnet Mask) is de term die wordt gebruikt voor het gebruik van verschillende subnetmaskers voor verschillende sun netwerken. Met andere woorden, het is het mechanisme dat verschillende subnetmaskers toestaat en een verdeling van een netwerk in subnetwerken mogelijk maakt. Het is als een subnet van subnetten.
+
 ##
