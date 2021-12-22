@@ -384,4 +384,10 @@ Het 'netmask' bestaat binair geschreven uit een aantal  opeenvolgende "énen" va
 ## VLSM
 VLSM (Variable Lenght Subnet Mask) is de term die wordt gebruikt voor het gebruik van verschillende subnetmaskers voor verschillende sun netwerken. Met andere woorden, het is het mechanisme dat verschillende subnetmaskers toestaat en een verdeling van een netwerk in subnetwerken mogelijk maakt. Het is als een subnet van subnetten.
 
-##
+## Netwerkapparaten
+Netwerkapparaten zijn componenten die worden gebruikt om computers of andere elektronische apparaten met elkaar te verbinden, zodat ze bestanden of bronnen zoals printers of faxmachines kunnen delen. Apparaten die worden gebruikt om een Local Area Network (LAN) in te stellen, zijn het meest voorkomende type netwerkapparaten dat door het publiek wordt gebruikt. Een LAN vereist een hub, router, bekabeling of radiotechnologie, netwerkkaarten en, indien online toegang gewenst is, een high-speed modem.
+
+## DHCP
+Dynamic Host Configuration Protocol is een computerprotocol dat beschrijft hoe een computer dynamisch zijn netwerkinstelling van een DHCP-server kan verkrijgen. Het DHCP-protocol is gebaseerd op het Internet Protocol IP en werkt met UDP-pakketten.
+
+## UDP 

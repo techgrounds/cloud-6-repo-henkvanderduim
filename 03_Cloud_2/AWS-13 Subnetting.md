@@ -36,49 +36,33 @@ Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden i
 Geen probleem
 
 ### Resultaat
-Ik heb er bewust voor gekozen om bij de eerste opdracht gebruik te maken van 'Sunny's Table'. Dit wordt uitgelegd in de Youtube video die bij de bronnen staat.  
-Dit is Sunny's Table:  
-![Sunny's Table](../00_includes/AWS-13a.png)  
-
-Het aantal hosts verminder je met 2. Eén voor het Network ID en één voor de Broadcast ID. Dan houd je het aantal Usable Hosts over.
-
 #### Opdracht 1
 1 private subnet, niet van buitenaf benaderbaar en minimaal 15 hosts.
 
-Uit Sunny's Table haal ik dan:  
 Subnet | Hosts | Subnet Mask
 :----- | :---- | :----------
-1 | 256 | /24
+8 | 32 | /27
 
 Private IP adres: 10.0.0.0
 
 Dan kom ik tot het volgende private subnet:  
 Network ID | Broadcast ID  | Mask | Slash | Range | Wildcard
 :--------- | :------------ | :--- | :---- | :---- | :-------
-10.0.0.0 | 10.0.0.255 | 255.255.225.0 | /24 | 10.0.0.1 - 10.0.0.254 | 0.0.0.255
-
-De architectuur is als volgt weergegeven:  
-![architectuur](../00_includes/AWS-13b.png)  
+10.0.0.0 | 10.0.0.31 | 255.255.225.224 | /27 | 10.0.0.1 - 10.0.0.30 | 0.0.0.31
 
 #### Opdracht 2
 1 private subnet, internet toegang via NAT Gateway en minimaal 30 hosts.
 
-Uit Sunny's Table haal ik dan:  
 Subnet | Hosts | Subnet Mask
 :----- | :---- | :----------
-1 | 256 | /24
+4 | 64 | /26
 
 Private IP adres: 10.0.0.0  
-Public IP adres: EIP 18.195.114.13  
-Voor de NAT Gateway wordt dat dan een Elastic IP adres (AWS)
 
 Dan kom ik tot het volgende private subnet:  
 Network ID | Broadcast ID  | Mask | Slash | Range | Wildcard
 :--------- | :------------ | :--- | :---- | :---- | :-------
-10.0.0.0 | 10.0.0.255 | 255.255.225.0 | /24 | 10.0.0.1 - 10.0.0.254 | 0.0.0.255
-
-De architectuur van het private subnet en de NAT Gateway is als volgt weergegeven:  
-![architectuur](../00_includes/AWS-13c.png)  
+10.0.0.0 | 10.0.0.63 | 255.255.255.192 | /26 | 10.0.0.1 - 10.0.0.62 | 0.0.0.63
 
 #### Opdracht 3
 1 public subnet, Internet Gateway en minimaal 5 hosts.
@@ -93,7 +77,7 @@ Public IP adres: 17.5.7.8
 Dan kom ik op het volgende subnet:  
 Network ID | Broadcast ID  | Mask | Slash | Range | Wildcard
 :--------- | :------------ | :--- | :---- | :---- | :-------
-10.0.0.0 | 10.0.0.255 | 255.255.225.0 | /24 | 10.0.0.1 - 10.0.0.254 | 0.0.0.255
+17.5.7.8 | 17.5.7.15 | 255.255.255.248 | /29 | 17.5.7.9 - 17.5.7.14 | 0.0.0.7
 
-De architectuur is als volgt weergegeven:  
-![architectuur](../00_includes/AWS-13d.png)  
+De architectuur van de opdrachten is als volgt weergegeven:  
+![opdracht](../00_includes/AWS-13-Subnetting.png)
