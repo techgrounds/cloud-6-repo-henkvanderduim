@@ -390,4 +390,13 @@ Netwerkapparaten zijn componenten die worden gebruikt om computers of andere ele
 ## DHCP
 Dynamic Host Configuration Protocol is een computerprotocol dat beschrijft hoe een computer dynamisch zijn netwerkinstelling van een DHCP-server kan verkrijgen. Het DHCP-protocol is gebaseerd op het Internet Protocol IP en werkt met UDP-pakketten.
 
-## 
+## ELB
+De ELB-services van AWS is een beheerde service die load balancing biedt voor een reeks instanties. Er zijn vier soorten ELB's:
+- **Application Load Balancer**: deze ELB werkt met HTTP- en HTTPS-protocollen (laag 7 van de OSI-stack).
+- **Network Load Balancer**: deze ELB werkt met TCP en UDP (laag 4 van de OSI-stack).
+- **Gateway Load Balancer**: deze ELB gebruik je om virtuele apparaten, zoals de firewall, te implementeren, schalen en beheren.
+- **Klassieke Load Balancer**: deze ELB is verouderd en niet aanbevolen voor gebruik. AWS is (tot nu toe) nooit gestopt met het ondersteunen van services. De reden hiervoor is dat het bestaande applicaties kan schaden.
+
+## Auto-Scaling
+Auto Scaling is een methode die wordt gebruikt in cloud computing en die de hoeveelheid rekenbronnen in een serverfarm dynamisch aanpast - meestal gemeten aan de hand van het aantal actieve servers - automatisch op basis van de belasting van de farm.  
+Het aantal servers dat achter een webtoepassing draait, kan bijvoorbeeld automatisch worden verhoogd of verlaagd op basis van het aantal actieve gebruikers op de site. Aangezien dergelijke statistieken in de loop van de dag drastisch kunnen veranderen, en servers een beperkte bron zijn die geld kost om te draaien, zelfs als ze inactief zijn, is er vaak een prikkel om "net genoeg" servers te draaien om de huidige belasting te ondersteunen, terwijl ze nog steeds in staat zijn om ondersteuning van plotselinge en grote pieken in activiteit.  Autoscaling is handig voor dergelijke behoeften, omdat het het aantal actieve servers kan verminderen wanneer de activiteit laag is, en nieuwe servers kan lanceren wanneer de activiteit hoog is. Automatisch schalen is nauw verwant aan en bouwt voort op het idee van load balancing.
