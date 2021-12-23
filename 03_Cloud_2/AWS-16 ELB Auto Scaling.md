@@ -24,15 +24,15 @@ Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden i
     - AMI: Amazon Linux 2
     - Type: t3.micro
     - Gebruikersgegevens:
-        '#!/bin/bash
-        '# Installeer Apache Web Server en PHP
-        'yum install -y httpd mysql php
-        '# Lab-bestanden downloaden
+        '#!/bin/bash  
+        '# Installeer Apache Web Server en PHP  
+        'yum install -y httpd mysql php  
+        '# Lab-bestanden downloaden  
         'wget https://aws-tc-largeobjects.s3.amazonaws.com/CUR-TF-100-RESTRT-1/80-lab-vpc-web-server/lab-app.zip
-        'unzip lab-app.zip -d /var/www/html/
-        '# Schakel webserver in
-        'chkconfig httpd op
-        'service httpd start
+        'unzip lab-app.zip -d /var/www/html/  
+        '# Schakel webserver in  
+        'chkconfig httpd op  
+        'service httpd start  
     - Security Group: HTTP toestaan
 - Wacht tot de statuscontroles zijn voltooid.
 - Maak een AMI van uw instantie met de volgende vereisten:
