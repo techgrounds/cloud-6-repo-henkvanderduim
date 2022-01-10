@@ -28,10 +28,13 @@ Ik heb ervoor gekozen om [Ruby on Rails](https://docs.aws.amazon.com/elasticbean
 In mijn enthousiasme voor de kerstvakantie alles verwijderd. Dus ook de default VPC. Die opnieuw aangemaakt en dan loopt alles door.
 
 ### Resultaat
+Aanmaken webapp
 ![EB1](../00_includes/AWS-18a.png)
 
-![EB2](../00_includes/AWS-18b.png)
+![EB2](../00_includes/AWS-18b.png)  
 
+De aangemaakte webapp in Elastic Beanstalk  
 ![EB3](../00_includes/AWS-18c.png)
 
+De webapp  
 ![EB4](../00_includes/AWS-18d.png)
