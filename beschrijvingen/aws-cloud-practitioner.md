@@ -181,6 +181,7 @@ Bij een REST (Representational State Transfer) koppeling wordt er minder structu
 Er zijn in totaal zes Storage Classes bij AWS. Zie onderstaande afbeelding:  
 ![Storage Classes](../00_includes/storage-classes.png)  
 
+## S3
 ### S3-Standard
 ![S3 Standard](../00_includes/s3-standard.png)  
 
@@ -400,3 +401,23 @@ De ELB-services van AWS is een beheerde service die load balancing biedt voor ee
 ## Auto-Scaling
 Auto Scaling is een methode die wordt gebruikt in cloud computing en die de hoeveelheid rekenbronnen in een serverfarm dynamisch aanpast - meestal gemeten aan de hand van het aantal actieve servers - automatisch op basis van de belasting van de farm.  
 Het aantal servers dat achter een webtoepassing draait, kan bijvoorbeeld automatisch worden verhoogd of verlaagd op basis van het aantal actieve gebruikers op de site. Aangezien dergelijke statistieken in de loop van de dag drastisch kunnen veranderen, en servers een beperkte bron zijn die geld kost om te draaien, zelfs als ze inactief zijn, is er vaak een prikkel om "net genoeg" servers te draaien om de huidige belasting te ondersteunen, terwijl ze nog steeds in staat zijn om ondersteuning van plotselinge en grote pieken in activiteit.  Autoscaling is handig voor dergelijke behoeften, omdat het het aantal actieve servers kan verminderen wanneer de activiteit laag is, en nieuwe servers kan lanceren wanneer de activiteit hoog is. Automatisch schalen is nauw verwant aan en bouwt voort op het idee van load balancing.
+
+## CloudWatch
+Amazon CloudWatch is een onderdeel van Amazon Web Services dat monitoring biedt voor AWS-bronnen en de klantapplicaties die op de Amazon-infrastructuur draaien.
+
+## X-Ray
+AWS X-Ray is een belangrijk onderdeel in de AWS serverless stack die ontwikkelaars in staat stelt prestatieanalyses uit te voeren en gedistribueerde microservice-gebaseerde applicaties te debuggen.
+
+## LightSail
+Amazon Lightsail is een Amazon Web Service-product. Deze cloudservice combineert de kracht van cloudcomputing met geheugenopslag, wat AWS-klanten ten goede komt, of ze nu beginnende of ervaren cloudgebruikers zijn. Bovendien heeft Amazon Lightsail zo ontworpen dat het gemakkelijk is aan te schaffen, te begrijpen en te gebruiken is.
+
+Amazon Lightsail is een VPS, of Virtual Private Server, ondersteund door de Amazon Web Service-infrastructuur. Een VPS is een softwarematige weergave van een echte of fysieke server. Klanten die toegang hebben tot een VPS wijzen hun middelen toe om taken uit te voeren terwijl ze abstract blijven van de fysieke server.
+
+## SNS
+AWS Simple Notification Service (of AWS SNS) is een cloudgebaseerde webservice die berichten bezorgt. Met andere woorden, de AWS SNS-service coördineert en beheert de levering van pushberichten aan clients of geabonneerde eindpunten. AWS SNS kunt u ook een berichtenservice maken en leveren voor gedistribueerde netwerken en serverloze toepassingen.
+
+## Application-Health
+Wanneer je een productiewebsite hebt is het belangrijk om te weten dat jouw applicatie beschikbaar is en reageert op verzoeken. 
+
+## Graviton
+AWS Graviton2-processors leveren een aanzienlijke sprong in prestaties en mogelijkheden ten opzichte van de eerste generatie AWS Graviton-processors (A1-serie). Amazon gaat er prat op dat deze nieuwe instances tot 40% betere prijs en prestaties bieden dan vergelijkbare huidige generatie x86-gebaseerde instances voor een breed scala aan workloads.
