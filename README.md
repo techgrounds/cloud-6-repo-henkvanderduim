@@ -1,5 +1,5 @@
 # Introductie van Henk van der Duim  
-## Binnenkort Cloud-Engineer
+## Data Analist/Scientist en binnenkort ook Cloud-Engineer
 
 Om mijn ambities waar te maken en mijn nieuwsgierigheid tevreden te stellen heb ik dit jaar ook een opleiding gevolgd op het gebied van data management, data analyse (Power BI) en data science (Python, Machine & Deep Learning).
 
