@@ -427,3 +427,10 @@ AWS Origin Shield is een gecentralizeerde cache laag. Die helpt om de workload t
 
 ## DDoS
 Een Distributed Denial of Service aanval, ook wel DDoS genoemd is een cyberaanval waarbij ontzettend veel verkeer naar computers, computernetwerken of servers worden verstuurd waardoor deze onbruikbaar worden voor de normale gebruiker. Je kunt dit vergelijken met een file, maar dan op het internet.
+
+## WRR
+Weighted round robin (WRR) is een netwerkplanner voor datastromen, maar wordt ook gebruikt om processen in te plannen.
+
+Weighted round robin is een generalisering van round-robin-planning. Het bedient een reeks wachtrijen of taken. Terwijl round-robin de wachtrijen of taken doorloopt en één servicekans per cyclus geeft, biedt weighted round robin aan elk een vast aantal kansen, zoals gespecificeerd door het geconfigureerde gewicht dat dient om het deel van de capaciteit te beïnvloeden dat door elke wachtrij of taak wordt ontvangen . In computernetwerken is een servicemogelijkheid de emissie van één pakket, als de geselecteerde wachtrij niet leeg is.
+
+Als alle pakketten dezelfde grootte hebben, is WRR de eenvoudigste benadering van generalized processor sharing (GPS). Er bestaan verschillende varianten van WRR. De belangrijkste zijn de klassieke WRR en de interleaved WRR.
