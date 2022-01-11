@@ -1,14 +1,14 @@
 ---
 name: Feedback Request
-about: CloudFront (AWS)
-title: Feedback request CloudFront
-labels: ''
+about: Route 53 (AWS)
+title: Feedback request Route 53
+labels: 'AWS'
 assignees: ''
 
 ---
 
-# Feedback Request CloudFront
-Permalink naar bestand: [AWS-19 CloudFront](../04_Cloud_3/AWS-19%20CloudFront.md)
+# Feedback Request Route 53
+Permalink naar bestand: [AWS-20 Route 53](../04_Cloud_3/AWS-20%20Route53.md)
 
 Template voor reviewers:
 ```
