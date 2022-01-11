@@ -421,3 +421,9 @@ Wanneer je een productiewebsite hebt is het belangrijk om te weten dat jouw appl
 
 ## Graviton
 AWS Graviton2-processors leveren een aanzienlijke sprong in prestaties en mogelijkheden ten opzichte van de eerste generatie AWS Graviton-processors (A1-serie). Amazon gaat er prat op dat deze nieuwe instances tot 40% betere prijs en prestaties bieden dan vergelijkbare huidige generatie x86-gebaseerde instances voor een breed scala aan workloads.
+
+## OriginShield
+AWS Origin Shield is een gecentralizeerde cache laag. Die helpt om de workload te verlagen op je Origin.
+
+## DDoS
+Een Distributed Denial of Service aanval, ook wel DDoS genoemd is een cyberaanval waarbij ontzettend veel verkeer naar computers, computernetwerken of servers worden verstuurd waardoor deze onbruikbaar worden voor de normale gebruiker. Je kunt dit vergelijken met een file, maar dan op het internet.
