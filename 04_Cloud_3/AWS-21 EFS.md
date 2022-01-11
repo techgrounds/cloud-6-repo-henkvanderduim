@@ -15,17 +15,17 @@ Maak een EFS file system en mount deze op een EC2 instance m.b.v. AWS CLI.
 ### Gebruikte bronnen
 - https://aws.amazon.com/efs/  
 - https://docs.aws.amazon.com/efs/latest/ug/wt1-create-ec2-resources.html  
-- - https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-sg.html#deleting-a-security-group  
+- https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-sg.html#deleting-a-security-group  
 
 ### Ervaren problemen
-Een typefout is zo gemaakt en dan is het zoeken. Veel gebruik gemaakt van de help functie (aws [commando] [subcommando] help) om te achterhalen wat er fout gaat. Zowaar een fout ontdekt in de oefening op de site van AWS.
+Een typefout is zo gemaakt en dan is het zoeken. Ik heb veel gebruik gemaakt van de help functie (aws [commando] [subcommando] help) om te achterhalen wat er fout gaat. En ik heb zowaar een fout ontdekt in de oefening op de site van AWS.
 Verder een hele leerzame exercitie om alles via de AWS CLI te doen.  
 Wat gedoe gehad met het key-pair. Pas na goed lezen erachter gekomen waar mijn fout zat.
 
 ### Resultaat
 Ik heb in de kerstvakantie een laptop volledig ingericht met Linux (Ubuntu). Die heb ik gebruikt voor deze oefening.  
 #### Setting up AWS CLI
-Dat had ik al gedaan. Ik heb wel de profiles in het config file gezet.
+Dat had ik al gedaan. Ik heb wel het profile van de adminuser in het config file gezet.
 #### Stap 1: Maak de Amazon EC2 resources
 **Stap 1.1: maak 2 security groups**  
 EC2 Instance Security Group  
