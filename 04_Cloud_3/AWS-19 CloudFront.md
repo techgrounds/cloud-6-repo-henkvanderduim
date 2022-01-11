@@ -3,6 +3,9 @@ klsfsdkfsdhf
 
 ![CloudFront](../00_includes/AWS-19c.png)
 
+Ik heb een mindmap gemaakt van de features van CloudFront:  
+![mindmap](../00_includes/mindmap-cloudfront.png)
+
 ## Key-terms
 Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
 
