@@ -12,6 +12,12 @@ CloudFront is een Content Delivery Network (CDN) dat onderdeel is van Amazon Web
 Ik heb een mindmap gemaakt van de features van CloudFront:  
 ![mindmap](../00_includes/mindmap-cloudfront.png)
 
+Op mijn eigen website [Henk van der Duim](https://www.henkvanderduim.nl) maak ik gebruik van CloudFront. Hiervoor gebruik ik de Wordpress Plugin WPAdmin CDN.
+
+![plugin](../00_includes/AWS-19f.png)
+
+![setup](../00_includes/AWS-19g.png)
+
 ## Key-terms
 Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
 [Origin Shield](../beschrijvingen/aws-cloud-practitioner.md#OriginShield)  
