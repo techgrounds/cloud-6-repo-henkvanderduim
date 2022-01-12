@@ -19,10 +19,10 @@ Op mijn eigen website [Henk van der Duim](https://www.henkvanderduim.nl) maak ik
 ![setup](../00_includes/AWS-19g.png)
 
 ## Key-terms
-Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
-[Origin Shield](../beschrijvingen/aws-cloud-practitioner.md#OriginShield)  
-[Latency](../beschrijvingen/aws-cloud-practitioner.md#LowLatency)  
-[DDoS Attacks](../beschrijvingen/aws-cloud-practitioner.md#DDoS)  
+- Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+- [Origin Shield](../beschrijvingen/aws-cloud-practitioner.md#OriginShield)  
+- [Latency](../beschrijvingen/aws-cloud-practitioner.md#LowLatency)  
+- [DDoS Attacks](../beschrijvingen/aws-cloud-practitioner.md#DDoS)  
 
 ## Opdracht
 Bestudeer CloudFront

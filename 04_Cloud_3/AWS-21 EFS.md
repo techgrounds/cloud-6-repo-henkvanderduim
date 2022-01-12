@@ -7,8 +7,8 @@ Ik heb een mindmap gemaakt van de features van EFS.
 ![mindmap](../00_includes/mindmap-efs.png)
 
 ## Key-terms
-Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
-
+- Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+- Verder geen key-term specifiek voor dit onderwerp.
 ## Opdracht
 Maak een EFS file system en mount deze op een EC2 instance m.b.v. AWS CLI.
 - https://docs.aws.amazon.com/efs/latest/ug/wt1-getting-started.html  

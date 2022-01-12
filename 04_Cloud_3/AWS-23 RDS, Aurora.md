@@ -2,7 +2,7 @@
 [Geef een korte beschrijving van het onderwerp]
 
 ## Key-terms
-Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+- Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
 
 ## Opdracht
 ### Gebruikte bronnen

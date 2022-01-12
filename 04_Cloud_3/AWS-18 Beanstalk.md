@@ -5,16 +5,16 @@ Ik heb een mindmap gemaakt waarin alle termen en features naar voren komen.
 ![mindmap](../00_includes/mindmap-elastic-beanstalk.png)
 
 ## Key-terms
-Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
-[CloudWatch](../beschrijvingen/aws-cloud-practitioner.md#CloudWatch)  
-[AWS X-Ray](../beschrijvingen/aws-cloud-practitioner.md#x-ray)  
-[Lightsail](../beschrijvingen/aws-cloud-practitioner.md#LightSail)  
-[S3](../beschrijvingen/aws-cloud-practitioner.md#S3)  
-[SNS](../beschrijvingen/aws-cloud-practitioner.md#SNS)  
-[Load Balancing](../beschrijvingen/aws-cloud-practitioner.md#ELB)  
-[Auto Scaling](../beschrijvingen/aws-cloud-practitioner.md#Auto-Scaling)  
-[Application Health](../beschrijvingen/aws-cloud-practitioner.md#Application-Health)  
-[AWS Graviton](../beschrijvingen/aws-cloud-practitioner.md#Graviton)  
+- Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+- [CloudWatch](../beschrijvingen/aws-cloud-practitioner.md#CloudWatch)  
+- [AWS X-Ray](../beschrijvingen/aws-cloud-practitioner.md#x-ray)  
+- [Lightsail](../beschrijvingen/aws-cloud-practitioner.md#LightSail)  
+- [S3](../beschrijvingen/aws-cloud-practitioner.md#S3)  
+- [SNS](../beschrijvingen/aws-cloud-practitioner.md#SNS)  
+- [Load Balancing](../beschrijvingen/aws-cloud-practitioner.md#ELB)  
+- [Auto Scaling](../beschrijvingen/aws-cloud-practitioner.md#Auto-Scaling)  
+- [Application Health](../beschrijvingen/aws-cloud-practitioner.md#Application-Health)  
+- [AWS Graviton](../beschrijvingen/aws-cloud-practitioner.md#Graviton)  
 
 ## Opdracht
 Bestudeer AWS Elastic Beanstalk
