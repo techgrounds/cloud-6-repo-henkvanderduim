@@ -7,8 +7,8 @@ Ik heb een mindmap gemaakt van de features van DynbamoDB.
 ![mindmap](../00_includes/mindmap-dynamodb.png)
 
 ## Key-terms
-Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
-[NoSQL](../beschrijvingen/aws-cloud-practitioner.md#NoSQL)  
+- Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+- [NoSQL](../beschrijvingen/aws-cloud-practitioner.md#NoSQL)  
 
 ## Opdracht
 Ik heb de stappen in de workshop: Hands-on Labs fo Amazon DynamoDB gevolgd.
