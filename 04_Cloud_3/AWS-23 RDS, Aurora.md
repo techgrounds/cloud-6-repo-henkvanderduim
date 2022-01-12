@@ -14,6 +14,7 @@ Bij Aurora heb ik geen mindmap gemaakt, omdat daar voor verschillende database e
 Zowel RDS als Aurora vallen onder de Database-as-a-service (DBaaS) cloudservices en bieden gebruikers de mogelijkheid om databases te gebruiken zonder de fysieke infrastructuur te hoeven configureren en zonder software te installeren. Dit brengt veel gemak voor veel particulieren en bedrijven. Aangezien organisaties de operationele kosten moeten verlagen, is DBaaS in de meeste organisaties het beste alternatief voor gegevensopslag geworden.
 ## Key-terms
 - Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+- [Serverless](../beschrijvingen/aws-cloud-practitioner.md#Serverless)  
 
 ## Opdracht
 - [Aurora Serverless Tutorial](https://www.youtube.com/watch?v=ciRbXZqBl7M)
@@ -49,16 +50,16 @@ De database is na zo'n vijf minuten klaar.
 Als je op de naam 'serverlessdemo' klikt komt er meer informatie over de database:  
 ![info](../00_includes/AWS-23h1.png)
 
-Connectivity & Security  
+**Connectivity & Security**  
 ![cs](../00_includes/AWS-23h2.png)
 
-Monitoring  
+**Monitoring**  
 ![info](../00_includes/AWS-23h3.png)
 
-Configuration  
+**Configuration**  
 ![info](../00_includes/AWS-23h4.png)
 
-Maintenance & backups  
+**Maintenance & backups**  
 ![info](../00_includes/AWS-23h5.png)
 
 **Query Editor**  
@@ -88,5 +89,5 @@ SQL Statement
 Output  
 ![qe](../00_includes/AWS-23i8.png)
 
-M.b.v. Python kun je ook de database benaderen. Dit werk ik uit in de Lambda opdracht.  
+M.b.v. Python kun je ook de database benaderen. Dit werk ik verder uit in de Amazon Lambda opdracht.  
 ![qe](../00_includes/AWS-23i9.png)

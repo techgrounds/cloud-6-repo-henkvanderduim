@@ -437,3 +437,6 @@ Als alle pakketten dezelfde grootte hebben, is WRR de eenvoudigste benadering va
 
 ## NoSQL
 Dit type database verschilt aanmerkelijk van de klassieke relationele databasemanagementsystemen. NoSQL databases hebben over het algemeen geen vaste databaseschema's. Sommigen zijn in staat om horizontaal te schalen en ze vermijden vaak de JOIN-operaties. Voorbeelden van NoSQL databases zijn: DynamoDB, MongoDB, Hypertable, Amazon SimpleDB.
+
+## Serverless
+Software wordt uitgevoerd zonder dat je je druk hoeft te maken over servers of virtuele machines. Dat klinkt gek, maar de datacenters zijn er wel, de infrastructuur vind je volledig bij de cloud provider. In een Serverless wereld neemt de cloud provider deze verantwoordelijkheid op zich. De Letterlijke vertaling van Serverless is server loos, dus zonder server. Laat je niet verwarren door deze term. Het klinkt wellicht een tikkeltje tegenstrijdig. Wat dit in de praktijk betekent is dat de ontwikkelaars geen omkijken hebben naar infrastructurele issues. Zij kunnen zich volledig focussen op hetgeen ze het leukste vinden;  het schrijven van code. 
