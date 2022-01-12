@@ -56,10 +56,10 @@ Scan de database (een fragment)
 ![item](../00_includes/AWS-22j.png)  
 
 Nu met een aantal opties  
-[opties](../00_includes/AWS-22k.png)
+![opties](../00_includes/AWS-22k.png)
 
 Scan op tabel met Partition key en Sort key  
-[scan](../00_includes/AWS-22l.png)
+![scan](../00_includes/AWS-22l.png)
 
 Uitlezen van Thread 1  
 ![thread1](../00_includes/AWS-22m.png)
@@ -76,11 +76,11 @@ De tabel structuur:
 ![oef3](../00_includes/AWS-22p.png)
 
 De scan:  
-[scan](../00_includes/AWS-22q.png)
+![scan](../00_includes/AWS-22q.png)
 
 **Oefening: Update the ProductCatalog item where Id=201 to add new colors “Blue” and “Yellow” to the list of colors for that bike type. Then use the API to remove those “Blue” and “Yellow” list entries to return it to the original state.**  
 Item opvragen:  
-[get](../00_includes/AWS-22r.png)
+![get](../00_includes/AWS-22r.png)
 
 Blauw en Geel toevoegen:  
 ![kleur](../00_includes/AWS-22s.png)
