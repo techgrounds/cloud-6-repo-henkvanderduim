@@ -16,10 +16,11 @@ Zowel RDS als Aurora vallen onder de Database-as-a-service (DBaaS) cloudservices
 - Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
 
 ## Opdracht
-1. Integreer een Amazon RDS voor een SQL server instance met Amazon S3 (RDS)
-2. Implementeer een Global Database (Aurora)
+- [Aurora Serverless Tutorial](https://www.youtube.com/watch?v=ciRbXZqBl7M)
+- dfdf
+
 ### Gebruikte bronnen
-- https://aws.amazon.com/rds/aurora/?aurora-whats-new.sort-by=item.additionalFields.postDateTime&aurora-whats-new.sort-order=desc  
+- https://aws.amazon.com/rds/aurora) 
 - https://aws.amazon.com/rds/  
 - https://www.youtube.com/watch?v=1vFg1z-2E7Y
 - https://hevodata.com/learn/aws-aurora-vs-rds/
@@ -28,4 +29,65 @@ Zowel RDS als Aurora vallen onder de Database-as-a-service (DBaaS) cloudservices
 Geen
 
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+In de Amazon RDS Console wordt een database aangemaakt.  
+![rds](../00_includes/AWS-23c.png)  
+
+Een Amazon Aurora engine wordt gebruikt. De DB cluster identifier wordt ingevuld (de underscore is verwijderd, want dat werkt dus niet).  
+![db](../00_includes/AWS-23d.png)
+
+De Capacity settings worden ingevuld. De rest laten we voor wat het is.  
+![cs](../00_includes/AWS-23e.png)
+
+Connectivity laten we voor het grootste deel ook voor wat het is. Additional configuration wordt wel aangeklikt. Er wordt een vinkje gezet bij Web Service Data API. Zodat we straks via de Query Editor aan de slag kunnen.  
+![api](../00_includes/AWS-23f.png)
+
+De database options worden ingevuld (wederom is de underscore verwijderd).  
+![database](../00_includes/AWS-23g.png)
+
+De database is na zo'n vijf minuten klaar.  
+![db](../00_includes/AWS-23h.png)
+
+Als je op de naam 'serverlessdemo' klikt komt er meer informatie over de database:  
+![info](../00_includes/AWS-23h1.png)
+
+Connectivity & Security  
+![cs](../00_includes/AWS-23h2.png)
+
+Monitoring  
+![info](../00_includes/AWS-23h3.png)
+
+Configuration  
+![info](../00_includes/AWS-23h4.png)
+
+Maintenance & backups  
+![info](../00_includes/AWS-23h5.png)
+
+**Query Editor**  
+![qe](../00_includes/AWS-23i.png)
+
+Nadat alles is ingevuld, laat ik de reeds geplaatste SQL opdracht draaien.  
+![qe](../00_includes/AWS-23i1.png)
+
+Output:  
+![qe](../00_includes/AWS-23i2.png)
+
+Nog een paar SQL statements en de output:  
+![qe](../00_includes/AWS-23i3.png)  
+
+Output  
+![qe](../00_includes/AWS-23i4.png)
+
+SQL Statement  
+![qe](../00_includes/AWS-23i5.png)
+
+Output  
+![qe](../00_includes/AWS-23i6.png)
+
+SQL Statement  
+![qe](../00_includes/AWS-23i7.png)
+
+Output  
+![qe](../00_includes/AWS-23i8.png)
+
+M.b.v. Python kun je ook de database benaderen. Dit werk ik uit in de Lambda opdracht.  
+![qe](../00_includes/AWS-23i9.png)
