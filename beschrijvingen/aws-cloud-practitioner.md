@@ -434,3 +434,6 @@ Weighted round robin (WRR) is een netwerkplanner voor datastromen, maar wordt oo
 Weighted round robin is een generalisering van round-robin-planning. Het bedient een reeks wachtrijen of taken. Terwijl round-robin de wachtrijen of taken doorloopt en één servicekans per cyclus geeft, biedt weighted round robin aan elk een vast aantal kansen, zoals gespecificeerd door het geconfigureerde gewicht dat dient om het deel van de capaciteit te beïnvloeden dat door elke wachtrij of taak wordt ontvangen . In computernetwerken is een servicemogelijkheid de emissie van één pakket, als de geselecteerde wachtrij niet leeg is.
 
 Als alle pakketten dezelfde grootte hebben, is WRR de eenvoudigste benadering van generalized processor sharing (GPS). Er bestaan verschillende varianten van WRR. De belangrijkste zijn de klassieke WRR en de interleaved WRR.
+
+## NoSQL
+Dit type database verschilt aanmerkelijk van de klassieke relationele databasemanagementsystemen. NoSQL databases hebben over het algemeen geen vaste databaseschema's. Sommigen zijn in staat om horizontaal te schalen en ze vermijden vaak de JOIN-operaties. Voorbeelden van NoSQL databases zijn: DynamoDB, MongoDB, Hypertable, Amazon SimpleDB.
