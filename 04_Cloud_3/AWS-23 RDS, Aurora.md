@@ -1,5 +1,5 @@
 # RDS
-Amazon RDS staat voor Amazon Relational Database Service. Het biedt een eenvoudige manier om relationele databases in de cloud in te stellen, te schalen en te gebruiken. Het biedt een aanpasbare en kostenefficiënte capaciteit terwijl u databasebeheertaken uitvoert, zodat u zich kunt concentreren op uw bedrijf en toepassingen. Het heeft zes database-engines die u kunt kiezen, namelijk Amazon Aurora, MariaDB, MySQL, PostgreSQL, Microsoft SQL Server en Oracle.  
+Amazon RDS staat voor Amazon Relational Database Service. Het biedt een eenvoudige manier om relationele databases in de cloud in te stellen, te schalen en te gebruiken. Het biedt een aanpasbare en kostenefficiënte capaciteit terwijl je databasebeheertaken uitvoert, zodat jij je kunt concentreren op je bedrijf en toepassingen. Het heeft zes database-engines waaruit je kunt kiezen, namelijk Amazon Aurora, MariaDB, MySQL, PostgreSQL, Microsoft SQL Server en Oracle.  
 ![rds](../00_includes/AWS-23a.png)
 
 Ik heb een mindmap gemaakt van de features van Amazon RDS:  
@@ -17,7 +17,6 @@ Zowel RDS als Aurora vallen onder de Database-as-a-service (DBaaS) cloudservices
 
 ## Opdracht
 - [Aurora Serverless Tutorial](https://www.youtube.com/watch?v=ciRbXZqBl7M)
-- dfdf
 
 ### Gebruikte bronnen
 - https://aws.amazon.com/rds/aurora) 
