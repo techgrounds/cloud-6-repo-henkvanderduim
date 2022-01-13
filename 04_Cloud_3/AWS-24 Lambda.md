@@ -54,7 +54,7 @@ def lambda_handler(event, context):
 
 En ik verwijder de regel met handler() onderaan het bestand.
 
-Alles wordt opgeslagen en ik maak er een zip-file van en verander de naam van deze in 'function'.  
+Alles wordt opgeslagen en ik maak er een zip-file van en verander de naam van deze in [function](../00_includes/function.zip).  
 ![sql](../00_includes/AWS-24f.png)
 
 **In de Lambda console wordt de functie aangemaakt:**  
