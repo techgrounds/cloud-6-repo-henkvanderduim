@@ -6,7 +6,11 @@
 
 ## Opdracht
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+- https://www.youtube.com/watch?v=RoKAEzdcr7k
+- https://aws.amazon.com/eventbridge/
+- https://aws.amazon.com/sqs/
+- https://aws.amazon.com/sns/
+- 
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
