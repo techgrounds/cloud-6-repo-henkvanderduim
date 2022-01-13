@@ -21,7 +21,8 @@ https://www.youtube.com/watch?v=vyLvmPkQZkI
 - 
 
 ### Ervaren problemen
-[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
+Ik moest voor de opdrach SQL Workbench installeren, die verliep moeizaam.  
+De python library pymysql is veranderd t.o.v. de versie die in de video wordt getoond. Kostte veel tijd om uit te zoeken waar de foutmelding vandaan kwam en hoe deze op te lossen. Achteraf gezien een kleinigheidje, maar toch...
 
 ### Resultaat
 **Database aanmaken**  
@@ -35,4 +36,7 @@ Database aanmaken en de tabel:
 
 En we vullen de tabel met 2 rijen data:  
 ![sql](../00_includes/AWS-24d.png)
+
+Script geschreven in Python om verbinding met de MySQL te maken en de rijen uit te lezen.  
+![sql](../00_includes/AWS-24e.png)
 
