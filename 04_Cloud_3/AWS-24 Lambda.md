@@ -18,7 +18,7 @@ Hoe een RDS MySQL uitvragen via AWs Lambda in Python van AWS Lambda in Python.
 https://www.youtube.com/watch?v=vyLvmPkQZkI
 ### Gebruikte bronnen
 - https://aws.amazon.com/lambda/
-- 
+- https://stackoverflow (zie ervaren problemen)
 
 ### Ervaren problemen
 Ik moest voor de opdrach SQL Workbench installeren, die verliep moeizaam.  
@@ -40,3 +40,25 @@ En we vullen de tabel met 2 rijen data:
 Script geschreven in Python om verbinding met de MySQL te maken en de rijen uit te lezen.  
 ![sql](../00_includes/AWS-24e.png)
 
+Ook controleren of het werkt:  
+![sql](../00_includes/AWS-24e1.png)
+
+In het python bestand pas ik de regel met def handler(): aan, zodat het er als volgt komt uit te zien:  
+def lambda_handler(event, context):  
+
+En ik verwijder de regel met handler() onderaan het bestand.
+
+Alles wordt opgeslagen en ik maak er een zip-file van en verander de naam van deze in 'function'.  
+![sql](../00_includes/AWS-24f.png)
+
+In de Lambda console wordt de functie aangemaakt:  
+![sql](../00_includes/AWS-24g.png)
+
+Nu worden de permissions aangepast. daarvoor klikken we op de Role name:  
+![sql](../00_includes/AWS-24h.png)
+
+In IAM wordt de policy AWSLambdaVPCAccessExecutionRole toegevoegd. En daarna wordt het zip bestand geupload.
+![sql](../00_includes/AWS-24i.png)
+
+Daarna kan de knop 'Test' ingedrukt worden. En dan zien we dat het werkt. De twee rijen worden weergegeven.  
+![sql](../00_includes/AWS-24j.png)
