@@ -14,36 +14,36 @@ Ik heb een mindmap gemaakt van de features van AWS Lambda:
 - Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
 
 ## Opdracht
-Hoe een RDS MySQL uitvragen via AWs Lambda in Python van AWS Lambda in Python.  
+Hoe een RDS MySQL uitvragen via AWs Lambda in Python.  
 https://www.youtube.com/watch?v=vyLvmPkQZkI
 ### Gebruikte bronnen
 - https://aws.amazon.com/lambda/
 - https://stackoverflow (zie ervaren problemen)
 
 ### Ervaren problemen
-Ik moest voor de opdrach SQL Workbench installeren, die verliep moeizaam.  
+Ik moest voor de opdrach SQL Workbench installeren, die installatie verliep moeizaam.  
 De python library pymysql is veranderd t.o.v. de versie die in de video wordt getoond. Kostte veel tijd om uit te zoeken waar de foutmelding vandaan kwam en hoe deze op te lossen. Achteraf gezien een kleinigheidje, maar toch...
 
 ### Resultaat
 **Database aanmaken**  
 ![rds](../00_includes/AWS-24a.png)
 
-Via SQL Workbench contact maken met de database:  
+Via SQL Workbench contact maken:  
 ![sql](../00_includes/AWS-24b.png)
 
-Database aanmaken en de tabel:  
+**Database aanmaken en de tabel:**  
 ![sql](../00_includes/AWS-24c.png)
 
-En we vullen de tabel met 2 rijen data:  
+**En we vullen de tabel met 2 rijen data:**  
 ![sql](../00_includes/AWS-24d.png)
 
-Script geschreven in Python om verbinding met de MySQL te maken en de rijen uit te lezen.  
+**Script geschreven in Python** om verbinding met de MySQL te maken en de rijen uit te lezen.  
 ![sql](../00_includes/AWS-24e.png)
 
-Ook controleren of het werkt:  
+**Ook controleren of het werkt:**  
 ![sql](../00_includes/AWS-24e1.png)
 
-In het python bestand pas ik de regel met def handler(): aan, zodat het er als volgt komt uit te zien:  
+**In het python bestand** pas ik de regel met def handler(): aan, zodat het er als volgt komt uit te zien:  
 def lambda_handler(event, context):  
 
 En ik verwijder de regel met handler() onderaan het bestand.
@@ -51,14 +51,14 @@ En ik verwijder de regel met handler() onderaan het bestand.
 Alles wordt opgeslagen en ik maak er een zip-file van en verander de naam van deze in 'function'.  
 ![sql](../00_includes/AWS-24f.png)
 
-In de Lambda console wordt de functie aangemaakt:  
+**In de Lambda console wordt de functie aangemaakt:**  
 ![sql](../00_includes/AWS-24g.png)
 
-Nu worden de permissions aangepast. daarvoor klikken we op de Role name:  
+**Nu worden de permissions aangepast. daarvoor klikken we op de Role name:**  
 ![sql](../00_includes/AWS-24h.png)
 
-In IAM wordt de policy AWSLambdaVPCAccessExecutionRole toegevoegd. En daarna wordt het zip bestand geupload.
+**In IAM wordt de policy AWSLambdaVPCAccessExecutionRole toegevoegd. En daarna wordt het zip bestand geupload.**
 ![sql](../00_includes/AWS-24i.png)
 
-Daarna kan de knop 'Test' ingedrukt worden. En dan zien we dat het werkt. De twee rijen worden weergegeven.  
+**Daarna kan de knop 'Test' ingedrukt worden. En dan zien we dat het werkt. De twee rijen worden weergegeven.**  
 ![sql](../00_includes/AWS-24j.png)
