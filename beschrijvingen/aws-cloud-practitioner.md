@@ -440,3 +440,21 @@ Dit type database verschilt aanmerkelijk van de klassieke relationele databasema
 
 ## Serverless
 Software wordt uitgevoerd zonder dat je je druk hoeft te maken over servers of virtuele machines. Dat klinkt gek, maar de datacenters zijn er wel, de infrastructuur vind je volledig bij de cloud provider. In een Serverless wereld neemt de cloud provider deze verantwoordelijkheid op zich. De Letterlijke vertaling van Serverless is server loos, dus zonder server. Laat je niet verwarren door deze term. Het klinkt wellicht een tikkeltje tegenstrijdig. Wat dit in de praktijk betekent is dat de ontwikkelaars geen omkijken hebben naar infrastructurele issues. Zij kunnen zich volledig focussen op hetgeen ze het leukste vinden;  het schrijven van code. 
+
+## SQLWorkbench
+MySQL Workbench is een CASE-tool voor het bijwerken en aanmaken van MySQL-databases met behulp van een grafische interface.
+
+## Python
+Python is een programmeertaal die begin jaren 90 ontworpen en ontwikkeld werd door Guido van Rossum, destijds verbonden aan het Centrum voor Wiskunde en Informatica in Amsterdam.
+
+## pymysql
+PyMySQL is een pure Python MySQL-clientbibliotheek, gebaseerd op PEP 249. De meeste openbare API's zijn compatibel met mysqlclient en MySQLdb. PyMySQL werkt met MySQL 5.5+ en MariaDB 5.5+.
+
+## SDK
+Een software development kit is een verzameling hulpmiddelen die handig zijn bij het ontwikkelen van computerprogramma's voor een bepaald besturingssysteem, type hardware, desktopomgeving of voor het maken van software die een speciale techniek gebruikt.
+
+## Framework
+Framework is een geheel van softwarecomponenten dat gebruikt kan worden bij het programmeren van applicaties, maar ook de afspraken hoe die componenten gebruikt worden binnen een groep ontwikkelaars en welke code-standaarden en bibliotheken gebruikt worden kunnen ook onderdeel zijn van een framework.
+
+## ML
+Automatisch leren, machinaal leren of machine learning is een breed onderzoeksveld binnen kunstmatige intelligentie, dat zich bezighoudt met de ontwikkeling van algoritmes en technieken waarmee computers kunnen leren. De methodes zijn te verdelen in twee ruwe categorieën: aanleidinggevend en deductief.

@@ -12,18 +12,23 @@ Ik heb een mindmap gemaakt van de features van AWS Lambda:
 
 ## Key-terms
 - Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
-
+- [SQL Workbench](../beschrijvingen/aws-cloud-practitioner.md#SQLWorkbench)
+- [Python](../05_Cloud_4/opdracht.md#python)
+- [pymysql](../beschrijvingen/aws-cloud-practitioner.md#pymysql)
+- [SDK](../beschrijvingen/aws-cloud-practitioner.md#SDK)
+- [Framework](../beschrijvingen/aws-cloud-practitioner.md#framework)
+- [Machine Learning](../beschrijvingen/aws-cloud-practitioner.md#ML)
 ## Opdracht
 Hoe een RDS MySQL uitvragen via AWS Lambda in Python.  
 https://www.youtube.com/watch?v=vyLvmPkQZkI
 ### Gebruikte bronnen
 - https://aws.amazon.com/lambda/
 - https://stackoverflow (zie ervaren problemen)
-- https://twitter.com/BeABetterDevv
+- https://twitter.com/BeABetterDevv (zie ervaren problemen)
 
 ### Ervaren problemen
 Ik moest voor de opdrach SQL Workbench installeren, die installatie verliep moeizaam.  
-De python library pymysql is veranderd t.o.v. de versie die in de video wordt getoond. Kostte veel tijd om uit te zoeken waar de foutmelding vandaan kwam en hoe deze op te lossen. Achteraf gezien een kleinigheidje, maar toch...
+De python library pymysql is veranderd t.o.v. de versie die in de video wordt getoond. Kostte veel tijd om uit te zoeken waar de foutmelding vandaan kwam en hoe deze op te lossen. Achteraf gezien een kleinigheidje.
 
 ### Resultaat
 **Database aanmaken**  
@@ -63,3 +68,5 @@ Alles wordt opgeslagen en ik maak er een zip-file van en verander de naam van de
 
 **Daarna kan de knop 'Test' ingedrukt worden. En dan zien we dat het werkt. De twee rijen worden weergegeven.**  
 ![sql](../00_includes/AWS-24j.png)
+
+Met een whopping 'execution duration' van 2.70ms. Die dan wel weer naar een 'billing duration' van 3.0ms wordt afgerond!
