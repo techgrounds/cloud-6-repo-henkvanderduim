@@ -66,6 +66,7 @@ Bestudeer
 ### Gebruikte bronnen
 - https://aws.amazon.com/architecture/well-architected/
 - https://volansys.com/pillars-of-aws-well-architected-framework/
+- https://www.youtube.com/watch?v=B08iQQhXG1Y
 
 ### Ervaren problemen
 Geen
