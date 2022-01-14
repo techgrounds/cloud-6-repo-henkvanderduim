@@ -458,3 +458,48 @@ Framework is een geheel van softwarecomponenten dat gebruikt kan worden bij het 
 
 ## ML
 Automatisch leren, machinaal leren of machine learning is een breed onderzoeksveld binnen kunstmatige intelligentie, dat zich bezighoudt met de ontwikkeling van algoritmes en technieken waarmee computers kunnen leren. De methodes zijn te verdelen in twee ruwe categorieën: aanleidinggevend en deductief.
+
+## PollingTechniques
+**Short Polling**
+1. Client doet een verzoek aan de server
+2. Server kan op twee manieren reageren:
+    - Het stuurt een leeg antwoord
+    - Het verzendt data-object in zijn lichaam (JSON-object)
+3. Zodra een client het antwoord van de server ontvangt, wacht hij een paar seconden en herhaalt hij het bovenstaande proces.
+
+Enkele uitdagingen bij short-polling:  
+Herhaalde verzoeken aan de server verspillen bronnen omdat elke nieuwe inkomende verbinding tot stand moet worden gebracht, de HTTP-headers moeten worden doorgegeven, een query voor nieuwe gegevens moet worden uitgevoerd en een antwoord (meestal zonder nieuwe gegevens om aan te bieden) moet worden gegenereerd en afgeleverd . De verbinding moet worden gesloten en alle bronnen moeten worden opgeschoond.
+
+**Long Polling**  
+Long Polling werkt op de volgende manier anders dan Short Polling:
+1. Client doet een verzoek aan de server
+2. Server kan op twee manieren reageren:
+    - Als er nieuwe gegevens beschikbaar zijn, kan het meteen reageren.
+    - Als het geen nieuwe gegevens heeft, houdt het die verbinding een tijdje open en wanneer het nieuwe gegevens ontvangt, reageert het terug met bijgewerkte gegevens.
+
+Kortom, het is een mechanisme waarbij de client de server voortdurend om nieuwe informatie vraagt met behulp van reguliere HTTP-verzoeken en de server zijn antwoord blokkeert wanneer hij niets nieuws te melden heeft.
+
+Zolang de client ervoor zorgt dat er constant een polling-verzoek openstaat, ontvangt hij snel informatie van de server nadat deze beschikbaar is.
+
+Om te voorkomen dat verbindingen een time-out krijgen (die worden afgebroken vanwege een gebrek aan activiteit), stellen lange polling-technieken meestal een maximale tijd in voor elk verzoek, waarna de server toch zal reageren, ook al heeft deze niets te herhalen, waarna de client een nieuwe aanvraag starten.
+
+Door het verzoek periodiek opnieuw op te starten, wordt de techniek ook robuuster, waardoor clients kunnen herstellen van tijdelijke verbindingsstoringen of serverproblemen.
+
+Een drukke server die long-polling gebruikt, heeft mogelijk duizenden wachtverzoeken en dus openstaande TCP-verbindingen. NodeJS, dat het gemakkelijk maakt om veel verbindingen te beheren zonder voor elke verbinding een aparte besturingsthread te maken, past goed bij een dergelijk systeem.
+
+Enkele uitdagingen bij long-polling:
+- Gegarandeerd bestellen en afleveren van berichten: Bestelling van berichten kan niet worden gegarandeerd als dezelfde client meerdere verbindingen met de server opent.
+- Als de klant het bericht niet heeft kunnen ontvangen, is er mogelijk berichtverlies.
+- Prestaties en schalen
+- Apparaatondersteuning en fallbacks
+
+**Web Sockets**  
+_WebSocket is a computer communication protocol that provides full-duplex communication channels over a single TCP connection._  
+
+Het WebSocket-protocol maakt interactie tussen een client en een webserver mogelijk met minder overhead, waardoor realtime gegevensoverdracht van en naar de server mogelijk is. WebSockets houdt de verbinding open, waardoor berichten heen en weer kunnen worden doorgegeven tussen de client en de server. Op deze manier kan er een tweerichtingsgesprek plaatsvinden tussen de client en de server.
+
+Enkele voordelen van Web Sockets ten opzichte van long-polling:
+- WebSockets houdt een unieke verbinding open en elimineert latentieproblemen die optreden bij Long Polling.
+- Long polling is veel meer resource-intensief op servers, terwijl WebSockets een extreem lichte voetafdruk op servers hebben.
+- WebSockets passeren de meeste firewalls zonder enige herconfiguratie.
+- Goed beveiligingsmodel (op oorsprong gebaseerd beveiligingsmodel).

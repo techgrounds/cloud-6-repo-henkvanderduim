@@ -15,6 +15,9 @@ EventBridge gebruikt het concept van Event Buses om gebeurtenissen van een bron 
 
 ## Key-terms
 - Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+- [Short Polling](../beschrijvingen/aws-cloud-practitioner.md#PollingTechniques)
+- [Long Polling](../beschrijvingen/aws-cloud-practitioner.md#PollingTechniques)
+- [Webhook](../beschrijvingen/aws-cloud-practitioner.md#Webhook)
 
 ## Opdracht
 Using AWS Lambda with Amazon CloudWatch and SNS to Implement a Slack Chat Bot.  
@@ -57,3 +60,5 @@ Tot mijn opperste verbazing en lichte verbijstering is het bericht verschenen:
 
 En zoals ingesteld, ook een mailtje vanuit het 'SlackAlarm':  
 ![slack](../00_includes/AWS-25j.png)
+
+Na het uitvoeren van de opdracht heb ik alles weer verwijderd.
