@@ -503,3 +503,12 @@ Enkele voordelen van Web Sockets ten opzichte van long-polling:
 - Long polling is veel meer resource-intensief op servers, terwijl WebSockets een extreem lichte voetafdruk op servers hebben.
 - WebSockets passeren de meeste firewalls zonder enige herconfiguratie.
 - Goed beveiligingsmodel (op oorsprong gebaseerd beveiligingsmodel).
+
+## Webhook
+Webhooks zijn een van de weinige manieren waarop webapplicaties met elkaar kunnen communiceren.
+
+Hiermee kun je realtime gegevens van de ene toepassing naar de andere verzenden wanneer een bepaalde gebeurtenis zich voordoet.
+
+Wat een webhook doet, is je op de hoogte stellen wanneer iemand incheckt, zodat je alle processen die jeu in jouw toepassing had, kunt uitvoeren zodra deze gebeurtenis is geactiveerd.
+
+De gegevens worden vervolgens via het web verzonden van de toepassing waar de gebeurtenis oorspronkelijk plaatsvond, naar de ontvangende toepassing die de gegevens verwerkt.
