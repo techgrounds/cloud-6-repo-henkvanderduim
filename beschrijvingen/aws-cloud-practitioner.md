@@ -512,3 +512,12 @@ Hiermee kun je realtime gegevens van de ene toepassing naar de andere verzenden 
 Wat een webhook doet, is je op de hoogte stellen wanneer iemand incheckt, zodat je alle processen die jeu in jouw toepassing had, kunt uitvoeren zodra deze gebeurtenis is geactiveerd.
 
 De gegevens worden vervolgens via het web verzonden van de toepassing waar de gebeurtenis oorspronkelijk plaatsvond, naar de ontvangende toepassing die de gegevens verwerkt.
+
+## Dcoker
+Docker wordt gebruikt om softwarepakketten uit te voeren die 'containers' worden genoemd. Containers zijn geïsoleerd van elkaar door middel van containervirtualisatie, en bundelen hun eigen applicaties, tools, bibliotheken en configuratiebestanden; ze kunnen met elkaar communiceren via goed gedefinieerde kanalen. Alle containers worden uitgevoerd door een enkele kernel van het besturingssysteem en zijn dus lichter dan virtuele machines. Containers worden gemaakt van 'images' die hun precieze inhoud specificeren. Images worden vaak gemaakt door standaard images te combineren en te wijzigen, die zijn gedownload van openbare archieven. 
+
+## Fargate
+AWS Fargate is een service die serverloze computerbronnen inricht om AWS ECS- en EKS-containers uit te voeren. AWS stelt dat Fargate jou in staat stelt zich te concentreren op het bouwen van jouw applicaties wanneer je Fargate de vereiste infrastructuur laat inrichten en beheren. Zie het als containers on-demand zonder onderliggende handmatig gemaakte infrastructuur die snel kan worden gelanceerd en geschaald, waarbij je alles op containerniveau beheert.
+
+## ECR
+Amazon Elastic Container Registry (Amazon ECR) is een door AWS beheerde service voor het registreren van containerimages die veilig, schaalbaar en betrouwbaar is. Amazon ECR ondersteunt privérepository's met op bronnen gebaseerde machtigingen met behulp van AWS IAM. Dit is zodat bepaalde gebruikers of Amazon EC2-instanties toegang hebben tot jouw containerrepository's en afbeeldingen. Je kan de CLI van jouw voorkeur gebruiken om Docker-images, Open Container Initiative (OCI)-images en OCI-compatibele artefacten te pushen, pullen en beheren.
