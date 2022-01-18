@@ -521,3 +521,27 @@ AWS Fargate is een service die serverloze computerbronnen inricht om AWS ECS- en
 
 ## ECR
 Amazon Elastic Container Registry (Amazon ECR) is een door AWS beheerde service voor het registreren van containerimages die veilig, schaalbaar en betrouwbaar is. Amazon ECR ondersteunt privérepository's met op bronnen gebaseerde machtigingen met behulp van AWS IAM. Dit is zodat bepaalde gebruikers of Amazon EC2-instanties toegang hebben tot jouw containerrepository's en afbeeldingen. Je kan de CLI van jouw voorkeur gebruiken om Docker-images, Open Container Initiative (OCI)-images en OCI-compatibele artefacten te pushen, pullen en beheren.
+
+## ITSM
+IT service management is een benaming voor het procesmatig aansturen van de werkwijze van IT-beheer. IT service management wordt ook wel afgekort als ITSM.
+
+IT service management is een onderdeel van IT-beheer. Naast IT service management komen binnen IT-beheer ook andere disciplines voor, zoals technisch beheer, applicatiebeheer, facilitair beheer, documentbeheer. 
+
+## ITOM
+De Gartner IT Glossary zegt dat ITOM “alle tools bevat die nodig zijn om de levering, capaciteit, prestaties en beschikbaarheid van de computer-, netwerk- en applicatieomgeving te beheren.” Gartner verdeelt ITOM in 10 belangrijke functionele segmenten en marktsegmenten.
+
+## SecurityHub
+AWS Security Hub is een cloudservice voor het beheer van beveiligingsmanagement die best practice-controles op het gebied van beveiliging uitvoert, waarschuwingen verzamelt en geautomatiseerd herstel mogelijk maakt.
+
+## AuditManager
+AWS Audit Manager helpt je continu jouw AWS-gebruik te controleren om de manier waarop je risico's en naleving van regelgeving en industrienormen beoordeelt, te vereenvoudigen.
+
+## SystemManager
+AWS Systems Manager is de operationele hub voor uw AWS-applicaties en -bronnen en is onderverdeeld in vier kernfunctiegroepen:  
+1. Operations Management
+2. Application Management
+3. Change Management
+4. Node Management
+
+## Organization
+AWS Organizations helpt je jouw omgeving centraal te beheren en te besturen terwijl je groeit en je AWS-resources opschaalt. Met AWS Organizations kun je programmatisch nieuwe AWS-accounts maken en resources toewijzen, accounts groeperen om jouw workflows te organiseren, beleid toepassen op accounts of groepen voor governance en facturering vereenvoudigen door één enkele betalingsmethode voor al jouw accounts te gebruiken.
