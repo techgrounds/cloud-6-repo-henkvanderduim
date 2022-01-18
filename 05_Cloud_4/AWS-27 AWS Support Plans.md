@@ -5,15 +5,17 @@ Er zijn vier AWS Support Plans beschikbaar:
 - Business: 24×7 e-mail, chat en telefonische ondersteuning. En staat onbeperkt contacten toe om onbeperkt cases te openen.
 - Enterprise: 24×7 e-mail, chat en telefonische ondersteuning, inclusief een Technical Account Manager (TAM). En staat onbeperkt contacten toe om onbeperkt cases te openen.
 
+![sp](../00_includes/AWS-27a.png)
+
+![sp](../00_includes/AWS-27b.png)
+
 AWs Support Plans is gekoppeld aan de [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/), de [AWS Personal Health Dashboard](https://aws.amazon.com/premiumsupport/technology/personal-health-dashboard/) en de [AWS Health API](https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html).  
 AWs Support Plans voorziet ook in drie programma's:
 1. [AWS Infrastructure Event Management-IEM](https://aws.amazon.com/premiumsupport/programs/iem/)
 2. [AWs Well Architected](https://aws.amazon.com/architecture/well-architected/)
 3. [Proactive Services](https://aws.amazon.com/premiumsupport/technology-and-programs/proactive-services/)
 
-![sp](../00_includes/AWS-27a.png)
 
-![sp](../00_includes/AWS-27b.png)
 
 ## Key-terms
 - Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
