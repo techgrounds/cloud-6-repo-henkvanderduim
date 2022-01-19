@@ -27,9 +27,9 @@ Ik heb een mindmap gemaakt van de features van IAM:
 ![mindmap](../00_includes/mindmap-aws-iam.png)
 
 ### Samengevat
-We create **users** who use **credentials** that grant access based on their **policy document**
+>We create **users** who use **credentials** that grant access based on their **policy document**
 
-We create **Roles** which can be assumed by **entities** within or across account boundaries with a **trust relationship**
+>We create **Roles** which can be assumed by **entities** within or across account boundaries with a **trust relationship**
 
 #### Trust Relationship
 In de afbeelding hieronder een weergave van een **trust relationship**.  
