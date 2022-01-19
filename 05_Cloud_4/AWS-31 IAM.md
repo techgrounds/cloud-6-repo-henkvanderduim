@@ -53,4 +53,6 @@ Hierdoor krijgt *Account 2* toegang tot de tabel.
 Geen
 
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+Aan de hand van het lab (zie opdracht), worden er meerdere gebruikers aangemaakt. Die worden lid van User Groups.
+
+Daarna inloggen en zien wat de gebruikers wel en niet mogen.
