@@ -23,6 +23,7 @@ Voorbeeld van een Policy statement: DynamoDB tabel met Read-Only-Access voor spe
 **Resource** = in dit geval de DynamoDB met specifieke tabel  
 **Condition** = Voorwaarden en attributen
 
+#### Mindmap
 Ik heb een mindmap gemaakt van de features van IAM:  
 ![mindmap](../00_includes/mindmap-aws-iam.png)
 
@@ -35,7 +36,7 @@ Ik heb een mindmap gemaakt van de features van IAM:
 In de afbeelding hieronder een weergave van een **trust relationship**.  
 *Account 1* heeft toegang tot de DynamoDB tabel. *Account 2* wil graag toegang tot deze tabel hebben. Om dat te realiseren moet er een *Role* gemaakt worden met de juiste permissies.
 
-Vervolgens moet er via IAM een trust relation gecreërd worden. Hierin geeft *Account 1* dat deze *Account 2* vertrouwd en vice versa.  
+Vervolgens moet er via IAM een trust relation gecreërd worden. Hierin geeft *Account 1* aan dat deze *Account 2* vertrouwd en vice versa.  
 Daarnaast geeft *Account 1* de mogelijkheid aan *Account 2* om de rol aan te nemen: *Assumed Role*.  
 Hierdoor krijgt *Account 2* toegang tot de tabel.  
 ![trust](../00_includes/trust_relationships.drawio.png)
