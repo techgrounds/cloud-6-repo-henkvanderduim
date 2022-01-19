@@ -545,3 +545,6 @@ AWS Systems Manager is de operationele hub voor uw AWS-applicaties en -bronnen e
 
 ## Organization
 AWS Organizations helpt je jouw omgeving centraal te beheren en te besturen terwijl je groeit en je AWS-resources opschaalt. Met AWS Organizations kun je programmatisch nieuwe AWS-accounts maken en resources toewijzen, accounts groeperen om jouw workflows te organiseren, beleid toepassen op accounts of groepen voor governance en facturering vereenvoudigen door één enkele betalingsmethode voor al jouw accounts te gebruiken.
+
+## AD
+Active Directory is een eigen implementatie door Microsoft van de directoryservice LDAP in combinatie met DNS en Kerberos voor het gebruik in Windows-omgevingen vanaf Windows 2000. Active Directory staat beheerders toe om het beleid in het netwerk van een organisatie te beheren.

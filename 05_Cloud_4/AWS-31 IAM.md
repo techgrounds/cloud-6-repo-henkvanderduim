@@ -42,12 +42,24 @@ Hierdoor krijgt *Account 2* toegang tot de tabel.
 ![trust](../00_includes/trust_relationships.drawio.png)
 ## Key-terms
 - Alle key-terms die betrekking hebben op AWS Cloud Practitioner, zijn te vinden in het document: [AWS-Cloud-Practitioner](../beschrijvingen/aws-cloud-practitioner.md)  
+- User
+: Individuele gebruiker
+- Group
+: verzameling gebruikers
+- Roles
+: Verzameling van policies
+- Policies
+: Low level permissies t.b.v. resources (Allow of Deny)
+- [Active Directory](../beschrijvingen/aws-cloud-practitioner.md#AD)
+- Least Privilege Model
+: model om minimale autorisatie toe te kennen
 
 ## Opdracht
 [Introduction to AWS Identity and Access Management (IAM)](https://amazon.qwiklabs.com/focuses/22172?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=15177031)
 ### Gebruikte bronnen
 - https://aws.amazon.com/iam/?nc=sn&loc=1
 - https://www.youtube.com/watch?v=_ZCTvmaPgao
+- https://www.youtube.com/watch?v=y8cbKJAo3B4
 
 ### Ervaren problemen
 Geen
