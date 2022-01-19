@@ -56,3 +56,15 @@ Geen
 Aan de hand van het lab (zie opdracht), worden er meerdere gebruikers aangemaakt. Die worden lid van User Groups.
 
 Daarna inloggen en zien wat de gebruikers wel en niet mogen.
+
+**Users**  
+![users](../00_includes/AWS-31b.png)
+
+**Groups**  
+![groups](../00_includes/AWS-31c.png)
+
+**Policy**  
+![policy](../00_includes/AWS-31d.png)
+
+**User naar Group**  
+![usergroup](../00_includes/AWS-31e.png)
