@@ -1,6 +1,7 @@
 # Python
 
 ## .py bestanden
+Deze zijn terug te vinden in de folder [Gefixt](../Gefixt).  
 Al deze bestanden zijn gefixt. In de bestanden heb ik achter de '#' gezet wat de aanpassing is. Tevens heb ik de originele regels/commando's achter de '#' gezet.
 
 ## Python oefeningen
