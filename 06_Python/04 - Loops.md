@@ -28,9 +28,6 @@ for i in range(1, 50):
     print(x)
 ```
 
-#### Zonder de code aante passen. Resultat is 50 nullen
-![code](../00_includes/Oef0402-code2.png)
-
 ### Resultaat
 ![result](../00_includes/Oef0402-result2.png)
 
