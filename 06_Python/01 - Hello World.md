@@ -11,4 +11,8 @@
 ![plugin](../00_includes/python_plugin.png)
 
 ## Hello World!
-![helloworld](../00_includes/helloworld_py.png)
+```Python
+print('Hello World!')
+```
+
+![result](../00_includes/helloworld_py.png)

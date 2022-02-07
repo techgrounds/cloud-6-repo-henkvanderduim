@@ -10,8 +10,32 @@ Een computer werkt met binaire code. Om te zien of een binaire code een getal of
 
 ## Oefening 1
 ### Code
-![code](../00_includes/Oef0301-code.png)
+```python
+# variabele a
+a = 'int'
 
+# variabele b
+b = 7
+
+# variabele c
+c = False
+
+# variabele d
+d = "18.5"
+
+# M.b.v. het commando 'type' achterhalen welk data type erin de variabelen zit.
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+
+# nieuwe variabele opvoeren die een foutmelding geeft
+#x = b + d
+
+# variabele x aanpassen zodat het werkt
+x = b + float(d)
+print(x)
+```
 ### Resultaat
 #### Data Types achterhalen
 ![result](../00_includes/Oef0301-result1.png)
@@ -28,7 +52,13 @@ De input() functie geeft altijd een 'str' klasse aan als data type. Als je dit a
 - float(input("waarde: "))
 
 ### Code
-![code](../00_includes/Oef0302-code.png)
+```python
+# Spelen met de input() functie en variabelen
+# input opvragen
+waarde = input("geef een waarde: ")
 
+# welk data type is ingevoerd?
+print(type(waarde))
+```
 ### Resultaat
 ![result](../00_includes/Oef0302-result.png)
