@@ -5,10 +5,10 @@
 - Schrijf de hello world code
 
 ## Python versie
-[versie](../00_includes/python-versie.png)
+![versie](../00_includes/python-versie.png)
 
 ## Python plugin
-[plugin](../00_includes/python_plugin.png)
+![plugin](../00_includes/python_plugin.png)
 
 ## Hello World!
-[helloworld](../00_includes/helloworld_py.png)
+![helloworld](../00_includes/helloworld_py.png)
