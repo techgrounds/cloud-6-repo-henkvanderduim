@@ -26,6 +26,7 @@ willekeur()
 # maak een script die m.b.v. eigen functie de opgevraagde input uitprint
 #
 # functie: myfunction()
+#
 def myfunction():
     print("Hello World!")
 
