@@ -6,18 +6,12 @@ In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is dez
 Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
 
 ## Belangrijke mijlpalen
-| **Onderwerp** | **Datum (pw)** |
-| ------------- | -------------- |
-| Start Python | 07-02-2022 (w1) |
-| Start project (v1.0) | 07-02-2022 (w1) |
-| Introductie Project v1.1 | 14-03-2022 (w5) |
-| Oplevering/Eindpresentatie | 08-04-2022 (w9) |
-
-### Progressie
-![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)  
-![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/10)  
-![Introductie Project v1.1](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)  
-![Oplevering/Eindpresentatie](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)
+| **Onderwerp** | **Datum (pw)** | **Progressie** |
+| ------------- | -------------- | -------------- |
+| Start Python | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) |
+| Start project (v1.0) | 07-02-2022 (w1) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/10) |
+| Introductie Project v1.1 | 14-03-2022 (w5) | ![Introductie Project v1.1](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) |
+| Oplevering/Eindpresentatie | 08-04-2022 (w9) | ![Oplevering/Eindpresentatie](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) |
 
 ## Projectactiviteiten
 | **Project Activiteit** | **Datum (pw)** |
