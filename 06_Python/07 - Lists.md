@@ -26,14 +26,14 @@ for x in namen:
 #
 # lijst
 mylist = [12, 23, 34, 45, 56]
-
+x = len(mylist)
 # loop
 for i in range(len(mylist)):
-    while i != 4:
+    while i != x-1:
         print(mylist[i] + mylist[i+1])
         i = i + 1
     else:
-        print(mylist[i] + mylist[0])
+        print(mylist[i] + mylist[i-(x-1)])
         break
 ```
 ### Resultaat
