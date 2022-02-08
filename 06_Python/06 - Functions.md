@@ -19,7 +19,7 @@ def willekeur():
 willekeur()
 ```
 ### Resultaat
-![result](../00_includes/Oef0601.png)
+![result](../00_includes/Oef0601a.png)
 ## Oefening 2
 ### Code
 ```python
