@@ -5,6 +5,8 @@
 #
 # lijst
 mylist = [12, 23, 34, 45, 56]
+
+# loop
 for i in range(len(mylist)):
     while i != 4:
         print(mylist[i] + mylist[i+1])
@@ -12,4 +14,3 @@ for i in range(len(mylist)):
     else:
         print(mylist[i] + mylist[0])
         break
-
