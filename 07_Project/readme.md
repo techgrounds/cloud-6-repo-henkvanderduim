@@ -3,4 +3,4 @@ In deze folder is alle informatie te vinden over het Project wat de komende weke
 
 ## JIRA
 In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
-Plek waar het te vinden is: [Jiras](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
+Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
