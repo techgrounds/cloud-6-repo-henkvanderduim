@@ -12,7 +12,7 @@ import random
 # definieer de functie
 def willekeur():
     i = 1 
-    while i !=5:
+    while i !=6:
         print(random.randint(0, 10))
         i = i + 1
 
