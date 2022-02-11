@@ -45,6 +45,3 @@
   
 4. **Diagrammen**
    *Voeg de diagrammen toe*
-  
-
-
