@@ -46,4 +46,4 @@ Version: 0.1
   
 4. **Diagrammen**  
 Na het overleg met de Product Owner (op 10 februari 2022), adviseren wij onderstaand diagram voor het MVP.  
-
+![awsdiagram](../00_includes/Cloud6Sentia1_diagram_0_1.drawio.png)
