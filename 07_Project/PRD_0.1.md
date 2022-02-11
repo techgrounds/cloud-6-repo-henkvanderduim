@@ -15,7 +15,7 @@ Version: 0.1
 4. Diagrammen
 
 ### Uitwerking
-1. **Doel**
+1. **Doel**  
    | Item | Opmerking |
    | ---- | --------- |
    | Visie | *Wat is het uiteindelijke product* |
@@ -23,7 +23,7 @@ Version: 0.1
    | Initiatieven| *Overzicht High-level product initiatieven* |
    | Persona(s) | *Voor wie is het product* |
 
-2. **Releases**
+2. **Releases**  
    | Item | Opmerking |
    | ---- | --------- |
    | Release | MVP v1.0 |
@@ -33,7 +33,7 @@ Version: 0.1
    | Kenmerken | *kenmerken van de release* |
    | Afhankelijkheden | *release afhankelijkheden* |
   
-3. **User Stories**
+3. **User Stories**  
    | Item | Opmerking |
    | ---- | --------- |
    | Kenmerk | *user story* |
@@ -44,6 +44,6 @@ Version: 0.1
    | Doen we niet | *alles wat buiten de scopen van deze user story ligt* |
    | Acceptatie criteria | *Acceptatiecondities* |
   
-4. **Diagrammen**
+4. **Diagrammen**  
 Na het overleg met de Product Owner (op 10 februari 2022), adviseren wij onderstaand diagram voor het MVP.  
 ![diagram](../00_includes/Cloud6Sentia1_diagram_0_1.drawio.png)
