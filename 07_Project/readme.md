@@ -13,7 +13,7 @@ Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira
 ## Belangrijke mijlpalen
 | **Onderwerp** | **Datum (pw)** | **Progressie** | **Datum klaar** |
 | ------------- | -------------- | -------------- | -------- |
-| Start Python | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 8 februari 2022 [x] Done |
+| Start Python | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 8 februari 2022 |
 | Start project (v1.0) | 07-02-2022 (w1) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 7 februari 2022 |
 | Introductie Project v1.1 | 14-03-2022 (w5) | ![Introductie Project v1.1](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) | d.d. |
 | Oplevering/Eindpresentatie | 08-04-2022 (w9) | ![Oplevering/Eindpresentatie](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) | d.d. |
