@@ -35,10 +35,11 @@ Version: 0.1
   
 3. **Epics**  
    Alle Epics zijn beschreven in afzonderlijke documenten. Daar wordt per Epic alles besproken en uitgewerkt.  
-   **Exploratie Epics**
+   **Exploratie Epics**  
    - [Als team willen wij duidelijk hebben wat de eisen zijn van de applicaties](../07_Project/Epic01.md)
    - [Als team willen wij een duidelijk overzicht van de aannames die wij gemaakt hebben](../07_Project/Epic02.md)
    - [Als team willen wij een duidelijk overzicht hebben van de Cloud Infrastructuur die de applicatie nodig heeft](../07_Project/Epic03.md)  
+
    **v1.0**
    - [Als klant wil ik een werkende applicatie hebben waarmee ik een veilige netwerk kan deployen](../07_Project/Epic04.md)
    - [Als klant wil ik een werkende applicatie hebben waarmee ik een werkende webserver kan deployen](../07_Project/Epic05.md)
