@@ -5,7 +5,8 @@
 | Kenmerk | v1.0 |
 | Omschrijving | Er moet een locatie beschikbaar zijn waar bootstrap scripts beschikbaar worden. Deze script moeten niet publiekelijk toegankelijk zijn. |
 | Doel | IaC-code voor een opslagoplossing voor scripts |
-| User problem |  | User value | |
+| User problem |  | 
+| User value |  |
 | Aannames |  |
 | Doen we niet |  |
 | Acceptatie criteria |  |

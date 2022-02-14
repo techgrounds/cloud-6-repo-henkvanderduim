@@ -1,5 +1,4 @@
 # Product Requirements Document
-Version: 0.1
 ## Cloud6.Sentia1
 - Shikha Jha
 - Chris de Bont

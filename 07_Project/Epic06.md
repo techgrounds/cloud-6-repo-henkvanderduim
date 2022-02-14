@@ -5,7 +5,8 @@
 | Kenmerk | v1.0 |
 | Omschrijving | De applicatie moet een management server starten en deze beschikbaar maken voor een beperkt publiek.  |
 | Doel | IaC-code voor een management server met alle benodigdheden |
-| User problem |  | User value | |
+| User problem |  | 
+| User value |  |
 | Aannames |  |
 | Doen we niet |  |
 | Acceptatie criteria |  |
