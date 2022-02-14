@@ -10,7 +10,7 @@
 ## Inhoud
 1. Doel
 2. Release
-3. User Stories
+3. Epics
 4. Diagrammen
 
 ### Uitwerking
@@ -32,15 +32,15 @@
    | Kenmerken | *kenmerken van de release* |
    | Afhankelijkheden | *release afhankelijkheden* |
   
-3. **User Stories**
+3. **Epics**
    | Item | Opmerking |
    | ---- | --------- |
-   | Kenmerk | *user story* |
-   | Omschrijving | Omschrijving van de user story* |
+   | Kenmerk | *epic* |
+   | Omschrijving | *Omschrijving van de epic* |
    | Doel | *wat wordt er bereikt* |
    | User problem | *Pijnpunt of uitdaging* | User value | *hoe helpt de oplossing de gebruiker* |
-   | Aannames | *de aannames bij deze user story* |
-   | Doen we niet | *alles wat buiten de scopen van deze user story ligt* |
+   | Aannames | *de aannames bij dit epic* |
+   | Doen we niet | *alles wat buiten de scopen van dit epic ligt* |
    | Acceptatie criteria | *Acceptatiecondities* |
   
 4. **Diagrammen**
