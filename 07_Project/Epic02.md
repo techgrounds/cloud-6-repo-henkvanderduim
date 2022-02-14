@@ -8,7 +8,7 @@
 | Team problem | Product Owner heeft bij een aantal vragen aangegeven dat van ons het antwoord/advies wordt verwacht | 
 | Team value | Overzicht van de aannames per Epic |
 | Aannames | geen aannames |
-| Doen we niet | Alles wat buiten de scope van het project document ligt |
+| Doen we niet | Alles wat buiten de scope van het project document en PRD ligt |
 | Acceptatie criteria | Als er bij de Epics aannames zijn benoemd of is aangegven dat ze er niet zijn |
 
 | Epic no. | Aannames |
