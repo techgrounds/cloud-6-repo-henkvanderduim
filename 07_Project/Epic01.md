@@ -15,4 +15,17 @@
 ## Vragen document met de antwoorden
 OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het document [Project Cloud6.Sentia1](https://docs.google.com/document/d/1pNPWIce4kDnR9kopbH4t7jD9nX6LFySnBpsTfaWT_r4/edit#heading=h.higkk7mphvwd) staan alle vragen inclusief de antwoorden die wij hebben gekregen.
 
-Deze Epic is klaar.
+## Opsomming van de Eisen
+- VM disks worden ge-encrypt (AWS KMS)
+- Gebruik CDK
+- Webserver: dagelijkse backup (7 dagen behouden)(AWs Backup)
+- Webserver: extern toegankelijk via HTTP/HTTPS
+- Webserver: geautomatiseerd geïnstalleerd (maak gebruik van User Data)
+- Webserver: SSH toegang alleen via de Admin/Management server
+- Admin/Management server: bereikbaar via Public IP
+- Admin/Management server: alleen bereikbaar vanaf vertrouwde locaties (Development Team) (Network ACL of GuardDuty)
+- IP ranges: 10.10.10.0/24 en 10.20.20.0/24
+- Subnets: firewalls op subnet niveau (Network ACL)
+- S3 bucket via de Admin/managment server
+- Lege Availablity Zone is voor de failover
+- Scrum master meeting dagelijks om 15:30 uur
