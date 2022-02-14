@@ -1,14 +1,19 @@
 # Project (Cloud6. Sentia1)
 In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt. Het tweede deel van het project zal te vinden zijn in de folder: 08_PROJECT1.1.
 
+## Project Document
+In het document [PRO-01 Project](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) is het project beschreven.
+
+## Project Requirements Document
+Alle zaken met betrekking tot de Epics, aannames, doelen, uitwerkingen zijn beschreven in het [Project Requirements Document](../07_Project/Product_Requirements_Document.md).
 ## JIRA
 In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
 Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
 
 ## Belangrijke mijlpalen
-| **Onderwerp** | **Datum (pw)** | **Progressie** | **Done** |
+| **Onderwerp** | **Datum (pw)** | **Progressie** | **Datum klaar** |
 | ------------- | -------------- | -------------- | -------- |
-| Start Python | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 8 februari 2022 |
+| Start Python | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 8 februari 2022 [x] Done |
 | Start project (v1.0) | 07-02-2022 (w1) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 7 februari 2022 |
 | Introductie Project v1.1 | 14-03-2022 (w5) | ![Introductie Project v1.1](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) | d.d. |
 | Oplevering/Eindpresentatie | 08-04-2022 (w9) | ![Oplevering/Eindpresentatie](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) | d.d. |
