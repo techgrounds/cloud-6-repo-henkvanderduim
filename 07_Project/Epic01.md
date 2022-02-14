@@ -11,3 +11,8 @@
 | Aannames | De product Owner heeft antwoord op alle vragen |
 | Doen we niet | Alvast antwoorden invullen bij de vragen |
 | Acceptatie criteria | De Product Owner heeft alle vragen naar onze tevredenheid beantwoord |
+
+## Vragen document met de antwoorden
+OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het document [Project Cloud6.Sentia1](https://docs.google.com/document/d/1pNPWIce4kDnR9kopbH4t7jD9nX6LFySnBpsTfaWT_r4/edit#heading=h.higkk7mphvwd) staan alle vragen inclusief de antwoorden die wij hebben gekregen.
+
+Deze Epic is klaar.

@@ -10,3 +10,17 @@
 | Aannames | geen aannames |
 | Doen we niet | Alles wat buiten de scope van het project document ligt |
 | Acceptatie criteria | Als er bij de Epics aannames zijn benoemd of is aangegven dat ze er niet zijn |
+
+| Epic no. | Aannames |
+| -------- | -------- |
+| [01](../07_Project/Epic01.md) | geen aannames |
+| [02](../07_Project/Epic02.md) | geen aannames |
+| [03](../07_Project/Epic03.md) |  |
+| [04](../07_Project/Epic04.md) |  |
+| [05](../07_Project/Epic05.md) |  |
+| [06](../07_Project/Epic06.md) |  |
+| [07](../07_Project/Epic07.md) |  |
+| [08](../07_Project/Epic08.md) |  |
+| [09](../07_Project/Epic09.md) |  |
+| [10](../07_Project/Epic10.md) |  |
+| [11](../07_Project/Epic11.md) |  |
