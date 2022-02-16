@@ -11,14 +11,10 @@
 | Acceptatie criteria | Overzicht van te gebruiken AWS diensten |
 
 ## Overzicht AWS diensten
-- CDK
 - S3 (bucket t.b.v. bootstrap scripts)
-- EC2 (webserver/management server)
-- VPC (peering)
+- EC2 (webserver/management server, AMI, Snapshots)
+- VPC (Subnets, peering, netwrok ACL)
 - KMS
-- Autoscaling
-- AMI
-- IAM
+- IAM (users, roles)
 - AWS Backup
-- Snapshots
-- SSM Parameters
+- Cloudformation
