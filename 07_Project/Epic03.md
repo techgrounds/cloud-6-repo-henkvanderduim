@@ -15,6 +15,6 @@
 - EC2 (webserver/management server, AMI, Snapshots)
 - VPC (Subnets, peering, netwrok ACL)
 - KMS
-- IAM (users, roles)
+- IAM (users, roles, policies)
 - AWS Backup
-- Cloudformation
+- Cloudformation (stacks)
