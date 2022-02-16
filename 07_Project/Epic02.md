@@ -15,7 +15,7 @@
 | -------- | -------- |
 | [01](../07_Project/Epic01.md) | geen aannames |
 | [02](../07_Project/Epic02.md) | geen aannames |
-| [03](../07_Project/Epic03.md) |  |
+| [03](../07_Project/Epic03.md) | Aanname: Project document is incompleet v.w.b. de AWs diensten |
 | [04](../07_Project/Epic04.md) |  |
 | [05](../07_Project/Epic05.md) |  |
 | [06](../07_Project/Epic06.md) |  |
