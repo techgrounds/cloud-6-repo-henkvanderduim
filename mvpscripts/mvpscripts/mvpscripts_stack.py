@@ -21,6 +21,8 @@
 
 # de benodigde zaken importeren
 import os.path
+from urllib import response
+import boto3
 import aws_cdk as cdk
 from aws_cdk import (
     Duration,
@@ -52,12 +54,10 @@ with open("./mvpscripts/webserver.sh") as f:
 
 #################### STACK ####################
 
-# Stack
+# Class
 class MvpscriptsStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-
-        # De code die de stack definieert is hieronder te vinden
 
         #################### VPC'S AANMAKEN ####################
 
@@ -275,3 +275,22 @@ class MvpscriptsStack(Stack):
                 delete_after=Duration.days(7),
             )
         )
+
+        ##################### SNAPSHOT #####################
+
+        ec2_client = boto3.resource("ec2")
+
+        def lambda_handler(event, context):
+            reservations = ec2_client.describe_volumes(
+                Filters=[{"Name": "tag: MNGT", "Values": ["MSBackup"]}]
+            )
+            for volume in reservations["Volumes"]:
+                # Maak Snapshot
+                reservations = ec2_client.create_snapshot(
+                    VolumeId=volume["VolumeId"],
+                    Description="Lambda backup for ebs" + volume["VolumeId"],
+                )
+                result = reservations["SnapshotId"]
+                ec2_client.create_tags(
+                    Resources=[result], Tags=[{"Key": "Name", "Value": "snapshot"}]
+                )
