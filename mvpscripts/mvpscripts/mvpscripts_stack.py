@@ -284,7 +284,7 @@ class MvpscriptsStack(Stack):
             reservations = ec2_client.describe_volumes(
                 Filters=[{"Name": "tag: MNGT", "Values": ["MSBackup"]}]
             )
-            for volume in reservations["Volumes"]:
+            for volume in reservations:
                 # Maak Snapshot
                 reservations = ec2_client.create_snapshot(
                     VolumeId=volume["VolumeId"],
