@@ -1,12 +1,36 @@
+# PRD-01 Cloud6.Sentia1
+#
+# Project om een MVP v1.0 te maken
+#
+# Ingrediënten:
+# 1 Regio
+# 2 VPC's met elk 2 AZ's
+#
+# VPC MANAGEMENT-PRD-VPC
+# - 2 public subnets (10.10.10.0/24)
+# - 1 EC2 instance (windows server)
+# - 1 Management Security Group
+#
+# VPC APP-PRD-VPC
+# - 2 PUBLIC SUBNETS (10.20.20.0/24)
+# - 1 EC2 instance (linux) met website
+# - 1 Production Security Group
+#
+# VPC Peering Connectie
+#
+
 # de benodigde zaken importeren
 import os.path
 import aws_cdk as cdk
 from aws_cdk import (
+    Duration,
     aws_ec2 as ec2,
     aws_iam as iam,
-    aws_backup as bk,
+    aws_backup as backup,
     aws_events as event,
+    aws_kms as kms,
     aws_s3 as s3,
+    RemovalPolicy,
     CfnOutput,
     App,
     Stack,
@@ -15,11 +39,18 @@ from aws_cdk import (
 
 from constructs import Construct
 from cdk_ec2_key_pair import KeyPair
+from aws_cdk.aws_events import Schedule
 from aws_cdk.aws_s3_assets import Asset
 
 
 # directory variabele
 dirname = os.path.dirname(__file__)
+
+# user data
+with open("./mvpscripts/webserver.sh") as f:
+    user_data = f.read()
+
+#################### STACK ####################
 
 # Stack
 class MvpscriptsStack(Stack):
@@ -28,7 +59,7 @@ class MvpscriptsStack(Stack):
 
         # De code die de stack definieert is hieronder te vinden
 
-        ####################### VPC's aanmaken #############################
+        #################### VPC'S AANMAKEN ####################
 
         # VPC 1 - Management VPC
 
@@ -75,7 +106,7 @@ class MvpscriptsStack(Stack):
             peer_region="eu-central-1",
         )
 
-        ####################### AMI's aanmaken #############################
+        #################### AMI's aanmaken ####################
 
         # AMI Linux
         amzn_linux = ec2.MachineImage.latest_amazon_linux(
@@ -90,6 +121,8 @@ class MvpscriptsStack(Stack):
             ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE
         )
 
+        #################### ROLLEN AANMAKEN ####################
+
         # Rol
 
         role = iam.Role(
@@ -101,15 +134,19 @@ class MvpscriptsStack(Stack):
             )
         )
 
-        # S3 bucket maken
+        #################### S3 BUCKET AANMAKEN ####################
+
+        # S3 bucket
         bucket = s3.Bucket(
             self,
             "BootstrapScriptBucket",
             versioned=True,
             encryption=s3.BucketEncryption.KMS,
             removal_policy=cdk.RemovalPolicy.DESTROY,
-            auto_delete_objects=True
+            auto_delete_objects=True,
         )
+
+        #################### SECURITY GROUPS AANMAKEN ####################
 
         # Security Group Management Server
         mngtsg = ec2.SecurityGroup(
@@ -125,35 +162,6 @@ class MvpscriptsStack(Stack):
 
         mngtsg.add_ingress_rule(
             ec2.Peer.any_ipv4(), ec2.Port.tcp(3389), "allow ssh access from the VPC"
-        )
-
-        # key pair
-        key = KeyPair(
-            self,
-            "KeyPair",
-            name="MijnKeyPair",
-            description="MijnKeyPair",
-            store_public_key=True,
-        )
-
-        key.grant_read_on_private_key(role)
-        key.grant_read_on_public_key(role)
-
-        # Instance Management Server (Windows)
-        management_server = ec2.Instance(
-            self,
-            "Management Server",
-            instance_type=ec2.InstanceType("t2.micro"),
-            machine_image=amzn_windows,
-            vpc=self.vpc1,
-            security_group=mngtsg,
-            key_name=key.key_pair_name,
-            block_devices=[
-                ec2.BlockDevice(
-                    device_name="/dev/sda1",
-                    volume=ec2.BlockDeviceVolume.ebs(30, encrypted=True),
-                )
-            ],
         )
 
         # Security Group Web Server
@@ -179,6 +187,39 @@ class MvpscriptsStack(Stack):
             ec2.Peer.any_ipv4(), ec2.Port.tcp(443), "allow HTTPS traffic from anywhere"
         )
 
+        #################### KEY PAIR AANMAKEN ####################
+
+        # key pair
+        key = KeyPair(
+            self,
+            "KeyPair",
+            name="MijnKeyPair",
+            description="MijnKeyPair",
+            store_public_key=True,
+        )
+
+        key.grant_read_on_private_key(role)
+        key.grant_read_on_public_key(role)
+
+        #################### EC2 INSTANCES AANMAKEN ####################
+
+        # Instance Management Server (Windows)
+        management_server = ec2.Instance(
+            self,
+            "Management Server",
+            instance_type=ec2.InstanceType("t2.micro"),
+            machine_image=amzn_windows,
+            vpc=self.vpc1,
+            security_group=mngtsg,
+            key_name=key.key_pair_name,
+            block_devices=[
+                ec2.BlockDevice(
+                    device_name="/dev/sda1",
+                    volume=ec2.BlockDeviceVolume.ebs(30, encrypted=True),
+                )
+            ],
+        )
+
         # Instance Web Server
         web_server = ec2.Instance(
             self,
@@ -188,6 +229,7 @@ class MvpscriptsStack(Stack):
             vpc=self.vpc2,
             security_group=wssg,
             key_name=key.key_pair_name,
+            user_data=ec2.UserData.custom(user_data),
             block_devices=[
                 ec2.BlockDevice(
                     device_name="/dev/xvda",
@@ -196,10 +238,40 @@ class MvpscriptsStack(Stack):
             ],
         )
 
+        #################### TAGS AANMAKEN ####################
+
         # Tags
         Tags.of(web_server).add("PRD", "WSBackup")
         Tags.of(management_server).add("MNGT", "MSBackup")
 
-        ##################### BACKUP ############################# 
+        ##################### BACKUP #############################
 
-        
+        # Backup Webserver
+        # Backup Vault maken
+        key = kms.Key(self, "PRD-BACKUP-KEY", removal_policy=RemovalPolicy.DESTROY)
+        vault = backup.BackupVault(
+            self, "BackupVault", backup_vault_name="PRD-VAULT", encryption_key=key
+        )
+
+        # backup plan maken
+        plan = backup.BackupPlan(
+            self, "PRD-BACKUP-PLAN", backup_plan_name="PRD-BACKUP-PLAN"
+        )
+
+        # Voeg backup resources toe a.d.h.v. de tags
+        plan.add_selection(
+            "Selection",
+            resources=[backup.BackupResource.from_tag("PRD", "WSBackup")],
+        )
+
+        # Backup rules - elke dag om 4:30 uur en 7 dagen behouden
+        plan.add_rule(
+            backup.BackupPlanRule(
+                backup_vault=vault,
+                rule_name="PRD_Backup_Rule",
+                schedule_expression=Schedule.cron(
+                    minute="30", hour="4", day="1", month="1-12"
+                ),
+                delete_after=Duration.days(7),
+            )
+        )
