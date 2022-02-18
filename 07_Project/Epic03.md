@@ -18,3 +18,5 @@
 - IAM (users, roles, policies)
 - AWS Backup
 - Cloudformation (stacks)
+- Lambda
+- Secrets Manager
