@@ -32,6 +32,7 @@ from aws_cdk import (
     aws_events as event,
     aws_kms as kms,
     aws_s3 as s3,
+    aws_ssm as ssm,
     RemovalPolicy,
     CfnOutput,
     App,
@@ -121,9 +122,9 @@ class MvpscriptsStack(Stack):
             ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE
         )
 
-        #################### ROLLEN AANMAKEN ####################
+        #################### ROLLEN/POLICIES AANMAKEN ####################
 
-        # Rol
+        # Rol SSM
 
         role = iam.Role(
             self, "InstanceSSM", assumed_by=iam.ServicePrincipal("ec2.amazonaws.com")
@@ -134,10 +135,11 @@ class MvpscriptsStack(Stack):
             )
         )
 
+        
         #################### S3 BUCKET AANMAKEN ####################
 
         # S3 bucket
-        bucket = s3.Bucket(
+        bootstrapbucket = s3.Bucket(
             self,
             "BootstrapScriptBucket",
             versioned=True,
@@ -250,7 +252,7 @@ class MvpscriptsStack(Stack):
         # Backup Vault maken
         key = kms.Key(self, "PRD-BACKUP-KEY", removal_policy=RemovalPolicy.DESTROY)
         vault = backup.BackupVault(
-            self, "BackupVault", backup_vault_name="PRD-VAULT", encryption_key=key
+            self, "BackupVault1", backup_vault_name="PRD-VAULT", encryption_key=key
         )
 
         # backup plan maken
@@ -276,21 +278,33 @@ class MvpscriptsStack(Stack):
             )
         )
 
-        ##################### SNAPSHOT #####################
+        # Backup Management Server
+        # Backup Vault maken
+        key = kms.Key(self, "MNGT-BACKUP-KEY", removal_policy=RemovalPolicy.DESTROY)
+        vault = backup.BackupVault(
+            self, "BackupVault2", backup_vault_name="MNGT-VAULT", encryption_key=key
+        )
 
-        ec2_client = boto3.resource("ec2")
+        # backup plan maken
+        plan = backup.BackupPlan(
+            self, "MNGT-BACKUP-PLAN", backup_plan_name="MNGT-BACKUP-PLAN"
+        )
 
-        def lambda_handler(event, context):
-            reservations = ec2_client.describe_volumes(
-                Filters=[{"Name": "tag: MNGT", "Values": ["MSBackup"]}]
+        # Voeg backup resources toe a.d.h.v. de tags
+        plan.add_selection(
+            "Selection",
+            resources=[backup.BackupResource.from_tag("MNGT", "WSBackup")],
+        )
+
+        # Backup rules - elke dag om 4:30 uur en 7 dagen behouden
+        plan.add_rule(
+            backup.BackupPlanRule(
+                backup_vault=vault,
+                rule_name="MNGT_Backup_Rule",
+                schedule_expression=Schedule.cron(
+                    minute="30", hour="4", day="1", month="1-12"
+                ),
+                delete_after=Duration.days(7),
             )
-            for volume in reservations:
-                # Maak Snapshot
-                reservations = ec2_client.create_snapshot(
-                    VolumeId=volume["VolumeId"],
-                    Description="Lambda backup for ebs" + volume["VolumeId"],
-                )
-                result = reservations["SnapshotId"]
-                ec2_client.create_tags(
-                    Resources=[result], Tags=[{"Key": "Name", "Value": "snapshot"}]
-                )
+        )
+
