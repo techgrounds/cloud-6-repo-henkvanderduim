@@ -135,7 +135,6 @@ class MvpscriptsStack(Stack):
             )
         )
 
-        
         #################### S3 BUCKET AANMAKEN ####################
 
         # S3 bucket
@@ -159,11 +158,15 @@ class MvpscriptsStack(Stack):
             allow_all_outbound=True,
         )
         mngtsg.add_ingress_rule(
-            ec2.Peer.any_ipv4(), ec2.Port.tcp(22), "allow ssh access from the VPC"
+            ec2.Peer.ipv4("84.84.84.9/32"),
+            ec2.Port.tcp(22),
+            "allow ssh access from the VPC",
         )
 
         mngtsg.add_ingress_rule(
-            ec2.Peer.any_ipv4(), ec2.Port.tcp(3389), "allow ssh access from the VPC"
+            ec2.Peer.ipv4("84.84.84.9/32"),
+            ec2.Port.tcp(3389),
+            "allow RDP access from the VPC",
         )
 
         # Security Group Web Server
@@ -307,4 +310,3 @@ class MvpscriptsStack(Stack):
                 delete_after=Duration.days(7),
             )
         )
-
