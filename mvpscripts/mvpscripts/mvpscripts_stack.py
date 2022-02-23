@@ -1,28 +1,24 @@
 # PRD-01 Cloud6.Sentia1
 #
-# Project om een MVP v1.0 te maken
+# Project: MVP v1.0
 #
 # Ingrediënten:
 # 1 Regio
 # 2 VPC's met elk 2 AZ's
 #
-# VPC MANAGEMENT-PRD-VPC
-# - 2 public subnets (10.10.10.0/24)
-# - 1 EC2 instance (windows server)
-# - 1 Management Security Group
+# VPC MANAGEMENT-PRD-VPC                    | VPC APP-PRD-VPC
+# - 2 public subnets (10.10.10.0/24)        | - 2 PUBLIC SUBNETS (10.20.20.0/24)
+# - 1 EC2 instance (windows server)         | - 1 EC2 instance (linux) met website
+# - 1 Management Security Group             | - 1 Production Security Group
+# - Backup 1x per week (1 bewaren)          | - Dagelijkse backup (7 dgn bewaren)
 #
-# VPC APP-PRD-VPC
-# - 2 PUBLIC SUBNETS (10.20.20.0/24)
-# - 1 EC2 instance (linux) met website
-# - 1 Production Security Group
+# S3 Bucket t.b.v. Bootstrap Scripts
 #
-# VPC Peering Connectie
-#
+# VPC Peering Connection
 
 # de benodigde zaken importeren
 import os.path
 from urllib import response
-import boto3
 import aws_cdk as cdk
 from aws_cdk import (
     Duration,
@@ -200,9 +196,7 @@ class MvpscriptsStack(Stack):
         # ec2.Peer.any_ipv4(), ec2.Port.tcp(22), "allow ssh access from the VPC"
         # )
 
-        wssg.add_ingress_rule(
-            mngtsg, ec2.Port.tcp(22), wssg
-        )
+        wssg.add_ingress_rule(mngtsg, ec2.Port.tcp(22), wssg)
 
         wssg.add_ingress_rule(
             ec2.Peer.any_ipv4(),
@@ -297,7 +291,10 @@ class MvpscriptsStack(Stack):
                 backup_vault=vault,
                 rule_name="PRD_Backup_Rule",
                 schedule_expression=Schedule.cron(
-                    minute="30", hour="4", month="1-12", day="1",
+                    minute="30",
+                    hour="4",
+                    month="1-12",
+                    day="1",
                 ),
                 delete_after=Duration.days(7),
             )
@@ -327,7 +324,10 @@ class MvpscriptsStack(Stack):
                 backup_vault=vault,
                 rule_name="MNGT_Backup_Rule",
                 schedule_expression=Schedule.cron(
-                    minute="0", hour="0", month="1-12", day="4",
+                    minute="0",
+                    hour="0",
+                    month="1-12",
+                    day="4",
                 ),
                 delete_after=Duration.days(13),
             )
