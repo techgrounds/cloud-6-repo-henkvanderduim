@@ -73,7 +73,7 @@ class MvpscriptsStack(Stack):
             subnet_configuration=[
                 ec2.SubnetConfiguration(
                     subnet_type=ec2.SubnetType.PUBLIC,
-                    name="Public Subnet",
+                    name="Public",
                     cidr_mask=25,
                 )
             ],
@@ -90,7 +90,7 @@ class MvpscriptsStack(Stack):
             subnet_configuration=[
                 ec2.SubnetConfiguration(
                     subnet_type=ec2.SubnetType.PUBLIC,
-                    name="Public Subnet",
+                    name="Public",
                     cidr_mask=25,
                 )
             ],
@@ -105,6 +105,24 @@ class MvpscriptsStack(Stack):
             vpc_id=self.vpc2.vpc_id,
             # Peering Regio (optioneel)
             peer_region="eu-central-1",
+        )
+
+        # VPC Peering Connection maken VPC1-VPC2
+        self.cfn_Route = ec2.CfnRoute(
+            self,
+            "VPC1-route",
+            route_table_id=self.vpc1.public_subnets[1].route_table.route_table_id,
+            destination_cidr_block=self.vpc2.vpc_cidr_block,
+            vpc_peering_connection_id=self.cfn_vPCPeering_connection.ref,
+        )
+
+        # VPC Peering Connection maken VPC2-VPC1
+        self.cfn_Route = ec2.CfnRoute(
+            self,
+            "VPC2-route",
+            route_table_id=self.vpc2.public_subnets[0].route_table.route_table_id,
+            destination_cidr_block=self.vpc1.vpc_cidr_block,
+            vpc_peering_connection_id=self.cfn_vPCPeering_connection.ref,
         )
 
         #################### AMI's aanmaken ####################
@@ -178,8 +196,12 @@ class MvpscriptsStack(Stack):
             allow_all_outbound=True,
         )
 
+        # wssg.add_ingress_rule(
+        # ec2.Peer.any_ipv4(), ec2.Port.tcp(22), "allow ssh access from the VPC"
+        # )
+
         wssg.add_ingress_rule(
-            ec2.Peer.any_ipv4(), ec2.Port.tcp(22), "allow ssh access from the VPC"
+            mngtsg, ec2.Port.tcp(22), wssg
         )
 
         wssg.add_ingress_rule(
@@ -275,7 +297,7 @@ class MvpscriptsStack(Stack):
                 backup_vault=vault,
                 rule_name="PRD_Backup_Rule",
                 schedule_expression=Schedule.cron(
-                    minute="30", hour="4", day="1", month="1-12"
+                    minute="30", hour="4", month="1-12", day="1",
                 ),
                 delete_after=Duration.days(7),
             )
@@ -305,8 +327,8 @@ class MvpscriptsStack(Stack):
                 backup_vault=vault,
                 rule_name="MNGT_Backup_Rule",
                 schedule_expression=Schedule.cron(
-                    minute="30", hour="4", day="1", month="1-12"
+                    minute="0", hour="0", month="1-12", day="4",
                 ),
-                delete_after=Duration.days(7),
+                delete_after=Duration.days(13),
             )
         )
