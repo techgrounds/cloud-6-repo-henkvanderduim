@@ -3,11 +3,11 @@ import os
 
 import aws_cdk as cdk
 
-from mvpscripts.mvpscripts_stack import MvpscriptsStack
+from mvpscript.mvpscript_stack import MvpscriptStack
 
 
 app = cdk.App()
-MvpscriptsStack(app, "MvpscriptsStack",
+MvpscriptStack(app, "MvpscriptStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.

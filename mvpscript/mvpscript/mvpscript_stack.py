@@ -46,13 +46,13 @@ from aws_cdk.aws_s3_assets import Asset
 dirname = os.path.dirname(__file__)
 
 # user data
-with open("./mvpscripts/webserver.sh") as f:
+with open("./mvpscript/webserver.sh") as f:
     user_data = f.read()
 
 #################### STACK ####################
 
-# Class
-class MvpscriptsStack(Stack):
+
+class MvpscriptStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
@@ -196,12 +196,8 @@ class MvpscriptsStack(Stack):
         # ec2.Peer.any_ipv4(), ec2.Port.tcp(22), "allow ssh access from the VPC"
         # )
 
-        wssg.add_ingress_rule(mngtsg, ec2.Port.tcp(22), wssg)
-
         wssg.add_ingress_rule(
-            ec2.Peer.any_ipv4(),
-            ec2.Port.tcp(80),
-            "allow HTTP traffic from anywhere",
+            ec2.Peer.any_ipv4(), ec2.Port.tcp(80), "allow HTTP traffic from anywhere"
         )
 
         wssg.add_ingress_rule(
