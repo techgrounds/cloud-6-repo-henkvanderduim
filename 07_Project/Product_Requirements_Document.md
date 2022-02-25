@@ -52,5 +52,5 @@
    - [Als klant wil ik een MVP kunnen deployen om te testen](../07_Project/Epic11.md)
   
 4. **Diagrammen**  
-Na het overleg met de Product Owner (op 10 februari 2022), adviseren wij onderstaand diagram voor het MVP.  
+Na het overleg met de Product Owner, adviseren wij onderstaand diagram voor het MVPv1.0.  
 ![awsdiagram](../00_includes/Cloud6Sentia1_diagram_0_5.drawio.png)
