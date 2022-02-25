@@ -1,58 +1,53 @@
 
-# Welcome to your CDK Python project!
+# Hier is de code te vinden van het MVP v1.0
 
-This is a blank project for Python development with CDK.
+Dit is een Python ontwikkeling met de AWS CDK
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Het `cdk.json` bestand vertelt de CDK Toolkit hoe de app wordt gedraaid.
 
-This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
-directory.  To create the virtualenv it assumes that there is a `python3`
-(or `python` for Windows) executable in your path with access to the `venv`
-package. If for any reason the automatic creation of the virtualenv fails,
-you can create the virtualenv manually.
+Dit project is opgezet als een standaard python project. Het initialisatie
+proces maakt een virtualenv binnen het project, die wordt opgeslagen onder
+de `.venv` directory. De virtualenv neemt aan dat er een `python3`
+executable in het pad aanwezig is om toegang te krijgen tot de `venv`
+package. Als het automatisch creëeren van de virtualenv niet lukt, dan kan
+er handmatig eentje gemaakt worden.
 
-To manually create a virtualenv on MacOS and Linux:
-
-```
-$ python -m venv .venv
-```
-
-After the init process completes and the virtualenv is created, you can use the following
-step to activate your virtualenv.
+In de terminal (Powershell/CMD)
 
 ```
-$ source .venv/bin/activate
+python -m venv .venv
 ```
 
-If you are a Windows platform, you would activate the virtualenv like this:
+Na de creatie van de virtualenv, kun je de virtualenv activeren op de volgende manier.
 
 ```
-% .venv\Scripts\activate.bat
+source .venv/bin/activate
 ```
 
-Once the virtualenv is activated, you can install the required dependencies.
+OP een Windows platform gaat het zo:
 
 ```
-$ pip install -r requirements.txt
+.venv\Scripts\activate.bat
 ```
 
-At this point you can now synthesize the CloudFormation template for this code.
+Als de virtualenv is geactiveerd, kun je de afhankelijkheden installeren.
 
 ```
-$ cdk synth
+pip install -r requirements.txt
 ```
 
-To add additional dependencies, for example other CDK libraries, just add
-them to your `setup.py` file and rerun the `pip install -r requirements.txt`
-command.
+Nu kun je de code synthesizen:
 
-## Useful commands
+```
+cdk synth
+```
 
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
+## Handige commando's
 
-Enjoy!
+ * `cdk ls`          Lijst van alle stacks in de app
+ * `cdk synth`       Synthesizes de Cloudformation template
+ * `cdk deploy`      deploy deze stack in je standaard AWS account/region
+ * `cdk diff`        vegelijk de deployed stack met de huidige status
+ * `cdk docs`        open CDK documentatie
+
+Have fun!
