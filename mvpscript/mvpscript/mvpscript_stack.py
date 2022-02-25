@@ -192,9 +192,11 @@ class MvpscriptStack(Stack):
             allow_all_outbound=True,
         )
 
-        # wssg.add_ingress_rule(
-        # ec2.Peer.any_ipv4(), ec2.Port.tcp(22), "allow ssh access from the VPC"
-        # )
+        wssg.add_ingress_rule(
+            ec2.Peer.security_group_id(mngtsg.security_group_id),
+            ec2.Port.tcp(22),
+            "allow ssh access from the management Security Group",
+        )
 
         wssg.add_ingress_rule(
             ec2.Peer.any_ipv4(), ec2.Port.tcp(80), "allow HTTP traffic from anywhere"
