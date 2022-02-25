@@ -1,0 +1,4 @@
+digraph StacksGraph {
+	node [fillcolor=grey shape=box style=filled]
+	fontsize=20 label="Stack Dependencies" labelloc=t rankdir=LR
+}

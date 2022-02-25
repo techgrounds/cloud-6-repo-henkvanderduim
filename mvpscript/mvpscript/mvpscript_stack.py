@@ -16,7 +16,7 @@
 #
 # VPC Peering Connection
 
-# de benodigde zaken importeren
+# de benodigde libraries/onderdelen importeren
 import os.path
 from urllib import response
 import aws_cdk as cdk
@@ -48,6 +48,7 @@ dirname = os.path.dirname(__file__)
 # user data
 with open("./mvpscript/webserver.sh") as f:
     user_data = f.read()
+
 
 #################### STACK ####################
 
@@ -92,7 +93,7 @@ class MvpscriptStack(Stack):
             ],
         )
 
-        # VPC Peering aanzetten
+        # VPC Peering
 
         self.cfn_vPCPeering_connection = ec2.CfnVPCPeeringConnection(
             self,
