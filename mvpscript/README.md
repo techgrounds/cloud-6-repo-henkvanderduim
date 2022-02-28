@@ -8,7 +8,7 @@ Het `cdk.json` bestand vertelt de CDK Toolkit hoe de app wordt gedraaid.
 Dit project is opgezet als een standaard python project. Het initialisatie
 proces maakt een virtualenv binnen het project, die wordt opgeslagen onder
 de `.venv` directory. De virtualenv neemt aan dat er een `python3`
-executable in het pad aanwezig is om toegang te krijgen tot de `venv`
+executable in het pad aanwezig is om toegang te krijgen tot de `.venv`
 package. Als het automatisch creëeren van de virtualenv niet lukt, dan kan
 er handmatig eentje gemaakt worden.
 
