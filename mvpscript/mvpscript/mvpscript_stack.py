@@ -1,22 +1,24 @@
-# PRD-01 Cloud6.Sentia1
-#
-# Project: MVP v1.0
-#
-# Ingredients:
-# 1 Region
-# 2 VPC's with each 2 AZ's
-#
-# VPC MANAGEMENT-PRD-VPC                    | VPC APP-PRD-VPC
-# - 2 public subnets (10.10.10.0/24)        | - 2 PUBLIC SUBNETS (10.20.20.0/24)
-# - 1 EC2 instance (windows server)         | - 1 EC2 instance (linux) with website
-# - 1 Management Security Group             | - 1 Production Security Group
-# - Backup 1x a week (1 saved    )          | - daily backup (7 rounds saved)
-#
-# S3 Bucket for Bootstrap Scripts
-#
-# VPC Peering Connection
+'''''
+PRD-01 Cloud6.Sentia1
 
-# Importing the necessary libraries
+Project: MVP v1.0
+
+Ingredients:
+- 1 Region
+- 2 VPC's with each 2 AZ's
+
+VPC MANAGEMENT-PRD-VPC                    | VPC APP-PRD-VPC
+- 2 public subnets (10.10.10.0/24)        | - 2 PUBLIC SUBNETS (10.20.20.0/24)
+- 1 EC2 instance (windows server)         | - 1 EC2 instance (linux) with website
+- 1 Management Security Group             | - 1 Production Security Group
+- Backup 1x a week (1 saved    )          | - daily backup (7 rounds saved)
+
+S3 Bucket for Bootstrap Scripts
+
+VPC Peering Connection
+'''''
+### Importing the necessary libraries
+
 import os.path
 from urllib import response
 import aws_cdk as cdk
@@ -43,12 +45,8 @@ from aws_cdk.aws_events import Schedule
 from aws_cdk.aws_s3_assets import Asset
 
 
-# directory variable
+### directory variable
 dirname = os.path.dirname(__file__)
-
-# user data
-#with open("./bucket/webserver.sh") as f:
-#    user_data = f.read()
 
 
 #################### STACK ####################
@@ -60,7 +58,7 @@ class MvpscriptStack(Stack):
 
         #################### Create 2 VPCs + VPC Peering ####################
 
-        # VPC 1 - Management VPC
+        ### VPC 1 - Management VPC
 
         self.vpc1 = ec2.Vpc(
             self,
@@ -77,7 +75,7 @@ class MvpscriptStack(Stack):
             ],
         )
 
-        # VPC 2 - Webserver VPC
+        ### VPC 2 - Webserver VPC
 
         self.vpc2 = ec2.Vpc(
             self,
@@ -94,7 +92,7 @@ class MvpscriptStack(Stack):
             ],
         )
 
-        # VPC Peering
+        ### VPC Peering
 
         self.cfn_vPCPeering_connection = ec2.CfnVPCPeeringConnection(
             self,
@@ -105,7 +103,7 @@ class MvpscriptStack(Stack):
             peer_region="eu-central-1",
         )
 
-        # VPC Peering Connection between VPC1-VPC2 through Route-table
+        ### VPC Peering Connection between VPC1-VPC2 through Route-table
         self.cfn_Route = ec2.CfnRoute(
             self,
             "VPC1-route",
@@ -114,7 +112,7 @@ class MvpscriptStack(Stack):
             vpc_peering_connection_id=self.cfn_vPCPeering_connection.ref,
         )
 
-        # VPC Peering Connection between VPC2-VPC1 through Route-table
+        ### VPC Peering Connection between VPC2-VPC1 through Route-table
         self.cfn_Route = ec2.CfnRoute(
             self,
             "VPC2-route",
@@ -125,7 +123,7 @@ class MvpscriptStack(Stack):
 
         #################### Create AMI's ####################
 
-        # AMI Linux
+        ### AMI Linux
         amzn_linux = ec2.MachineImage.latest_amazon_linux(
             generation=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,
             edition=ec2.AmazonLinuxEdition.STANDARD,
@@ -133,14 +131,14 @@ class MvpscriptStack(Stack):
             storage=ec2.AmazonLinuxStorage.GENERAL_PURPOSE,
         )
 
-        # AMI Windows
+        ### AMI Windows
         amzn_windows = ec2.MachineImage.latest_windows(
             ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE
         )
 
         #################### Create Roles & Policies ####################
 
-        # Role SSM
+        ### Role SSM
 
         role = iam.Role(
             self, "InstanceSSM", assumed_by=iam.ServicePrincipal("ec2.amazonaws.com")
@@ -153,7 +151,7 @@ class MvpscriptStack(Stack):
 
         #################### Create S3 Bucket ####################
 
-        # S3 bucket
+        ### S3 bucket
         bootstrapbucket = s3.Bucket(
             self,
             "BootstrapScriptBucket",
@@ -163,7 +161,7 @@ class MvpscriptStack(Stack):
             auto_delete_objects=True,
         )
         
-        # Put file in the bucket
+        ### Put file in the bucket
         s3deploy.BucketDeployment(
             self, "S3Deployment",
             sources=[s3deploy.Source.asset("./bucket")],
@@ -172,7 +170,7 @@ class MvpscriptStack(Stack):
         
         #################### Create Security Groups ####################
 
-        # Security Group Management Server
+        ### Security Group Management Server
         mngtsg = ec2.SecurityGroup(
             self,
             "ManagementSecurityGroup",
@@ -192,7 +190,7 @@ class MvpscriptStack(Stack):
             "allow RDP access from the VPC",
         )
 
-        # Security Group Web Server
+        ### Security Group Web Server
         wssg = ec2.SecurityGroup(
             self,
             "ProductionSecurityGroup",
@@ -217,7 +215,7 @@ class MvpscriptStack(Stack):
 
         #################### Create Key Pair ####################
 
-        # key pair
+        ### key pair
         key = KeyPair(
             self,
             "KeyPair",
@@ -231,7 +229,7 @@ class MvpscriptStack(Stack):
 
         #################### Create EC2 Instances ####################
 
-        # Instance Management Server (Windows)
+        ### Instance Management Server (Windows)
         management_server = ec2.Instance(
             self,
             "Management Server",
@@ -249,7 +247,7 @@ class MvpscriptStack(Stack):
         )
         
             
-        # Instance Web Server
+        ### Instance Web Server
         web_server = ec2.Instance(
             self,
             "Web Server",
@@ -258,7 +256,6 @@ class MvpscriptStack(Stack):
             vpc=self.vpc2,
             security_group=wssg,
             key_name=key.key_pair_name,
-            #user_data=ec2.UserData.custom(user_data),
             block_devices=[
                 ec2.BlockDevice(
                     device_name="/dev/xvda",
@@ -285,31 +282,31 @@ class MvpscriptStack(Stack):
 
         #################### Create Tags ####################
 
-        # Tags
+        ### Tags
         Tags.of(web_server).add("PRD", "WSBackup")
         Tags.of(management_server).add("MNGT", "MSBackup")
 
         ##################### Create Backup Routines #############################
 
-        # Backup Webserver
-        # Create Backup Vault
+        ### Backup Webserver
+        ### Create Backup Vault
         key = kms.Key(self, "PRD-BACKUP-KEY", removal_policy=RemovalPolicy.DESTROY)
         vault = backup.BackupVault(
             self, "BackupVault1", backup_vault_name="PRD-VAULT", encryption_key=key
         )
 
-        # Create Backup Plan
+        ### Create Backup Plan
         plan = backup.BackupPlan(
             self, "PRD-BACKUP-PLAN", backup_plan_name="PRD-BACKUP-PLAN"
         )
 
-        # Add Backup Resources through Tags
+        ### Add Backup Resources through Tags
         plan.add_selection(
             "Selection",
             resources=[backup.BackupResource.from_tag("PRD", "WSBackup")],
         )
 
-        # Create Backup Rule - Each day at 4:30 hrs and keep for 7 days
+        ### Create Backup Rule - Each day at 4:30 hrs and keep for 7 days
         plan.add_rule(
             backup.BackupPlanRule(
                 backup_vault=vault,
@@ -324,25 +321,25 @@ class MvpscriptStack(Stack):
             )
         )
 
-        # Backup Management Server
-        # Create Backup Vault
+        ### Backup Management Server
+        ### Create Backup Vault
         key = kms.Key(self, "MNGT-BACKUP-KEY", removal_policy=RemovalPolicy.DESTROY)
         vault = backup.BackupVault(
             self, "BackupVault2", backup_vault_name="MNGT-VAULT", encryption_key=key
         )
 
-        # Create Backup Plan
+        ### Create Backup Plan
         plan = backup.BackupPlan(
             self, "MNGT-BACKUP-PLAN", backup_plan_name="MNGT-BACKUP-PLAN"
         )
 
-        # Add Backup Resources through Tags
+        ### Add Backup Resources through Tags
         plan.add_selection(
             "Selection",
             resources=[backup.BackupResource.from_tag("MNGT", "WSBackup")],
         )
 
-        # Create Backup Rule - Once a week and save 1
+        ### Create Backup Rule - Once a week and save 1
         plan.add_rule(
             backup.BackupPlanRule(
                 backup_vault=vault,
