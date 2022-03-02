@@ -25,6 +25,97 @@
     "@aws-cdk/core:target-partitions": [
       "aws",
       "aws-cn"
-    ]
+    ],
+    "ENVIRONMENTS": {
+      "vpcs": {
+        "vpc1_name": "management-prd-vpc",
+        "vpc1_cidr_block": "10.10.10.0/24",
+        "vpc1_cidr_mask": 25,
+        "vpc1_subnet_name": "Public",
+        "vpc1_max_azs": 2,
+        "vpc2_name": "app-prd-vpc",
+        "vpc2_cidr_block": "10.20.20.0/24",
+        "vpc2_cidr_mask": 25,
+        "vpc2_subnet_name": "Public",
+        "vpc2_max_azs": 2,
+        "vpcp_name": "VPCPeeringConnection-prd",
+        "vpcp_region": "eu-central-1",
+        "vpcp_route_table1": "VPC1-Route",
+        "vpcp_route_table2": "VPC2-Route"
+      },
+      "roles": {
+        "iam_ssm_role": "InstanceSSM",
+        "iam_ssm_principal": "ec2.amazonaws.com"
+      },
+      "bucket": {
+        "bucket_name": "BootstrapScriptBucket",
+        "versioned": true,
+        "auto_delete_objects": true,
+        "deploy_name": "S3Deployment",
+        "source": "./bucket"
+      },
+      "sgs": {
+        "sg1_name": "ManagementSecurityGroup",
+        "sg1_description": "Management Security Group",
+        "sg1_allow_all_outbound": true,
+        "sg1_ssh_rule_ip": "84.84.84.9/32",
+        "sg1_ssh_rule_port": 22,
+        "sg1_rdp_rule_ip": "84.84.84.9/32",
+        "sg1_rdp_rule_port": 3389,
+        "sg2_name": "ProductionSecurityGroup",
+        "sg2_description": "Production Security Group",
+        "sg2_allow_all_outbound": true,
+        "sg2_sg_rule_port": 22,
+        "sg2_http_rule_port": 80,
+        "sg2_https_rule_port": 443
+      },
+      "keypair": {
+        "kp": "KeyPair",
+        "kp_name": "MijnKeyPair",
+        "kp_description": "MijnKeyPair",
+        "kp_store": true
+      },
+      "ec2s": {
+        "ec1_name": "Management Server",
+        "ec1_instance_type": "t2.micro",
+        "ec1_device_name": "/dev/sda1",
+        "ec1_encrypted": true,
+        "ec2_name": "Web Server",
+        "ec2_instance_type": "t3.nano",
+        "ec2_device_name": "/dev/xvda",
+        "ec2_encrypted": true
+      },
+      "webscript": {
+        "asset_name": "Asset",
+        "asset_path": "./bucket/webserver.sh",
+        "asset_region": "eu-central_1"
+      },
+      "bus": {
+        "vault1_key": "PRD-BACKUP-KEY",
+        "vault1_name": "BackupVault1",
+        "backup_vault1_name": "PRD-VAULT",
+        "backup_plan1": "PRD-BACKUP-PLAN",
+        "backup_plan1_name": "PRD-BACKUP-PLAN",
+        "rule1_name": "PRD_Backup_Rule",
+        "minute1": "30",
+        "hour1": "4",
+        "daym1": "*",
+        "month1": "1-12",
+        "weekday1": "*",
+        "duration1": 7,
+        "vault2_key": "MNGT-BACKUP-KEY",
+        "vault2_name": "BackupVault2",
+        "backup_vault2_name": "MNGT-VAULT",
+        "backup_plan2": "MNGT-BACKUP-PLAN",
+        "backup_plan2_name": "MNGT-BACKUP-PLAN",
+        "rule2_name": "MNGT_Backup_Rule",
+        "minute2": "0",
+        "hour2": "0",
+        "daym2": "*",
+        "month2": "1-12",
+        "weekday2": "4",
+        "duration2": 13
+      }
+    }
   }
 }
