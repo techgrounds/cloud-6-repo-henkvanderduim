@@ -1,5 +1,8 @@
 # Project (Cloud6. Sentia1)
-In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt. Het tweede deel van het project zal te vinden zijn in de folder: 08_PROJECT1.1.
+In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt.  
+Het project kent twee fasen:  
+1. MVP 1.0  
+2. MVP 1.1
 
 ## Project Document
 In het document [PRO-01 Project](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) is het project beschreven.
