@@ -10,6 +10,8 @@ Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, e
 In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
 Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
 
+## MVP Script
+
 In het [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#readme) document in de MVPSCRIPT folder is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json'.
 
 ## Belangrijke mijlpalen
