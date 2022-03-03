@@ -271,12 +271,12 @@ class MvpscriptStack(Stack):
         )
         
         ### Put file in the bucket
-        s3deploy.BucketDeployment(
-            self, 
-            deploy_name,
-            sources=[s3deploy.Source.asset(source)],
-            destination_bucket=bootstrapbucket,
-        )
+        #s3deploy.BucketDeployment(
+        #    self, 
+        #    deploy_name,
+        #    sources=[s3deploy.Source.asset(source)],
+        #    destination_bucket=bootstrapbucket,
+        #)
         
         #################### Create Security Groups ####################
 
@@ -442,7 +442,6 @@ class MvpscriptStack(Stack):
                 schedule_expression=Schedule.cron(
                     minute=minute1,
                     hour=hour1,
-                    day=daym1,
                     month=month1,
                     week_day=weekday1,
                 ),
@@ -484,7 +483,6 @@ class MvpscriptStack(Stack):
                 schedule_expression=Schedule.cron(
                     minute=minute2,
                     hour=hour2,
-                    day=daym2,
                     month=month2,
                     week_day=weekday2,
                 ),
