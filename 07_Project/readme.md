@@ -1,5 +1,8 @@
 # Project (Cloud6. Sentia1)
-In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt. Het tweede deel van het project zal te vinden zijn in de folder: 08_PROJECT1.1.
+In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt.  
+Het project kent twee fasen:  
+1. MVP 1.0  
+2. MVP 1.1
 
 ## Project Document
 In het document [PRO-01 Project](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) is het project beschreven.
@@ -9,6 +12,10 @@ Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, e
 ## JIRA
 In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
 Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
+
+## MVP Script
+
+In het [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#readme) document in de MVPSCRIPT folder is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json'.
 
 ## Belangrijke mijlpalen
 | **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                                     | **Datum klaar** |
@@ -22,6 +29,6 @@ Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira
 | **Project Activiteit**                                 | **Datum (pw)**  | **Progressie**                                                                     |
 | ------------------------------------------------------ | --------------- | ---------------------------------------------------------------------------------- |
 | Sprint 1: Review progressie app v1                     | 25-02-2022 (w3) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) |
-| Sprint 2: Review oplevering app v1                     | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)  |
+| Sprint 2: Review oplevering app v1                     | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/40)  |
 | Sprint 3: Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint3rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)  |
 | Sprint 4: Review oplevering app v1.1 / Eindpresentatie | 08-04-2022 (w9) | ![Sprint4ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)  |
