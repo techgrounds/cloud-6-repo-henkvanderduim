@@ -44,7 +44,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 - Subnets: firewalls op subnet niveau (Network ACL)
 - Lege Availablity Zone is voor de failover
 
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Een duidelijk overzicht van de aannames (Epic - 02)
 | Item                | Opmerking                                                                                                                                                                                                          |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -71,7 +71,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | [10](../07_Project/Epic10.md) | Aanname: de klant weet niets, dus Jip en Janneke                               |
 | [11](../07_Project/Epic11.md) | Aanname: testomgeving is separate omgeving. Parameterfile gebruiken!           |
 
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Een duidelijk overzicht van de Cloud Infrastructuur (Epic - 03)
 | Item                | Omgeving                                                                                                                                                                                                           |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -107,7 +107,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Aannames            | Trusted Sources is het DevOps team                                                                                                                                                   |
 | Doen we niet        | De rest van de wereld toegang geven                                                                                                                                                  |
 | Acceptatie criteria | Als bij test blijkt dat alleen DevOps toegang kunnen krijgen en al het andere verkeer niet                                                                                           |
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende webserver deployen (Epic - 05)
 | Item                | Opmerking                                                                                 |
 | ------------------- | ----------------------------------------------------------------------------------------- |
@@ -120,7 +120,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Doen we niet        | Complete website bouwen, alleen wat in de opdracht staat                                  |
 | Acceptatie criteria | Als de gemaakte webpagina zichtbaar is                                                    |
 
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende management server deployen (epic - 06)
 | Item                | Opmerking                                                                                            |
 | ------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -133,7 +133,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Doen we niet        | Firewall plaatsen voor de Admin/Management server                                                    |
 | Acceptatie criteria | Als getest is dat de toegang beperkt is tot hoe wij het ingericht hebben                             |
 
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil opslagoplossing voor bootstrapscript(s) (epic - 07)
 | Item                | Opmerking                                                                                                                               |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -145,7 +145,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Aannames            | S3 bucket wordt gebruikt met versioning en encryptie                                                                                    |
 | Doen we niet        | Aannames doen over de mate van opvragingen uit de S3 bucket                                                                             |
 | Acceptatie criteria | Als de S3 Bucket er is en niet publiekelijk te benaderen is                                                                             |
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil alle data versleuteld hebben (epic - 08)
 | Item                | Opmerking                                                                                                                                                       |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -158,7 +158,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Doen we niet        |                                                                                                                                                                 |
 | Acceptatie criteria | Als de data versleuteld is en dit is getest                                                                                                                     |
 
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil iedere dag een backup, met bewaartermijn van 7 dagen (Epic - 09)
 | Item                | Opmerking                                                                                                                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -171,7 +171,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Doen we niet        | Snapshots                                                                                                                                                                            |
 | Acceptatie criteria | Als de backups zijn gedraaid en er zijn                                                                                                                                              |
 
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil weten hoe hij/zij de applicatie kan gebruiken (Epic - 10)
 
 | Item                | Opmerking                                                                                                                                                                                                    |
@@ -185,7 +185,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Doen we niet        | Cursus organiseren, videos maken                                                                                                                                                                             |
 | Acceptatie criteria | Als de user in staat is om het zelf te deployen                                                                                                                                                              |
 
-
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil de MVP kunnen deployen om te testen (Epic - 11)
 | Item                | Opmerking                                                                                                                                                                              |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -197,3 +197,4 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Aannames            | Wij maken gebruik van een environment file voor de parameters                                                                                                                          |
 | Doen we niet        | test omgeving inrichten, testplan/scripts maken                                                                                                                                        |
 | Acceptatie criteria | Als de user aangeeft dat het werkt in de test omngevings                                                                                                                               |
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
