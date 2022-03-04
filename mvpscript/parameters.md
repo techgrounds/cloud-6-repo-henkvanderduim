@@ -4,7 +4,7 @@ Als bepaalde termen je als Cloud Engineer onbekend voorkomen dan heb ik hier de 
 
 ## CDK JSON Tabel
 | Parameter                         | wat wordt er ingevuld                                                                                                                |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| :-------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | **VPC**                           |                                                                                                                                      |
 | mngt_name                         | Naam van de VPC voor de MANAGEMENT-PRD-VPC                                                                                           |
 | mngt_cidr_block                   | CIDR Block voor de MANAGEMENT-PRD-VPC                                                                                                |
