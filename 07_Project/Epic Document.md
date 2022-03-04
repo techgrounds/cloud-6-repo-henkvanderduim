@@ -1,17 +1,17 @@
 # Epic Document
 
 ## Inhoud
-## Wat zijn de eisen
-## Een duidelijk overzicht van de aannames
-## Een duidelijk overzicht van de Cloud Infrastructuur
-## Klant wil een veilig netwerk deployen
-## Klant wil een werkende webserver deployen
-## Klant wil een werkende management server deployen
-## Klant wil opslagoplossing voor bootstrapscript(s)
-## Klant wil alle data versleuteld hebben
-## Klant wil iedere dag een backup, met bewaartermijn van 7 dagen
-## Klant wil weten hoe hij/zij de applicatie kan gebruiken
-## Klant wil de MVP kunnen deployen om te testen
+- [Wat zijn de eisen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#wat-zijn-de-eisen-epic---01)
+- [Een duidelijk overzicht van de aannames](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-aannames-epic---02)
+- [Een duidelijk overzicht van de Cloud Infrastructuur](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-cloud-infrastructuur-epic---03)
+- [Klant wil een veilig netwerk deployen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-veilig-netwerk-deployen-epic---04)
+- [Klant wil een werkende webserver deployen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-webserver-deployen-epic---05)
+- [Klant wil een werkende management server deployen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-management-server-deployen-epic---06)
+- [Klant wil opslagoplossing voor bootstrapscript(s)](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-opslagoplossing-voor-bootstrapscripts-epic---07)
+- [Klant wil alle data versleuteld hebben](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-alle-data-versleuteld-hebben-epic---08)
+- [Klant wil iedere dag een backup, met bewaartermijn van 7 dagen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-iedere-dag-een-backup-met-bewaartermijn-van-7-dagen-epic---09)
+- [Klant wil weten hoe hij/zij de applicatie kan gebruiken](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-weten-hoe-hijzij-de-applicatie-kan-gebruiken-epic---10)
+- [Klant wil de MVP kunnen deployen om te testen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-de-mvp-kunnen-deployen-om-te-testen-epic---11)
 
 ## Wat zijn de eisen (Epic - 01)
 | Item                | Opmerking                                                                                                                                                                                                    |
