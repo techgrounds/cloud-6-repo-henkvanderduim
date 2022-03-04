@@ -15,7 +15,7 @@ Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira
 
 ## MVP Script
 
-In het [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#readme) document in de MVPSCRIPT folder is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json'.
+In het [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#readme) document in de MVPSCRIPT folder is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpscript/parameters.md) document.
 
 ## Belangrijke mijlpalen
 | **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                                     | **Datum klaar** |
@@ -26,9 +26,9 @@ In het [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/
 | Oplevering/Eindpresentatie | 08-04-2022 (w9) | ![Oplevering/Eindpresentatie](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) | d.d.            |
 
 ## Projectactiviteiten
-| **Project Activiteit**                                 | **Datum (pw)**  | **Progressie**                                                                     |
-| ------------------------------------------------------ | --------------- | ---------------------------------------------------------------------------------- |
+| **Project Activiteit**                                 | **Datum (pw)**  | **Progressie**                                                                      |
+| ------------------------------------------------------ | --------------- | ----------------------------------------------------------------------------------- |
 | Sprint 1: Review progressie app v1                     | 25-02-2022 (w3) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) |
-| Sprint 2: Review oplevering app v1                     | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/40)  |
-| Sprint 3: Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint3rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)  |
-| Sprint 4: Review oplevering app v1.1 / Eindpresentatie | 08-04-2022 (w9) | ![Sprint4ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)  |
+| Sprint 2: Review oplevering app v1                     | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/50)  |
+| Sprint 3: Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint3rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)   |
+| Sprint 4: Review oplevering app v1.1 / Eindpresentatie | 08-04-2022 (w9) | ![Sprint4ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/0)   |
