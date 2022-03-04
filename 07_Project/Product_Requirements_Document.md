@@ -53,6 +53,6 @@
   
 4. **Diagrammen**  
 Na het overleg met de Product Owner, adviseren wij onderstaand diagram voor het MVPv1.0.  
-![awsdiagram](../00_includes/MVP%201.0%20(AWS).drawio.png)  
+![awsdiagram](../00_includes/MVP%20v1.0%20(AWS).drawio.png)  
 En dit zijn de gebruikte AWS Services voor de MVP v1.0.  
-![aws services](../00_includes/MVP%20AWS%20Services.drawio.png)
+![aws services](../00_includes/MVP%20v1.0%20AWS%20Services.drawio.png)
