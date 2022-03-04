@@ -7,7 +7,7 @@ In de folder 07_Project van deze Github is alle [project documentatie](https://g
 Aan de hand van het [Project Plan](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) en het [Product Requirements Document](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Product_Requirements_Document.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP):  
 1. M.b.v. AWS CDK/Python een stack bouwen, die gebruikt kan worden door AWS Cloudformation.
 2. In de stack is de configuratie opgenomen zoals te zien is in het diagram in het [Product Requirements Document](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Product_Requirements_Document.md).
-3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [uitleg parameters]().
+3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [Parameters](../mvpscript/parameters.md).
 4. Ik ga er vanuit dat een cloud engineer hiermee aan de slag gaat. 
 
 ## Het bestand: mvpscript_stack.py
@@ -49,7 +49,7 @@ class MvpscriptStack(Stack):
         super().__init__(scope, construct_id, **kwargs)
 ```
 
-3. Direct na de *class* definitie worden de parameters neergezet. Deze zijn terug te vinden in het document: [uitleg parameters]()
+3. Direct na de *class* definitie worden de parameters neergezet. Deze zijn terug te vinden in het document: [Parameters](../mvpscript/parameters.md)
 
 4. Vervolgens worden er twee VPC's en de VPC Peering aangemaakt:  
 Voorbeeld van 1 VPC  
