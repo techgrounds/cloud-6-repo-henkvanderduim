@@ -104,7 +104,7 @@ class MvpscriptStack(Stack):
         wsrv_sg_name = sgs_environment.get("wsrv_sg_name")
         wsrv_sg_description = sgs_environment.get("wsrv_sg_description")
         wsrv_sg_allow_all_outbound = sgs_environment.get("wsrv_sg_allow_all_outbound")
-        wsrv_sg_sg_rule_port = sgs_environment.get("wsrv_sg_sg_rule_port")
+        wsrv_sg_rule_port = sgs_environment.get("wsrv_sg_rule_port")
         wsrv_sg_http_rule_port = sgs_environment.get("wsrv_sg_http_rule_port")
         wsrv_sg_https_rule_port = sgs_environment.get("wsrv_sg_https_rule_port")
         
@@ -319,7 +319,7 @@ class MvpscriptStack(Stack):
 
         wssg.add_ingress_rule(
             ec2.Peer.security_group_id(mngtsg.security_group_id),
-            ec2.Port.tcp(wsrv_sg_sg_rule_port),
+            ec2.Port.tcp(wsrv_sg_rule_port),
             "allow ssh access from the management Security Group",
         )
 
