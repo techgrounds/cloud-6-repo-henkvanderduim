@@ -82,17 +82,21 @@
       "ec2s": {
         "mngt_ec2_name": "Management Server",
         "mngt_ec2_instance_type": "t2.micro",
-        "mngt_ec2_device_name": "/dev/sda1",
         "mngt_ec2_encrypted": true,
         "wsrv_ec2_name": "Web Server",
         "wsrv_ec2_instance_type": "t3.nano",
-        "wsrv_ec2_device_name": "/dev/xvda",
         "wsrv_ec2_encrypted": true
       },
       "webscript": {
         "wsrv_asset_name": "Asset",
         "wsrv_asset_path": "./bucket/webserver.sh",
         "wsrv_asset_region": "eu-central-1"
+      },
+      "tags": {
+        "mngt_tag_key": "MNGT",
+        "mngt_tag_value": "MSBackup",
+        "wsrv_tag_key": "PRD",
+        "wsrv_tag_value": "WSBackup"
       },
       "bus": {
         "mngt_vault_key": "MNGT-BACKUP-KEY",
