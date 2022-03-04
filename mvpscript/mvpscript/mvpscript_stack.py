@@ -480,6 +480,8 @@ class MvpscriptStack(Stack):
             backup.BackupPlanRule(
                 backup_vault=vault,
                 rule_name=rule2_name,
+                #completion_window=Duration.hours(2),
+                #start_window=Duration.hours(1),
                 schedule_expression=Schedule.cron(
                     minute=minute2,
                     hour=hour2,

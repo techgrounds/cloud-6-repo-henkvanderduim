@@ -8,6 +8,7 @@ Aan de hand van het [Project Plan](https://docs.google.com/document/d/1yiJkqn4bX
 1. M.b.v. AWS CDK/Python een stack bouwen, die gebruikt kan worden door AWS Cloudformation.
 2. In de stack is de configuratie opgenomen zoals te zien is in het diagram in het [Product Requirements Document](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Product_Requirements_Document.md).
 3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [uitleg parameters]().
+4. Ik ga er vanuit dat een cloud engineer hiermee aan de slag gaat. 
 
 ## Het bestand: mvpscript_stack.py
 Dit bestand is als volgt opgebouwd:  
@@ -98,28 +99,43 @@ self.cfn_Route = ec2.CfnRoute(
         )
 ```
 
-8. Vervolgens is de Bucket aangemaakt
+8. Vervolgens is de  s3 Bucket aangemaakt met de juiste instellingen. Om vervolgens de Security Groups aan te maken die nodig zijn voor eisen van het project.  
+Ook de key pairs worden klaargemaakt voor het vervolg in het script.
 
+9.  Daarna zijn de twee EC2 instances aangemaakt. Hieronder een voorbeeld:  
+```python
+management_server = ec2.Instance(
+            self,
+            ec1_name,
+            instance_type=ec2.InstanceType(ec1_instance_type),
+            machine_image=amzn_windows,
+            vpc=self.vpc1,
+            security_group=mngtsg,
+            key_name=key.key_pair_name,
+            block_devices=[
+                ec2.BlockDevice(
+                    device_name=ec1_device_name,
+                    volume=ec2.BlockDeviceVolume.ebs(30, encrypted=ec1_encrypted),
+                )
+            ],
+        )
+```
 
+10. De *User Data* die ik nodig heb om de webserver daadwerkelijk als webserver te laten functioneren, wordt dan in de S3 Bucket geplaatst om vevolgens vanuit de S3 Bucket gelanceert te worden.
 
+11. Bij het Backup deel maak ik gebruik van *Tags*. Deze zijn als volgt samengesteld:  
+```python
+### Tags
+        Tags.of(web_server).add("PRD", "WSBackup")
+        Tags.of(management_server).add("MNGT", "MSBackup")
+```
 
+12. Als laatste zijn de Backup Vaults, Plans en Rules aangemaakt.
 
+## Stack script gebruiken
+Om het script te gebruiken doe je het volgende:  
 
-
-
-Dit is een Python ontwikkeling met de AWS CDK
-
-Het `cdk.json` bestand vertelt de CDK Toolkit hoe de app wordt gedraaid. En bevat alle parameters.
-
-Dit project is opgezet als een standaard python project. Het initialisatie
-proces maakt een virtualenv binnen het project, die wordt opgeslagen onder
-de `.venv` directory. De virtualenv neemt aan dat er een `python3`
-executable in het pad aanwezig is om toegang te krijgen tot de `.venv`
-package. Als het automatisch creëeren van de virtualenv niet lukt, dan kan
-er handmatig eentje gemaakt worden.
-
-In de terminal (Powershell/CMD)
-
+In de terminal (VSCode/Powershell/CMD)
 ```
 python -m venv .venv
 ```
@@ -130,7 +146,7 @@ Na de creatie van de virtualenv, kun je de virtualenv activeren op de volgende m
 source .venv/bin/activate
 ```
 
-OP een Windows platform gaat het zo:
+Op een Windows platform gaat het zo:
 
 ```
 .venv\Scripts\activate.bat
@@ -146,6 +162,12 @@ Nu kun je de code synthesizen:
 
 ```
 cdk synth
+```
+
+Als dat foutloos gaat, dan deploy je de code:
+
+```
+cdk deploy
 ```
 
 ## Handige commando's
