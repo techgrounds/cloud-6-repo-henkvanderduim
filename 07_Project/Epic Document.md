@@ -121,7 +121,7 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doel                | IaC-code voor en webserver en alle benodigdheden                                          |
 | User problem        | Er moet een webserver komen                                                               |
 | User value          | Een webserver die te benaderen is van buitenaf, door het publiek                          |
-| Aannames            | Webserver is een Linux server                                                             |
+| Aannames            | geen aannames                                                                             |
 | Doen we niet        | Complete website bouwen, alleen wat in de opdracht staat                                  |
 | Acceptatie criteria | Als de gemaakte webpagina zichtbaar is                                                    |
 
@@ -142,7 +142,7 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Acceptatie criteria | Als getest is dat de toegang beperkt is tot hoe wij het ingericht hebben                             |
 
 ### Schema Management Server
-![AWS EC2]()
+![AWS EC2](../00_includes/MVP%20v1.0%20Management%20server%20(AWS).jpg)  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil opslagoplossing voor bootstrapscript(s) (epic - 07)
@@ -157,6 +157,11 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | Aannames doen over de mate van opvragingen uit de S3 bucket                                                                             |
 | Acceptatie criteria | Als de S3 Bucket er is en niet publiekelijk te benaderen is                                                                             |
 
+### Schema van de S3 Bucket in het diagram
+![AWS S3](../00_includes/MVP%20v1.0%20Management%20server%20(AWS).jpg)  
+
+De S3 Bucket ontvangt bij het deployen meteen het script voor het installeren van de Webserver. Dit script wordt opgestart vanuit de S3 Bucket. Ook wordt de folder met daarin het Stack script gekopieerd naar de S3 Bucket.  
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil alle data versleuteld hebben (epic - 08)
 | Item                | Opmerking                                                                                                                                                       |
@@ -166,9 +171,12 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doel                | IaC-code voor versleuteling voorzieningen                                                                                                                       |
 | User problem        | Data moet versleuteld worden, zowel in Rest als in Motion                                                                                                       |
 | User value          | Als de data versleuteld is, is dat veiliger                                                                                                                     |
-| Aannames            |                                                                                                                                                                 |
-| Doen we niet        |                                                                                                                                                                 |
-| Acceptatie criteria | Als de data versleuteld is en dit is getest                                                                                                                     |
+| Aannames            | Geen aannames                                                                                                                                                   |
+| Doen we niet        | niet van toepassing                                                                                                                                             |
+| Acceptatie criteria | Als de data versleuteld is en dit is gecontroleerd                                                                                                              |
+
+### Encryptie
+De encryptie en de sleutels zijn terug te vinden in de KMS en de Secrets Manager.  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil iedere dag een backup, met bewaartermijn van 7 dagen (Epic - 09)
@@ -182,6 +190,9 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Aannames            | Management server ook meenmenen in een backup structuur (1x per week, 1 behouden)                                                                                                    |
 | Doen we niet        | Snapshots                                                                                                                                                                            |
 | Acceptatie criteria | Als de backups zijn gedraaid en er zijn                                                                                                                                              |
+
+### Backup
+Voor zowel de Webserver alsmede de Management Server is er een Backup Vault/Plan/Rule gemaakt.
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil weten hoe hij/zij de applicatie kan gebruiken (Epic - 10)
