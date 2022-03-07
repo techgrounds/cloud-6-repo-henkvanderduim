@@ -125,8 +125,28 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | Complete website bouwen, alleen wat in de opdracht staat                                  |
 | Acceptatie criteria | Als de gemaakte webpagina zichtbaar is                                                    |
 
-### Schema Webserver
-![AWS EC2](../00_includes/MVP%20v1.0%20Webserver%20(AWS).jpg)  
+### Schema Webserver Stack
+![AWS EC2](../00_includes/Stack-APP-PRD-VPC.png)  
+
+### Opbouw van de Stack APP-PRD-VPC
+![AWS Stack](../00_includes/Stack-APP-PRD-VPC-info.png)
+
+### Security Group
+![AWS SG](../00_includes/stack-APP-PRD-VPC-SG.png)
+
+### Webserver
+![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-1.png)
+![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-2.png)
+![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-3.png)
+
+### Network Interface
+![AWS ENI](../00_includes/Stack-APP-PRD-VPC-ENI-1.png)
+![AWS ENI](../00_includes/STACK-app-prd-vpc-eni-2.png)
+
+### Route Tables
+![AWS RT](../00_includes/stack-APP-PRD-VPC-RT-1.png)
+![AWS RT](../00_includes/stack-APP-PRD-VPC-RT-2.png)
+
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende management server deployen (epic - 06)
