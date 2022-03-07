@@ -147,6 +147,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Aannames            | S3 bucket wordt gebruikt met versioning en encryptie                                                                                    |
 | Doen we niet        | Aannames doen over de mate van opvragingen uit de S3 bucket                                                                             |
 | Acceptatie criteria | Als de S3 Bucket er is en niet publiekelijk te benaderen is                                                                             |
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil alle data versleuteld hebben (epic - 08)
 | Item                | Opmerking                                                                                                                                                       |
