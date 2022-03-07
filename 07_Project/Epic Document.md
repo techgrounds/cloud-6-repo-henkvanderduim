@@ -109,7 +109,7 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | De rest van de wereld toegang geven tot de Admin/Management Server. HTTP/HTTPS toegang tot de Webserver is geoorloofd                                                                |
 | Acceptatie criteria | Als bij test blijkt dat alleen het AWS Team toegang kan krijgen en al het andere verkeer niet                                                                                        |
 
-![AWS Netwerk](../00_includes/MVP%20v1.0%20Network%20(AWS).drawio.png)    
+![AWS Netwerk](../00_includes/MVP%20v1.0%20Netwerk%20(AWS).jpg)   
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende webserver deployen (Epic - 05)
