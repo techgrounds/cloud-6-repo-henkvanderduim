@@ -28,21 +28,29 @@
 ### Vragen document met de antwoorden
 OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het document [Project Cloud6.Sentia1](https://docs.google.com/document/d/1pNPWIce4kDnR9kopbH4t7jD9nX6LFySnBpsTfaWT_r4/edit#heading=h.higkk7mphvwd) staan alle vragen inclusief de antwoorden die wij hebben gekregen.
 
-### Opsomming van de Eisen
-- VM disks worden ge-encrypt
-- Gebruik CDK
-- Webserver: dagelijkse backup (7 dagen behouden)
-- Webserver: extern toegankelijk via HTTP/HTTPS
-- Webserver: geautomatiseerd geïnstalleerd
-- Webserver: SSH toegang alleen via de Admin/Management server
-- Webserver: Linux VM
-- Admin/Management server: bereikbaar via Public IP
-- Admin/Management server: alleen bereikbaar vanaf vertrouwde locaties (DevOps Team)
-- Admin/Management server: Windows Server VM
-- Webserver alleen te bereiken vanaf Admin/Management Server via SSH/RDP
-- IP ranges: 10.10.10.0/24 en 10.20.20.0/24
-- Subnets: firewalls op subnet niveau (Network ACL)
-- Lege Availablity Zone is voor de failover
+### Opsomming van de Eisen en Besluiten
+| Eisen                                                                  |
+| :--------------------------------------------------------------------- |
+| VM disks worden ge-encrypt                                             |
+| Gebruik CDK/Python                                                     |
+| Webserver: dagelijkse backup (7 dagen behouden)                        |
+| Webserver: extern toegankelijk voor publiek via HTTP/HTTPS             |
+| Webserver: geautomatiseerd geïnstalleerd                               |
+| Admin/Management server: bereikbaar via Public IP                      |
+| Admin/Management server: alleen bereikbaar vanaf vertrouwde locaties   |
+| Webserver alleen te bereiken vanaf Admin/Management Server via SSH/RDP |
+| IP ranges: 10.10.10.0/24 en 10.20.20.0/24                              |
+| Subnets: firewalls op subnet niveau                                    |
+
+| Besluiten                                                                      |
+| :----------------------------------------------------------------------------- |
+| Webserver: Linux VM                                                            |
+| Admin/Management server: Windows Server VM                                     |
+| Lege Availablity Zone is voor de failover                                      |
+| Trusted resources = AWS Team                                                   |
+| Admin/Management server meenemen in de backup cyclus (1x per week/ 1 behouden) |
+| testomgeving is separate omgeving. Parameterfile gebruiken!                    |
+| Documentatie wordt geschreven voor een Engineer                                |
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Een duidelijk overzicht van de aannames (Epic - 02)
@@ -57,19 +65,19 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Doen we niet        | Alles wat buiten de scope van het project document en PRD ligt                                                                                                                                                     |
 | Acceptatie criteria | Als er bij de Epics aannames zijn benoemd of is aangegven dat ze er niet zijn                                                                                                                                      |
 
-| Epic no.                      | Aannames                                                                       |
-| ----------------------------- | ------------------------------------------------------------------------------ |
-| [01](../07_Project/Epic01.md) | geen aannames                                                                  |
-| [02](../07_Project/Epic02.md) | geen aannames                                                                  |
-| [03](../07_Project/Epic03.md) | Aanname: Project document is incompleet v.w.b. de AWs diensten                 |
-| [04](../07_Project/Epic04.md) | Aanname: Trusted sources = DevOps Team                                         |
-| [05](../07_Project/Epic05.md) | aanname: Webserver is Linux                                                    |
-| [06](../07_Project/Epic06.md) | aanname: Admin/Management serer is Windows                                     |
-| [07](../07_Project/Epic07.md) | aanname: S3 Bucket benaderbaar via Admin/Management server                     |
-| [08](../07_Project/Epic08.md) | aannames: gebruikmaken van KMS en Secrets Manager                              |
-| [09](../07_Project/Epic09.md) | Admin/Management server meenemen in de backup cyclus (1x per week/ 1 behouden) |
-| [10](../07_Project/Epic10.md) | Aanname: de klant weet niets, dus Jip en Janneke                               |
-| [11](../07_Project/Epic11.md) | Aanname: testomgeving is separate omgeving. Parameterfile gebruiken!           |
+| Epic no.                                                                                                                                                                                                    | Aannames                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| [01]([../07_Project/Epic01.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#wat-zijn-de-eisen-epic---01))                                             | geen aannames                                                  |
+| [02]([../07_Project/Epic02.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-aannames-epic---02))                       | geen aannames                                                  |
+| [03]([../07_Project/Epic03.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-cloud-infrastructuur-epic---03))           | Aanname: Project document is incompleet v.w.b. de AWS diensten |
+| [04]([../07_Project/Epic04.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-veilig-netwerk-deployen-epic---04))                         | geen aannames                                                  |
+| [05]([../07_Project/Epic05.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-webserver-deployen-epic---05))                     | geen aannames                                                  |
+| [06]([../07_Project/Epic06.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-management-server-deployen-epic---06))             | geen aannames                                                  |
+| [07]([../07_Project/Epic07.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-opslagoplossing-voor-bootstrapscripts-epic---07))               | geen aannames                                                  |
+| [08]([../07_Project/Epic08.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-alle-data-versleuteld-hebben-epic---08))                        | geen aannames                                                  |
+| [09]([../07_Project/Epic09.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-iedere-dag-een-backup-met-bewaartermijn-van-7-dagen-epic---09)) | geen aannames                                                  |
+| [10]([../07_Project/Epic10.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-weten-hoe-hijzij-de-applicatie-kan-gebruiken-epic---10))        | geen aannames                                                  |
+| [11]([../07_Project/Epic11.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-de-mvp-kunnen-deployen-om-te-testen-epic---11))                 | geen aannames                                                  |
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Een duidelijk overzicht van de Cloud Infrastructuur (Epic - 03)
@@ -85,16 +93,9 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Acceptatie criteria | Overzicht van te gebruiken AWS diensten                                                                                                                                                                            |
 
 ### Overzicht AWS diensten
-- S3 (bucket t.b.v. bootstrap scripts)
-- EC2 (webserver/management server, AMI, Snapshots)
-- VPC (Subnets, peering, Security Groups)
-- KMS
-- IAM (users, roles, policies)
-- AWS Backup
-- Cloudformation (stacks)
-- Lambda
-- Secrets Manager
+![aws diensten](../00_includes/MVP%20v1.0%20AWS%20Services.drawio.png)  
 
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 
 ## Klant wil een veilig netwerk deployen (epic - 04)
 | Item                | Opmerking                                                                                                                                                                            |
@@ -107,6 +108,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Aannames            | Trusted Sources is het DevOps team                                                                                                                                                   |
 | Doen we niet        | De rest van de wereld toegang geven                                                                                                                                                  |
 | Acceptatie criteria | Als bij test blijkt dat alleen DevOps toegang kunnen krijgen en al het andere verkeer niet                                                                                           |
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende webserver deployen (Epic - 05)
 | Item                | Opmerking                                                                                 |
@@ -197,4 +199,5 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Aannames            | Wij maken gebruik van een environment file voor de parameters                                                                                                                          |
 | Doen we niet        | test omgeving inrichten, testplan/scripts maken                                                                                                                                        |
 | Acceptatie criteria | Als de user aangeeft dat het werkt in de test omngevings                                                                                                                               |
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
