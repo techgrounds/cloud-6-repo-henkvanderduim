@@ -135,17 +135,34 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 ![AWS SG](../00_includes/stack-APP-PRD-VPC-SG.png)
 
 ### Webserver
-![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-1.png)
-![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-2.png)
-![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-3.png)
+![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-1.png)  
+![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-2.png)  
+![AWS WS](../00_includes/stack-APP-PRD-VPC-WS-3.png)  
 
 ### Network Interface
-![AWS ENI](../00_includes/Stack-APP-PRD-VPC-ENI-1.png)
-![AWS ENI](../00_includes/STACK-app-prd-vpc-eni-2.png)
+![AWS ENI](../00_includes/Stack-APP-PRD-VPC-ENI-1.png)  
+![AWS ENI](../00_includes/STACK-app-prd-vpc-eni-2.png)  
 
 ### Route Tables
-![AWS RT](../00_includes/stack-APP-PRD-VPC-RT-1.png)
-![AWS RT](../00_includes/stack-APP-PRD-VPC-RT-2.png)
+![AWS RT](../00_includes/stack-APP-PRD-VPC-RT-1.png)  
+![AWS RT](../00_includes/stack-APP-PRD-VPC-RT-2.png)  
+**De tweede Route Table**  
+![AWS RT](../00_includes/stack-APP-PRD-VPC-RT-3.png)  
+
+### Network ACL
+![AWS ACL](../00_includes/stack-APP-PRD-VPC-ACL-1.png)  
+![AWS ACL](../00_includes/stack-APP-PRD-VPC-ACL-2.png)  
+
+### Subnets
+![AWS SN](../00_includes/stack-APP-PRD-VPC-SN-1.png)  
+![AWS SN](../00_includes/stack-APP-PRD-VPC-SN-2.png)  
+**Het tweede Subnet**  
+![AWS SN](../00_includes/stack-APP-PRD-VPC-SN2-1.png)  
+![AWS SN](../00_includes/stack-APP-PRD-VPC-SN2-2.png)
+
+### VPC Peering
+![AWS VPCP](../00_includes/stack-APP-PRD-VPC-P-1.png)  
+![AWS VPCP](../00_includes/stack-APP-PRD-VPC-P-2.png)  
 
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
