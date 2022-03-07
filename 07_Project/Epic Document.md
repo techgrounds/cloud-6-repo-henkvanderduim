@@ -65,19 +65,19 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | Alles wat buiten de scope van het project document en PRD ligt                                                                                                                                                                                          |
 | Acceptatie criteria | Als er bij de Epics aannames zijn benoemd of is aangegven dat ze er niet zijn                                                                                                                                                                           |
 
-| Epic no.                                                                                                                                                                                                    | Aannames                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [01]([../07_Project/Epic01.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#wat-zijn-de-eisen-epic---01))                                             | geen aannames                                                  |
-| [02]([../07_Project/Epic02.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-aannames-epic---02))                       | geen aannames                                                  |
-| [03]([../07_Project/Epic03.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-cloud-infrastructuur-epic---03))           | Aanname: Project document is incompleet v.w.b. de AWS diensten |
-| [04]([../07_Project/Epic04.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-veilig-netwerk-deployen-epic---04))                         | geen aannames                                                  |
-| [05]([../07_Project/Epic05.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-webserver-deployen-epic---05))                     | geen aannames                                                  |
-| [06]([../07_Project/Epic06.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-management-server-deployen-epic---06))             | geen aannames                                                  |
-| [07]([../07_Project/Epic07.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-opslagoplossing-voor-bootstrapscripts-epic---07))               | geen aannames                                                  |
-| [08]([../07_Project/Epic08.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-alle-data-versleuteld-hebben-epic---08))                        | geen aannames                                                  |
-| [09]([../07_Project/Epic09.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-iedere-dag-een-backup-met-bewaartermijn-van-7-dagen-epic---09)) | geen aannames                                                  |
-| [10]([../07_Project/Epic10.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-weten-hoe-hijzij-de-applicatie-kan-gebruiken-epic---10))        | geen aannames                                                  |
-| [11]([../07_Project/Epic11.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-de-mvp-kunnen-deployen-om-te-testen-epic---11))                 | geen aannames                                                  |
+| Epic no.                                                                                                                                                                                                    | Aannames      |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| [01]([../07_Project/Epic01.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#wat-zijn-de-eisen-epic---01))                                             | geen aannames |
+| [02]([../07_Project/Epic02.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-aannames-epic---02))                       | geen aannames |
+| [03]([../07_Project/Epic03.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-cloud-infrastructuur-epic---03))           | geen aannames |
+| [04]([../07_Project/Epic04.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-veilig-netwerk-deployen-epic---04))                         | geen aannames |
+| [05]([../07_Project/Epic05.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-webserver-deployen-epic---05))                     | geen aannames |
+| [06]([../07_Project/Epic06.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-management-server-deployen-epic---06))             | geen aannames |
+| [07]([../07_Project/Epic07.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-opslagoplossing-voor-bootstrapscripts-epic---07))               | geen aannames |
+| [08]([../07_Project/Epic08.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-alle-data-versleuteld-hebben-epic---08))                        | geen aannames |
+| [09]([../07_Project/Epic09.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-iedere-dag-een-backup-met-bewaartermijn-van-7-dagen-epic---09)) | geen aannames |
+| [10]([../07_Project/Epic10.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-weten-hoe-hijzij-de-applicatie-kan-gebruiken-epic---10))        | geen aannames |
+| [11]([../07_Project/Epic11.md](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-de-mvp-kunnen-deployen-om-te-testen-epic---11))                 | geen aannames |
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Een duidelijk overzicht van de Cloud Infrastructuur (Epic - 03)
@@ -210,7 +210,7 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 
 ### Subnets
 ![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-1.png)  
-![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-2.png)
+![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-2.png)  
 **Het tweede Subnet**  
 ![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-3.png)  
 ![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-4.png)  
