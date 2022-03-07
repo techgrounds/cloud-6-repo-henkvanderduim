@@ -125,7 +125,10 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | Complete website bouwen, alleen wat in de opdracht staat                                  |
 | Acceptatie criteria | Als de gemaakte webpagina zichtbaar is                                                    |
 
-### Schema Webserver Stack
+### Webserver in de lucht
+![AWS](../00_includes/0_webserver.png)  
+
+### Webserver Stack
 ![AWS EC2](../00_includes/Stack-APP-PRD-VPC.png)  
 
 ### Opbouw van de Stack APP-PRD-VPC
@@ -178,8 +181,43 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | Firewall plaatsen voor de Admin/Management server                                                    |
 | Acceptatie criteria | Als getest is dat de toegang beperkt is tot hoe wij het ingericht hebben                             |
 
-### Schema Management Server
-![AWS EC2](../00_includes/MVP%20v1.0%20Management%20server%20(AWS).jpg)  
+### Management Server Stack
+![AWS Stack](../00_includes/0_stack-MNGT-PRD-VPC.png)  
+
+### Opbouw van de stack MANAGEMENT-PRD-VPC
+![AWS info](../00_includes/0_stack-MNGT-PRD-VPC-info-1.png)  
+![AWS Info](../00_includes/0_stack-MNGT-PRD-VPC-info-2.png)
+
+### Security Group
+![AWS SG](../00_includes/0_stack-MNGT-PRD-VPC-SG-1.png)  
+![AWS SG](../00_includes/0_stack-MNGT-PRD-VPC-SG-2.png)
+
+### Management Server
+![AWS MS](../00_includes/0_stack-MNGT-PRD-VPC-MS-1.png)  
+![AWS MS](../00_includes/0_stack-MNGT-PRD-VPC-MS-2.png)  
+![AWS MS](../00_includes/0_stack-MNGT-PRD-VPC-MS-3.png)  
+![AWS MS](../00_includes/0_stack-MNGT-PRD-VPC-MS-4.png)  
+
+### Network Interface
+![AWS ENI](../00_includes/0_stack-MNGT-PRD-VPC-ENI-1.png)  
+![AWS ENI](../00_includes/0_stack-MNGT-PRD-VPC-ENI-2.png)
+
+### Route Table
+![AWS RT](../00_includes/0_stack-MNGT-PRD-RT-1.png)
+
+### Network ACL
+![AWS ACL](../00_includes/0_stack-MNGT-PRD-VPC-ACL.png)
+
+### Subnets
+![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-1.png)  
+![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-2.png)
+**Het tweede Subnet**  
+![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-3.png)  
+![AWS SN](../00_includes/0_stack-MNGT-PRD-VPC-SN-4.png)  
+
+### VPC Peering
+![AWS VPCP](../00_includes/0_stack-MNGT-PRD-VPC-P-1.png)  
+![AWS VPCP](../00_includes/0_stack-MNGT-PRD-VPC-P-2.png)
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil opslagoplossing voor bootstrapscript(s) (epic - 07)
@@ -197,7 +235,7 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 ### Schema van de S3 Bucket in het diagram
 ![AWS S3](../00_includes/MVP%20v1.0%20Management%20server%20(AWS).jpg)  
 
-De S3 Bucket ontvangt bij het deployen meteen het script voor het installeren van de Webserver. Dit script wordt opgestart vanuit de S3 Bucket. Ook wordt de folder met daarin het Stack script gekopieerd naar de S3 Bucket.  
+De S3 Bucket ontvangt bij het deployen meteen het script voor het installeren van de Webserver. Dit script wordt opgestart vanuit de S3 Bucket.  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil alle data versleuteld hebben (epic - 08)
@@ -214,6 +252,7 @@ De S3 Bucket ontvangt bij het deployen meteen het script voor het installeren va
 
 ### Encryptie
 De encryptie en de sleutels zijn terug te vinden in de KMS en de Secrets Manager.  
+![AWS](../00_includes/0_secretsmanager.png)  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil iedere dag een backup, met bewaartermijn van 7 dagen (Epic - 09)
@@ -231,6 +270,17 @@ De encryptie en de sleutels zijn terug te vinden in de KMS en de Secrets Manager
 ### Backup
 Voor zowel de Webserver alsmede de Management Server is er een Backup Vault/Plan/Rule gemaakt.
 
+### Backup Vaults
+![AWS](../00_includes/0_backup_vault.png)
+
+### Backup Plans
+![AWS](../00_includes/0_backup_plan.png)
+
+### Backup Rules
+![AWS WSRV](../00_includes/0_backup_rule_wsrv.png)  
+**Rule voor de Management Server**  
+![AWS MNGT](../00_includes/0_backup_rule_mngt.png)  
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil weten hoe hij/zij de applicatie kan gebruiken (Epic - 10)
 
@@ -241,9 +291,12 @@ Voor zowel de Webserver alsmede de Management Server is er een Backup Vault/Plan
 | Doel                | Documentatie voor het gebruik van de applicatie                                                                                                                                                              |
 | User problem        | Geen idee hoe het allemaal werkt                                                                                                                                                                             |
 | User value          | Handleiding met hoe het allemaal werkt                                                                                                                                                                       |
-| Aannames            | User weet niets                                                                                                                                                                                              |
+| Aannames            | geen aannames                                                                                                                                                                                                |
 | Doen we niet        | Cursus organiseren, videos maken                                                                                                                                                                             |
 | Acceptatie criteria | Als de user in staat is om het zelf te deployen                                                                                                                                                              |
+
+## Uitleg
+In de [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#readme) wordt uitleg gegeven over het script en toebehoren en hoe het te deployen.  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil de MVP kunnen deployen om te testen (Epic - 11)
@@ -254,8 +307,11 @@ Voor zowel de Webserver alsmede de Management Server is er een Backup Vault/Plan
 | Doel                | Configuratie voor een MVP deployment                                                                                                                                                   |
 | User problem        | User wil zelf testen op aparte omgeving                                                                                                                                                |
 | User value          | User ziet dat het allemaal werkt in een test omgeving                                                                                                                                  |
-| Aannames            | Wij maken gebruik van een environment file voor de parameters                                                                                                                          |
-| Doen we niet        | test omgeving inrichten, testplan/scripts maken                                                                                                                                        |
-| Acceptatie criteria | Als de user aangeeft dat het werkt in de test omngevings                                                                                                                               |
+| Aannames            | Wij maken gebruik van een environment file voor de parameters (cdk.json)                                                                                                               |
+| Doen we niet        | test omgeving inrichten, testplan/scripts                                                                                                                                              |
+| Acceptatie criteria | Als de user aangeeft dat het werkt in de testomngeving                                                                                                                                 |
+
+### Uitleg
+In de [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#readme) wordt uitleg gegeven over het script en toebehoren en hoe het te deployen. Informatie over de parameters is te vinden in het docunent: [Parameters](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpscript/parameters.md).  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
