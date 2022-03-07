@@ -109,6 +109,7 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | De rest van de wereld toegang geven tot de Admin/Management Server. HTTP/HTTPS toegang tot de Webserver is geoorloofd                                                                |
 | Acceptatie criteria | Als bij test blijkt dat alleen het AWS Team toegang kan krijgen en al het andere verkeer niet                                                                                        |
 
+### Netwerk tekening
 ![AWS Netwerk](../00_includes/MVP%20v1.0%20Netwerk%20(AWS).jpg)   
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
@@ -124,6 +125,9 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Doen we niet        | Complete website bouwen, alleen wat in de opdracht staat                                  |
 | Acceptatie criteria | Als de gemaakte webpagina zichtbaar is                                                    |
 
+### Schema Webserver
+![AWS EC2](../00_includes/MVP%20v1.0%20Webserver%20(AWS).jpg)  
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende management server deployen (epic - 06)
 | Item                | Opmerking                                                                                            |
@@ -136,6 +140,9 @@ Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Proj
 | Aannames            | Epic04 is een onderdeel van de oplossing, rest oplossen m.b.v. SG                                    |
 | Doen we niet        | Firewall plaatsen voor de Admin/Management server                                                    |
 | Acceptatie criteria | Als getest is dat de toegang beperkt is tot hoe wij het ingericht hebben                             |
+
+### Schema Management Server
+![AWS EC2]()
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil opslagoplossing voor bootstrapscript(s) (epic - 07)
