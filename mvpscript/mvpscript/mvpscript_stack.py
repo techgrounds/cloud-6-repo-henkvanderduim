@@ -278,7 +278,7 @@ class MvpscriptStack(Stack):
             auto_delete_objects=auto_delete_objects,
         )
         
-        ### Put file in the bucket
+        ### Put mvpscript folder in the bucket
         #s3deploy.BucketDeployment(
         #    self, 
         #    deploy_name,
@@ -291,7 +291,6 @@ class MvpscriptStack(Stack):
         ### Security Group Management Server
         mngtsg = ec2.SecurityGroup(
             self,
-            mngt_sg_name,
             mngt_sg_name,
             vpc=self.vpc1,
             description=mngt_sg_description,
@@ -312,7 +311,6 @@ class MvpscriptStack(Stack):
         ### Security Group Web Server
         wssg = ec2.SecurityGroup(
             self,
-            wsrv_sg_name,
             wsrv_sg_name,
             vpc=self.vpc2,
             description=wsrv_sg_description,

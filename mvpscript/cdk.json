@@ -52,7 +52,7 @@
         "versioned": true,
         "auto_delete_objects": true,
         "deploy_name": "S3Deployment",
-        "source": "./bucket"
+        "source": "./mvpscript"
       },
       "sgs": {
         "mngt_sg_name": "ManagementSecurityGroup",
