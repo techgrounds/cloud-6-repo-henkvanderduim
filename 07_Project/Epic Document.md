@@ -26,7 +26,7 @@
 | Acceptatie criteria | De Product Owner heeft alle vragen naar onze tevredenheid beantwoord                                                                                                                                         |
 
 ### Vragen document met de antwoorden
-OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het document [Project Cloud6.Sentia1](https://docs.google.com/document/d/1pNPWIce4kDnR9kopbH4t7jD9nX6LFySnBpsTfaWT_r4/edit#heading=h.higkk7mphvwd) staan alle vragen inclusief de antwoorden die wij hebben gekregen.
+Wij hebben meerdere gesprekken gehad met de Product Owner. In het document [Project Cloud6.Sentia1](https://docs.google.com/document/d/1pNPWIce4kDnR9kopbH4t7jD9nX6LFySnBpsTfaWT_r4/edit#heading=h.higkk7mphvwd) staan alle vragen inclusief de antwoorden die wij hebben gekregen, van het gesprek van 10 februari jl. De besluitenlijst is tot stand gekomen aan de hand van de antwoorden en toevoegingen van de Product Owner.
 
 ### Opsomming van de Eisen en Besluiten
 | Eisen                                                                  |
@@ -54,16 +54,16 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Een duidelijk overzicht van de aannames (Epic - 02)
-| Item                | Opmerking                                                                                                                                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Kenmerk             | Exploratie                                                                                                                                                                                                         |
-| Omschrijving        | Je hebt al heel wat informatie gekregen. En al een ontwerp. Alleen in het ontwerp ontbreken nog zaken als IAM/AD. Identificeer deze extra diensten die je nodig zal hebben en maak een overzicht van alle diensten |
-| Doel                | Een puntsgewijze overzicht van alle aannames                                                                                                                                                                       |
-| Team problem        | Product Owner heeft bij een aantal vragen aangegeven dat van ons het antwoord/advies wordt verwacht                                                                                                                |
-| Team value          | Overzicht van de aannames per Epic                                                                                                                                                                                 |
-| Aannames            | geen aannames                                                                                                                                                                                                      |
-| Doen we niet        | Alles wat buiten de scope van het project document en PRD ligt                                                                                                                                                     |
-| Acceptatie criteria | Als er bij de Epics aannames zijn benoemd of is aangegven dat ze er niet zijn                                                                                                                                      |
+| Item                | Opmerking                                                                                                                                                                                                                                               |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kenmerk             | Exploratie                                                                                                                                                                                                                                              |
+| Omschrijving        | Je hebt al heel wat informatie gekregen. En al een ontwerp. Alleen in het ontwerp ontbreken nog zaken als IAM/AD. Identificeer deze extra diensten die je nodig zal hebben en maak een overzicht van alle diensten                                      |
+| Doel                | Een puntsgewijze overzicht van alle aannames                                                                                                                                                                                                            |
+| Team problem        | Product Owner heeft, tijdens het eerste gesprek, bij een aantal vragen aangegeven dat van ons het antwoord/advies wordt verwacht. Er zijn meerdere gesprekken geweest met de Product Owner. Daardoor zijn alle aannames inmiddels omgezet in besluiten. |
+| Team value          | Overzicht van de aannames per Epic                                                                                                                                                                                                                      |
+| Aannames            | geen aannames                                                                                                                                                                                                                                           |
+| Doen we niet        | Alles wat buiten de scope van het project document en PRD ligt                                                                                                                                                                                          |
+| Acceptatie criteria | Als er bij de Epics aannames zijn benoemd of is aangegven dat ze er niet zijn                                                                                                                                                                           |
 
 | Epic no.                                                                                                                                                                                                    | Aannames                                                       |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -81,7 +81,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Een duidelijk overzicht van de Cloud Infrastructuur (Epic - 03)
-| Item                | Omgeving                                                                                                                                                                                                           |
+| Item                | Opmerking                                                                                                                                                                                                          |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Kenmerk             | Exploratie                                                                                                                                                                                                         |
 | Omschrijving        | Je hebt al heel wat informatie gekregen. En al een ontwerp. Alleen in het ontwerp ontbreken nog zaken als IAM/AD. Identificeer deze extra diensten die je nodig zal hebben en maak een overzicht van alle diensten |
@@ -90,7 +90,7 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Team value          | Overzicht van de AWS diensten die gebruikt gaan worden                                                                                                                                                             |
 | Aannames            | Het Project document is incompleet v.w.b. de AWS diensten                                                                                                                                                          |
 | Doen we niet        | Alle diensten en oplossingen die buiten AWS liggen en die **niet** beschreven zijn in de PRD                                                                                                                       |
-| Acceptatie criteria | Overzicht van te gebruiken AWS diensten                                                                                                                                                                            |
+| Acceptatie criteria | Overzicht van de te gebruiken AWS diensten                                                                                                                                                                         |
 
 ### Overzicht AWS diensten
 ![aws diensten](../00_includes/MVP%20v1.0%20AWS%20Services.drawio.png)  
@@ -105,9 +105,11 @@ OP 10 februari 2022, hebben wij het gesprek gehad met de Product Owner. In het d
 | Doel                | IaC-code voor het netwerk en alle onderdelen                                                                                                                                         |
 | User problem        | Alleen trusted sources (IP Adressen) mogen de management server benaderen                                                                                                            |
 | User value          | Afschermen van ongewenst verkeer naar de Admin/Management server                                                                                                                     |
-| Aannames            | Trusted Sources is het DevOps team                                                                                                                                                   |
-| Doen we niet        | De rest van de wereld toegang geven                                                                                                                                                  |
-| Acceptatie criteria | Als bij test blijkt dat alleen DevOps toegang kunnen krijgen en al het andere verkeer niet                                                                                           |
+| Aannames            | Trusted Sources is het AWS team                                                                                                                                                      |
+| Doen we niet        | De rest van de wereld toegang geven tot de Admin/Management Server. HTTP/HTTPS toegang tot de Webserver is geoorloofd                                                                |
+| Acceptatie criteria | Als bij test blijkt dat alleen het AWS Team toegang kan krijgen en al het andere verkeer niet                                                                                        |
+
+![AWS Netwerk](../00_includes/MVP%20v1.0%20Netwerk%20(AWS).drawio(1).png)  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
 ## Klant wil een werkende webserver deployen (Epic - 05)
