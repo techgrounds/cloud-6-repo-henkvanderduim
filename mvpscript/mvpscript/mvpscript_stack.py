@@ -1,7 +1,7 @@
 '''''
 PRD-01 Cloud6.Sentia1
 
-Project: MVP v1.0
+Project: MVP v1.1
 
 Ingredients:
 - 1 Region
@@ -12,6 +12,13 @@ VPC MANAGEMENT-PRD-VPC                    | VPC APP-PRD-VPC
 - 1 EC2 instance (windows server)         | - 1 EC2 instance (linux) with website
 - 1 Management Security Group             | - 1 Production Security Group
 - Backup 1x a week (1 saved    )          | - daily backup (7 rounds saved)
+                                          | - Load Balancer
+                                          | - Elastic IP instead of Public IP Address
+                                          | - TLS 1.2 or higher
+                                          | - HTTP automatically converted to HTTPS
+                                          | - Regular Health Checks
+                                          | - When Health Check fails -> automatically recover instance
+                                          | - High load -> autoscaling with max. 3 instances
 
 S3 Bucket for Bootstrap Scripts
 
