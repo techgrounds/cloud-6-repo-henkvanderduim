@@ -38,6 +38,7 @@ from aws_cdk import (
     aws_kms as kms,
     aws_s3 as s3,
     aws_s3_deployment as s3deploy,
+#    aws_elasticloadbalancingv2 as elbv2,
     aws_ssm as ssm,
     RemovalPolicy,
     CfnOutput,
@@ -45,11 +46,12 @@ from aws_cdk import (
     Stack,
     Tags,
 )
-
+from cdk_iam_floyd import Elasticloadbalancing, ElasticloadbalancingV2
 from constructs import Construct
 from cdk_ec2_key_pair import KeyPair
 from aws_cdk.aws_events import Schedule
 from aws_cdk.aws_s3_assets import Asset
+#from aws_cdk.aws_autoscaling import AutoScalingGroup 
 
 
 ### directory variable
@@ -150,6 +152,11 @@ class MvpscriptStack(Stack):
         wsrv_tag_key = tags_environment.get("wsrv_tag_key")
         wsrv_tag_value = tags_environment.get("wsrv_tag_value")
         
+        # Autoscaling Group
+        asgroup_environment = environments.get("asgroup")
+        asg_name = asgroup_environment.get("asg_name")
+        asg_delete = asgroup_environment.get("asg_delete")
+        
         # Backup Vaults/Plans/Rules
         bus_environment = environments.get("bus")
         mngt_vault_key = bus_environment.get("mngt_vault_key")
@@ -242,6 +249,7 @@ class MvpscriptStack(Stack):
             destination_cidr_block=self.vpc1.vpc_cidr_block,
             vpc_peering_connection_id=self.cfn_vPCPeering_connection.ref,
         )
+        
 
         #################### Create AMI's ####################
 
@@ -285,14 +293,7 @@ class MvpscriptStack(Stack):
             auto_delete_objects=auto_delete_objects,
         )
         
-        ### Put mvpscript folder in the bucket
-        #s3deploy.BucketDeployment(
-        #    self, 
-        #    deploy_name,
-        #    sources=[s3deploy.Source.asset(source)],
-        #    destination_bucket=bootstrapbucket,
-        #)
-        
+
         #################### Create Security Groups ####################
 
         ### Security Group Management Server
@@ -368,6 +369,7 @@ class MvpscriptStack(Stack):
         wsrvkey.grant_read_on_private_key(role)
         wsrvkey.grant_read_on_public_key(role)
 
+        
         #################### Create EC2 Instances ####################
 
         ### Instance Management Server (Windows)
@@ -431,6 +433,57 @@ class MvpscriptStack(Stack):
         ### Tags
         Tags.of(management_server).add(mngt_tag_key, mngt_tag_value)
         Tags.of(web_server).add(wsrv_tag_key, wsrv_tag_value)
+
+
+        # #################### Create Autoscaling Group ####################
+        
+        # asg = AutoScalingGroup.AutoScalingGroup(
+        #     self,
+        #     asg_name,
+        #     vpc=self.vpc2,
+        #     vpc_subnets=ec2.SubnetType.PUBLIC,
+        #     instance_type=ec2.InstanceType(wsrv_ec2_instance_type),
+        #     machine_image=amzn_linux,
+        #     key_name=wsrvkey.key_pair_name,
+        #     vpc_subnets=wsrv_subnet_name
+        #     desired_capacity=1,
+        #     max_capacity=3,
+        #     min_capacity=1,
+        #     block.devices=[
+        #         AutoScalingGroup.BlockDevice(
+        #             device_name="/dev/xvda",
+        #             volume=AutoScalingGroup.BlockDeviceVolume.ebs(
+        #                 volume_size=8,
+        #                 encrypted=wsrv_ec2_encrypted,
+        #                 delete_on_termination=asg_delete
+        #             )
+        #         )
+        #     ]
+        #     )
+        # asg.add_security_group(wssg)
+
+        # asg.connections.allow_from(lb, ec2.Port.tcp(80), "LB access 80 port of EC2 in Autoscaling Group")
+        # listener.add_targets("addTargetsGroup",
+        #                      port=80,
+        #                      targets[asg]
+        #                      )
+
+        # #################### Elastic Load Balancer ####################
+        
+        # ### Create the Load Balancer in the Webserver's VPC
+        # lb = elbv2.NetworkLoadBalancer(
+        #     self,
+        #     "WSRV-LB",
+        #     vpc=self.vpc2,
+        #     internet_facing=True,
+        #     health_check=("port": 80),
+        #     load_balancer_name="WSRV-LB",
+        #     security_group=wsrv_sg_name
+        #     )
+        # lb.add_target(asg)
+        
+        # listener = lb.add_listener(external_port=80)
+        # listener.connections.allow_default_port_from_any_ipv4("Open to the world")
 
         ##################### Create Backup Routines #############################
 
