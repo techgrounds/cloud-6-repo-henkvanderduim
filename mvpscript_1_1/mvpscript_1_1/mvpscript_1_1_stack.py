@@ -435,14 +435,6 @@ class Mvpscript11Stack(Stack):
         # assets.grant_read(asg.role)
 
         # Scaling action
-        scaling_action = autoscaling.StepScalingAction(
-            self,
-            "scaleout",
-            auto_scaling_group=asg,
-            adjustment_type=autoscaling.AdjustmentType.EXACT_CAPACITY,
-        )
-        scaling_action.add_adjustment(adjustment=1, lower_bound=1)
-        scale_out_init.add_alarm_action(AutoScalingAction(scaling_action))
 
         # asg.connections.allow_from(lb, ec2.Port.tcp(80), "LB access 80 port of EC2 in Autoscaling Group")
         # listener.add_targets("addTargetsGroup",
