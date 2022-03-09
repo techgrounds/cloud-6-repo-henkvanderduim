@@ -54,6 +54,9 @@
         "deploy_name": "S3Deployment",
         "source": "./mvpscript"
       },
+      "userdata": {
+        "usrdt": "sudo yum -y update; sudo yum install httpd -y; sudo systemctl enable httpd; systemctl start httpd; sudo echo '<h1> Joehoe, dit is je webserver </h1>'"
+      },
       "sgs": {
         "mngt_sg_name": "ManagementSecurityGroup",
         "mngt_sg_description": "Management Security Group",
@@ -85,7 +88,12 @@
         "mngt_ec2_encrypted": true,
         "wsrv_ec2_name": "Web Server",
         "wsrv_ec2_instance_type": "t3.nano",
+        "wsrv_ec2_volume_type": "GP2",
         "wsrv_ec2_encrypted": true
+      },
+      "asgroup": {
+        "asg_name": "WSRV ASG",
+        "asg_delete": true
       },
       "webscript": {
         "wsrv_asset_name": "Asset",

@@ -1,7 +1,7 @@
-'''''
+"""''
 PRD-01 Cloud6.Sentia1
 
-Project: MVP v1.0
+Project: MVP v1.1
 
 Ingredients:
 - 1 Region
@@ -12,11 +12,18 @@ VPC MANAGEMENT-PRD-VPC                    | VPC APP-PRD-VPC
 - 1 EC2 instance (windows server)         | - 1 EC2 instance (linux) with website
 - 1 Management Security Group             | - 1 Production Security Group
 - Backup 1x a week (1 saved    )          | - daily backup (7 rounds saved)
+                                          | - Load Balancer
+                                          | - Elastic IP instead of Public IP Address
+                                          | - TLS 1.2 or higher
+                                          | - HTTP automatically converted to HTTPS
+                                          | - Regular Health Checks
+                                          | - When Health Check fails -> automatically recover instance
+                                          | - High load -> autoscaling with max. 3 instances
 
 S3 Bucket for Bootstrap Scripts
 
 VPC Peering Connection
-'''''
+""" ""
 ### Importing the necessary libraries
 
 import os.path
@@ -31,6 +38,9 @@ from aws_cdk import (
     aws_kms as kms,
     aws_s3 as s3,
     aws_s3_deployment as s3deploy,
+    aws_elasticloadbalancingv2 as elbv2,
+    aws_elasticloadbalancingv2_targets as target,
+    aws_autoscaling as autoscaling,
     aws_ssm as ssm,
     RemovalPolicy,
     CfnOutput,
@@ -38,11 +48,13 @@ from aws_cdk import (
     Stack,
     Tags,
 )
-
+from cdk_iam_floyd import Autoscaling, Elasticloadbalancing, ElasticloadbalancingV2
 from constructs import Construct
 from cdk_ec2_key_pair import KeyPair
 from aws_cdk.aws_events import Schedule
 from aws_cdk.aws_s3_assets import Asset
+
+# from aws_cdk.aws_autoscaling import AutoScalingGroup
 
 
 ### directory variable
@@ -52,12 +64,11 @@ dirname = os.path.dirname(__file__)
 #################### STACK ####################
 
 
-class MvpscriptStack(Stack):
+class Mvpscript11Stack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-        
         #################### Parameter Setup ####################
-        
+
         # VPCs
         environments = self.node.try_get_context("ENVIRONMENTS")
         vpcs_environment = environments.get("vpcs")
@@ -66,31 +77,31 @@ class MvpscriptStack(Stack):
         mngt_cidr_mask = vpcs_environment.get("mngt_cidr_mask")
         mngt_subnet_name = vpcs_environment.get("mngt_subnet_name")
         mngt_max_azs = vpcs_environment.get("mngt_max_azs")
-        
+
         wsrv_name = vpcs_environment.get("wsrv_name")
         wsrv_cidr_block = vpcs_environment.get("wsrv_cidr_block")
         wsrv_cidr_mask = vpcs_environment.get("wsrv_cidr_mask")
         wsrv_subnet_name = vpcs_environment.get("wsrv_subnet_name")
         wsrv_max_azs = vpcs_environment.get("wsrv_max_azs")
-        
+
         vpcp_name = vpcs_environment.get("vpcp_name")
         vpcp_region = vpcs_environment.get("vpcp_region")
         mngt_vpcp_route = vpcs_environment.get("mngt_vpcp_route")
         wsrv_vpcp_route = vpcs_environment.get("wsrv_vpcp_route")
-        
+
         # Roles
         roles_environment = environments.get("roles")
         iam_ssm_role = roles_environment.get("iam_ssm_role")
         iam_ssm_principal = roles_environment.get("iam_ssm_principal")
-        
+
         # Bucket
         bucket_environment = environments.get("bucket")
         bucket_name = bucket_environment.get("bucket_name")
         versioned = bucket_environment.get("versioned")
         auto_delete_objects = bucket_environment.get("auto_delete_objects")
-        #deploy_name = bucket_environment.get("deploy_name")
-        #source = bucket_environment.get("source")
-        
+        # deploy_name = bucket_environment.get("deploy_name")
+        # source = bucket_environment.get("source")
+
         # SGs
         sgs_environment = environments.get("sgs")
         mngt_sg_name = sgs_environment.get("mngt_sg_name")
@@ -100,49 +111,58 @@ class MvpscriptStack(Stack):
         mngt_sg_ssh_rule_port = sgs_environment.get("mngt_sg_ssh_rule_port")
         mngt_sg_rdp_rule_ip = sgs_environment.get("mngt_sg_rdp_rule_ip")
         mngt_sg_rdp_rule_port = sgs_environment.get("mngt_sg_rdp_rule_port")
-        
+
         wsrv_sg_name = sgs_environment.get("wsrv_sg_name")
         wsrv_sg_description = sgs_environment.get("wsrv_sg_description")
         wsrv_sg_allow_all_outbound = sgs_environment.get("wsrv_sg_allow_all_outbound")
         wsrv_sg_rule_port = sgs_environment.get("wsrv_sg_rule_port")
         wsrv_sg_http_rule_port = sgs_environment.get("wsrv_sg_http_rule_port")
         wsrv_sg_https_rule_port = sgs_environment.get("wsrv_sg_https_rule_port")
-        
+
         # Key Pair
         keypair_environment = environments.get("keypair")
         mngt_kp = keypair_environment.get("mngt_kp")
         mngt_kp_name = keypair_environment.get("mngt_kp_name")
         mngt_kp_description = keypair_environment.get("mngt_kp_description")
         mngt_kp_store = keypair_environment.get("mngt_kp_store")
-        
+
         wsrv_kp = keypair_environment.get("wsrv_kp")
         wsrv_kp_name = keypair_environment.get("wsrv_kp_name")
         wsrv_kp_description = keypair_environment.get("wsrv_kp_description")
         wsrv_kp_store = keypair_environment.get("wsrv_kp_store")
-        
+
         # EC2s
         ec2s_environment = environments.get("ec2s")
         mngt_ec2_name = ec2s_environment.get("mngt_ec2_name")
         mngt_ec2_instance_type = ec2s_environment.get("mngt_ec2_instance_type")
         mngt_ec2_encrypted = ec2s_environment.get("mngt_ec2_encrypted")
-        
+
         wsrv_ec2_name = ec2s_environment.get("wsrv_ec2_name")
         wsrv_ec2_instance_type = ec2s_environment.get("wsrv_ec2_instance_type")
         wsrv_ec2_encrypted = ec2s_environment.get("wsrv_ec2_encrypted")
-        
+
         # Server Script
         webscript_environment = environments.get("webscript")
-        wsrv_asset_name = webscript_environment.get("wsrv_asset_name")
-        wsrv_asset_path = webscript_environment.get("wsrv_asset_path")
-        wsrv_asset_region = webscript_environment.get("wsrv_asset_region")
-        
+        # wsrv_asset_name = webscript_environment.get("wsrv_asset_name")
+        # wsrv_asset_path = webscript_environment.get("wsrv_asset_path")
+        # wsrv_asset_region = webscript_environment.get("wsrv_asset_region")
+
         # Tags
         tags_environment = environments.get("tags")
         mngt_tag_key = tags_environment.get("mngt_tag_key")
         mngt_tag_value = tags_environment.get("mngt_tag_value")
         wsrv_tag_key = tags_environment.get("wsrv_tag_key")
         wsrv_tag_value = tags_environment.get("wsrv_tag_value")
-        
+
+        # User Data
+        userdata_environments = environments.get("userdata")
+        usrdt = userdata_environments.get("usrdt")
+
+        # Autoscaling Group
+        asgroup_environment = environments.get("asgroup")
+        asg_name = asgroup_environment.get("asg_name")
+        asg_delete = asgroup_environment.get("asg_delete")
+
         # Backup Vaults/Plans/Rules
         bus_environment = environments.get("bus")
         mngt_vault_key = bus_environment.get("mngt_vault_key")
@@ -156,7 +176,7 @@ class MvpscriptStack(Stack):
         mngt_month = bus_environment.get("mngt_month")
         mngt_weekday = bus_environment.get("mngt_weekday")
         mngt_duration = bus_environment.get("mngt_duration")
-        
+
         wsrv_vault_key = bus_environment.get("wsrv_vault_key")
         wsrv_vault_name = bus_environment.get("wsrv_vault_name")
         wsrv_backup_vault_name = bus_environment.get("wsrv_backup_vault_name")
@@ -168,8 +188,6 @@ class MvpscriptStack(Stack):
         wsrv_month = bus_environment.get("wsrv_month")
         wsrv_weekday = bus_environment.get("wsrv_weekday")
         wsrv_duration = bus_environment.get("wsrv_duration")
-        
-                
 
         #################### Create 2 VPCs + VPC Peering ####################
 
@@ -256,9 +274,7 @@ class MvpscriptStack(Stack):
         ### Role SSM
 
         role = iam.Role(
-            self, 
-            iam_ssm_role,
-            assumed_by=iam.ServicePrincipal(iam_ssm_principal)
+            self, iam_ssm_role, assumed_by=iam.ServicePrincipal(iam_ssm_principal)
         )
         role.add_managed_policy(
             iam.ManagedPolicy.from_aws_managed_policy_name(
@@ -277,15 +293,7 @@ class MvpscriptStack(Stack):
             removal_policy=cdk.RemovalPolicy.DESTROY,
             auto_delete_objects=auto_delete_objects,
         )
-        
-        ### Put mvpscript folder in the bucket
-        #s3deploy.BucketDeployment(
-        #    self, 
-        #    deploy_name,
-        #    sources=[s3deploy.Source.asset(source)],
-        #    destination_bucket=bootstrapbucket,
-        #)
-        
+
         #################### Create Security Groups ####################
 
         ### Security Group Management Server
@@ -324,15 +332,15 @@ class MvpscriptStack(Stack):
         )
 
         wssg.add_ingress_rule(
-            ec2.Peer.any_ipv4(), 
-            ec2.Port.tcp(wsrv_sg_http_rule_port), 
-            "allow HTTP traffic from anywhere"
+            ec2.Peer.any_ipv4(),
+            ec2.Port.tcp(wsrv_sg_http_rule_port),
+            "allow HTTP traffic from anywhere",
         )
 
         wssg.add_ingress_rule(
-            ec2.Peer.any_ipv4(), 
-            ec2.Port.tcp(wsrv_sg_https_rule_port), 
-            "allow HTTPS traffic from anywhere"
+            ec2.Peer.any_ipv4(),
+            ec2.Port.tcp(wsrv_sg_https_rule_port),
+            "allow HTTPS traffic from anywhere",
         )
 
         #################### Create Key Pair ####################
@@ -348,7 +356,7 @@ class MvpscriptStack(Stack):
 
         mngtkey.grant_read_on_private_key(role)
         mngtkey.grant_read_on_public_key(role)
-        
+
         ### key pair webserver
         wsrvkey = KeyPair(
             self,
@@ -379,73 +387,108 @@ class MvpscriptStack(Stack):
                 )
             ],
         )
-        
-            
-        ### Instance Web Server
-        web_server = ec2.Instance(
+
+        #################### Create Autoscaling Group ####################
+
+        asg = autoscaling.AutoScalingGroup(
             self,
             wsrv_ec2_name,
+            vpc=self.vpc2,
+            vpc_subnets=ec2.SubnetType.PUBLIC,
             instance_type=ec2.InstanceType(wsrv_ec2_instance_type),
             machine_image=amzn_linux,
-            vpc=self.vpc2,
-            security_group=wssg,
             key_name=wsrvkey.key_pair_name,
+            desired_capacity=1,
+            max_capacity=3,
+            min_capacity=1,
             block_devices=[
-                ec2.BlockDevice(
+                autoscaling.BlockDevice(
                     device_name="/dev/xvda",
-                    volume=ec2.BlockDeviceVolume.ebs(8, encrypted=wsrv_ec2_encrypted),
+                    volume=autoscaling.BlockDeviceVolume.ebs(
+                        volume_size=8,
+                        encrypted=wsrv_ec2_encrypted,
+                        delete_on_termination=asg_delete,
+                    ),
                 )
             ],
         )
-        
+        asg.add_security_group(wssg)
+
         # Launch script to install webserver
-    
-        assets = Asset(
+
+        asg.add_user_data(usrdt)
+
+        # assets = Asset(
+        #     self,
+        #     wsrv_asset_name,
+        #     path=wsrv_asset_path,
+        # )
+
+        # Local_path = asg.user_data.add_s3_download_command(
+        #     bucket=assets.bucket,
+        #     bucket_key=assets.s3_object_key,
+        #     region=wsrv_asset_region,
+        # )
+
+        # asg.user_data.add_execute_file_command(file_path=Local_path)
+
+        # assets.grant_read(asg.role)
+
+        # Scaling action
+        scaling_action = autoscaling.StepScalingAction(
             self,
-            wsrv_asset_name,
-            path=wsrv_asset_path,
+            "scaleout",
+            auto_scaling_group=asg,
+            adjustment_type=autoscaling.AdjustmentType.EXACT_CAPACITY,
         )
-        
-        Local_path = web_server.user_data.add_s3_download_command(
-            bucket=assets.bucket,
-            bucket_key=assets.s3_object_key,
-            region=wsrv_asset_region,
-        )
+        scaling_action.add_adjustment(adjustment=1, lower_bound=1)
+        scale_out_init.add_alarm_action(AutoScalingAction(scaling_action))
 
-        web_server.user_data.add_execute_file_command(
-            file_path=Local_path
-        )
+        # asg.connections.allow_from(lb, ec2.Port.tcp(80), "LB access 80 port of EC2 in Autoscaling Group")
+        # listener.add_targets("addTargetsGroup",
+        #                      port=80,
+        #                      targets[asg]
+        #                      )
 
-        assets.grant_read(web_server.role)
-        
- 
+        # #################### Elastic Load Balancer ####################
+
+        # ### Create the Load Balancer in the Webserver's VPC
+        # lb = elbv2.NetworkLoadBalancer(
+        #     self,
+        #     "WSRV-LB",
+        #     vpc=self.vpc2,
+        #     internet_facing=True,
+        #     health_check=("port": 80),
+        #     load_balancer_name="WSRV-LB",
+        #     security_group=wsrv_sg_name
+        #     )
+        # lb.add_target(asg)
+
+        # listener = lb.add_listener(external_port=80)
+        # listener.connections.allow_default_port_from_any_ipv4("Open to the world")
+
         #################### Create Tags ####################
 
-        ### Tags
         Tags.of(management_server).add(mngt_tag_key, mngt_tag_value)
-        Tags.of(web_server).add(wsrv_tag_key, wsrv_tag_value)
+        Tags.of(asg).add(wsrv_tag_key, wsrv_tag_value)
 
         ##################### Create Backup Routines #############################
 
         ### Backup Management Server
         ### Create Backup Vault
         mngtvaultkey = kms.Key(
-            self,
-            mngt_vault_key,
-            removal_policy=RemovalPolicy.DESTROY
-            )
+            self, mngt_vault_key, removal_policy=RemovalPolicy.DESTROY
+        )
         mngtvault = backup.BackupVault(
             self,
             mngt_vault_name,
             backup_vault_name=mngt_backup_vault_name,
-            encryption_key=mngtvaultkey
+            encryption_key=mngtvaultkey,
         )
 
         ### Create Backup Plan
         mngtplan = backup.BackupPlan(
-            self,
-            mngt_backup_plan,
-            backup_plan_name=mngt_backup_plan_name
+            self, mngt_backup_plan, backup_plan_name=mngt_backup_plan_name
         )
 
         ### Add Backup Resources through Tags
@@ -471,23 +514,17 @@ class MvpscriptStack(Stack):
 
         ### Backup Webserver
         ### Create Backup Vault
-        wsrvkey = kms.Key(
-            self,
-            wsrv_vault_key,
-            removal_policy=RemovalPolicy.DESTROY
-            )
+        wsrvkey = kms.Key(self, wsrv_vault_key, removal_policy=RemovalPolicy.DESTROY)
         wsrvvault = backup.BackupVault(
             self,
             wsrv_vault_name,
             backup_vault_name=wsrv_backup_vault_name,
-            encryption_key=wsrvkey
+            encryption_key=wsrvkey,
         )
 
         ### Create Backup Plan
         wsrvplan = backup.BackupPlan(
-            self,
-            wsrv_backup_plan,
-            backup_plan_name=wsrv_backup_plan_name
+            self, wsrv_backup_plan, backup_plan_name=wsrv_backup_plan_name
         )
 
         ### Add Backup Resources through Tags
