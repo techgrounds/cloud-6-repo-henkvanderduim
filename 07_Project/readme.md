@@ -31,7 +31,7 @@ In het [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/
 | -------------------------- | --------------- | -------------------------------------------------------------------------------------------------- | --------------- |
 | Start Python               | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)           | 8 februari 2022 |
 | Start project (v1.0)       | 07-02-2022 (w1) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)       | 7 februari 2022 |
-| Introductie Project v1.1   | 14-03-2022 (w5) | ![Introductie Project v1.1](https://us-central1-progress-markdown.cloudfunctions.net/progress/100  | 8 maart 2022    |
+| Introductie Project v1.1   | 14-03-2022 (w5) | ![Introductie Project v1.1](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 8 maart 2022    |
 | Oplevering/Eindpresentatie | 08-04-2022 (w9) | ![Oplevering/Eindpresentatie](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) | d.d.            |
 
 ## Projectactiviteiten
