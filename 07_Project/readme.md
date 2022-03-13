@@ -5,21 +5,26 @@ Het project kent twee fasen:
 2. [MVP 1.1](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#mvp-11)
 
 ## MVP 1.0
-## Project Document
+## Project Document v1.0
 In het document [PRO-01 Project](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) is het project beschreven.
 
-## Project Requirements Document
+## Project Requirements Document v1.0
 Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../07_Project/Product_Requirements_Document.md).
-## JIRA
+## JIRA v1.0
 In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
 Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
 
-## MVP Script
+## MVP Script v1.0
 
 In het [Readme](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#readme) document in de MVPSCRIPT folder is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpscript/parameters.md) document.  
 
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#project-cloud6-sentia1)  
 
 ## MVP 1.1
+## Project Document v1.1
+## Project Requirements Document v1.1
+## MVP Script v1.1
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#project-cloud6-sentia1)
 
 ## Belangrijke mijlpalen
 | **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                                     | **Datum klaar** |
