@@ -1,6 +1,7 @@
 # Parameters
 In de tabel hieronder wordt uitleg gegeven over de Parameters die gebruikt worden in het bestand 'mvpscript_stack.py'.  
-Als bepaalde termen je als Cloud Engineer onbekend voorkomen dan heb ik hier de oplossing: [Cloud Engineer](https://techgrounds.nl/wp-content/uploads/2022/02/Cloud-opleiding-voor-deelnemers.pdf).
+Als bepaalde termen je als Cloud Engineer onbekend voorkomen dan heb ik hier de oplossing: [Cloud Engineer](https://techgrounds.nl/wp-content/uploads/2022/02/Cloud-opleiding-voor-deelnemers.pdf).  
+Dit bestand hoort bij MVP v1.1.
 
 ## CDK JSON Tabel
 | Parameter                         | wat wordt er ingevuld                                                                                                                |
