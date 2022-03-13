@@ -33,15 +33,15 @@
         "mngt_cidr_mask": 25,
         "mngt_subnet_name": "MNGT",
         "mngt_max_azs": 2,
-        "wsrv_name": "APP-PRD-VPC",
-        "wsrv_cidr_block": "10.20.20.0/24",
-        "wsrv_cidr_mask": 25,
-        "wsrv_subnet_name": "WSRV",
-        "wsrv_max_azs": 2,
+        "asg_name": "APP-PRD-VPC",
+        "asg_cidr_block": "10.20.20.0/24",
+        "asg_cidr_mask": 25,
+        "asg_subnet_name": "ASG-WSRV",
+        "asg_max_azs": 2,
         "vpcp_name": "VPCPeeringConnection-prd",
         "vpcp_region": "eu-central-1",
         "mngt_vpcp_route": "MNGT-Route",
-        "wsrv_vpcp_route": "WSRV-Route"
+        "asg_vpcp_route": "ASG-Route"
       },
       "roles": {
         "iam_ssm_role": "InstanceSSM",
@@ -51,11 +51,7 @@
         "bucket_name": "BootstrapScriptBucket",
         "versioned": true,
         "auto_delete_objects": true,
-        "deploy_name": "S3Deployment",
-        "source": "./mvpscript"
-      },
-      "userdata": {
-        "usrdt": "sudo yum -y update; sudo yum install httpd -y; sudo systemctl enable httpd; systemctl start httpd; sudo echo '<h1> Joehoe, dit is je webserver </h1>'"
+        "deployment_name": "Bucket-Deployment"
       },
       "sgs": {
         "mngt_sg_name": "ManagementSecurityGroup",
@@ -65,34 +61,42 @@
         "mngt_sg_ssh_rule_port": 22,
         "mngt_sg_rdp_rule_ip": "84.84.84.9/32",
         "mngt_sg_rdp_rule_port": 3389,
-        "wsrv_sg_name": "WebserverSecurityGroup",
-        "wsrv_sg_description": "Webserver Security Group",
-        "wsrv_sg_allow_all_outbound": true,
-        "wsrv_sg_rule_port": 22,
-        "wsrv_sg_http_rule_port": 80,
-        "wsrv_sg_https_rule_port": 443
+        "asgsg_name": "ASG-SG",
+        "asgsg_description": "Auto-Scaling-Security-Group",
+        "asgsg_allow_all_outbound": true,
+        "asgsg_rule_port": 22,
+        "asgsg_http_rule_port": 80,
+        "asgsg_https_rule_port": 443,
+        "asgsg_elb_port": 80,
+        "elbsg_name": "LoadBalancerSG",
+        "elbsg_description": "Load-Balancer-Security-Group",
+        "elbsg_allow_all_outbound": true,
+        "elbsg_http_rule_port": 80,
+        "elbsg_https_rule_port": 443
       },
       "keypair": {
         "mngt_kp": "MNGTKeyPair",
         "mngt_kp_name": "MNGTKeyPair",
         "mngt_kp_description": "MNGTKeyPair",
         "mngt_kp_store": true,
-        "wsrv_kp": "WSRVKeyPair",
-        "wsrv_kp_name": "WSRVKeyPair",
-        "wsrv_kp_description": "WSRVKeyPair",
-        "wsrv_kp_store": true
+        "asg_kp": "ASGKeyPair",
+        "asg_kp_name": "ASGKeyPair",
+        "asg_kp_description": "ASGKeyPair",
+        "asg_kp_store": true
+      },
+      "lbs": {
+        "lb_name": "ASG-LB",
+        "lb_if": true,
+        "arn_cert": "arn:aws:acm:eu-central-1:048127819745:certificate/2342992a-8903-4b4b-8ea5-0cd4d9bafc0b",
+        "list_name": "ASG-LB-Listener"
       },
       "ec2s": {
         "mngt_ec2_name": "Management Server",
         "mngt_ec2_instance_type": "t2.micro",
         "mngt_ec2_encrypted": true,
-        "wsrv_ec2_name": "Web Server",
-        "wsrv_ec2_instance_type": "t3.nano",
-        "wsrv_ec2_volume_type": "GP2",
-        "wsrv_ec2_encrypted": true
-      },
-      "asgroup": {
-        "asg_name": "WSRV ASG",
+        "asg_ec2_name": "Web Server",
+        "asg_ec2_instance_type": "t3.nano",
+        "asg_ec2_encrypted": true,
         "asg_delete": true
       },
       "webscript": {
@@ -103,8 +107,8 @@
       "tags": {
         "mngt_tag_key": "MNGT",
         "mngt_tag_value": "MSBackup",
-        "wsrv_tag_key": "WSRV",
-        "wsrv_tag_value": "WSBackup"
+        "asg_tag_key": "ASG",
+        "asg_tag_value": "ASGBackup"
       },
       "bus": {
         "mngt_vault_key": "MNGT-BACKUP-KEY",
@@ -118,17 +122,17 @@
         "mngt_month": "1-12",
         "mngt_weekday": "4",
         "mngt_duration": 13,
-        "wsrv_vault_key": "WSRV-BACKUP-KEY",
-        "wsrv_vault_name": "WSRVBackupVault",
-        "wsrv_backup_vault_name": "WSRV-VAULT",
-        "wsrv_backup_plan": "WSRV-BACKUP-PLAN",
-        "wsrv_backup_plan_name": "WSRV-BACKUP-PLAN",
-        "wsrv_rule_name": "WSRV_Backup_Rule",
-        "wsrv_minute": "30",
-        "wsrv_hour": "4",
-        "wsrv_month": "1-12",
-        "wsrv_weekday": "*",
-        "wsrv_duration": 7
+        "asg_vault_key": "ASG-BACKUP-KEY",
+        "asg_vault_name": "ASGBackupVault",
+        "asg_backup_vault_name": "ASG-VAULT",
+        "asg_backup_plan": "ASG-BACKUP-PLAN",
+        "asg_backup_plan_name": "ASG-BACKUP-PLAN",
+        "asg_rule_name": "ASG_Backup_Rule",
+        "asg_minute": "30",
+        "asg_hour": "4",
+        "asg_month": "1-12",
+        "asg_weekday": "*",
+        "asg_duration": 7
       }
     }
   }
