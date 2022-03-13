@@ -56,8 +56,6 @@ from aws_cdk.aws_s3_assets import Asset
 from aws_cdk.aws_certificatemanager import Certificate
 from aws_cdk.aws_elasticloadbalancingv2 import SslPolicy
 
-# from aws_cdk.aws_autoscaling import AutoScalingGroup
-
 
 ### directory variable
 dirname = os.path.dirname(__file__)
@@ -69,6 +67,7 @@ dirname = os.path.dirname(__file__)
 class Mvpscript11Stack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
+
         #################### Parameter Setup ####################
 
         # VPCs
@@ -217,23 +216,7 @@ class Mvpscript11Stack(Stack):
             destination_bucket=bootstrapbucket,
         )
 
-        #################### VPC t.b.v. Autoscaling ####################
-
-        ### VPC - Autoscaling
-
-        self.vpc2 = ec2.Vpc(
-            self,
-            asg_name,
-            max_azs=asg_max_azs,
-            cidr=asg_cidr_block,
-            subnet_configuration=[
-                ec2.SubnetConfiguration(
-                    subnet_type=ec2.SubnetType.PRIVATE_WITH_NAT,
-                    name=asg_subnet_name,
-                    cidr_mask=asg_cidr_mask,
-                )
-            ],
-        )
+        #################### VPC's t.b.v. MNGT Server en Autoscaling ####################
 
         ### VPC - Management VPC
 
@@ -242,7 +225,6 @@ class Mvpscript11Stack(Stack):
             mngt_name,
             max_azs=mngt_max_azs,
             cidr=mngt_cidr_block,
-            # Configure 1 subnet in each AZ, 2 AZ's.
             subnet_configuration=[
                 ec2.SubnetConfiguration(
                     subnet_type=ec2.SubnetType.PUBLIC,
@@ -251,6 +233,10 @@ class Mvpscript11Stack(Stack):
                 )
             ],
         )
+
+        ### VPC - Autoscaling
+
+        self.vpc2 = ec2.Vpc(self, asg_name)
 
         ### VPC Peering
 
@@ -411,35 +397,6 @@ class Mvpscript11Stack(Stack):
         asgkey.grant_read_on_private_key(role)
         asgkey.grant_read_on_public_key(role)
 
-        #################### Elastic Load Balancer ####################
-
-        ### Create the Load Balancer in the Webserver's VPC
-        lb = elbv2.ApplicationLoadBalancer(
-            self,
-            lb_name,
-            vpc=self.vpc2,
-            internet_facing=lb_if,
-            security_group=elbsg,
-            load_balancer_name=lb_name,
-        )
-
-        ### Listener
-        listener_certificate = elbv2.ListenerCertificate.from_arn(arn_cert)
-        listener = lb.add_listener(
-            list_name,
-            certificates=[listener_certificate],
-            port=443,
-            ssl_policy=elbv2.SslPolicy.TLS12,
-        )
-
-        ### HTTP => HTTPS redirect
-        lb.add_redirect(source_port=80, target_port=443)
-
-        ### Health Check
-        health_check = elbv2.HealthCheck(
-            interval=Duration.seconds(120), path="/", timeout=Duration.seconds(60)
-        )
-
         #################### Create EC2 Instances ####################
 
         ### Instance Management Server (Windows)
@@ -486,11 +443,6 @@ class Mvpscript11Stack(Stack):
             ],
         )
 
-        ### add target
-        target = listener.add_targets(
-            "WSRV-LB-TargetGroup", port=80, targets=[asg], health_check=health_check
-        )
-
         ### Launch script to install webserver
 
         assets = Asset(
@@ -498,6 +450,8 @@ class Mvpscript11Stack(Stack):
             wsrv_asset_name,
             path=wsrv_asset_path,
         )
+
+        listener_certificate = elbv2.ListenerCertificate.from_arn(arn_cert)
 
         Local_path = asg.user_data.add_s3_download_command(
             bucket=assets.bucket,
@@ -514,6 +468,46 @@ class Mvpscript11Stack(Stack):
         Tags.of(management_server).add(mngt_tag_key, mngt_tag_value)
         Tags.of(asg).add(asg_tag_key, asg_tag_value)
 
+        #################### Elastic Load Balancer ####################
+
+        ### Create the Load Balancer in the Webserver's VPC
+        lb = elbv2.ApplicationLoadBalancer(
+            self,
+            lb_name,
+            vpc=self.vpc2,
+            internet_facing=lb_if,
+            security_group=elbsg,
+            load_balancer_name=lb_name,
+        )
+
+        ### Listener
+        listener_certificate = elbv2.ListenerCertificate.from_arn(arn_cert)
+        listener = lb.add_listener(
+            list_name,
+            port=443,
+            certificates=[listener_certificate],
+            ssl_policy=elbv2.SslPolicy.RECOMMENDED,
+        )
+
+        ### HTTP => HTTPS redirect
+        lb.add_redirect(source_port=80, target_port=443)
+
+        ### Health Check
+        health_check = elbv2.HealthCheck(
+            interval=Duration.seconds(120), path="/", timeout=Duration.seconds(60)
+        )
+
+        ### Listener connections
+        listener.connections.allow_default_port_from_any_ipv4("Open to the world")
+
+        ### add target
+        target = listener.add_targets(
+            "WSRV-LB-TargetGroup", port=80, targets=[asg], health_check=health_check
+        )
+
+        ### Autoscaling Action
+        asg.scale_on_cpu_utilization("scale_on_cpu", target_utilization_percent=50)
+
         ##################### Create Backup Routines #############################
 
         ### Backup Management Server
@@ -526,6 +520,7 @@ class Mvpscript11Stack(Stack):
             mngt_vault_name,
             backup_vault_name=mngt_backup_vault_name,
             encryption_key=mngtvaultkey,
+            removal_policy=RemovalPolicy.DESTROY,
         )
 
         ### Create Backup Plan
@@ -562,6 +557,7 @@ class Mvpscript11Stack(Stack):
             asg_vault_name,
             backup_vault_name=asg_backup_vault_name,
             encryption_key=asgkey,
+            removal_policy=RemovalPolicy.DESTROY,
         )
 
         ### Create Backup Plan
