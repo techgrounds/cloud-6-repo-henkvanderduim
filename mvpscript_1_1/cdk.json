@@ -104,7 +104,7 @@
       },
       "webscript": {
         "wsrv_asset_name": "Asset",
-        "wsrv_asset_path": "./bucket/webserver.sh",
+        "wsrv_asset_path": "./bucket/webtestserver.sh",
         "wsrv_asset_region": "eu-central-1"
       },
       "tags": {

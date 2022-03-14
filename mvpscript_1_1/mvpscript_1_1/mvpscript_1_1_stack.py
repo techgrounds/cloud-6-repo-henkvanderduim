@@ -518,7 +518,7 @@ class Mvpscript11Stack(Stack):
 
         ### Health Check
         health_check = elbv2.HealthCheck(
-            interval=Duration.seconds(120), path="/", timeout=Duration.seconds(60)
+            interval=Duration.seconds(60), path="/", timeout=Duration.seconds(30)
         )
 
         ### Listener connections
