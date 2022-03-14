@@ -35,8 +35,9 @@
         "mngt_max_azs": 2,
         "asg_name": "APP-PRD-VPC",
         "asg_cidr_block": "10.20.20.0/24",
-        "asg_cidr_mask": 25,
-        "asg_subnet_name": "ASG-WSRV",
+        "asg_cidr_mask": 27,
+        "public_asg_subnet_name": "ASG-Public",
+        "private_asg_subnet_name": "ASG-Private",
         "asg_max_azs": 2,
         "vpcp_name": "VPCPeeringConnection-prd",
         "vpcp_region": "eu-central-1",
@@ -51,7 +52,8 @@
         "bucket_name": "BootstrapScriptBucket",
         "versioned": true,
         "auto_delete_objects": true,
-        "deployment_name": "Bucket-Deployment"
+        "deployment_name": "Bucket-Deployment",
+        "asset_bucket": "./bucket"
       },
       "sgs": {
         "mngt_sg_name": "ManagementSecurityGroup",
@@ -88,7 +90,8 @@
         "lb_name": "ASG-LB",
         "lb_if": true,
         "arn_cert": "arn:aws:acm:eu-central-1:048127819745:certificate/2342992a-8903-4b4b-8ea5-0cd4d9bafc0b",
-        "list_name": "ASG-LB-Listener"
+        "list_name": "ASG-LB-Listener",
+        "target_group": "WSRV-LB-TargetGroup"
       },
       "ec2s": {
         "mngt_ec2_name": "Management Server",

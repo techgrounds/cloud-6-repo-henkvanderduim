@@ -82,7 +82,8 @@ class Mvpscript11Stack(Stack):
         asg_name = vpcs_environment.get("asg_name")
         asg_cidr_block = vpcs_environment.get("asg_cidr_block")
         asg_cidr_mask = vpcs_environment.get("asg_cidr_mask")
-        asg_subnet_name = vpcs_environment.get("asg_subnet_name")
+        public_asg_subnet_name = vpcs_environment.get("public_asg_subnet_name")
+        private_asg_subnet_name = vpcs_environment.get("private_asg_subnet_name")
         asg_max_azs = vpcs_environment.get("asg_max_azs")
 
         vpcp_name = vpcs_environment.get("vpcp_name")
@@ -101,6 +102,7 @@ class Mvpscript11Stack(Stack):
         versioned = bucket_environment.get("versioned")
         auto_delete_objects = bucket_environment.get("auto_delete_objects")
         deployment_name = bucket_environment.get("deployment_name")
+        asset_bucket = bucket_environment.get("asset_bucket")
 
         # Security Groups
         sgs_environment = environments.get("sgs")
@@ -144,6 +146,7 @@ class Mvpscript11Stack(Stack):
         lb_if = lbs_environment.get("lb_if")
         arn_cert = lbs_environment.get("arn_cert")
         list_name = lbs_environment.get("list_name")
+        target_group = lbs_environment.get("target_group")
 
         # EC2s
         ec2s_environment = environments.get("ec2s")
@@ -212,7 +215,7 @@ class Mvpscript11Stack(Stack):
         s3deploy.BucketDeployment(
             self,
             deployment_name,
-            sources=[s3deploy.Source.asset("./bucket")],
+            sources=[s3deploy.Source.asset(asset_bucket)],
             destination_bucket=bootstrapbucket,
         )
 
@@ -236,7 +239,28 @@ class Mvpscript11Stack(Stack):
 
         ### VPC - Autoscaling
 
-        self.vpc2 = ec2.Vpc(self, asg_name)
+        self.vpc2 = ec2.Vpc(
+            self,
+            asg_name,
+            nat_gateway_subnets=ec2.SubnetSelection(
+                subnet_group_name=public_asg_subnet_name
+            ),
+            nat_gateways=1,
+            max_azs=asg_max_azs,
+            cidr=asg_cidr_block,
+            subnet_configuration=[
+                ec2.SubnetConfiguration(
+                    subnet_type=ec2.SubnetType.PUBLIC,
+                    name=public_asg_subnet_name,
+                    cidr_mask=asg_cidr_mask,
+                ),
+                ec2.SubnetConfiguration(
+                    subnet_type=ec2.SubnetType.PRIVATE_WITH_NAT,
+                    name=private_asg_subnet_name,
+                    cidr_mask=asg_cidr_mask,
+                ),
+            ],
+        )
 
         ### VPC Peering
 
@@ -501,12 +525,12 @@ class Mvpscript11Stack(Stack):
         listener.connections.allow_default_port_from_any_ipv4("Open to the world")
 
         ### add target
-        target = listener.add_targets(
-            "WSRV-LB-TargetGroup", port=80, targets=[asg], health_check=health_check
+        listener.add_targets(
+            target_group, port=80, targets=[asg], health_check=health_check
         )
 
         ### Autoscaling Action
-        asg.scale_on_cpu_utilization("scale_on_cpu", target_utilization_percent=50)
+        asg.scale_on_cpu_utilization("scale_on_cpu", target_utilization_percent=60)
 
         ##################### Create Backup Routines #############################
 
