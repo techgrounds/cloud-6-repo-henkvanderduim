@@ -138,6 +138,7 @@
         "asg_backup_vault_name": "ASG-Backup-Vault",
         "asg_backup_plan": "ASG-BACKUP-PLAN",
         "asg_backup_plan_name": "ASG-BACKUP-PLAN",
+        "asg_backup_resource": "ASG-Backup-Resource",
         "asg_rule_name": "ASG-Backup-Rule",
         "asg_minute": "30",
         "asg_hour": "4",

@@ -191,6 +191,7 @@ class Mvpscript11Stack(Stack):
         asg_backup_vault_name = bus_environment.get("asg_backup_vault_name")
         asg_backup_plan = bus_environment.get("asg_backup_plan")
         asg_backup_plan_name = bus_environment.get("asg_backup_plan_name")
+        asg_backup_resource = bus_environment.get("asg_backup_resource")
         asg_rule_name = bus_environment.get("asg_rule_name")
         asg_minute = bus_environment.get("asg_minute")
         asg_hour = bus_environment.get("asg_hour")
@@ -595,7 +596,7 @@ class Mvpscript11Stack(Stack):
 
         ### Add Backup Resources through Tags
         asgplan.add_selection(
-            "Selection",
+            asg_backup_resource,
             resources=[backup.BackupResource.from_tag(asg_tag_key, asg_tag_value)],
         )
 
