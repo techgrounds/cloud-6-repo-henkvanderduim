@@ -109,9 +109,9 @@ class Mvpscript11Stack(Stack):
         mngt_sg_name = sgs_environment.get("mngt_sg_name")
         mngt_sg_description = sgs_environment.get("mngt_sg_description")
         mngt_sg_allow_all_outbound = sgs_environment.get("mngt_sg_allow_all_outbound")
-        mngt_sg_ssh_rule_ip = sgs_environment.get("mngt_sg_ssh_rule_ip")
+        mngt_trusted_ip_ssh = sgs_environment.get("mngt_trusted_ip_ssh")
+        mngt_trusted_ip_rdp = sgs_environment.get("mngt_trusted_ip_rdp")
         mngt_sg_ssh_rule_port = sgs_environment.get("mngt_sg_ssh_rule_port")
-        mngt_sg_rdp_rule_ip = sgs_environment.get("mngt_sg_rdp_rule_ip")
         mngt_sg_rdp_rule_port = sgs_environment.get("mngt_sg_rdp_rule_port")
 
         asgsg_name = sgs_environment.get("asgsg_name")
@@ -329,17 +329,21 @@ class Mvpscript11Stack(Stack):
             description=mngt_sg_description,
             allow_all_outbound=mngt_sg_allow_all_outbound,
         )
-        mngtsg.add_ingress_rule(
-            ec2.Peer.ipv4(mngt_sg_ssh_rule_ip),
-            ec2.Port.tcp(mngt_sg_ssh_rule_port),
-            "allow ssh access from the VPC",
-        )
+        iplistssh = mngt_trusted_ip_ssh
+        for i in range(len(iplistssh)):
+            mngtsg.add_ingress_rule(
+                ec2.Peer.ipv4(iplistssh[i] + "/32"),
+                ec2.Port.tcp(mngt_sg_ssh_rule_port),
+                "allow ssh access from the VPC",
+            )
 
-        mngtsg.add_ingress_rule(
-            ec2.Peer.ipv4(mngt_sg_rdp_rule_ip),
-            ec2.Port.tcp(mngt_sg_rdp_rule_port),
-            "allow RDP access from the VPC",
-        )
+        iplistrdp = mngt_trusted_ip_rdp
+        for i in range(len(iplistrdp)):
+            mngtsg.add_ingress_rule(
+                ec2.Peer.ipv4(iplistrdp[i] + "/32"),
+                ec2.Port.tcp(mngt_sg_rdp_rule_port),
+                "allow RDP access from the VPC",
+            )
 
         ### Security Group ELB
         elbsg = ec2.SecurityGroup(
