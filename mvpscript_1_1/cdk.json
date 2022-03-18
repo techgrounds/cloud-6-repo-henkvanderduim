@@ -91,12 +91,7 @@
         "mngt_kp_store": true,
         "asg_kp": "FFDV-KPASG01",
         "asg_kp_name": "FFDV-KPASG01",
-        "asg_kp_description": "Key Pair ASG",
-        "asg_kp_store": true
-      },
-      "lbs": {
-        "lb_name": "FFDV-ALBASG01",
-        "lb_if": true,
+        "asg_kp_description": "Key Pai,
         "list_name": "ASG-LB-Listene",
         "target_group": "ASG-LB-Target-Group"
       },

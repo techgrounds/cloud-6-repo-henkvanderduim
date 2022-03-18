@@ -177,5 +177,3 @@ cdk deploy
  * `cdk deploy`      deploy deze stack in je standaard AWS account/region
  * `cdk diff`        vegelijk de deployed stack met de huidige status
  * `cdk docs`        open CDK documentatie
-
-Have fun!
