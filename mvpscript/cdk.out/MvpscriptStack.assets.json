@@ -1,0 +1,19 @@
+{
+  "version": "16.0.0",
+  "files": {
+    "66b3a4b4aa4033194db6666f6ec855ea2cc07d59415e076b2dd6c0424703c7dc": {
+      "source": {
+        "path": "MvpscriptStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "66b3a4b4aa4033194db6666f6ec855ea2cc07d59415e076b2dd6c0424703c7dc.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
