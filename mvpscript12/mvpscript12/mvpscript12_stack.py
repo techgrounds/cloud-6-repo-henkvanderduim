@@ -5,11 +5,14 @@
 ### Importing the necessary libraries
 
 import os.path
+import boto3
 import aws_acm_certified as acm
 from urllib import response
 import aws_cdk as cdk
 from aws_cdk import (
     Duration,
+    aws_cloudwatch as cw,
+    aws_lambda as _lambda,
     aws_ec2 as ec2,
     aws_iam as iam,
     aws_backup as backup,
@@ -27,13 +30,19 @@ from aws_cdk import (
     Stack,
     Tags,
 )
-from cdk_iam_floyd import Autoscaling, Elasticloadbalancing, ElasticloadbalancingV2
+from cdk_iam_floyd import (
+    Autoscaling,
+    Cloudwatch,
+    Elasticloadbalancing,
+    ElasticloadbalancingV2,
+)
 from constructs import Construct
 from cdk_ec2_key_pair import KeyPair
 from aws_cdk.aws_events import Schedule
 from aws_cdk.aws_s3_assets import Asset
 from aws_cdk.aws_certificatemanager import Certificate
 from aws_cdk.aws_elasticloadbalancingv2 import SslPolicy
+from aws_cdk.aws_cloudwatch import GraphWidget, Metric, TextWidget, SingleValueWidget
 
 
 ### directory variable
@@ -592,4 +601,10 @@ class Mvpscript12Stack(Stack):
                 ),
                 delete_after=Duration.days(asg_duration),
             )
+        )
+
+        ##################### Create a Cloudwatch Dashboard #############################
+
+        dashboard = Cloudwatch.on_dashboard(
+            self, "MVPMonitoringDashboard", dashboard_name="MVP Monitoring Dashboard"
         )
