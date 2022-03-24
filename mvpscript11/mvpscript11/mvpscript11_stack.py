@@ -423,7 +423,7 @@ class Mvpscript11Stack(Stack):
             ],
         )
 
-        #################### Create Autoscaling Group ####################
+        #################### Create Autoscaling ####################
 
         asg = autoscaling.AutoScalingGroup(
             self,
