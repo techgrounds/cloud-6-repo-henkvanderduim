@@ -67,8 +67,6 @@ class Mvpscript11Stack(Stack):
 
         vpcp_name = vpcs_environment.get("vpcp_name")
         vpcp_region = vpcs_environment.get("vpcp_region")
-        mngt_vpcp_route = vpcs_environment.get("mngt_vpcp_route")
-        asg_vpcp_route = vpcs_environment.get("asg_vpcp_route")
 
         # Roles
         roles_environment = environments.get("roles")
@@ -224,7 +222,6 @@ class Mvpscript11Stack(Stack):
             nat_gateway_subnets=ec2.SubnetSelection(
                 subnet_group_name=public_asg_subnet_name
             ),
-            nat_gateways=1,
             max_azs=asg_max_azs,
             cidr=asg_cidr_block,
             subnet_configuration=[
@@ -252,23 +249,37 @@ class Mvpscript11Stack(Stack):
             peer_region=vpcp_region,
         )
 
-        ### VPC Peering Connection between VPC1-VPC2 through Route-table
-        self.cfn_Route = ec2.CfnRoute(
-            self,
-            mngt_vpcp_route,
-            route_table_id=self.vpc1.public_subnets[1].route_table.route_table_id,
-            destination_cidr_block=self.vpc2.vpc_cidr_block,
-            vpc_peering_connection_id=self.cfn_vPCPeering_connection.ref,
-        )
+        ### VPC Peering Connection between VPC1-VPC2
 
-        ### VPC Peering Connection between VPC2-VPC1 through Route-table
-        self.cfn_Route = ec2.CfnRoute(
-            self,
-            asg_vpcp_route,
-            route_table_id=self.vpc2.public_subnets[0].route_table.route_table_id,
-            destination_cidr_block=self.vpc1.vpc_cidr_block,
-            vpc_peering_connection_id=self.cfn_vPCPeering_connection.ref,
-        )
+        for i in range(0, 2):
+            self.cfn_Route = ec2.CfnRoute(
+                self,
+                "route_table_id" + str(i),
+                route_table_id=self.vpc.public_subnets[i].route_table.route_table_id,
+                destination_cidr_block=self.vpc2.vpc_cidr_block,
+                vpc_peering_connection_id=self.VPCPeering.ref,
+            )
+            i = i + 1
+
+        for j in range(0, 2):
+            self.cfn_Route = ec2.CfnRoute(
+                self,
+                "route_table1_id" + str(j),
+                route_table_id=self.vpc.private_subnets[j].route_table.route_table_id,
+                destination_cidr_block=self.vpc2.vpc_cidr_block,
+                vpc_peering_connection_id=self.VPCPeering.ref,
+            )
+            j = j + 1
+
+        for k in range(0, 2):
+            self.cfn_Route = ec2.CfnRoute(
+                self,
+                "route_table2_id" + str(k),
+                route_table_id=self.vpc2.public_subnets[k].route_table.route_table_id,
+                destination_cidr_block=self.vpc.vpc_cidr_block,
+                vpc_peering_connection_id=self.VPCPeering.ref,
+            )
+            k = k + 1
 
         #################### Create AMI's ####################
 

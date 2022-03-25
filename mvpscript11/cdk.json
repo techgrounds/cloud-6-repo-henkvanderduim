@@ -31,18 +31,16 @@
         "mngt_name": "FFDV-VPVMNG01",
         "mngt_cidr_block": "10.10.10.0/24",
         "mngt_cidr_mask": 25,
-        "mngt_subnet_name": "MNGT",
+        "mngt_subnet_name": "MNGT-Public-",
         "mngt_max_azs": 2,
         "asg_name": "FFDV-VPCASG01",
         "asg_cidr_block": "10.20.20.0/24",
         "asg_cidr_mask": 27,
-        "public_asg_subnet_name": "ASG-Public",
-        "private_asg_subnet_name": "ASG-Private",
+        "public_asg_subnet_name": "ASG-Public-",
+        "private_asg_subnet_name": "ASG-Private-",
         "asg_max_azs": 2,
         "vpcp_name": "VPCPeeringConnection",
-        "vpcp_region": "eu-central-1",
-        "mngt_vpcp_route": "MNGT-Route",
-        "asg_vpcp_route": "ASG-Route"
+        "vpcp_region": "eu-central-1"
       },
       "roles": {
         "iam_ssm_role": "InstanceSSM",
@@ -56,7 +54,7 @@
         "asset_bucket": "./bucket"
       },
       "sgs": {
-        "mngt_sg_name": "FFDV-SGMNG01",
+        "mngt_sg_name": "FFDV-SGMNG01-",
         "mngt_sg_description": "Management Security Group",
         "mngt_sg_allow_all_outbound": true,
         "mngt_trusted_ip_ssh": [
@@ -71,14 +69,14 @@
         ],
         "mngt_sg_ssh_rule_port": 22,
         "mngt_sg_rdp_rule_port": 3389,
-        "asgsg_name": "FFDV-SGASG01",
+        "asgsg_name": "FFDV-SGASG01-",
         "asgsg_description": "Auto-Scaling-Security-Group",
         "asgsg_allow_all_outbound": true,
         "asgsg_rule_port": 22,
         "asgsg_http_rule_port": 80,
         "asgsg_https_rule_port": 443,
         "asgsg_elb_port": 80,
-        "elbsg_name": "FFDV-ALBSG01",
+        "elbsg_name": "FFDV-SGALB01-",
         "elbsg_description": "Load-Balancer-Security-Group",
         "elbsg_allow_all_outbound": true,
         "elbsg_http_rule_port": 80,

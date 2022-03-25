@@ -23,7 +23,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::048127819745:role/cdk-hnb659fds-deploy-role-048127819745-eu-central-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::048127819745:role/cdk-hnb659fds-cfn-exec-role-048127819745-eu-central-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-048127819745-eu-central-1/2227596073a8a5d0aa1f03274e01bcd513b4a7a6b762306659bf88186380568a.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-048127819745-eu-central-1/4b02c0a8deed4ac4c7772e1de4462de126c2bfecf18c0fdb53877edba30bfc07.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -410,16 +410,16 @@
             "type": "aws:cdk:warning",
             "data": "desiredCapacity has been configured. Be aware this will reset the size of your AutoScalingGroup on every deployment. See https://github.com/aws/aws-cdk/issues/5215",
             "trace": [
-              "Annotations.addMessage (C:\\Users\\henkv\\AppData\\Local\\Temp\\jsii-kernel-BOwnU5\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1213)",
-              "Annotations.addWarning (C:\\Users\\henkv\\AppData\\Local\\Temp\\jsii-kernel-BOwnU5\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:600)",
-              "new AutoScalingGroup (C:\\Users\\henkv\\AppData\\Local\\Temp\\jsii-kernel-BOwnU5\\node_modules\\aws-cdk-lib\\aws-autoscaling\\lib\\auto-scaling-group.js:1:10816)",
-              "C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpm2k4qfgv\\lib\\program.js:8412:58",
-              "Kernel._wrapSandboxCode (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpm2k4qfgv\\lib\\program.js:8840:24)",
-              "Kernel._create (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpm2k4qfgv\\lib\\program.js:8412:34)",
-              "Kernel.create (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpm2k4qfgv\\lib\\program.js:8153:29)",
-              "KernelHost.processRequest (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpm2k4qfgv\\lib\\program.js:9761:36)",
-              "KernelHost.run (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpm2k4qfgv\\lib\\program.js:9724:22)",
-              "Immediate._onImmediate (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpm2k4qfgv\\lib\\program.js:9725:46)",
+              "Annotations.addMessage (C:\\Users\\henkv\\AppData\\Local\\Temp\\jsii-kernel-6S3FDs\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:1213)",
+              "Annotations.addWarning (C:\\Users\\henkv\\AppData\\Local\\Temp\\jsii-kernel-6S3FDs\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:1:600)",
+              "new AutoScalingGroup (C:\\Users\\henkv\\AppData\\Local\\Temp\\jsii-kernel-6S3FDs\\node_modules\\aws-cdk-lib\\aws-autoscaling\\lib\\auto-scaling-group.js:1:10816)",
+              "C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpmbrns814\\lib\\program.js:8412:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpmbrns814\\lib\\program.js:8840:24)",
+              "Kernel._create (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpmbrns814\\lib\\program.js:8412:34)",
+              "Kernel.create (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpmbrns814\\lib\\program.js:8153:29)",
+              "KernelHost.processRequest (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpmbrns814\\lib\\program.js:9761:36)",
+              "KernelHost.run (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpmbrns814\\lib\\program.js:9724:22)",
+              "Immediate._onImmediate (C:\\Users\\henkv\\AppData\\Local\\Temp\\tmpmbrns814\\lib\\program.js:9725:46)",
               "processImmediate (node:internal/timers:466:21)"
             ]
           }
