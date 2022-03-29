@@ -35,7 +35,7 @@ class SgStack(cdk.NestedStack):
         elbsg_https_rule_port = sgs_environment.get("elbsg_https_rule_port")
 
         ### Security Group Management Server
-        mngtsg = ec2.SecurityGroup(
+        self.mngtsg = ec2.SecurityGroup(
             self,
             mngt_sg_name,
             vpc=vpc1,
@@ -44,7 +44,7 @@ class SgStack(cdk.NestedStack):
         )
         iplistssh = mngt_trusted_ip_ssh
         for i in range(len(iplistssh)):
-            mngtsg.add_ingress_rule(
+            self.mngtsg.add_ingress_rule(
                 ec2.Peer.ipv4(iplistssh[i] + "/32"),
                 ec2.Port.tcp(mngt_sg_ssh_rule_port),
                 "allow ssh access from the VPC",
@@ -52,14 +52,14 @@ class SgStack(cdk.NestedStack):
 
         iplistrdp = mngt_trusted_ip_rdp
         for i in range(len(iplistrdp)):
-            mngtsg.add_ingress_rule(
+            self.mngtsg.add_ingress_rule(
                 ec2.Peer.ipv4(iplistrdp[i] + "/32"),
                 ec2.Port.tcp(mngt_sg_rdp_rule_port),
                 "allow RDP access from the VPC",
             )
 
         ### Security Group ELB
-        elbsg = ec2.SecurityGroup(
+        self.elbsg = ec2.SecurityGroup(
             self,
             elbsg_name,
             vpc=vpc2,
@@ -67,20 +67,20 @@ class SgStack(cdk.NestedStack):
             allow_all_outbound=elbsg_allow_all_outbound,
         )
 
-        elbsg.add_ingress_rule(
+        self.elbsg.add_ingress_rule(
             ec2.Peer.any_ipv4(),
             ec2.Port.tcp(elbsg_http_rule_port),
             "allow HTTP traffic from anywhere",
         )
 
-        elbsg.add_ingress_rule(
+        self.elbsg.add_ingress_rule(
             ec2.Peer.any_ipv4(),
             ec2.Port.tcp(elbsg_https_rule_port),
             "allow HTTPS traffic from anywhere",
         )
 
         ### Security Group ASG
-        asgsg = ec2.SecurityGroup(
+        self.asgsg = ec2.SecurityGroup(
             self,
             asgsg_name,
             vpc=vpc2,
@@ -88,19 +88,19 @@ class SgStack(cdk.NestedStack):
             allow_all_outbound=asgsg_allow_all_outbound,
         )
 
-        asgsg.add_ingress_rule(
-            ec2.Peer.security_group_id(mngtsg.security_group_id),
+        self.asgsg.add_ingress_rule(
+            ec2.Peer.security_group_id(self.mngtsg.security_group_id),
             ec2.Port.tcp(asgsg_rule_port),
             "allow access from the MNGT Security Group",
         )
 
-        asgsg.add_ingress_rule(
+        self.asgsg.add_ingress_rule(
             ec2.Peer.any_ipv4(),
             ec2.Port.tcp(asgsg_http_rule_port),
             "allow HTTP traffic from anywhere",
         )
 
-        asgsg.add_ingress_rule(
+        self.asgsg.add_ingress_rule(
             ec2.Peer.any_ipv4(),
             ec2.Port.tcp(asgsg_https_rule_port),
             "allow HTTPS traffic from anywhere",

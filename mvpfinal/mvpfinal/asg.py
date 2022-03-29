@@ -57,7 +57,7 @@ class AsgStack(cdk.NestedStack):
         asg = autoscaling.AutoScalingGroup(
             self,
             asg_ec2_name,
-            vpc=self.vpc2,
+            vpc=vpc,
             vpc_subnets=ec2.SubnetType.PUBLIC,
             instance_type=ec2.InstanceType(asg_ec2_instance_type),
             machine_image=amzn_linux,
