@@ -1,0 +1,1 @@
+arn:aws:acm:eu-central-1:048127819745:certificate/ae6b84cf-9efd-43c9-bd96-a534e6f81f52

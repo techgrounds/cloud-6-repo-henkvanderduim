@@ -28,9 +28,6 @@ class MngtStack(cdk.NestedStack):
         mngt_ec2_instance_type = ec2s_environment.get("mngt_ec2_instance_type")
         mngt_ec2_encrypted = ec2s_environment.get("mngt_ec2_encrypted")
         webscript_environment = environments.get("webscript")
-        wsrv_asset_name = webscript_environment.get("wsrv_asset_name")
-        wsrv_asset_path = webscript_environment.get("wsrv_asset_path")
-        wsrv_asset_region = webscript_environment.get("wsrv_asset_region")
 
         ### AMI Windows
         amzn_windows = ec2.MachineImage.latest_windows(
