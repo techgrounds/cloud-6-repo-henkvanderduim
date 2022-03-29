@@ -21,11 +21,11 @@ class VpcpStack(cdk.NestedStack):
 
         ### VPC Peering
 
-        self.cfn_vPCPeering_connection = ec2.CfnVPCPeeringConnection(
+        self.VPCPeering_connection = ec2.CfnVPCPeeringConnection(
             self,
             vpcp_name,
-            peer_vpc_id=self.vpc1.vpc_id,
-            vpc_id=self.vpc2.vpc_id,
+            peer_vpc_id=vpc1.vpc_id,
+            vpc_id=vpc2.vpc_id,
             # Peering Region (optional)
             peer_region=vpcp_region,
         )
@@ -38,23 +38,23 @@ class VpcpStack(cdk.NestedStack):
                 vpcp_r1name + str(i),
                 route_table_id=vpc1.public_subnets[i].route_table.route_table_id,
                 destination_cidr_block=vpc2.vpc_cidr_block,
-                vpc_peering_connection_id=self.VPCPeering.ref,
+                vpc_peering_connection_id=self.VPCPeering_connection.ref,
             )
 
         for i in range(0, 2):
             ec2.CfnRoute(
                 self,
                 vpcp_r2name + str(i),
-                route_table_id=vpc1.private_subnets[i].route_table.route_table_id,
-                destination_cidr_block=vpc2.vpc_cidr_block,
-                vpc_peering_connection_id=self.VPCPeering.ref,
+                route_table_id=vpc2.public_subnets[i].route_table.route_table_id,
+                destination_cidr_block=vpc1.vpc_cidr_block,
+                vpc_peering_connection_id=self.VPCPeering_connection.ref,
             )
 
         for i in range(0, 2):
             ec2.CfnRoute(
                 self,
                 vpcp_r3name + str(i),
-                route_table_id=vpc2.public_subnets[i].route_table.route_table_id,
+                route_table_id=vpc2.private_subnets[i].route_table.route_table_id,
                 destination_cidr_block=vpc1.vpc_cidr_block,
-                vpc_peering_connection_id=self.VPCPeering.ref,
+                vpc_peering_connection_id=self.VPCPeering_connection.ref,
             )
