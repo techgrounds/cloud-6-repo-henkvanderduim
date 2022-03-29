@@ -30,7 +30,7 @@ class ElbStack(cdk.NestedStack):
         target_group = lbs_environment.get("target_group")
 
         ### Create the Load Balancer in the Webserver's VPC
-        lb = elbv2.ApplicationLoadBalancer(
+        self.lb = elbv2.ApplicationLoadBalancer(
             self,
             lb_name,
             vpc=vpc,
@@ -44,7 +44,7 @@ class ElbStack(cdk.NestedStack):
             acm.generate_certificate(),
         )
 
-        listener = lb.add_listener(
+        listener = self.lb.add_listener(
             list_name,
             port=443,
             certificates=[listener_certificate],
@@ -52,7 +52,7 @@ class ElbStack(cdk.NestedStack):
         )
 
         ### HTTP => HTTPS redirect
-        lb.add_redirect(source_port=80, target_port=443)
+        self.lb.add_redirect(source_port=80, target_port=443)
 
         ### Health Check
         health_check = elbv2.HealthCheck(
