@@ -14,7 +14,7 @@ import aws_cdk as cdk
 
 app = cdk.App()
 mvp_stack = cdk.Stack(
-    app, "MVP Stack", env=cdk.Environment(account="048127819745", region="eu-central-1")
+    app, "MVPStack", env=cdk.Environment(account="048127819745", region="eu-central-1")
 )
 s3bucket = S3BucketStack(mvp_stack, "S3 Bucket App")
 vpc_app = VpcsStack(mvp_stack, "VPCs app")
