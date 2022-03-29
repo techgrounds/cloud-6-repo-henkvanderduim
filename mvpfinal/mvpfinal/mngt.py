@@ -36,8 +36,8 @@ class MngtStack(cdk.NestedStack):
 
         ## key pair Mangement Server
         mngtkey = KeyPair(
-            self,
-            mngt_kp,
+            scope=scope,
+            id=mngt_kp,
             name=mngt_kp_name,
             description=mngt_kp_description,
             store_public_key=mngt_kp_store,
