@@ -57,8 +57,8 @@ class BackupStack(cdk.NestedStack):
 
         #################### Create Tags ####################
 
-        Tags.of(self.management_server).add(mngt_tag_key, mngt_tag_value)
-        Tags.of(self.asg).add(asg_tag_key, asg_tag_value)
+        Tags.of(management_server).add(mngt_tag_key, mngt_tag_value)
+        Tags.of(asg).add(asg_tag_key, asg_tag_value)
 
         ##################### Create Backup Routines #############################
 
