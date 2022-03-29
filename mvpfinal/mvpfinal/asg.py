@@ -54,7 +54,7 @@ class AsgStack(cdk.NestedStack):
 
         #################### Create Autoscaling ####################
 
-        asg = autoscaling.AutoScalingGroup(
+        self.asg = autoscaling.AutoScalingGroup(
             self,
             asg_ec2_name,
             vpc=vpc,
@@ -86,10 +86,10 @@ class AsgStack(cdk.NestedStack):
             path=wsrv_asset_path,
         )
 
-        Local_path = asg.user_data.add_s3_download_command(
+        Local_path = self.asg.user_data.add_s3_download_command(
             bucket=assets.bucket,
             bucket_key=assets.s3_object_key,
             region=wsrv_asset_region,
         )
 
-        asg.user_data.add_execute_file_command(file_path=Local_path)
+        self.asg.user_data.add_execute_file_command(file_path=Local_path)
