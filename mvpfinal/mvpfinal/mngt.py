@@ -3,6 +3,7 @@ from constructs import Construct
 from cdk_ec2_key_pair import KeyPair
 from aws_cdk import (
     aws_ec2 as ec2,
+    aws_iam as iam,
 )
 
 
@@ -13,6 +14,7 @@ class MngtStack(cdk.NestedStack):
         id: str,
         vpc: ec2.Vpc,
         mngtsg: ec2.SecurityGroup,
+        role: iam.Role,
         **kwargs
     ) -> None:
         super().__init__(scope, id, **kwargs)
@@ -42,6 +44,9 @@ class MngtStack(cdk.NestedStack):
             description=mngt_kp_description,
             store_public_key=mngt_kp_store,
         )
+
+        mngtkey.grant_read_on_private_key(role)
+        mngtkey.grant_read_on_public_key(role)
 
         ### Instance Management Server (Windows)
         self.management_server = ec2.Instance(

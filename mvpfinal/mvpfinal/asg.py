@@ -5,6 +5,7 @@ from constructs import Construct
 from aws_cdk import (
     aws_autoscaling as autoscaling,
     aws_ec2 as ec2,
+    aws_iam as iam,
 )
 
 
@@ -15,6 +16,7 @@ class AsgStack(cdk.NestedStack):
         id: str,
         asgsg: ec2.SecurityGroup,
         vpc: ec2.Vpc,
+        role: iam.Role,
         **kwargs
     ) -> None:
         super().__init__(scope, id, **kwargs)
@@ -52,6 +54,9 @@ class AsgStack(cdk.NestedStack):
             store_public_key=asg_kp_store,
         )
 
+        asgkey.grant_read_on_private_key(role)
+        asgkey.grant_read_on_public_key(role)
+
         #################### Create Autoscaling ####################
 
         self.asg = autoscaling.AutoScalingGroup(
@@ -62,6 +67,7 @@ class AsgStack(cdk.NestedStack):
             instance_type=ec2.InstanceType(asg_ec2_instance_type),
             machine_image=amzn_linux,
             key_name=asgkey.key_pair_name,
+            role=role,
             security_group=asgsg,
             desired_capacity=1,
             max_capacity=3,
@@ -93,3 +99,5 @@ class AsgStack(cdk.NestedStack):
         )
 
         self.asg.user_data.add_execute_file_command(file_path=Local_path)
+
+        assets.grant_read(self.asg.role)

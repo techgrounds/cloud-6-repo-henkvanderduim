@@ -53,6 +53,10 @@
         "deployment_name": "GLDV-S3BUCDP",
         "asset_bucket": "./bucket"
       },
+      "roles": {
+        "iam_ssm_role": "InstanceSSM",
+        "iam_ssm_principal": "ec2.amazonaws.com"
+      },
       "sgs": {
         "mngt_sg_name": "FFDV-SGMNG01-",
         "mngt_sg_description": "Management Security Group",

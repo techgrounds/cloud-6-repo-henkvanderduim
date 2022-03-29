@@ -4,6 +4,7 @@ import os
 from mvpfinal.s3bucket import S3BucketStack
 from mvpfinal.vpcs import VpcsStack
 from mvpfinal.vpcp import VpcpStack
+from mvpfinal.roles import RolesStack
 from mvpfinal.sg import SgStack
 from mvpfinal.mngt import MngtStack
 from mvpfinal.asg import AsgStack
@@ -24,6 +25,9 @@ vpcp_app = VpcpStack(
     vpc1=vpc_app.vpc1,
     vpc2=vpc_app.vpc2,
 )
+
+roles_app = RolesStack(mvp_stack, "Roles App")
+
 sg_app = SgStack(
     mvp_stack,
     "Security Groups App",
@@ -35,12 +39,14 @@ mngt_app = MngtStack(
     "MNGT App",
     vpc=vpc_app.vpc1,
     mngtsg=sg_app.mngtsg,
+    role=roles_app.role,
 )
 asg_app = AsgStack(
     mvp_stack,
     "ASG App",
     vpc=vpc_app.vpc2,
     asgsg=sg_app.asgsg,
+    role=roles_app.role,
 )
 elb_app = ElbStack(
     mvp_stack,
