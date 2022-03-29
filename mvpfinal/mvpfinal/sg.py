@@ -38,7 +38,7 @@ class SgStack(cdk.NestedStack):
         mngtsg = ec2.SecurityGroup(
             self,
             mngt_sg_name,
-            vpc=self.vpc1,
+            vpc=vpc1,
             description=mngt_sg_description,
             allow_all_outbound=mngt_sg_allow_all_outbound,
         )
@@ -62,7 +62,7 @@ class SgStack(cdk.NestedStack):
         elbsg = ec2.SecurityGroup(
             self,
             elbsg_name,
-            vpc=self.vpc2,
+            vpc=vpc2,
             description=elbsg_description,
             allow_all_outbound=elbsg_allow_all_outbound,
         )
@@ -83,7 +83,7 @@ class SgStack(cdk.NestedStack):
         asgsg = ec2.SecurityGroup(
             self,
             asgsg_name,
-            vpc=self.vpc2,
+            vpc=vpc2,
             description=asgsg_description,
             allow_all_outbound=asgsg_allow_all_outbound,
         )
