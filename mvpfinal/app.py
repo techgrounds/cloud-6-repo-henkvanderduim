@@ -47,6 +47,7 @@ elb_app = ElbStack(
     "ELB App",
     vpc=vpc_app.vpc2,
     asg=asg_app.asg,
+    elbsg=sg_app.elbsg,
 )
 Backup_app = BackupStack(
     mvp_stack,

@@ -20,14 +20,13 @@ class SgStack(cdk.NestedStack):
         mngt_trusted_ip_rdp = sgs_environment.get("mngt_trusted_ip_rdp")
         mngt_sg_ssh_rule_port = sgs_environment.get("mngt_sg_ssh_rule_port")
         mngt_sg_rdp_rule_port = sgs_environment.get("mngt_sg_rdp_rule_port")
-
         asgsg_name = sgs_environment.get("asgsg_name")
         asgsg_description = sgs_environment.get("asgsg_description")
         asgsg_allow_all_outbound = sgs_environment.get("asgsg_allow_all_outbound")
         asgsg_rule_port = sgs_environment.get("asgsg_rule_port")
         asgsg_http_rule_port = sgs_environment.get("asgsg_http_rule_port")
         asgsg_https_rule_port = sgs_environment.get("asgsg_https_rule_port")
-
+        asgsg_elb_port = sgs_environment.get("asgsg_elb_port")
         elbsg_name = sgs_environment.get("elbsg_name")
         elbsg_description = sgs_environment.get("elbsg_description")
         elbsg_allow_all_outbound = sgs_environment.get("elbsg_allow_all_outbound")
@@ -42,6 +41,7 @@ class SgStack(cdk.NestedStack):
             description=mngt_sg_description,
             allow_all_outbound=mngt_sg_allow_all_outbound,
         )
+
         iplistssh = mngt_trusted_ip_ssh
         for i in range(len(iplistssh)):
             self.mngtsg.add_ingress_rule(
@@ -92,6 +92,12 @@ class SgStack(cdk.NestedStack):
             ec2.Peer.security_group_id(self.mngtsg.security_group_id),
             ec2.Port.tcp(asgsg_rule_port),
             "allow access from the MNGT Security Group",
+        )
+
+        self.asgsg.add_ingress_rule(
+            ec2.Peer.security_group_id(self.elbsg.security_group_id),
+            ec2.Port.tcp(asgsg_elb_port),
+            "allow access from the ELB Security Group",
         )
 
         self.asgsg.add_ingress_rule(

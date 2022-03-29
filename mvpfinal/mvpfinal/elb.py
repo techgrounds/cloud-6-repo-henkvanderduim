@@ -17,6 +17,7 @@ class ElbStack(cdk.NestedStack):
         id: str,
         asg: autoscaling.AutoScalingGroup,
         vpc: ec2.Vpc,
+        elbsg: ec2.SecurityGroup,
         **kwargs
     ) -> None:
         super().__init__(scope, id, **kwargs)
@@ -33,6 +34,7 @@ class ElbStack(cdk.NestedStack):
             self,
             lb_name,
             vpc=vpc,
+            security_group=elbsg,
             internet_facing=lb_if,
             load_balancer_name=lb_name,
         )
