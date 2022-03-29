@@ -45,8 +45,8 @@ class AsgStack(cdk.NestedStack):
 
         ### key pair webserver
         asgkey = KeyPair(
-            self,
-            asg_kp,
+            scope=scope,
+            id=asg_kp,
             name=asg_kp_name,
             description=asg_kp_description,
             store_public_key=asg_kp_store,
