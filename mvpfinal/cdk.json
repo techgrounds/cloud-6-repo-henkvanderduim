@@ -1,0 +1,148 @@
+{
+  "app": "python app.py",
+  "watch": {
+    "include": [
+      "**"
+    ],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "requirements*.txt",
+      "source.bat",
+      "**/__init__.py",
+      "python/__pycache__",
+      "tests"
+    ]
+  },
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:stackRelativeExports": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+    "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
+    "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": true,
+    "@aws-cdk/aws-iam:minimizePolicies": true,
+    "@aws-cdk/core:target-partitions": [
+      "aws",
+      "aws-cn"
+    ],
+    "ENVIRONMENTS": {
+      "vpcs": {
+        "mngt_name": "FFDV-VPVMNG01",
+        "mngt_cidr_block": "10.10.10.0/24",
+        "mngt_cidr_mask": 25,
+        "mngt_subnet_name": "MNGT-Public-",
+        "mngt_max_azs": 2,
+        "asg_name": "FFDV-VPCASG01",
+        "asg_cidr_block": "10.20.20.0/24",
+        "asg_cidr_mask": 27,
+        "public_asg_subnet_name": "ASG-Public-",
+        "private_asg_subnet_name": "ASG-Private-",
+        "asg_max_azs": 2,
+        "vpcp_name": "VPCPeeringConnection",
+        "vpcp_region": "eu-central-1",
+        "vpcp_r1name": "Route-1",
+        "vpcp_r2name": "Route-2",
+        "vpcp_r3name": "Route-3"
+      },
+      "bucket": {
+        "bucket_name": "GLDV-S3BUC01",
+        "versioned": true,
+        "auto_delete_objects": true,
+        "deployment_name": "GLDV-S3BUCDP",
+        "asset_bucket": "./bucket"
+      },
+      "sgs": {
+        "mngt_sg_name": "FFDV-SGMNG01-",
+        "mngt_sg_description": "Management Security Group",
+        "mngt_sg_allow_all_outbound": true,
+        "mngt_trusted_ip_ssh": [
+          "84.84.84.9",
+          "84.84.84.1",
+          "84.84.84.5"
+        ],
+        "mngt_trusted_ip_rdp": [
+          "84.84.84.9",
+          "84.84.84.2",
+          "84.84.84.4"
+        ],
+        "mngt_sg_ssh_rule_port": 22,
+        "mngt_sg_rdp_rule_port": 3389,
+        "asgsg_name": "FFDV-SGASG01-",
+        "asgsg_description": "Auto-Scaling-Security-Group",
+        "asgsg_allow_all_outbound": true,
+        "asgsg_rule_port": 22,
+        "asgsg_http_rule_port": 80,
+        "asgsg_https_rule_port": 443,
+        "asgsg_elb_port": 80,
+        "elbsg_name": "FFDV-SGALB01-",
+        "elbsg_description": "Load-Balancer-Security-Group",
+        "elbsg_allow_all_outbound": true,
+        "elbsg_http_rule_port": 80,
+        "elbsg_https_rule_port": 443
+      },
+      "keypair": {
+        "mngt_kp": "FFDV-KPMNG01",
+        "mngt_kp_name": "FFDV-KPMNG01",
+        "mngt_kp_description": "Key Pair MNGT",
+        "mngt_kp_store": true,
+        "asg_kp": "FFDV-KPASG01",
+        "asg_kp_name": "FFDV-KPASG01",
+        "asg_kp_description": "Key Pair ASG",
+        "asg_kp_store": true
+      },
+      "lbs": {
+        "lb_name": "FFDV-ALBASG01",
+        "lb_if": true,
+        "list_name": "ASG-LB-Listene",
+        "target_group": "ASG-LB-Target-Group"
+      },
+      "ec2s": {
+        "mngt_ec2_name": "FFDV-EC2MNG01",
+        "mngt_ec2_instance_type": "t2.micro",
+        "mngt_ec2_encrypted": true,
+        "asg_ec2_name": "FFDV-EC2ASG01",
+        "asg_ec2_instance_type": "t3.nano",
+        "asg_ec2_encrypted": true,
+        "asg_delete": true
+      },
+      "webscript": {
+        "wsrv_asset_name": "Asset",
+        "wsrv_asset_path": "./bucket/webtestserver.sh",
+        "wsrv_asset_region": "eu-central-1"
+      },
+      "tags": {
+        "mngt_tag_key": "Management Server",
+        "mngt_tag_value": "MSBackup",
+        "asg_tag_key": "ASG",
+        "asg_tag_value": "ASGBackup"
+      },
+      "bus": {
+        "mngt_vault_key": "MNGT-BACKUP-KEY",
+        "mngt_vault_name": "MNGT-Backup-Vault",
+        "mngt_backup_vault_name": "MNGT-Backup-Vault",
+        "mngt_backup_plan": "MNGT-BACKUP-PLAN",
+        "mngt_backup_plan_name": "MNGT-BACKUP-PLAN",
+        "mngt_rule_name": "MNGT-Backup-Rule",
+        "mngt_minute": "0",
+        "mngt_hour": "0",
+        "mngt_month": "1-12",
+        "mngt_weekday": "4",
+        "mngt_duration": 13,
+        "asg_vault_key": "ASG-BACKUP-KEY",
+        "asg_vault_name": "ASG-Backup-Vault",
+        "asg_backup_vault_name": "ASG-Backup-Vault",
+        "asg_backup_plan": "ASG-BACKUP-PLAN",
+        "asg_backup_plan_name": "ASG-BACKUP-PLAN",
+        "asg_backup_resource": "ASG-Backup-Resource",
+        "asg_rule_name": "ASG-Backup-Rule",
+        "asg_minute": "30",
+        "asg_hour": "4",
+        "asg_month": "1-12",
+        "asg_weekday": "*",
+        "asg_duration": 7
+      }
+    }
+  }
+}
