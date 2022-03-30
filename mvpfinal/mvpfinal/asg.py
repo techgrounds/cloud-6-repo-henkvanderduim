@@ -82,6 +82,7 @@ class AsgStack(cdk.NestedStack):
                     ),
                 )
             ],
+            group_metrics=[autoscaling.GroupMetrics.all()],
         )
 
         ### Launch script to install webserver

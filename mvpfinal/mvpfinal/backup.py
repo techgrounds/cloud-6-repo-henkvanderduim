@@ -91,6 +91,8 @@ class BackupStack(cdk.NestedStack):
             backup.BackupPlanRule(
                 backup_vault=mngtvault,
                 rule_name=mngt_rule_name,
+                completion_window=Duration.hours(2),
+                start_window=Duration.hours(1),
                 schedule_expression=Schedule.cron(
                     minute=mngt_minute,
                     hour=mngt_hour,
@@ -128,6 +130,8 @@ class BackupStack(cdk.NestedStack):
             backup.BackupPlanRule(
                 backup_vault=asgvault,
                 rule_name=asg_rule_name,
+                completion_window=Duration.hours(2),
+                start_window=Duration.hours(1),
                 schedule_expression=Schedule.cron(
                     minute=asg_minute,
                     hour=asg_hour,
