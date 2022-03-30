@@ -82,6 +82,7 @@ class AsgStack(cdk.NestedStack):
                     ),
                 )
             ],
+            new_instances_protected_from_scale_in=False,
             group_metrics=[autoscaling.GroupMetrics.all()],
         )
 
