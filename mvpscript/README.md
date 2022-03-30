@@ -1,6 +1,6 @@
 # Project (Cloud6. Sentia1)
 In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt.  
-Het project kent twee fasen:  
+## Inhoud  
 1. [MVP 1.0](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#mvp-10)  
 2. [Belangrijke Mijlpalen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#belangrijke-mijlpalen)
 3. [Het Project](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#het-project)
