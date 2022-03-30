@@ -1,10 +1,10 @@
 # Project (Cloud6. Sentia1)
 In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt.  
 Het project kent twee fasen:  
-1. [MVP 1.0](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#mvp-10)  
-2. [Belangrijke Mijlpalen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#mvp-11)
-3. [Het Project]()
-4. [Stackscript Gebruiken]()
+1. [MVP 1.0](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#mvp-10)  
+2. [Belangrijke Mijlpalen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#belangrijke-mijlpalen)
+3. [Het Project](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#het-project)
+4. [Stackscript Gebruiken](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#stack-script-gebruiken)
 
 ## MVP 1.0
 ## Project Document v1.0
@@ -20,7 +20,7 @@ Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira
 
 In dit document is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpscript/parameters.md) document.  
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#project-cloud6-sentia1)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#project-cloud6-sentia1)  
 
 
 ## Belangrijke mijlpalen
@@ -172,9 +172,9 @@ management_server = ec2.Instance(
 
 12. Als laatste zijn de Backup Vaults, Plans en Rules aangemaakt.
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#project-cloud6-sentia1)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#project-cloud6-sentia1)  
 
-## Stack script gebruiken
+## Stackscript gebruiken
 Om het script te gebruiken doe je het volgende:  
 
 In de terminal (VSCode/Powershell/CMD)
@@ -222,4 +222,4 @@ cdk deploy
 
 Have fun!
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#project-cloud6-sentia1)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#project-cloud6-sentia1)  
