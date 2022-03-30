@@ -1,167 +1,66 @@
 # Project (Cloud6. Sentia1)
-In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt.  
+In deze folder is alle informatie te vinden over het Project (versie 1.1) wat uitgevoert is na de voltooiing van versie 1.0.  
 ## Inhoud  
-1. [MVP 1.0](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#mvp-10)  
+1. [MVP 1.1](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#mvp-10)  
 2. [Belangrijke Mijlpalen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#belangrijke-mijlpalen)
 3. [Het Project](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#het-project)
 4. [Stackscript Gebruiken](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#stack-script-gebruiken)
 
-## MVP 1.0
-In het document [PRO-01 Project](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) is het project beschreven.
+## MVP 1.1
+In het document [Project v1.1](https://docs.google.com/document/d/1CT8AtpS_o81EeGhCEzPSn8XVu-lkvngzHyz8zWnoGmE/edit) zijn de aanpassingen/aanvullingen op versie 1.0 van het project beschreven.
 
-## Project Requirements Document v1.0
-Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../07_Project/Product_Requirements_Document.md).
-## JIRA v1.0
-In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
-Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
+## Project Requirements Document v1.1
+Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../mvpfinal/Product_Requirements_Document_v_1_1.md).
 
-## MVP Script v1.0
-In dit document is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpscript/parameters.md) document.  
+## MVP Script v1.1
+In dit document is de (technische)informatie te vinden over de 'nested stack' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpfinal/parameters_v_1_1.md) document.  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
 
 
 ## Belangrijke mijlpalen v1.0
-| **Onderwerp**        | **Datum (pw)**  | **Progressie**                                                                               | **Datum klaar** |
-| -------------------- | --------------- | -------------------------------------------------------------------------------------------- | --------------- |
-| Start Python         | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)     | 8 februari 2022 |
-| Start project (v1.0) | 07-02-2022 (w1) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 7 februari 2022 |
+| **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                               | **Datum klaar**            |
+| -------------------------- | --------------- | -------------------------------------------------------------------------------------------- | -------------------------- |
+| Introductie Project v1.1   | 14-03-2022 (w5) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)     | 8 maart 2022               |
+| Oplevering/Eindpresentatie | 08-04-2022 (w9) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 30 maart 2022 (oplevering) |
 
 
 ## Projectactiviteiten v1.0
-| **Project Activiteit**             | **Datum (pw)**  | **Progressie**                                                                                         |
-| ---------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ |
-| Sprint 1: Review progressie app v1 | 25-02-2022 (w3) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 25 februari 2022 |
-| Sprint 2: Review oplevering app v1 | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 7 maart 2022     |
+| **Project Activiteit**                                | **Datum (pw)**  | **Progressie**                                                                                                                              |
+| ----------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sprint 3 Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 25 maart 2022                                         |
+| Sprint 4 Review oplevering app v1.1 / Eindpresentatie | 08-04-2022 (w9) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/50) - 30 maart 2022 (Oplevering)/08 april 2022 (Presentatie) |
 
 ## Het Project
-Aan de hand van het [Project Plan](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) en het [Product Requirements Document](../mvpscript/Product_Requirements_Document.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP):  
-1. M.b.v. AWS CDK/Python een stack bouwen, die gebruikt kan worden door AWS Cloudformation.
-2. In de stack is de configuratie opgenomen zoals te zien is in het diagram in het [Product Requirements Document](../mvpscript/Product_Requirements_Document.md).
-3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [Parameters](../mvpscript/parameters.md).
-4. Ik ga er vanuit dat een cloud engineer hiermee aan de slag gaat. 
+Aan de hand van het [Project Plan](https://docs.google.com/document/d/1CT8AtpS_o81EeGhCEzPSn8XVu-lkvngzHyz8zWnoGmE/edit) en het [Product Requirements Document](../mvpfinal/Product_Requirements_Document_v_1_1.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP) versie 1.1 (ik beschrijf alleen de verschillen t.o.v. versie 1.0):  
+1. Er is een nested stack gebouwd, waarin de verschillende elementen in zijn verwerkt.
+2. In de stack is de configuratie opgenomen zoals te zien is in het diagram:  
+![diagram](../00_includes/MVP%20v1.1%20(AWS).drawio.png)  
+3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [Parameters](../mvpfinal/parameters_v_1_1.md).
+4. Toegevoegd zijn:
+   1. Application Load Balancer
+   2. Auto Scaling Group
+   3. Private Subnets (in de VPC van de webserver)
+   4. NAT Gateway in de public subnets (in de VPC van de webserver)
+   5. Self-Signed Certificate 
+   6. Health Check
 
-## Het bestand: mvpscript_stack.py
-Dit bestand is als volgt opgebouwd:  
-1. Eerst worden de benodigde *libraries* geladen.  
-```python
-### Importing the necessary libraries
+## Nested Stack
+De volgende bestanden zijn aangemaakt:
+- asg.py: t.b.v. de Auto Scaling Group voor de webserver
+- mngt.py: EC2 t.b.v. de Management Server
+- vpcs.py: De benodigde VPC's, Subnets en NAT Gateways
+- vpcp.py: De VPC Peering
+- sg.py: De security groups t.b.v. de Management EC2, Auto Scaling Group en de Load Balancer
+- s3bucket.py: t.b.v. de S3 Bucket met het launch script voor de webserver
+- roles.py: De role die gebruikt wordt
+- elb.py: De Application Load Balancer
+- backup.py: T.b.v. het backuppen van de Management server en de webserver
 
-import os.path
-from urllib import response
-import aws_cdk as cdk
-from aws_cdk import (
-    Duration,
-    aws_ec2 as ec2,
-    aws_iam as iam,
-    aws_backup as backup,
-    aws_events as event,
-    aws_kms as kms,
-    aws_s3 as s3,
-    aws_s3_deployment as s3deploy,
-    aws_ssm as ssm,
-    RemovalPolicy,
-    CfnOutput,
-    App,
-    Stack,
-    Tags,
-)
-
-from constructs import Construct
-from cdk_ec2_key_pair import KeyPair
-from aws_cdk.aws_events import Schedule
-from aws_cdk.aws_s3_assets import Asset
-```
-
-2. Dan wordt de *class* gedefinieerd:  
-```python
-class MvpscriptStack(Stack):
-    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
-        super().__init__(scope, construct_id, **kwargs)
-```
-
-3. Direct na de *class* definitie worden de parameters neergezet. Deze zijn terug te vinden in het document: [Parameters](../mvpscript/parameters.md)
-
-4. Vervolgens worden er twee VPC's en de VPC Peering aangemaakt:  
-Voorbeeld van 1 VPC  
-```python
-### VPC 1 - Management VPC
-
-        self.vpc1 = ec2.Vpc(
-            self,
-            vpc1_name,
-            max_azs=vpc1_max_azs,
-            cidr=vpc1_cidr_block,
-            # Configure 1 subnet in each AZ, 2 AZ's.
-            subnet_configuration=[
-                ec2.SubnetConfiguration(
-                    subnet_type=ec2.SubnetType.PUBLIC,
-                    name=vpc1_subnet_name,
-                    cidr_mask=vpc1_cidr_mask,
-                )
-            ],
-        )
-```
-
-5. Voor de VPC Peering moeten er twee *route tables* aangepast worden (één voorbeeld):  
-```python
-self.cfn_Route = ec2.CfnRoute(
-            self,
-            vpcp_route_table1,
-            route_table_id=self.vpc1.public_subnets[1].route_table.route_table_id,
-            destination_cidr_block=self.vpc2.vpc_cidr_block,
-            vpc_peering_connection_id=self.cfn_vPCPeering_connection.ref,
-        )
-```
-
-6. Er worden twee AMI's aangemaakt. Voor de webserver die gedeployed gaat worden een Linux machine en voor de management server een windows machine.
-
-7. Ik heb een rol aangemaakt voor de *Secrets Manager*:  
-```python
- role = iam.Role(
-            self, 
-            iam_ssm_role,
-            assumed_by=iam.ServicePrincipal(iam_ssm_principal)
-        )
-        role.add_managed_policy(
-            iam.ManagedPolicy.from_aws_managed_policy_name(
-                "AmazonSSMManagedInstanceCore"
-            )
-        )
-```
-
-8. Vervolgens is de  s3 Bucket aangemaakt met de juiste instellingen. Om vervolgens de Security Groups aan te maken die nodig zijn voor eisen van het project.  
-Ook de key pairs worden klaargemaakt voor het vervolg in het script.
-
-9.  Daarna zijn de twee EC2 instances aangemaakt. Hieronder een voorbeeld:  
-```python
-management_server = ec2.Instance(
-            self,
-            ec1_name,
-            instance_type=ec2.InstanceType(ec1_instance_type),
-            machine_image=amzn_windows,
-            vpc=self.vpc1,
-            security_group=mngtsg,
-            key_name=key.key_pair_name,
-            block_devices=[
-                ec2.BlockDevice(
-                    device_name=ec1_device_name,
-                    volume=ec2.BlockDeviceVolume.ebs(30, encrypted=ec1_encrypted),
-                )
-            ],
-        )
-```
-
-10. De *User Data* die ik nodig heb om de webserver daadwerkelijk als webserver te laten functioneren, wordt dan in de S3 Bucket geplaatst om vevolgens vanuit de S3 Bucket gelanceert te worden.
-
-11. Bij het Backup deel maak ik gebruik van *Tags*. Deze zijn als volgt samengesteld:  
-```python
-### Tags
-        Tags.of(web_server).add("PRD", "WSBackup")
-        Tags.of(management_server).add("MNGT", "MSBackup")
-```
-
-12. Als laatste zijn de Backup Vaults, Plans en Rules aangemaakt.
+## Self-Signed Certificate
+Om dit te realiseren zijn er twee extra bestanden aangemaakt:
+1. certmaker.py: hierin wordt het self-signed certificate aangemaakt
+2. aws_acm_certified.py: het certificaat wordt geupload naar de AWS Certificate Manager en er wordt tevens gecontroleerd of het certificaat al aanwezig is.
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
 
