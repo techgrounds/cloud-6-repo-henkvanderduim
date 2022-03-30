@@ -1,10 +1,10 @@
 # Project (Cloud6. Sentia1)
 In deze folder is alle informatie te vinden over het Project (versie 1.1) wat uitgevoert is na de voltooiing van versie 1.0.  
 ## Inhoud  
-1. [MVP 1.1](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#mvp-10)  
-2. [Belangrijke Mijlpalen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#belangrijke-mijlpalen)
-3. [Het Project](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#het-project)
-4. [Stackscript Gebruiken](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#stack-script-gebruiken)
+1. [MVP 1.1](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#mvp-11)  
+2. [Belangrijke Mijlpalen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#belangrijke-mijlpalen-v11)
+3. [Het Project](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#het-project)
+4. [Stackscript Gebruiken](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#stackscript-gebruiken)
 
 ## MVP 1.1
 In het document [Project v1.1](https://docs.google.com/document/d/1CT8AtpS_o81EeGhCEzPSn8XVu-lkvngzHyz8zWnoGmE/edit) zijn de aanpassingen/aanvullingen op versie 1.0 van het project beschreven.
@@ -15,10 +15,10 @@ Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, e
 ## MVP Script v1.1
 In dit document is de (technische)informatie te vinden over de 'nested stack' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpfinal/parameters_v_1_1.md) document.  
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#inhoud)  
 
 
-## Belangrijke mijlpalen v1.0
+## Belangrijke mijlpalen v1.1
 | **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                               | **Datum klaar**            |
 | -------------------------- | --------------- | -------------------------------------------------------------------------------------------- | -------------------------- |
 | Introductie Project v1.1   | 14-03-2022 (w5) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)     | 8 maart 2022               |
@@ -62,7 +62,7 @@ Om dit te realiseren zijn er twee extra bestanden aangemaakt:
 1. certmaker.py: hierin wordt het self-signed certificate aangemaakt
 2. aws_acm_certified.py: het certificaat wordt geupload naar de AWS Certificate Manager en er wordt tevens gecontroleerd of het certificaat al aanwezig is.
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#inhoud)  
 
 ## Stackscript gebruiken
 Om het script te gebruiken doe je het volgende:  
@@ -112,4 +112,4 @@ cdk deploy
 
 Have fun!
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#inhoud)  
