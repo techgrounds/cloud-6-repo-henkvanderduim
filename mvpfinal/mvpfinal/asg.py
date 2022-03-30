@@ -32,6 +32,7 @@ class AsgStack(cdk.NestedStack):
         asg_ec2_instance_type = ec2s_environment.get("asg_ec2_instance_type")
         asg_ec2_encrypted = ec2s_environment.get("asg_ec2_encrypted")
         asg_delete = ec2s_environment.get("asg_delete")
+        asg_protect = ec2s_environment.get("asg_protect")
         webscript_environment = environments.get("webscript")
         wsrv_asset_name = webscript_environment.get("wsrv_asset_name")
         wsrv_asset_path = webscript_environment.get("wsrv_asset_path")
@@ -82,7 +83,7 @@ class AsgStack(cdk.NestedStack):
                     ),
                 )
             ],
-            new_instances_protected_from_scale_in=False,
+            new_instances_protected_from_scale_in=asg_protect,
             group_metrics=[autoscaling.GroupMetrics.all()],
         )
 

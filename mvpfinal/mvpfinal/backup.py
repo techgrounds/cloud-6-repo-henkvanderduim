@@ -37,6 +37,8 @@ class BackupStack(cdk.NestedStack):
         mngt_backup_plan = bus_environment.get("mngt_backup_plan")
         mngt_backup_plan_name = bus_environment.get("mngt_backup_plan_name")
         mngt_rule_name = bus_environment.get("mngt_rule_name")
+        mngt_complete = bus_environment.get("mngt_complete")
+        mngt_start = bus_environment.get("mngt_start")
         mngt_minute = bus_environment.get("mngt_minute")
         mngt_hour = bus_environment.get("mngt_hour")
         mngt_month = bus_environment.get("mngt_month")
@@ -49,6 +51,8 @@ class BackupStack(cdk.NestedStack):
         asg_backup_plan_name = bus_environment.get("asg_backup_plan_name")
         asg_backup_resource = bus_environment.get("asg_backup_resource")
         asg_rule_name = bus_environment.get("asg_rule_name")
+        asg_complete = bus_environment.get("asg_complete")
+        asg_start = bus_environment.get("asg_start")
         asg_minute = bus_environment.get("asg_minute")
         asg_hour = bus_environment.get("asg_hour")
         asg_month = bus_environment.get("asg_month")
@@ -91,8 +95,8 @@ class BackupStack(cdk.NestedStack):
             backup.BackupPlanRule(
                 backup_vault=mngtvault,
                 rule_name=mngt_rule_name,
-                completion_window=Duration.hours(2),
-                start_window=Duration.hours(1),
+                completion_window=Duration.hours(mngt_complete),
+                start_window=Duration.hours(mngt_start),
                 schedule_expression=Schedule.cron(
                     minute=mngt_minute,
                     hour=mngt_hour,
@@ -130,8 +134,8 @@ class BackupStack(cdk.NestedStack):
             backup.BackupPlanRule(
                 backup_vault=asgvault,
                 rule_name=asg_rule_name,
-                completion_window=Duration.hours(2),
-                start_window=Duration.hours(1),
+                completion_window=Duration.hours(asg_complete),
+                start_window=Duration.hours(asg_start),
                 schedule_expression=Schedule.cron(
                     minute=asg_minute,
                     hour=asg_hour,

@@ -109,7 +109,8 @@
         "asg_ec2_name": "FFDV-EC2ASG01",
         "asg_ec2_instance_type": "t3.nano",
         "asg_ec2_encrypted": true,
-        "asg_delete": true
+        "asg_delete": true,
+        "asg_protect": false
       },
       "webscript": {
         "wsrv_asset_name": "Asset",
@@ -129,6 +130,8 @@
         "mngt_backup_plan": "MNGT-BACKUP-PLAN",
         "mngt_backup_plan_name": "MNGT-BACKUP-PLAN",
         "mngt_rule_name": "MNGT-Backup-Rule",
+        "mngt_complete": 2,
+        "mngt_start": 1,
         "mngt_minute": "0",
         "mngt_hour": "0",
         "mngt_month": "1-12",
@@ -141,6 +144,8 @@
         "asg_backup_plan_name": "ASG-BACKUP-PLAN",
         "asg_backup_resource": "ASG-Backup-Resource",
         "asg_rule_name": "ASG-Backup-Rule",
+        "asg_complete": 2,
+        "asg_start": 1,
         "asg_minute": "30",
         "asg_hour": "4",
         "asg_month": "1-12",
