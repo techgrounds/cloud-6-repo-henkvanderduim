@@ -19,6 +19,7 @@ In dit document is de (technische)informatie te vinden over de 'nested stack' en
 
 
 ## Belangrijke mijlpalen v1.1
+{.blauw}
 | **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                               | **Datum klaar**            |
 | -------------------------- | --------------- | -------------------------------------------------------------------------------------------- | -------------------------- |
 | Introductie Project v1.1   | 14-03-2022 (w5) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)     | 8 maart 2022               |
@@ -26,6 +27,7 @@ In dit document is de (technische)informatie te vinden over de 'nested stack' en
 
 
 ## Projectactiviteiten v1.0
+{.blauw}
 | **Project Activiteit**                                | **Datum (pw)**  | **Progressie**                                                                                                                              |
 | ----------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sprint 3 Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 25 maart 2022                                         |
