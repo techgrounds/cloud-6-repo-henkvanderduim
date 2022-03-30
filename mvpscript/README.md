@@ -20,24 +20,22 @@ Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira
 
 In dit document is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpscript/parameters.md) document.  
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#project-cloud6-sentia1)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
 
 
-## Belangrijke mijlpalen
-| **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                                     | **Datum klaar** |
-| -------------------------- | --------------- | -------------------------------------------------------------------------------------------------- | --------------- |
-| Start Python               | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)           | 8 februari 2022 |
-| Start project (v1.0)       | 07-02-2022 (w1) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)       | 7 februari 2022 |
-| Introductie Project v1.1   | 14-03-2022 (w5) | ![Introductie Project v1.1](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 8 maart 2022    |
-| Oplevering/Eindpresentatie | 08-04-2022 (w9) | ![Oplevering/Eindpresentatie](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) | d.d.            |
+## Belangrijke mijlpalen v1.0
+| **Onderwerp**        | **Datum (pw)**  | **Progressie**                                                                               | **Datum klaar** |
+| -------------------- | --------------- | -------------------------------------------------------------------------------------------- | --------------- |
+| Start Python         | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)     | 8 februari 2022 |
+| Start project (v1.0) | 07-02-2022 (w1) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 7 februari 2022 |
 
-## Projectactiviteiten
-| **Project Activiteit**                                 | **Datum (pw)**  | **Progressie**                                                                                         |
-| ------------------------------------------------------ | --------------- | ------------------------------------------------------------------------------------------------------ |
-| Sprint 1: Review progressie app v1                     | 25-02-2022 (w3) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 25 februari 2022 |
-| Sprint 2: Review oplevering app v1                     | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 7 maart 2022     |
-| Sprint 3: Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint3rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)                    |
-| Sprint 4: Review oplevering app v1.1 / Eindpresentatie | 08-04-2022 (w9) | ![Sprint4ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/30)                     |
+
+## Projectactiviteiten v1.0
+| **Project Activiteit**             | **Datum (pw)**  | **Progressie**                                                                                         |
+| ---------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------ |
+| Sprint 1: Review progressie app v1 | 25-02-2022 (w3) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 25 februari 2022 |
+| Sprint 2: Review oplevering app v1 | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 7 maart 2022     |
+
 
 # Cloud6.Sentia1 - MVP v1.0
 
@@ -172,7 +170,7 @@ management_server = ec2.Instance(
 
 12. Als laatste zijn de Backup Vaults, Plans en Rules aangemaakt.
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#project-cloud6-sentia1)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
 
 ## Stackscript gebruiken
 Om het script te gebruiken doe je het volgende:  
@@ -222,4 +220,4 @@ cdk deploy
 
 Have fun!
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#project-cloud6-sentia1)  
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
