@@ -41,4 +41,4 @@
 Ik adviseer onderstaand diagram voor de MVP v1.1:
 ![diagram](../00_includes/MVP%20v1.1%20(AWS).drawio.png)
 En dit zijn de gebruikte AWS Services voor de MVP v1.1.  
-![aws services](../00_includes/MVP%20v1.1%20AWS%20Services.drawio.png)
+![aws services](../00_includes/MVP%20v1.1%20AWS%20Services.png)
