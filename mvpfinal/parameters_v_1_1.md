@@ -7,8 +7,8 @@ Dit bestand hoort bij MVP v1.1.
 Alle variabelen moeten tussen aanhalingstekens gezet worden (zie cdk.json) (" "). Getallen en Booleans (true/false) mogen geen aanhalingstekens hebben. Behalve als de getallen voor de cronjob van de backup ingevuld moeten worden. Deze getallen zet je tussen aanhalingstekens ("2").
 
 ## Inhoud
-[Parameters]()
-[Naamgevingsconventie]()
+- [Parameters](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#parameters-1)  
+- [Naamgevingsconventie](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#naamgevingsconventie)
 
 ## Parameters
 | Parameter                         | wat wordt er ingevuld                                                                                          | Voorbeeld                                                                                 |
@@ -122,6 +122,8 @@ Alle variabelen moeten tussen aanhalingstekens gezet worden (zie cdk.json) (" ")
 | asg_duration                      | Het aantal dagen dat de backups bewaart blijven in de APP-PRD-VPC omgeving                                     | 7                                                                                         |
 | asg_duration                      | Het aantal dagen dat de backups bewaart blijven in de APP-PRD-VPC omgeving                                     | 7                                                                                         |
 
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#inhoud)  
+
 ## Naamgevingsconventie
 Tijdens het volgen van deze opleiding, heb ik ontdekt dat ik een proces nodig heb voor het bouwen van een effectieve naamgevingsconventie voor projecten. Server- en desktopvirtualisatie verhoogt het aantal objecten binnen organisaties aanzienlijk.Een effectieve naamgevingsconventie die beschrijft wat een object is, zijn locatie, functie en doel, is van cruciaal belang. Hierdoor kunnen we objecten op een snelle manier identificeren, maar het biedt ook een gestructureerde manier om op een logische manier naar objecten te zoeken met behulp van trefwoorden.  
   
@@ -221,3 +223,5 @@ Uniek ID/volgnummer
 - Tagsleutels en -waarden zijn hoofdlettergevoelig  
 - Tagsleutels moeten uniek zijn per resource  
 - Gebruik het voorvoegsel "aws:" niet in je tagnaam of -waarden omdat het is gereserveerd voor AWS-gebruik
+
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#inhoud)  
