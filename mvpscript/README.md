@@ -1,12 +1,52 @@
+# Project (Cloud6. Sentia1)
+In deze folder is alle informatie te vinden over het Project wat de komende weken uitgevoerd wordt.  
+Het project kent twee fasen:  
+1. [MVP 1.0](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#mvp-10)  
+2. [Belangrijke Mijlpalen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#mvp-11)
+3. [Het Project]()
+4. [Stackscript Gebruiken]()
 
-# Cloud6.Sentia1 - MVP
+## MVP 1.0
+## Project Document v1.0
+In het document [PRO-01 Project](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) is het project beschreven.
 
-In de folder 07_Project van deze Github is alle [project documentatie](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#readme) te vinden over dit project.
+## Project Requirements Document v1.0
+Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../07_Project/Product_Requirements_Document.md).
+## JIRA v1.0
+In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
+Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
+
+## MVP Script v1.0
+
+In dit document is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpscript/parameters.md) document.  
+
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#project-cloud6-sentia1)  
+
+
+## Belangrijke mijlpalen
+| **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                                     | **Datum klaar** |
+| -------------------------- | --------------- | -------------------------------------------------------------------------------------------------- | --------------- |
+| Start Python               | 07-02-2022 (w1) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)           | 8 februari 2022 |
+| Start project (v1.0)       | 07-02-2022 (w1) | ![Start Project v1.0](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)       | 7 februari 2022 |
+| Introductie Project v1.1   | 14-03-2022 (w5) | ![Introductie Project v1.1](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) | 8 maart 2022    |
+| Oplevering/Eindpresentatie | 08-04-2022 (w9) | ![Oplevering/Eindpresentatie](https://us-central1-progress-markdown.cloudfunctions.net/progress/0) | d.d.            |
+
+## Projectactiviteiten
+| **Project Activiteit**                                 | **Datum (pw)**  | **Progressie**                                                                                         |
+| ------------------------------------------------------ | --------------- | ------------------------------------------------------------------------------------------------------ |
+| Sprint 1: Review progressie app v1                     | 25-02-2022 (w3) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 25 februari 2022 |
+| Sprint 2: Review oplevering app v1                     | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 7 maart 2022     |
+| Sprint 3: Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint3rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)                    |
+| Sprint 4: Review oplevering app v1.1 / Eindpresentatie | 08-04-2022 (w9) | ![Sprint4ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/30)                     |
+
+# Cloud6.Sentia1 - MVP v1.0
+
+In deze folder is alle project documentatie te vinden over dit project.
 
 ## Het Project
-Aan de hand van het [Project Plan](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) en het [Product Requirements Document](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Product_Requirements_Document.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP):  
+Aan de hand van het [Project Plan](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) en het [Product Requirements Document](../mvpscript/Product_Requirements_Document.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP):  
 1. M.b.v. AWS CDK/Python een stack bouwen, die gebruikt kan worden door AWS Cloudformation.
-2. In de stack is de configuratie opgenomen zoals te zien is in het diagram in het [Product Requirements Document](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Product_Requirements_Document.md).
+2. In de stack is de configuratie opgenomen zoals te zien is in het diagram in het [Product Requirements Document](../mvpscript/Product_Requirements_Document.md).
 3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [Parameters](../mvpscript/parameters.md).
 4. Ik ga er vanuit dat een cloud engineer hiermee aan de slag gaat. 
 
@@ -132,6 +172,8 @@ management_server = ec2.Instance(
 
 12. Als laatste zijn de Backup Vaults, Plans en Rules aangemaakt.
 
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#project-cloud6-sentia1)  
+
 ## Stack script gebruiken
 Om het script te gebruiken doe je het volgende:  
 
@@ -179,3 +221,5 @@ cdk deploy
  * `cdk docs`        open CDK documentatie
 
 Have fun!
+
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/07_Project#project-cloud6-sentia1)  
