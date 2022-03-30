@@ -1,18 +1,13 @@
 # Epic Document
 
 ## Inhoud
-- [Wat zijn de eisen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#wat-zijn-de-eisen-epic---01)
-- [Een duidelijk overzicht van de aannames](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-aannames-epic---02)
-- [Een duidelijk overzicht van de Cloud Infrastructuur](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#een-duidelijk-overzicht-van-de-cloud-infrastructuur-epic---03)
-- [Klant wil een veilig netwerk deployen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-veilig-netwerk-deployen-epic---04)
-- [Klant wil een werkende webserver deployen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-webserver-deployen-epic---05)
-- [Klant wil een werkende management server deployen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-een-werkende-management-server-deployen-epic---06)
-- [Klant wil opslagoplossing voor bootstrapscript(s)](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-opslagoplossing-voor-bootstrapscripts-epic---07)
-- [Klant wil alle data versleuteld hebben](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-alle-data-versleuteld-hebben-epic---08)
-- [Klant wil iedere dag een backup, met bewaartermijn van 7 dagen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-iedere-dag-een-backup-met-bewaartermijn-van-7-dagen-epic---09)
-- [Klant wil weten hoe hij/zij de applicatie kan gebruiken](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-weten-hoe-hijzij-de-applicatie-kan-gebruiken-epic---10)
-- [Klant wil de MVP kunnen deployen om te testen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#klant-wil-de-mvp-kunnen-deployen-om-te-testen-epic---11)
-
+- [Epic-12: Wat zijn de wijzigingen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#epic-12-wat-zijn-de-wijzigingen)
+- [Epic-13: Infrastructuur](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#epic-13-infrastructuur)
+- [Epic-14: Er moet een Load Balancer komen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#epic-14-er-moet-een-load-balancer-komen)
+- [Epic-15: Auto Scaling Group](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#epic-15-auto-scaling-group)
+- [Epic-16: HTTP verbindingen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#epic-16-http-verbindingen)
+- [Epic-17: Health Check van de Webserver](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#epic-17-health-check-van-de-webserver)
+  
 ## Epic-12: Wat zijn de wijzigingen
 | Item                | Opmerking                                                                                                                                                           |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -45,7 +40,7 @@
 | Om de aanhoudende belasting van de webserver het hoofd te bieden, installeren wij een Auto Scaling Group (max 3 servers) |
 | Documentatie wordt geschreven voor een Engineer                                                                          |
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-13: Infrastructuur
 | Item                | Opmerking                                                                                                        |
 | :------------------ | :--------------------------------------------------------------------------------------------------------------- |
@@ -64,7 +59,7 @@
 ### Overzicht AWS diensten
 ![aws diensten](../00_includes/MVP%20v1.1%20AWS%20Services.png)  
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 
 ## Epic-14: Er moet een Load Balancer komen
 | Item                | Opmerking                                                                                                                                                                                        |
@@ -81,7 +76,7 @@
 ### Netwerk tekening
 ![AWS Netwerk](../00_includes/MVP%20v1.0%20Netwerk%20(AWS).jpg)   
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-15: Auto Scaling Group
 | Item                | Opmerking                                                                                                                                                                                                                                    |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -97,7 +92,7 @@
 ### Webserver in de lucht
 ![AWS](../00_includes/0_webserver.png)  
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-16: HTTP verbindingen
 | Item                | Opmerking                                                                                                                                                                                                         |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -113,7 +108,7 @@
 ### Management Server Stack
 ![AWS Stack](../00_includes/0_stack-MNGT-PRD-VPC.png)  
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-17: Health Check van de Webserver
 | Item                                                                                            | Opmerking                                                                                                                                                              |
 | :---------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -131,4 +126,4 @@
 ![AWS S3](../00_includes/MVP%20v1.0%20Management%20server%20(AWS).jpg)  
  
 
-[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/07_Project/Epic%20Document.md#inhoud)
+[naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
