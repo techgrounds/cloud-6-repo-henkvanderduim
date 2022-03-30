@@ -1,112 +1,16 @@
 # Parameters
 In de tabel hieronder wordt uitleg gegeven over de Parameters die gebruikt worden in het bestand 'mvpscript_stack.py'.  
 Als bepaalde termen je als Cloud Engineer onbekend voorkomen dan heb ik hier de oplossing: [Cloud Engineer](https://techgrounds.nl/wp-content/uploads/2022/02/Cloud-opleiding-voor-deelnemers.pdf).  
-Dit bestand hoort bij MVP Final.  
-
-## Naamgevingsconventie
-Tijdens het volgen van deze opleiding, heb ik ontdekt dat ik een proces nodig heb voor het bouwen van een effectieve naamgevingsconventie voor projecten. Server- en desktopvirtualisatie verhoogt het aantal objecten binnen organisaties aanzienlijk.Een effectieve naamgevingsconventie die beschrijft wat een object is, zijn locatie, functie en doel, is van cruciaal belang. Hierdoor kunnen we objecten op een snelle manier identificeren, maar het biedt ook een gestructureerde manier om op een logische manier naar objecten te zoeken met behulp van trefwoorden.  
-  
-### Basisrichtlijnen
-- Een naam moet de locatie van het apparaat en zijn doel/functie/service identificeren.
-- Een naam moet eenvoudig zijn maar toch betekenisvol zijn voor systeembeheerders, systeemondersteuning en operations.
-- De norm moet consistent zijn. Eenmaal ingesteld, mag de naam niet veranderen.
-- Vermijd speciale tekens; gebruik alleen alfanumerieke tekens.
-- Vermijd het gebruik van numerieke cijfers, behalve het eindvolgnummer.
-- Vermijd het gebruik van specifieke product- of leveranciersnamen, aangezien deze aan verandering onderhevig kunnen zijn. (Er zijn enkele algemeen - aanvaarde uitzonderingen: Oracle, SMS, SQL, CTX, VMW)
-
-### Enkele basisaanbevelingen:
-- De naam moet beginnen met een star kopgedeelte dat de locatie identificeert en optioneel een type-ID. Deze moeten worden gevolgd door een scheidingsteken om het einde van het kopgedeelte aan te duiden. Dit scheidingsteken moet een "-" (streepje) zijn, tenzij het systeem een ​​"-" niet herkent. Vervang in dit geval het streepje door een ander geschikt overeengekomen teken (bijv. _ of $ of #).
-- Zorg voor een variabele sectie die de identificatie voltooit (functie, dienst, doel, toepassing).
-- Beëindig de naam met een uniek ID, een volgnummer, dat multifunctioneel kan zijn.
-- Zorg voor flexibiliteit. Aangezien de technologie voortdurend evolueert, moet ook deze standaard kunnen evolueren. Indien nodig kan deze standaard worden aangepast om rekening te houden met technologische, infrastructuur- en/of zakelijke veranderingen.
-- Er moet handhaving zijn, samen met nauwkeurige en actuele documentatie voor alle apparaten.
-
-### Voorbeeld
-**Structuur**  
-![structuur](../00_includes/structuur.png)  
-
-*Header*:  
-GG -- Geografische locatie  
-L -- Locatie moet generiek zijn en niet leverancier- of gebouwspecifiek om verhuizingen, naamsveranderingen van gebouwen als gevolg van fusies, overnames of ontbinding van het bedrijf, enz. te vergemakkelijken.  
-T -- Type  
-"-" -- Liggend streepje is een vereist scheidingsteken om het einde van het kopgedeelte aan te duiden  
-
-*Variable*:  
-AAA -- Functie/Service/Doel  
-BBB -- Toepassing  
-(Unieke ID)  
-"##" -- 2-cijferige reeks #  
-
-**Waarden gedefinieerd**:  
-
-Geografisch:  
-AM -- Amsterdam  
-HV -- Hilversum  
-FF -- Frankfurt  
-LO -- London  
-MA -- Madrid  
-SI -- Singapore  
-MU -- Mumbai  
-GL -- Global  
-
-Plaats:  
-D -- Hoofddatacentrum  
-C -- COLO-datacentrum  
-T -- Testgebied (moet worden gebruikt voor testmachines die permanent in de testomgeving moeten blijven)  
-
-Soort (optioneel):  
-V -- Virtueel  
-C -- Clusterserver  
-P -- Fysiek  
-O -- Uitbesteed of door een leverancier ondersteund systeem  
-
-Scheidingsteken (vereist):  
-Er wordt een "-" (liggend streepje) gebruikt, tenzij het systeem een "-" niet herkent, waarna een overeengekomen teken kan worden vervangen. Dit kan een _ of $ of # of een ander teken zijn.  
-
-**Variabele portie - AAA**  
-Identificeer het primaire doel van het apparaat:  
-
-DC -- Domeincontroller  
-FS -- Bestandsserver  
-PS -- Afdrukserver  
-ORA -- Oracle-database  
-SQL -- SQL-database  
-DB -- andere database(s)  
-EXH -- Microsoft Exchange  
-CTX -- Citrix Server  
-ESX -- VMware ESX-server  
-
-**Variabele portie BBB**  
-Identificeer de toepassing op deze server. Als de server voor een specifieke applicatie is, moet een applicatie-ID het tweede deel van dit gedeelte van de naam zijn, voorafgegaan door de service:
-
-JDE -- JDEdwards  
-DYN -- Dyna  
-EPC -- Episch  
-
-Dit deel van de naam biedt veel flexibiliteit om identifiers voor specifieke doeleinden, functies en/of toepassingen te verwerken. Er zijn veel uitdagingen om identifiers te selecteren die zinvol en consistent zijn en niet vaak worden gewijzigd. Hier zijn enkele voorbeelden gebaseerd op de richtlijnen die ik hierboven voorstel:
-
-CHD-DC01 -- Chicago Office, datacenter, domeincontroller, volgorde # 1  
-CHD-FS01 -- Chicago Office, datacenter, bestandsserver, volgorde # 1  
-CHD-EXH01 -- Chicago Office, Data Center, Microsoft Exchange, reeks # 1  
-CHD-ESX01 -- Chicago Office, Data Center, VMware ESX Server, volgorde # 1  
-CHC-CTXJDE01 -- Chicago Office, Data Center, Citrix Server, JDEdwards-toepassing, volgorde # 1  
-CHC-WEB01 -- Chicago Office, datacenter, webserver, volgorde # 1  
-
-Uniek ID/volgnummer  
-"##" Dit is een 2-cijferig volgnummer  
-
-### Tagging beperkingen
-- Maximaal aantal tags per resource – 10  
-- Maximale sleutellengte (key) – 127 Unicode-tekens  
-- Maximale waardelengte (value) – 255 Unicode-tekens  
-- Tagsleutels en -waarden zijn hoofdlettergevoelig  
-- Tagsleutels moeten uniek zijn per resource  
-- Gebruik het voorvoegsel "aws:" niet in je tagnaam of -waarden omdat het is gereserveerd voor AWS-gebruik
+Dit bestand hoort bij MVP v1.1.  
 
 ### Oh ja
-Alle variabelen moeten tussen aanhalingstekens gezet worden (zie cdk.json) (" "). Getallen en Booleans (true/false) mogen geen aanhalingstekens hebben.  
+Alle variabelen moeten tussen aanhalingstekens gezet worden (zie cdk.json) (" "). Getallen en Booleans (true/false) mogen geen aanhalingstekens hebben. Behalve als de getallen voor de cronjob van de backup ingevuld moeten worden. Deze getallen zet je tussen aanhalingstekens ("2").
 
-## CDK JSON Tabel
+## Inhoud
+[Parameters]()
+[Naamgevingsconventie]()
+
+## Parameters
 | Parameter                         | wat wordt er ingevuld                                                                                          | Voorbeeld                                                                                 |
 | :-------------------------------- | :------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
 | **VPC**                           |                                                                                                                |                                                                                           |
@@ -216,6 +120,104 @@ Alle variabelen moeten tussen aanhalingstekens gezet worden (zie cdk.json) (" ")
 | asg_weekday                       | De dag(en) van de week van de cron job in de Backup Rule in de APP-PRD-VPC omgeving                            | "*"                                                                                       |
 <<<<<<< HEAD
 | asg_duration                      | Het aantal dagen dat de backups bewaart blijven in de APP-PRD-VPC omgeving                                     | 7                                                                                         |
-=======
 | asg_duration                      | Het aantal dagen dat de backups bewaart blijven in de APP-PRD-VPC omgeving                                     | 7                                                                                         |
->>>>>>> 8c5c9382f5c643a94fdc01b2111484d41d615b78
+
+## Naamgevingsconventie
+Tijdens het volgen van deze opleiding, heb ik ontdekt dat ik een proces nodig heb voor het bouwen van een effectieve naamgevingsconventie voor projecten. Server- en desktopvirtualisatie verhoogt het aantal objecten binnen organisaties aanzienlijk.Een effectieve naamgevingsconventie die beschrijft wat een object is, zijn locatie, functie en doel, is van cruciaal belang. Hierdoor kunnen we objecten op een snelle manier identificeren, maar het biedt ook een gestructureerde manier om op een logische manier naar objecten te zoeken met behulp van trefwoorden.  
+  
+### Basisrichtlijnen
+- Een naam moet de locatie van het apparaat en zijn doel/functie/service identificeren.
+- Een naam moet eenvoudig zijn maar toch betekenisvol zijn voor systeembeheerders, systeemondersteuning en operations.
+- De norm moet consistent zijn. Eenmaal ingesteld, mag de naam niet veranderen.
+- Vermijd speciale tekens; gebruik alleen alfanumerieke tekens.
+- Vermijd het gebruik van numerieke cijfers, behalve het eindvolgnummer.
+- Vermijd het gebruik van specifieke product- of leveranciersnamen, aangezien deze aan verandering onderhevig kunnen zijn. (Er zijn enkele algemeen - aanvaarde uitzonderingen: Oracle, SMS, SQL, CTX, VMW)
+
+### Enkele basisaanbevelingen:
+- De naam moet beginnen met een star kopgedeelte dat de locatie identificeert en optioneel een type-ID. Deze moeten worden gevolgd door een scheidingsteken om het einde van het kopgedeelte aan te duiden. Dit scheidingsteken moet een "-" (streepje) zijn, tenzij het systeem een ​​"-" niet herkent. Vervang in dit geval het streepje door een ander geschikt overeengekomen teken (bijv. _ of $ of #).
+- Zorg voor een variabele sectie die de identificatie voltooit (functie, dienst, doel, toepassing).
+- Beëindig de naam met een uniek ID, een volgnummer, dat multifunctioneel kan zijn.
+- Zorg voor flexibiliteit. Aangezien de technologie voortdurend evolueert, moet ook deze standaard kunnen evolueren. Indien nodig kan deze standaard worden aangepast om rekening te houden met technologische, infrastructuur- en/of zakelijke veranderingen.
+- Er moet handhaving zijn, samen met nauwkeurige en actuele documentatie voor alle apparaten.
+
+### Voorbeeld
+**Structuur**  
+![structuur](../00_includes/structuur.png)  
+
+*Header*:  
+GG -- Geografische locatie  
+L -- Locatie moet generiek zijn en niet leverancier- of gebouwspecifiek om verhuizingen, naamsveranderingen van gebouwen als gevolg van fusies, overnames of ontbinding van het bedrijf, enz. te vergemakkelijken.  
+T -- Type  
+"-" -- Liggend streepje is een vereist scheidingsteken om het einde van het kopgedeelte aan te duiden  
+
+*Variable*:  
+AAA -- Functie/Service/Doel  
+BBB -- Toepassing  
+(Unieke ID)  
+"##" -- 2-cijferige reeks #  
+
+**Waarden gedefinieerd**:  
+
+Geografisch:  
+AM -- Amsterdam  
+HV -- Hilversum  
+FF -- Frankfurt  
+LO -- London  
+MA -- Madrid  
+SI -- Singapore  
+MU -- Mumbai  
+GL -- Global  
+
+Plaats:  
+D -- Hoofddatacentrum  
+C -- COLO-datacentrum  
+T -- Testgebied (moet worden gebruikt voor testmachines die permanent in de testomgeving moeten blijven)  
+
+Soort (optioneel):  
+V -- Virtueel  
+C -- Clusterserver  
+P -- Fysiek  
+O -- Uitbesteed of door een leverancier ondersteund systeem  
+
+Scheidingsteken (vereist):  
+Er wordt een "-" (liggend streepje) gebruikt, tenzij het systeem een "-" niet herkent, waarna een overeengekomen teken kan worden vervangen. Dit kan een _ of $ of # of een ander teken zijn.  
+
+**Variabele portie - AAA**  
+Identificeer het primaire doel van het apparaat:  
+
+DC -- Domeincontroller  
+FS -- Bestandsserver  
+PS -- Afdrukserver  
+ORA -- Oracle-database  
+SQL -- SQL-database  
+DB -- andere database(s)  
+EXH -- Microsoft Exchange  
+CTX -- Citrix Server  
+ESX -- VMware ESX-server  
+
+**Variabele portie BBB**  
+Identificeer de toepassing op deze server. Als de server voor een specifieke applicatie is, moet een applicatie-ID het tweede deel van dit gedeelte van de naam zijn, voorafgegaan door de service:
+
+JDE -- JDEdwards  
+DYN -- Dyna  
+EPC -- Episch  
+
+Dit deel van de naam biedt veel flexibiliteit om identifiers voor specifieke doeleinden, functies en/of toepassingen te verwerken. Er zijn veel uitdagingen om identifiers te selecteren die zinvol en consistent zijn en niet vaak worden gewijzigd. Hier zijn enkele voorbeelden gebaseerd op de richtlijnen die ik hierboven voorstel:
+
+CHD-DC01 -- Chicago Office, datacenter, domeincontroller, volgorde # 1  
+CHD-FS01 -- Chicago Office, datacenter, bestandsserver, volgorde # 1  
+CHD-EXH01 -- Chicago Office, Data Center, Microsoft Exchange, reeks # 1  
+CHD-ESX01 -- Chicago Office, Data Center, VMware ESX Server, volgorde # 1  
+CHC-CTXJDE01 -- Chicago Office, Data Center, Citrix Server, JDEdwards-toepassing, volgorde # 1  
+CHC-WEB01 -- Chicago Office, datacenter, webserver, volgorde # 1  
+
+Uniek ID/volgnummer  
+"##" Dit is een 2-cijferig volgnummer  
+
+### Tagging beperkingen
+- Maximaal aantal tags per resource – 10  
+- Maximale sleutellengte (key) – 127 Unicode-tekens  
+- Maximale waardelengte (value) – 255 Unicode-tekens  
+- Tagsleutels en -waarden zijn hoofdlettergevoelig  
+- Tagsleutels moeten uniek zijn per resource  
+- Gebruik het voorvoegsel "aws:" niet in je tagnaam of -waarden omdat het is gereserveerd voor AWS-gebruik
