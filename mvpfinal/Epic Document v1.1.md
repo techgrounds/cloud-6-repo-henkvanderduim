@@ -38,6 +38,7 @@
 | Via HTTP verbinden? Dan wordt de verbinding automatisch geupgrade naar HTTPS. Dit vindt plaats in de ALB                 |
 | Vanuit de ALB zal regelmatig een health check worden uitgevoerd op de webserver(s)                                       |
 | Om de aanhoudende belasting van de webserver het hoofd te bieden, installeren wij een Auto Scaling Group (max 3 servers) |
+| Best Practices en AWS Documentatie zijn leidend!                                                                         |
 | Documentatie wordt geschreven voor een Engineer                                                                          |
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
