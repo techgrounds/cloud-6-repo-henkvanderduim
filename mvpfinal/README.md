@@ -19,7 +19,6 @@ In dit document is de (technische)informatie te vinden over de 'nested stack' en
 
 
 ## Belangrijke mijlpalen v1.1
-{.overzicht-oranje}
 | **Onderwerp**              | **Datum (pw)**  | **Progressie**                                                                               | **Datum klaar**            |
 | -------------------------- | --------------- | -------------------------------------------------------------------------------------------- | -------------------------- |
 | Introductie Project v1.1   | 14-03-2022 (w5) | ![Python Project](https://us-central1-progress-markdown.cloudfunctions.net/progress/100)     | 8 maart 2022               |
@@ -27,7 +26,6 @@ In dit document is de (technische)informatie te vinden over de 'nested stack' en
 
 
 ## Projectactiviteiten v1.0
-{.overzicht-oranje}
 | **Project Activiteit**                                | **Datum (pw)**  | **Progressie**                                                                                                                              |
 | ----------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sprint 3 Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 25 maart 2022                                         |
@@ -49,20 +47,20 @@ Aan de hand van het [Project Plan](https://docs.google.com/document/d/1CT8AtpS_o
 
 ## Nested Stack
 De volgende bestanden zijn aangemaakt:
-- asg.py: t.b.v. de Auto Scaling Group voor de webserver
-- mngt.py: EC2 t.b.v. de Management Server
-- vpcs.py: De benodigde VPC's, Subnets en NAT Gateways
-- vpcp.py: De VPC Peering
-- sg.py: De security groups t.b.v. de Management EC2, Auto Scaling Group en de Load Balancer
-- s3bucket.py: t.b.v. de S3 Bucket met het launch script voor de webserver
-- roles.py: De role die gebruikt wordt
-- elb.py: De Application Load Balancer
-- backup.py: T.b.v. het backuppen van de Management server en de webserver
+- **asg.py**: t.b.v. de Auto Scaling Group voor de webserver
+- **mngt.py**: EC2 t.b.v. de Management Server
+- **vpcs.py**: De benodigde VPC's, Subnets en NAT Gateways
+- **vpcp.py**: De VPC Peering
+- **sg.py**: De security groups t.b.v. de Management EC2, Auto Scaling Group en de Load Balancer
+- **s3bucket.py**: t.b.v. de S3 Bucket met het launch script voor de webserver
+- **roles.py**: De role die gebruikt wordt
+- **elb.py**: De Application Load Balancer
+- **backup.py**: T.b.v. het backuppen van de Management server en de webserver
 
 ## Self-Signed Certificate
 Om dit te realiseren zijn er twee extra bestanden aangemaakt:
-1. certmaker.py: hierin wordt het self-signed certificate aangemaakt
-2. aws_acm_certified.py: het certificaat wordt geupload naar de AWS Certificate Manager en er wordt tevens gecontroleerd of het certificaat al aanwezig is.
+1. **certmaker.py**: hierin wordt het self-signed certificate aangemaakt
+2. **aws_acm_certified.py**: het certificaat wordt geupload naar de AWS Certificate Manager en er wordt tevens gecontroleerd of het certificaat al aanwezig is.
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#inhoud)  
 
