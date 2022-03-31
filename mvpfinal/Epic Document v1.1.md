@@ -94,13 +94,19 @@
 | Acceptatie criteria | Als bij het testen blijkt dat bij aanhoudende belasting er meerdere webservers worden opgestart. En bij afnemende belasting de extra webservers ook weer verdwijnen                                                                          |
 
 ### Auto Scaling Group
-![ASG](../00_includes/32%20-%20ASG-Webserver.png)  
-
-**Auto Scaling Group details**  
 ![asgd1](../00_includes/33%20-%20ASG-01.png)  
 ![asgd2](../00_includes/34%20-%20ASG-02.png)  
 ![asgd3](../00_includes/35%20-%20ASG-03.png)  
 ![asgd4](../00_includes/36%20-%20ASG-04.png)  
+
+### Auto Scaling Load testen
+![asgt](../00_includes/47%20-%20Load-Test.png)  
+
+### Auto Scaling Load testen - nieuwe EC2 instances
+![ec2](../00_includes/49%20-%20ASG-EC2-3-Instances.png)  
+
+### Auto Scaling Load testen - EC2 instances worden verwijderd
+![ec2v](../00_includes/50%20-%20ASG-Scale-In.png)  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-16: HTTP verbindingen
@@ -118,7 +124,7 @@
 ### Self-Signed Certificate
 ![ssc](../00_includes/44%20-%20Self-Signed-Certificate.png)  
 
-**With each deployment there will be checked if a self-signed certificate already exists**:  
+**Bij elke deployment wordt gekeken of er al een certificaat is**:  
 ![ssc](../00_includes/45%20-%20Check-File-Certificate.png)  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
@@ -136,7 +142,7 @@
 | Acceptatie criteria                                                                             | Als bij het testen blijkt dat bij het uitvallen van de webserver er automatisch een nieuwe wordt opgestart                                                             |
 
 ### Heath Check
-![hc](../00_includes/)  
+![hc](../00_includes/52%20-%20Health-Check.png)  
  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
