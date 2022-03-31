@@ -80,6 +80,9 @@
 ### Application Load Balancer - Target Group
 ![elbtg](../00_includes/30%20-%20ELB-Target-Groups.png)  
 
+### Geen Public IP meer voor de Webserver
+![ip](../00_includes/53%20-%20Public-IP-gone.png)  
+
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-15: Auto Scaling Group
 | Item                | Opmerking                                                                                                                                                                                                                                    |
