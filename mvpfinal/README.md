@@ -90,6 +90,14 @@ Als de virtualenv is geactiveerd, kun je de afhankelijkheden installeren.
 pip install -r requirements.txt
 ```
 
+Nu nog drie extra libraries installeren:
+
+```
+pip install boto3
+pip install pyopenssl
+pip install cdk-ec2-key-pair
+```
+
 Nu kun je de code synthesizen:
 
 ```
