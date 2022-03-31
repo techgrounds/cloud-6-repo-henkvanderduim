@@ -97,7 +97,6 @@ class SgStack(cdk.NestedStack):
             ec2.Peer.security_group_id(self.mngtsg.security_group_id),
             ec2.Port.tcp(asgsg_rule_port),
             "allow access from the MNGT Security Group",
-            remote_rule=True,
         )
 
         self.asgsg.add_ingress_rule(
@@ -116,4 +115,10 @@ class SgStack(cdk.NestedStack):
             ec2.Peer.any_ipv4(),
             ec2.Port.tcp(asgsg_https_rule_port),
             "allow HTTPS traffic from anywhere",
+        )
+
+        self.mngtsg.add_ingress_rule(
+            ec2.Peer.security_group_id(self.asgsg.security_group_id),
+            ec2.Port.tcp(asgsg_rule_port),
+            "allow access from the MNGT Security Group",
         )
