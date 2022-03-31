@@ -74,8 +74,11 @@
 | Doen we niet        | Afwijken van het hier gestelde                                                                                                                                                                   |
 | Acceptatie criteria | Bij het testen moet de webserver alleen maar te benaderen zijn via de Load Balancer                                                                                                              |
 
-### Netwerk tekening
-![AWS Netwerk](../00_includes/MVP%20v1.0%20Netwerk%20(AWS).jpg)   
+### Application Load Balancer
+![elb](../00_includes/31%20-%20ELB.png)  
+
+### Application Load Balancer - Target Group
+![elbtg](../00_includes/30%20-%20ELB-Target-Groups.png)  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-15: Auto Scaling Group
@@ -90,8 +93,14 @@
 | Doen we niet        | Afwijken van het hierboven gestelde                                                                                                                                                                                                          |
 | Acceptatie criteria | Als bij het testen blijkt dat bij aanhoudende belasting er meerdere webservers worden opgestart. En bij afnemende belasting de extra webservers ook weer verdwijnen                                                                          |
 
-### Webserver in de lucht
-![AWS](../00_includes/0_webserver.png)  
+### Auto Scaling Group
+![ASG](../00_includes/32%20-%20ASG-Webserver.png)  
+
+**Auto Scaling Group details**  
+![asgd1](../00_includes/33%20-%20ASG-01.png)  
+![asgd2](../00_includes/34%20-%20ASG-02.png)  
+![asgd3](../00_includes/35%20-%20ASG-03.png)  
+![asgd4](../00_includes/36%20-%20ASG-04.png)  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-16: HTTP verbindingen
@@ -106,8 +115,11 @@
 | Doen we niet        | Afwijken van het hierboven gestelde                                                                                                                                                                               |
 | Acceptatie criteria | Als getest is dat de toegang beperkt is tot hoe wij het ingericht hebben                                                                                                                                          |
 
-### Management Server Stack
-![AWS Stack](../00_includes/0_stack-MNGT-PRD-VPC.png)  
+### Self-Signed Certificate
+![ssc](../00_includes/44%20-%20Self-Signed-Certificate.png)  
+
+**With each deployment there will be checked if a self-signed certificate already exists**:  
+![ssc](../00_includes/45%20-%20Check-File-Certificate.png)  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
 ## Epic-17: Health Check van de Webserver
@@ -123,8 +135,8 @@
 | Doen we niet                                                                                    | Best Practices en AWS documentatie voorzien in de juiste configuratie                                                                                                  |
 | Acceptatie criteria                                                                             | Als bij het testen blijkt dat bij het uitvallen van de webserver er automatisch een nieuwe wordt opgestart                                                             |
 
-### Schema van de S3 Bucket in het diagram
-![AWS S3](../00_includes/MVP%20v1.0%20Management%20server%20(AWS).jpg)  
+### Heath Check
+![hc](../00_includes/)  
  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/Epic%20Document%20v1.1.md#inhoud)
