@@ -1,7 +1,25 @@
 # Parameters
-In de tabel hieronder wordt uitleg gegeven over de Parameters die gebruikt worden in het bestand 'mvpscript_stack.py'.  
+In de tabel hieronder wordt uitleg gegeven over de Parameters die gebruikt worden in de bestanden van de nested stack.  
 Als bepaalde termen je als Cloud Engineer onbekend voorkomen dan heb ik hier de oplossing: [Cloud Engineer](https://techgrounds.nl/wp-content/uploads/2022/02/Cloud-opleiding-voor-deelnemers.pdf).  
 Dit bestand hoort bij MVP v1.1.  
+
+### Parameters app.py
+Deze parameters zijn terug te vinden in het bestand app.py. De uitleg wordt bij het kopje [Parameters app.py]() gegeven.
+````python
+### Parameters t.b.v de nested stack
+stackname = "MVPStack"
+account = "012345678912"
+region = "eu-central-1"
+bucketapp = "S3 Bucket App"
+vpcapp = "VPCs App"
+vpcpapp = "VPC Peering App"
+rolesapp = "Roles App"
+sgapp = "Security Groups App"
+mngtapp = "Management App"
+asgapp = "Auto Scaling Groups App"
+elbapp = "Elastic Load Balancer App"
+backupapp = "Backup App"
+````
 
 ### Oh ja
 Alle variabelen moeten tussen aanhalingstekens gezet worden (zie cdk.json) (" "). Getallen en Booleans (true/false) mogen geen aanhalingstekens hebben. Behalve als de getallen voor de cronjob van de backup ingevuld moeten worden. Deze getallen zet je tussen aanhalingstekens ("2").
@@ -10,7 +28,23 @@ Alle variabelen moeten tussen aanhalingstekens gezet worden (zie cdk.json) (" ")
 - [Parameters](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#parameters-1)  
 - [Naamgevingsconventie](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#naamgevingsconventie)
 
-## Parameters
+## Parameters app.py
+| Parameter | Wat wordt er ingevuld                        | Voorbeeld                   |
+| :-------- | :------------------------------------------- | :-------------------------- |
+| stackname | De naam van de Stack                         | "MVPStack"                  |
+| account   | De AWS account die je gebruikt               | "012345678912"              |
+| region    | De regio waarin het deployen plaatsvindt     | "eu-central-1"              |
+| bucketapp | De naam van de Bucket app                    | "S3 Bucket App"             |
+| vpcapp    | De naam van de VPC app                       | "VPCs App"                  |
+| vpcpapp   | De naam van de VPC Peering app               | "VPC Peering App"           |
+| rolesapp  | De naam van de Role app                      | "Roles App"                 |
+| sgapp     | De naam van de Security Groups app           | "Security Groups App"       |
+| mngtapp   | De naam van de Management server app         | "Management App"            |
+| asgapp    | De naam van de Auto Saling Group app         | "Auto Scaling Groups App"   |
+| elbapp    | De naam van de Application Load Balancer app | "Elastic Load Balancer App" |
+| backupapp | De naam van de Backup app                    | "Backup App"                |
+
+## Parameters nested stack
 | Parameter                         | wat wordt er ingevuld                                                                                          | Voorbeeld                                                                                 |
 | :-------------------------------- | :------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
 | **VPC**                           |                                                                                                                |                                                                                           |
