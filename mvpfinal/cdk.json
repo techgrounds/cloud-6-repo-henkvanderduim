@@ -51,7 +51,8 @@
         "versioned": true,
         "auto_delete_objects": true,
         "deployment_name": "GLDV-S3BUCDP",
-        "asset_bucket": "./bucket"
+        "asset_bucket": "./bucket",
+        "albbucketname": "GLDV-S#BUC02"
       },
       "roles": {
         "iam_ssm_role": "InstanceSSM",

@@ -17,8 +17,9 @@ class S3BucketStack(cdk.NestedStack):
         auto_delete_objects = bucket_environment.get("auto_delete_objects")
         deployment_name = bucket_environment.get("deployment_name")
         asset_bucket = bucket_environment.get("asset_bucket")
+        albbucketname = bucket_environment.get("albbucketname")
 
-        ### S3 bucket
+        ### S3 bucket bootstrap
         bootstrapbucket = s3.Bucket(
             self,
             bucket_name,
@@ -35,4 +36,14 @@ class S3BucketStack(cdk.NestedStack):
             deployment_name,
             sources=[s3deploy.Source.asset(asset_bucket)],
             destination_bucket=bootstrapbucket,
+        )
+
+        ### S3 Bucket Access Logs
+        albbucket = s3.Bucket(
+            self,
+            albbucketname,
+            versioned=versioned,
+            encryption=s3.BucketEncryption.KMS,
+            removal_policy=cdk.RemovalPolicy.DESTROY,
+            auto_delete_objects=auto_delete_objects,
         )

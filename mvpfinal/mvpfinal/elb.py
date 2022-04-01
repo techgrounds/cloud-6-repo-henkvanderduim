@@ -28,6 +28,8 @@ class ElbStack(cdk.NestedStack):
         lb_if = lbs_environment.get("lb_if")
         list_name = lbs_environment.get("list_name")
         target_group = lbs_environment.get("target_group")
+        bucket_environment = environments.get("bucket")
+        albbucketname = bucket_environment.get("albbucketname")
 
         ### Create the Load Balancer in the Webserver's VPC
         self.lb = elbv2.ApplicationLoadBalancer(
@@ -36,6 +38,7 @@ class ElbStack(cdk.NestedStack):
             vpc=vpc,
             security_group=elbsg,
             internet_facing=lb_if,
+            log_access_logs=albbucketname,
             load_balancer_name=lb_name,
         )
 

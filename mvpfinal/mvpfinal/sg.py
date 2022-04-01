@@ -81,11 +81,6 @@ class SgStack(cdk.NestedStack):
             "allow HTTPS traffic from anywhere",
         )
 
-        self.elbsg.add_egress_rule(
-            ec2.Peer.any_ipv4(),
-            ec2.Port.tcp(elbsg_http_rule_port),
-        )
-
         ### Security Group ASG
         self.asgsg = ec2.SecurityGroup(
             self,
