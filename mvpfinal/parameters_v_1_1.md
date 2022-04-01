@@ -4,7 +4,7 @@ Als bepaalde termen je als Cloud Engineer onbekend voorkomen dan heb ik hier de 
 Dit bestand hoort bij MVP v1.1.  
 
 ### Parameters app.py
-Deze parameters zijn terug te vinden in het bestand app.py. De uitleg wordt bij het kopje [Parameters app.py]() gegeven.
+Deze parameters zijn terug te vinden in het bestand app.py. De uitleg wordt bij het kopje [Parameters app.py](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#parameters-apppy-1) gegeven.
 ````python
 ### Parameters t.b.v de nested stack
 stackname = "MVPStack"
@@ -25,7 +25,8 @@ backupapp = "Backup App"
 Alle variabelen moeten tussen aanhalingstekens gezet worden (zie cdk.json) (" "). Getallen en Booleans (true/false) mogen geen aanhalingstekens hebben. Behalve als de getallen voor de cronjob van de backup ingevuld moeten worden. Deze getallen zet je tussen aanhalingstekens ("2").
 
 ## Inhoud
-- [Parameters](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#parameters-1)  
+- [Parameters app.py](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#parameters-apppy-1)  
+- [Parameters nestd stack](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#parameters-nested-stack)    
 - [Naamgevingsconventie](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/blob/main/mvpfinal/parameters_v_1_1.md#naamgevingsconventie)
 
 ## Parameters app.py
