@@ -32,6 +32,7 @@ app = cdk.App()
 mvp_stack = cdk.Stack(
     app, stackname, env=cdk.Environment(account=account, region=region)
 )
+
 s3bucket = S3BucketStack(mvp_stack, bucketapp)
 vpc_app = VpcsStack(mvp_stack, vpcapp)
 vpcp_app = VpcpStack(
