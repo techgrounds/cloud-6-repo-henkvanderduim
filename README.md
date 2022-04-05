@@ -2,7 +2,9 @@
 In deze github kun je mijn progressie volgen die ik maak binnen de opleiding tot Cloud Engineer.  
 
 ## Project MVP
-Alles over het project MVP v1.0 is te vinden in de folde MVPScript, en alles over MVP v1.1 is te vinden in de folder MVPFinal.
+Alles over het project MVP v1.0 en MVP v1.1 is te vinden in deze Github:  
+- [MVP v1.0](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript)  
+- [MVP v1.1](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal)  
 
 ## Blogs
 Er zijn een aantal blogs verschenen van mijn hand over dit avontuur:
