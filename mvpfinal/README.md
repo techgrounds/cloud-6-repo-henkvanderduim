@@ -1,5 +1,5 @@
 # Project (Cloud6. Sentia1)
-In deze folder is alle informatie te vinden over het Project (versie 1.1) wat uitgevoert is na de voltooiing van versie 1.0.  
+In deze folder is alle informatie te vinden over het Project (versie 1.1) wat uitgevoerd is na de voltooiing van versie 1.0.  
 ## Inhoud  
 1. [MVP 1.1](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#mvp-11)  
 2. [Belangrijke Mijlpalen](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#belangrijke-mijlpalen-v11)
@@ -13,7 +13,7 @@ In het document [Project v1.1](https://docs.google.com/document/d/1CT8AtpS_o81Ee
 Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../mvpfinal/Documentatie/Product_Requirements_Document_v_1_1.md).
 
 ## MVP Script v1.1
-In dit document is de (technische)informatie te vinden over de 'nested stack' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpfinal/Documentatie/parameters_v_1_1.md) document.  
+In dit document is de (technische)informatie te vinden over de 'nested stack' en de parameters in de 'cdk.json', de uitleg over de betekenis van de parameters wordt gegeven in het [Parameters](../mvpfinal/Documentatie/parameters_v_1_1.md) document.  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#inhoud)  
 
