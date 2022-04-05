@@ -10,10 +10,10 @@ In deze folder is alle informatie te vinden over het Project (versie 1.1) wat ui
 In het document [Project v1.1](https://docs.google.com/document/d/1CT8AtpS_o81EeGhCEzPSn8XVu-lkvngzHyz8zWnoGmE/edit) zijn de aanpassingen/aanvullingen op versie 1.0 van het project beschreven.
 
 ## Project Requirements Document v1.1
-Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../mvpfinal/Product_Requirements_Document_v_1_1.md).
+Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../mvpfinal/Documentatie/Product_Requirements_Document_v_1_1.md).
 
 ## MVP Script v1.1
-In dit document is de (technische)informatie te vinden over de 'nested stack' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpfinal/parameters_v_1_1.md) document.  
+In dit document is de (technische)informatie te vinden over de 'nested stack' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpfinal/Documentatie/parameters_v_1_1.md) document.  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpfinal#inhoud)  
 
@@ -29,14 +29,14 @@ In dit document is de (technische)informatie te vinden over de 'nested stack' en
 | **Project Activiteit**                                | **Datum (pw)**  | **Progressie**                                                                                                                              |
 | ----------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sprint 3 Review progressie app v1.1                   | 25-03-2022 (w7) | ![Sprint1rp](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 25 maart 2022                                         |
-| Sprint 4 Review oplevering app v1.1 / Eindpresentatie | 08-04-2022 (w9) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/50) - 30 maart 2022 (Oplevering)/08 april 2022 (Presentatie) |
+| Sprint 4 Review oplevering app v1.1 / Eindpresentatie | 08-04-2022 (w9) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/90) - 30 maart 2022 (Oplevering)/08 april 2022 (Presentatie) |
 
 ## Het Project
-Aan de hand van het [Project Plan](https://docs.google.com/document/d/1CT8AtpS_o81EeGhCEzPSn8XVu-lkvngzHyz8zWnoGmE/edit) en het [Product Requirements Document](../mvpfinal/Product_Requirements_Document_v_1_1.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP) versie 1.1 (ik beschrijf alleen de verschillen t.o.v. versie 1.0):  
+Aan de hand van het [Project Plan](https://docs.google.com/document/d/1CT8AtpS_o81EeGhCEzPSn8XVu-lkvngzHyz8zWnoGmE/edit) en het [Product Requirements Document](../mvpfinal/Documentatie/Product_Requirements_Document_v_1_1.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP) versie 1.1 (ik beschrijf alleen de verschillen t.o.v. versie 1.0):  
 1. Er is een nested stack gebouwd, waarin de verschillende elementen in zijn verwerkt.
 2. In de stack is de configuratie opgenomen zoals te zien is in het diagram:  
 ![diagram](../00_includes/MVP%20v1.1%20(AWS).drawio.png)  
-3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [Parameters](../mvpfinal/parameters_v_1_1.md).
+3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [Parameters](../mvpfinal/Documentatie/parameters_v_1_1.md).
 4. Toegevoegd zijn:
    1. Application Load Balancer
    2. Auto Scaling Group
