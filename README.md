@@ -13,7 +13,7 @@ Er zijn een aantal blogs verschenen van mijn hand over dit avontuur:
 3. [De Foutmelding](https://www.henkvanderduim.nl/hersenspinsels/column/de-foutmelding/)  
 4. [Een Minimum Viable Product (MVP) Opleveren](https://www.henkvanderduim.nl/hersenspinsels/column/een-minimum-viable-product-mvp-opleveren/)  
 5. [MVP en de Perikelen](https://www.henkvanderduim.nl/hersenspinsels/column/mvp-en-de-perikelen/)  
-6. [Èindpresentatie](https://www.henkvanderduim.nl/hersenspinsels/column/eindpresentatie/)  
+6. [Eindpresentatie](https://www.henkvanderduim.nl/hersenspinsels/column/eindpresentatie/)  
 
 ## Haiku: Cloud
 > _werken in de cloud_  
