@@ -129,6 +129,7 @@
         "mngt_backup_vault_name": "MNGT-Backup-Vault",
         "mngt_backup_plan": "MNGT-BACKUP-PLAN",
         "mngt_backup_plan_name": "MNGT-BACKUP-PLAN",
+        "mngt_backup_resource": "MNGT-Backup_Resource",
         "mngt_rule_name": "MNGT-Backup-Rule",
         "mngt_complete": 2,
         "mngt_start": 1,

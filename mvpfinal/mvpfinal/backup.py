@@ -36,6 +36,7 @@ class BackupStack(cdk.NestedStack):
         mngt_backup_vault_name = bus_environment.get("mngt_backup_vault_name")
         mngt_backup_plan = bus_environment.get("mngt_backup_plan")
         mngt_backup_plan_name = bus_environment.get("mngt_backup_plan_name")
+        mngt_backup_resource = bus_environment.get("mngt_backup_resource")
         mngt_rule_name = bus_environment.get("mngt_rule_name")
         mngt_complete = bus_environment.get("mngt_complete")
         mngt_start = bus_environment.get("mngt_start")
