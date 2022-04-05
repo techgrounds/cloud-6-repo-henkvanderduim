@@ -10,7 +10,7 @@ In deze folder is alle informatie te vinden over het Project wat de komende weke
 In het document [PRO-01 Project](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) is het project beschreven.
 
 ## Project Requirements Document v1.0
-Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../07_Project/Documentatie/Product_Requirements_Document.md).
+Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../mvpscript/Documentatie/Product_Requirements_Document.md).
 ## JIRA v1.0
 In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
 Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).

@@ -4,9 +4,6 @@ Als bepaalde termen je als Cloud Engineer onbekend voorkomen dan heb ik hier de 
 
 Dit bestand hoort bij de MVP v1.0.
 
-Dit bestand hoort bij MVP v1.0.
-
-
 ## CDK JSON Tabel
 | Parameter                         | wat wordt er ingevuld                                                                                                                |
 | :-------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
