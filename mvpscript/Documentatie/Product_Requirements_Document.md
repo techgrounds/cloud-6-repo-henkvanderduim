@@ -35,7 +35,7 @@
    | Afhankelijkheden | IaC, Python, AWs CDK, eisen Product Owner                                  |
   
 3. **Epics**  
-   Alle Epics zijn afzonderlijk beschreven in het [Epic document](../07_Project/Epic%20Document.md). Hier wordt per Epic wordt alles besproken en uitgewerkt.  
+   Alle Epics zijn afzonderlijk beschreven in het [Epic document](../07_Project/Documentatie/Epic%20Document.md). Hier wordt per Epic wordt alles besproken en uitgewerkt.  
   
 4. **Diagrammen**  
 Na het overleg met de Product Owner, adviseren wij onderstaand diagram voor het MVPv1.0.  

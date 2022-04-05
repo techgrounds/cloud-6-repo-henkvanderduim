@@ -10,13 +10,13 @@ In deze folder is alle informatie te vinden over het Project wat de komende weke
 In het document [PRO-01 Project](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) is het project beschreven.
 
 ## Project Requirements Document v1.0
-Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../07_Project/Product_Requirements_Document.md).
+Alle zaken met betrekking tot de eisen, epics, aannames, doelen, uitwerkingen, etc. zijn beschreven in het [Project Requirements Document](../07_Project/Documentatie/Product_Requirements_Document.md).
 ## JIRA v1.0
 In Jira is een Roadmap aangemaakt voor het project. Op basis van de Epics is deze samengesteld.
 Plek waar het te vinden is: [Jira](https://techgroundscloud6q.atlassian.net/jira/software/projects/PCS/boards/5).
 
 ## MVP Script v1.0
-In dit document is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpscript/parameters.md) document.  
+In dit document is de (technische)informatie te vinden over de 'mvpscript_stack.py' en de parameters in de 'cdk.json', de uitleg van de parameters wordt gegeven in het [Parameters](../mvpscript/Documentatie/parameters.md) document.  
 
 [naar boven](https://github.com/techgrounds/cloud-6-repo-henkvanderduim/tree/main/mvpscript#inhoud)  
 
@@ -35,10 +35,10 @@ In dit document is de (technische)informatie te vinden over de 'mvpscript_stack.
 | Sprint 2: Review oplevering app v1 | 11-03-2022 (w5) | ![Sprint2ro](https://us-central1-progress-markdown.cloudfunctions.net/progress/100) - 7 maart 2022     |
 
 ## Het Project
-Aan de hand van het [Project Plan](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) en het [Product Requirements Document](../mvpscript/Product_Requirements_Document.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP):  
+Aan de hand van het [Project Plan](https://docs.google.com/document/d/1yiJkqn4bXbaM5r-KYqE907bFJSXZoPKeWgFpOIHl19E/edit) en het [Product Requirements Document](../mvpscript/Documentatie/Product_Requirements_Document.md), ben ik gekomen tot de volgende opbouw van de Minimum Viable Product (MVP):  
 1. M.b.v. AWS CDK/Python een stack bouwen, die gebruikt kan worden door AWS Cloudformation.
-2. In de stack is de configuratie opgenomen zoals te zien is in het diagram in het [Product Requirements Document](../mvpscript/Product_Requirements_Document.md).
-3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [Parameters](../mvpscript/parameters.md).
+2. In de stack is de configuratie opgenomen zoals te zien is in het diagram in het [Product Requirements Document](../mvpscript/Documentatie/Product_Requirements_Document.md).
+3. Alle gebruikte parameters zijn opgenomen in het bestand `cdk.json`. Uitleg over alle parameters is terug te vinden in het document: [Parameters](../mvpscript/Documentatie/parameters.md).
 4. Ik ga er vanuit dat een cloud engineer hiermee aan de slag gaat. 
 
 ## Het bestand: mvpscript_stack.py
