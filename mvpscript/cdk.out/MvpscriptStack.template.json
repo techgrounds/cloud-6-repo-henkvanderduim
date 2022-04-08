@@ -1,0 +1,1692 @@
+{
+  "Resources": {
+    "MANAGEMENTPRDVPC18153489": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.10.10.0/24",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/MANAGEMENT-PRD-VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/Resource"
+      }
+    },
+    "MANAGEMENTPRDVPCMNGTSubnet1Subnet54A71923": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.10.10.0/25",
+        "VpcId": {
+          "Ref": "MANAGEMENTPRDVPC18153489"
+        },
+        "AvailabilityZone": "eu-central-1a",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "MNGT"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet1/Subnet"
+      }
+    },
+    "MANAGEMENTPRDVPCMNGTSubnet1RouteTable89E4A4F3": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MANAGEMENTPRDVPC18153489"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet1/RouteTable"
+      }
+    },
+    "MANAGEMENTPRDVPCMNGTSubnet1RouteTableAssociation4D5AF29A": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MANAGEMENTPRDVPCMNGTSubnet1RouteTable89E4A4F3"
+        },
+        "SubnetId": {
+          "Ref": "MANAGEMENTPRDVPCMNGTSubnet1Subnet54A71923"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet1/RouteTableAssociation"
+      }
+    },
+    "MANAGEMENTPRDVPCMNGTSubnet1DefaultRoute538CF0D2": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MANAGEMENTPRDVPCMNGTSubnet1RouteTable89E4A4F3"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "MANAGEMENTPRDVPCIGW0211860A"
+        }
+      },
+      "DependsOn": [
+        "MANAGEMENTPRDVPCVPCGW4FFD48F5"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet1/DefaultRoute"
+      }
+    },
+    "MANAGEMENTPRDVPCMNGTSubnet2Subnet86420EF7": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.10.10.128/25",
+        "VpcId": {
+          "Ref": "MANAGEMENTPRDVPC18153489"
+        },
+        "AvailabilityZone": "eu-central-1b",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "MNGT"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet2/Subnet"
+      }
+    },
+    "MANAGEMENTPRDVPCMNGTSubnet2RouteTableFAD4297E": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MANAGEMENTPRDVPC18153489"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet2/RouteTable"
+      }
+    },
+    "MANAGEMENTPRDVPCMNGTSubnet2RouteTableAssociation37B0C698": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MANAGEMENTPRDVPCMNGTSubnet2RouteTableFAD4297E"
+        },
+        "SubnetId": {
+          "Ref": "MANAGEMENTPRDVPCMNGTSubnet2Subnet86420EF7"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet2/RouteTableAssociation"
+      }
+    },
+    "MANAGEMENTPRDVPCMNGTSubnet2DefaultRouteFCF277D7": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MANAGEMENTPRDVPCMNGTSubnet2RouteTableFAD4297E"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "MANAGEMENTPRDVPCIGW0211860A"
+        }
+      },
+      "DependsOn": [
+        "MANAGEMENTPRDVPCVPCGW4FFD48F5"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/MNGTSubnet2/DefaultRoute"
+      }
+    },
+    "MANAGEMENTPRDVPCIGW0211860A": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/MANAGEMENT-PRD-VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/IGW"
+      }
+    },
+    "MANAGEMENTPRDVPCVPCGW4FFD48F5": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "MANAGEMENTPRDVPC18153489"
+        },
+        "InternetGatewayId": {
+          "Ref": "MANAGEMENTPRDVPCIGW0211860A"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MANAGEMENT-PRD-VPC/VPCGW"
+      }
+    },
+    "APPPRDVPC10EC7A2D": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.20.20.0/24",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/APP-PRD-VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/Resource"
+      }
+    },
+    "APPPRDVPCWSRVSubnet1SubnetBB6056FE": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.20.20.0/25",
+        "VpcId": {
+          "Ref": "APPPRDVPC10EC7A2D"
+        },
+        "AvailabilityZone": "eu-central-1a",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "WSRV"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet1/Subnet"
+      }
+    },
+    "APPPRDVPCWSRVSubnet1RouteTable25ECBC16": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "APPPRDVPC10EC7A2D"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet1/RouteTable"
+      }
+    },
+    "APPPRDVPCWSRVSubnet1RouteTableAssociation6B81385A": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "APPPRDVPCWSRVSubnet1RouteTable25ECBC16"
+        },
+        "SubnetId": {
+          "Ref": "APPPRDVPCWSRVSubnet1SubnetBB6056FE"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet1/RouteTableAssociation"
+      }
+    },
+    "APPPRDVPCWSRVSubnet1DefaultRoute4758A2D3": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "APPPRDVPCWSRVSubnet1RouteTable25ECBC16"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "APPPRDVPCIGWC4293AFE"
+        }
+      },
+      "DependsOn": [
+        "APPPRDVPCVPCGW3D57079E"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet1/DefaultRoute"
+      }
+    },
+    "APPPRDVPCWSRVSubnet2SubnetC904D557": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.20.20.128/25",
+        "VpcId": {
+          "Ref": "APPPRDVPC10EC7A2D"
+        },
+        "AvailabilityZone": "eu-central-1b",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "WSRV"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet2/Subnet"
+      }
+    },
+    "APPPRDVPCWSRVSubnet2RouteTableE0C36CDA": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "APPPRDVPC10EC7A2D"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet2/RouteTable"
+      }
+    },
+    "APPPRDVPCWSRVSubnet2RouteTableAssociation68396FC4": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "APPPRDVPCWSRVSubnet2RouteTableE0C36CDA"
+        },
+        "SubnetId": {
+          "Ref": "APPPRDVPCWSRVSubnet2SubnetC904D557"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet2/RouteTableAssociation"
+      }
+    },
+    "APPPRDVPCWSRVSubnet2DefaultRouteD24BC4D2": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "APPPRDVPCWSRVSubnet2RouteTableE0C36CDA"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "APPPRDVPCIGWC4293AFE"
+        }
+      },
+      "DependsOn": [
+        "APPPRDVPCVPCGW3D57079E"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/WSRVSubnet2/DefaultRoute"
+      }
+    },
+    "APPPRDVPCIGWC4293AFE": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/APP-PRD-VPC"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/IGW"
+      }
+    },
+    "APPPRDVPCVPCGW3D57079E": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "APPPRDVPC10EC7A2D"
+        },
+        "InternetGatewayId": {
+          "Ref": "APPPRDVPCIGWC4293AFE"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/APP-PRD-VPC/VPCGW"
+      }
+    },
+    "VPCPeeringConnectionprd": {
+      "Type": "AWS::EC2::VPCPeeringConnection",
+      "Properties": {
+        "PeerVpcId": {
+          "Ref": "MANAGEMENTPRDVPC18153489"
+        },
+        "VpcId": {
+          "Ref": "APPPRDVPC10EC7A2D"
+        },
+        "PeerRegion": "eu-central-1"
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/VPCPeeringConnection-prd"
+      }
+    },
+    "MNGTRoute": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "MANAGEMENTPRDVPCMNGTSubnet2RouteTableFAD4297E"
+        },
+        "DestinationCidrBlock": {
+          "Fn::GetAtt": [
+            "APPPRDVPC10EC7A2D",
+            "CidrBlock"
+          ]
+        },
+        "VpcPeeringConnectionId": {
+          "Ref": "VPCPeeringConnectionprd"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MNGT-Route"
+      }
+    },
+    "WSRVRoute": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "APPPRDVPCWSRVSubnet1RouteTable25ECBC16"
+        },
+        "DestinationCidrBlock": {
+          "Fn::GetAtt": [
+            "MANAGEMENTPRDVPC18153489",
+            "CidrBlock"
+          ]
+        },
+        "VpcPeeringConnectionId": {
+          "Ref": "VPCPeeringConnectionprd"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/WSRV-Route"
+      }
+    },
+    "InstanceSSMCBFA3CF0": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/AmazonSSMManagedInstanceCore"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/InstanceSSM/Resource"
+      }
+    },
+    "InstanceSSMDefaultPolicy6E4EFE93": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:ListSecretVersionIds"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "MNGTKeyPairEC2KeyPairMNGTKeyPairA853371B",
+                  "PrivateKeyARN"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:ListSecretVersionIds"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "MNGTKeyPairEC2KeyPairMNGTKeyPairA853371B",
+                  "PublicKeyARN"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:ListSecretVersionIds"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "WSRVKeyPairEC2KeyPairWSRVKeyPair57573F5D",
+                  "PrivateKeyARN"
+                ]
+              }
+            },
+            {
+              "Action": [
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:ListSecretVersionIds"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "WSRVKeyPairEC2KeyPairWSRVKeyPair57573F5D",
+                  "PublicKeyARN"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "InstanceSSMDefaultPolicy6E4EFE93",
+        "Roles": [
+          {
+            "Ref": "InstanceSSMCBFA3CF0"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/InstanceSSM/DefaultPolicy/Resource"
+      }
+    },
+    "BootstrapScriptBucketKeyD7C0709B": {
+      "Type": "AWS::KMS::Key",
+      "Properties": {
+        "KeyPolicy": {
+          "Statement": [
+            {
+              "Action": "kms:*",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::048127819745:root"
+                    ]
+                  ]
+                }
+              },
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Description": "Created by MvpscriptStack/BootstrapScriptBucket"
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/BootstrapScriptBucket/Key/Resource"
+      }
+    },
+    "BootstrapScriptBucket6D85E5E6": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "KMSMasterKeyID": {
+                  "Fn::GetAtt": [
+                    "BootstrapScriptBucketKeyD7C0709B",
+                    "Arn"
+                  ]
+                },
+                "SSEAlgorithm": "aws:kms"
+              }
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "aws-cdk:auto-delete-objects",
+            "Value": "true"
+          }
+        ],
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/BootstrapScriptBucket/Resource"
+      }
+    },
+    "BootstrapScriptBucketPolicyB98A4E2F": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "BootstrapScriptBucket6D85E5E6"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+                    "Arn"
+                  ]
+                }
+              },
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "BootstrapScriptBucket6D85E5E6",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "BootstrapScriptBucket6D85E5E6",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/BootstrapScriptBucket/Policy/Resource"
+      }
+    },
+    "BootstrapScriptBucketAutoDeleteObjectsCustomResource19D30D26": {
+      "Type": "Custom::S3AutoDeleteObjects",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+            "Arn"
+          ]
+        },
+        "BucketName": {
+          "Ref": "BootstrapScriptBucket6D85E5E6"
+        }
+      },
+      "DependsOn": [
+        "BootstrapScriptBucketPolicyB98A4E2F"
+      ],
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/BootstrapScriptBucket/AutoDeleteObjectsCustomResource/Default"
+      }
+    },
+    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role"
+      }
+    },
+    "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-048127819745-eu-central-1",
+          "S3Key": "483ae06ed27ef8ca76e011264d772420593a6cfe8544759c306ef3b98c9e25be.zip"
+        },
+        "Timeout": 900,
+        "MemorySize": 128,
+        "Handler": "__entrypoint__.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x",
+        "Description": {
+          "Fn::Join": [
+            "",
+            [
+              "Lambda function for auto-deleting objects in ",
+              {
+                "Ref": "BootstrapScriptBucket6D85E5E6"
+              },
+              " S3 bucket."
+            ]
+          ]
+        }
+      },
+      "DependsOn": [
+        "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler",
+        "aws:asset:path": "asset.483ae06ed27ef8ca76e011264d772420593a6cfe8544759c306ef3b98c9e25be",
+        "aws:asset:property": "Code"
+      }
+    },
+    "ManagementSecurityGroup76F04431": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Management Security Group",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "84.84.84.9/32",
+            "Description": "allow ssh access from the VPC",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "ToPort": 22
+          },
+          {
+            "CidrIp": "84.84.84.9/32",
+            "Description": "allow RDP access from the VPC",
+            "FromPort": 3389,
+            "IpProtocol": "tcp",
+            "ToPort": 3389
+          }
+        ],
+        "VpcId": {
+          "Ref": "MANAGEMENTPRDVPC18153489"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/ManagementSecurityGroup/Resource"
+      }
+    },
+    "WebserverSecurityGroupCFEE3969": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "Webserver Security Group",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "Description": "allow ssh access from the management Security Group",
+            "FromPort": 22,
+            "IpProtocol": "tcp",
+            "SourceSecurityGroupId": {
+              "Fn::GetAtt": [
+                "ManagementSecurityGroup76F04431",
+                "GroupId"
+              ]
+            },
+            "ToPort": 22
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "allow HTTP traffic from anywhere",
+            "FromPort": 80,
+            "IpProtocol": "tcp",
+            "ToPort": 80
+          },
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "allow HTTPS traffic from anywhere",
+            "FromPort": 443,
+            "IpProtocol": "tcp",
+            "ToPort": 443
+          }
+        ],
+        "VpcId": {
+          "Ref": "APPPRDVPC10EC7A2D"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/WebserverSecurityGroup/Resource"
+      }
+    },
+    "MNGTKeyPairEC2KeyPairMNGTKeyPairA853371B": {
+      "Type": "Custom::EC2-Key-Pair",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "EC2KeyNameManagerLambdaBE629145",
+            "Arn"
+          ]
+        },
+        "Name": "MNGTKeyPair",
+        "Description": "MNGTKeyPair",
+        "KmsPrivate": "alias/aws/secretsmanager",
+        "KmsPublic": "alias/aws/secretsmanager",
+        "PublicKey": "",
+        "StorePublicKey": true,
+        "ExposePublicKey": false,
+        "PublicKeyFormat": "OPENSSH",
+        "RemoveKeySecretsAfterDays": 0,
+        "SecretPrefix": "ec2-ssh-key/",
+        "StackName": "MvpscriptStack",
+        "Tags": {
+          "CreatedByCfnCustomResource": "CFN::Resource::Custom::EC2-Key-Pair"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MNGTKeyPair/EC2-Key-Pair-MNGTKeyPair/Default"
+      }
+    },
+    "EC2KeyPairManagerPolicyEBBC1576": {
+      "Type": "AWS::IAM::ManagedPolicy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "ec2:DescribeKeyPairs",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "ec2:CreateKeyPair",
+                "ec2:CreateTags",
+                "ec2:ImportKeyPair"
+              ],
+              "Condition": {
+                "StringLike": {
+                  "aws:RequestTag/CreatedByCfnCustomResource": "CFN::Resource::Custom::EC2-Key-Pair"
+                }
+              },
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":ec2:*:*:key-pair/*"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": [
+                "ec2:CreateTags",
+                "ec2:DeleteKeyPair",
+                "ec2:DeleteTags"
+              ],
+              "Condition": {
+                "StringLike": {
+                  "ec2:ResourceTag/CreatedByCfnCustomResource": "CFN::Resource::Custom::EC2-Key-Pair"
+                }
+              },
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":ec2:*:*:key-pair/*"
+                  ]
+                ]
+              }
+            },
+            {
+              "Action": "secretsmanager:ListSecrets",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "secretsmanager:CreateSecret",
+                "secretsmanager:TagResource"
+              ],
+              "Condition": {
+                "StringLike": {
+                  "aws:RequestTag/CreatedByCfnCustomResource": "CFN::Resource::Custom::EC2-Key-Pair"
+                }
+              },
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": [
+                "secretsmanager:DeleteResourcePolicy",
+                "secretsmanager:DeleteSecret",
+                "secretsmanager:DescribeSecret",
+                "secretsmanager:GetResourcePolicy",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:ListSecretVersionIds",
+                "secretsmanager:PutResourcePolicy",
+                "secretsmanager:PutSecretValue",
+                "secretsmanager:RestoreSecret",
+                "secretsmanager:UntagResource",
+                "secretsmanager:UpdateSecret",
+                "secretsmanager:UpdateSecretVersionStage"
+              ],
+              "Condition": {
+                "StringLike": {
+                  "secretsmanager:ResourceTag/CreatedByCfnCustomResource": "CFN::Resource::Custom::EC2-Key-Pair"
+                }
+              },
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Description": "Used by Lambda CFN-Resource-Custom-EC2-Key-Pair, which is a custom CFN resource, managing EC2 Key Pairs",
+        "ManagedPolicyName": "MvpscriptStack-CFN-Resource-Custom-EC2-Key-Pair",
+        "Path": "/"
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/EC2-Key-Pair-Manager-Policy/Resource"
+      }
+    },
+    "EC2KeyPairManagerRoleB243C519": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Description": "Used by Lambda CFN-Resource-Custom-EC2-Key-Pair, which is a custom CFN resource, managing EC2 Key Pairs",
+        "ManagedPolicyArns": [
+          {
+            "Ref": "EC2KeyPairManagerPolicyEBBC1576"
+          },
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ],
+        "RoleName": "MvpscriptStack-CFN-Resource-Custom-EC2-Key-Pair"
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/EC2-Key-Pair-Manager-Role/Resource"
+      }
+    },
+    "EC2KeyNameManagerLambdaBE629145": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-048127819745-eu-central-1",
+          "S3Key": "05a1993b06bfce5c4452d1e976f29d82e356fba5ba793b48bd2a60fd54443029.zip"
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "EC2KeyPairManagerRoleB243C519",
+            "Arn"
+          ]
+        },
+        "Description": "Custom CFN resource: Manage EC2 Key Pairs",
+        "FunctionName": "MvpscriptStack-CFN-Resource-Custom-EC2-Key-Pair",
+        "Handler": "index.handler",
+        "Runtime": "nodejs14.x",
+        "Timeout": 180
+      },
+      "DependsOn": [
+        "EC2KeyPairManagerRoleB243C519"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/EC2-Key-Name-Manager-Lambda/Resource",
+        "aws:asset:path": "asset.05a1993b06bfce5c4452d1e976f29d82e356fba5ba793b48bd2a60fd54443029.zip",
+        "aws:asset:is-bundled": false,
+        "aws:asset:property": "Code"
+      }
+    },
+    "WSRVKeyPairEC2KeyPairWSRVKeyPair57573F5D": {
+      "Type": "Custom::EC2-Key-Pair",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "EC2KeyNameManagerLambdaBE629145",
+            "Arn"
+          ]
+        },
+        "Name": "WSRVKeyPair",
+        "Description": "WSRVKeyPair",
+        "KmsPrivate": "alias/aws/secretsmanager",
+        "KmsPublic": "alias/aws/secretsmanager",
+        "PublicKey": "",
+        "StorePublicKey": true,
+        "ExposePublicKey": false,
+        "PublicKeyFormat": "OPENSSH",
+        "RemoveKeySecretsAfterDays": 0,
+        "SecretPrefix": "ec2-ssh-key/",
+        "StackName": "MvpscriptStack",
+        "Tags": {
+          "CreatedByCfnCustomResource": "CFN::Resource::Custom::EC2-Key-Pair"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/WSRVKeyPair/EC2-Key-Pair-WSRVKeyPair/Default"
+      }
+    },
+    "ManagementServerInstanceRoleE1EF1325": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "MNGT",
+            "Value": "MSBackup"
+          },
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/Management Server"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Management Server/InstanceRole/Resource"
+      }
+    },
+    "ManagementServerInstanceProfile576B0FA7": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "ManagementServerInstanceRoleE1EF1325"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Management Server/InstanceProfile"
+      }
+    },
+    "ManagementServer3E4EF7C1": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "eu-central-1a",
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "Encrypted": true,
+              "VolumeSize": 30
+            }
+          }
+        ],
+        "IamInstanceProfile": {
+          "Ref": "ManagementServerInstanceProfile576B0FA7"
+        },
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiwindowslatestWindowsServer2019EnglishFullBaseC96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t2.micro",
+        "KeyName": {
+          "Fn::GetAtt": [
+            "MNGTKeyPairEC2KeyPairMNGTKeyPairA853371B",
+            "KeyPairName"
+          ]
+        },
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "ManagementSecurityGroup76F04431",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Ref": "MANAGEMENTPRDVPCMNGTSubnet1Subnet54A71923"
+        },
+        "Tags": [
+          {
+            "Key": "MNGT",
+            "Value": "MSBackup"
+          },
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/Management Server"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "<powershell></powershell>"
+        }
+      },
+      "DependsOn": [
+        "ManagementServerInstanceRoleE1EF1325"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Management Server/Resource"
+      }
+    },
+    "WebServerInstanceRoleC51B1D17": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "ec2.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/Web Server"
+          },
+          {
+            "Key": "WSRV",
+            "Value": "WSBackup"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Web Server/InstanceRole/Resource"
+      }
+    },
+    "WebServerInstanceRoleDefaultPolicy8A645E66": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::cdk-hnb659fds-assets-048127819745-eu-central-1"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::cdk-hnb659fds-assets-048127819745-eu-central-1/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "WebServerInstanceRoleDefaultPolicy8A645E66",
+        "Roles": [
+          {
+            "Ref": "WebServerInstanceRoleC51B1D17"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Web Server/InstanceRole/DefaultPolicy/Resource"
+      }
+    },
+    "WebServerInstanceProfileD8E1D493": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Roles": [
+          {
+            "Ref": "WebServerInstanceRoleC51B1D17"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Web Server/InstanceProfile"
+      }
+    },
+    "WebServer4D67F069": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "eu-central-1a",
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+              "Encrypted": true,
+              "VolumeSize": 8
+            }
+          }
+        ],
+        "IamInstanceProfile": {
+          "Ref": "WebServerInstanceProfileD8E1D493"
+        },
+        "ImageId": {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+        },
+        "InstanceType": "t3.nano",
+        "KeyName": {
+          "Fn::GetAtt": [
+            "WSRVKeyPairEC2KeyPairWSRVKeyPair57573F5D",
+            "KeyPairName"
+          ]
+        },
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "WebserverSecurityGroupCFEE3969",
+              "GroupId"
+            ]
+          }
+        ],
+        "SubnetId": {
+          "Ref": "APPPRDVPCWSRVSubnet1SubnetBB6056FE"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "MvpscriptStack/Web Server"
+          },
+          {
+            "Key": "WSRV",
+            "Value": "WSBackup"
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash\nmkdir -p $(dirname '/tmp/19dff9cd711d4e162c904259304cda179325260e6173539cdb0e64ca512fe77f.sh')\naws s3 cp 's3://cdk-hnb659fds-assets-048127819745-eu-central-1/19dff9cd711d4e162c904259304cda179325260e6173539cdb0e64ca512fe77f.sh' '/tmp/19dff9cd711d4e162c904259304cda179325260e6173539cdb0e64ca512fe77f.sh' --region eu-central-1\nset -e\nchmod +x '/tmp/19dff9cd711d4e162c904259304cda179325260e6173539cdb0e64ca512fe77f.sh'\n'/tmp/19dff9cd711d4e162c904259304cda179325260e6173539cdb0e64ca512fe77f.sh'"
+        }
+      },
+      "DependsOn": [
+        "WebServerInstanceRoleDefaultPolicy8A645E66",
+        "WebServerInstanceRoleC51B1D17"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/Web Server/Resource"
+      }
+    },
+    "MNGTBACKUPKEY0768D32E": {
+      "Type": "AWS::KMS::Key",
+      "Properties": {
+        "KeyPolicy": {
+          "Statement": [
+            {
+              "Action": "kms:*",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::048127819745:root"
+                    ]
+                  ]
+                }
+              },
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MNGT-BACKUP-KEY/Resource"
+      }
+    },
+    "MNGTBackupVaultCB4B9ECE": {
+      "Type": "AWS::Backup::BackupVault",
+      "Properties": {
+        "BackupVaultName": "MNGT-VAULT",
+        "EncryptionKeyArn": {
+          "Fn::GetAtt": [
+            "MNGTBACKUPKEY0768D32E",
+            "Arn"
+          ]
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MNGTBackupVault/Resource"
+      }
+    },
+    "MNGTBACKUPPLAND5594BAE": {
+      "Type": "AWS::Backup::BackupPlan",
+      "Properties": {
+        "BackupPlan": {
+          "BackupPlanName": "MNGT-BACKUP-PLAN",
+          "BackupPlanRule": [
+            {
+              "Lifecycle": {
+                "DeleteAfterDays": 13
+              },
+              "RuleName": "MNGT_Backup_Rule",
+              "ScheduleExpression": "cron(0 0 ? 1-12 4 *)",
+              "TargetBackupVault": {
+                "Fn::GetAtt": [
+                  "MNGTBackupVaultCB4B9ECE",
+                  "BackupVaultName"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MNGT-BACKUP-PLAN/Resource"
+      }
+    },
+    "MNGTBACKUPPLANSelectionRole36F3381F": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "backup.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MNGT-BACKUP-PLAN/Selection/Role/Resource"
+      }
+    },
+    "MNGTBACKUPPLANSelection7DD786D0": {
+      "Type": "AWS::Backup::BackupSelection",
+      "Properties": {
+        "BackupPlanId": {
+          "Fn::GetAtt": [
+            "MNGTBACKUPPLAND5594BAE",
+            "BackupPlanId"
+          ]
+        },
+        "BackupSelection": {
+          "IamRoleArn": {
+            "Fn::GetAtt": [
+              "MNGTBACKUPPLANSelectionRole36F3381F",
+              "Arn"
+            ]
+          },
+          "ListOfTags": [
+            {
+              "ConditionKey": "MNGT",
+              "ConditionType": "STRINGEQUALS",
+              "ConditionValue": "MSBackup"
+            }
+          ],
+          "SelectionName": "Selection"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/MNGT-BACKUP-PLAN/Selection/Resource"
+      }
+    },
+    "WSRVBACKUPKEYF319CCF5": {
+      "Type": "AWS::KMS::Key",
+      "Properties": {
+        "KeyPolicy": {
+          "Statement": [
+            {
+              "Action": "kms:*",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::048127819745:root"
+                    ]
+                  ]
+                }
+              },
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/WSRV-BACKUP-KEY/Resource"
+      }
+    },
+    "WSRVBackupVaultE2A7E475": {
+      "Type": "AWS::Backup::BackupVault",
+      "Properties": {
+        "BackupVaultName": "WSRV-VAULT",
+        "EncryptionKeyArn": {
+          "Fn::GetAtt": [
+            "WSRVBACKUPKEYF319CCF5",
+            "Arn"
+          ]
+        }
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/WSRVBackupVault/Resource"
+      }
+    },
+    "WSRVBACKUPPLAN7B028588": {
+      "Type": "AWS::Backup::BackupPlan",
+      "Properties": {
+        "BackupPlan": {
+          "BackupPlanName": "WSRV-BACKUP-PLAN",
+          "BackupPlanRule": [
+            {
+              "Lifecycle": {
+                "DeleteAfterDays": 7
+              },
+              "RuleName": "WSRV_Backup_Rule",
+              "ScheduleExpression": "cron(30 4 ? 1-12 * *)",
+              "TargetBackupVault": {
+                "Fn::GetAtt": [
+                  "WSRVBackupVaultE2A7E475",
+                  "BackupVaultName"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/WSRV-BACKUP-PLAN/Resource"
+      }
+    },
+    "WSRVBACKUPPLANSelectionRoleCA2DF1B8": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "backup.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/WSRV-BACKUP-PLAN/Selection/Role/Resource"
+      }
+    },
+    "WSRVBACKUPPLANSelectionEEFB3DD3": {
+      "Type": "AWS::Backup::BackupSelection",
+      "Properties": {
+        "BackupPlanId": {
+          "Fn::GetAtt": [
+            "WSRVBACKUPPLAN7B028588",
+            "BackupPlanId"
+          ]
+        },
+        "BackupSelection": {
+          "IamRoleArn": {
+            "Fn::GetAtt": [
+              "WSRVBACKUPPLANSelectionRoleCA2DF1B8",
+              "Arn"
+            ]
+          },
+          "ListOfTags": [
+            {
+              "ConditionKey": "WSRV",
+              "ConditionType": "STRINGEQUALS",
+              "ConditionValue": "WSBackup"
+            }
+          ],
+          "SelectionName": "Selection"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/WSRV-BACKUP-PLAN/Selection/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/21Sy27CMBD8Fu7G5XHoGZBaoapSlFRc0cZZwI2zRn4UoSj/XscOpLQ97czY3tnMZsHnz3w2gYudiqqeKlnytnAgahakfYtiwdvdWbDNgXbZhmW+VFIUviR0vTaiXHuHH1AqHPVRW1mrhQQnNd0v92BLDk24+QoOL3AdbAa2cmGQU4PkBj1DNJKOG02EIvYqUHgj3fXVaH+Oxg/ClqwDEoNVwh2T0PA212nSWDMdviq6D+gdCI5Yjfof4dYuM/ogVehql7xde1GnOAaUyvjqgSeyBhte143l7RvGS6F0TEFTVsDbF0/iFtsN92Z7sBad5au+sDJszJ/DALHuwKs0xQ+acKaAxpPIEixQ4d3ol9R1LEervemT9NbpZqQhwf+PQjBfskLD4oThnzqG1cWIwUCDYe8dy67upOlpyeczvph8WimnxpOTDfI81W+BdrLnoAIAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "MvpscriptStack/CDKMetadata/Default"
+      }
+    }
+  },
+  "Parameters": {
+    "SsmParameterValueawsserviceamiwindowslatestWindowsServer2019EnglishFullBaseC96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ami-windows-latest/Windows_Server-2019-English-Full-Base"
+    },
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+    },
+    "BootstrapVersion": {
+      "Type": "AWS::SSM::Parameter::Value<String>",
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+    }
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                  ],
+                  {
+                    "Ref": "BootstrapVersion"
+                  }
+                ]
+              }
+            ]
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+        }
+      ]
+    }
+  }
+}
