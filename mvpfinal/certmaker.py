@@ -13,7 +13,7 @@ ca_subj.ST = "California"
 ca_subj.L = "San Francisco"
 ca_subj.O = "MyOrganization"
 ca_subj.OU = "MyOrganizationalUnit"
-ca_subj.CN = "eu-central-1.elb.amazonaws.comA"
+ca_subj.CN = "eu-central-1.elb.amazonaws.com"
 ca_cert.add_extensions(
     [
         crypto.X509Extension(b"subjectKeyIdentifier", False, b"hash", subject=ca_cert),
